@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Security settings — Northwind Secure Mail{% endblock %}
+{% block body %}
+<div class="wrap" style="max-width:900px">
+  <h2 style="margin:0 0 18px;font-size:20px">Security settings</h2>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>Your protection level</h3>
+      {% if user.requires_passkey %}
+        <span class="chip ok">🔐 Phishing-resistant (YubiKey / passkey)</span>
+        <p class="muted small">Your account requires a WebAuthn passkey. Even if your password is stolen,
+        an attacker cannot sign in — the ceremony is bound to <span class="mono">{{ rp.id }}</span>.</p>
+      {% elif user.totp_secret %}
+        <span class="chip warn">📱 TOTP authenticator</span>
+        <p class="muted small">One-time codes protect against password reuse, but a phishing proxy can relay
+        them in real time. Ask IT about a YubiKey.</p>
+      {% else %}
+        <span class="chip bad">⚠ Password only</span>
+        <p class="muted small">Your account has no second factor. A stolen password means a stolen mailbox.</p>
+      {% endif %}
+    </div>
+
+    <div class="card">
+      <h3>Register a passkey / YubiKey</h3>
+      <p class="muted small">Add a hardware security key (Yubico YubiKey) or a platform passkey.
+      Implemented with Yubico's official FIDO2 library.</p>
+      <div class="field"><label>Label</label><input id="key-label" placeholder="My YubiKey 5 NFC"></div>
+      <button class="primary" id="reg-btn" onclick="registerKey()">🔐 Register security key</button>
+      <div id="reg-status"></div>
+    </div>
+  </div>
+
+  <div class="card mt">
+    <h3>Registered passkeys</h3>
+    <table class="tbl">
+      <tr><th>Label</th><th>Credential ID</th><th>Registered</th></tr>
+      {% for c in creds %}
+        <tr><td>{{ c.label }}</td><td class="mono">{{ c.cred_id.hex()[:24] }}…</td><td class="mono">{{ c.created_at[:19].replace('T',' ') }}</td></tr>
+      {% else %}
+        <tr><td colspan="3" class="muted">No passkeys registered yet.</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="card mt">
+    <h3>Active sessions</h3>
+    <table class="tbl">
+      <tr><th>Created</th><th>Last seen</th><th>Client</th></tr>
+      {% for s in sessions %}
+        <tr><td class="mono">{{ s.created_at[:19].replace('T',' ') }}</td><td class="mono">{{ s.last_seen[:19].replace('T',' ') }}</td><td class="mono small">{{ (s.ua or 'unknown')[:60] }}</td></tr>
+      {% else %}
+        <tr><td colspan="3" class="muted">No sessions.</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+async function registerKey() {
+  const btn = document.getElementById('reg-btn');
+  const label = document.getElementById('key-label').value || 'YubiKey';
+  btn.disabled = true; btn.textContent = 'Waiting for your security key…';
+  try {
+    const opt = await (await fetch('/api/webauthn/register/options', {method:'POST'})).json();
+    if (!opt.ok) throw new Error(opt.error);
+    const cred = await navigator.credentials.create({
+      publicKey: {
+        challenge: b64ToBuf(opt.challenge),
+        rp: opt.rp,
+        user: {id: b64ToBuf(opt.user.id), name: opt.user.name, displayName: opt.user.displayName},
+        pubKeyCredParams: opt.pubKeyCredParams,
+        timeout: opt.timeout,
+        excludeCredentials: (opt.excludeCredentials || []).map(c => ({type: c.type, id: b64ToBuf(c.id)})),
+        authenticatorSelection: opt.authenticatorSelection,
+        attestation: 'none'
+      }
+    });
+    const r = await fetch('/api/webauthn/register', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        label,
+        response: {
+          id: cred.id, rawId: bufToB64(cred.rawId), type: cred.type,
+          response: {clientDataJSON: bufToB64(cred.response.clientDataJSON), attestationObject: bufToB64(cred.response.attestationObject)}
+        }
+      })
+    });
+    const data = await r.json();
+    if (r.ok) { window.location.reload(); } else { throw new Error(data.error); }
+  } catch (e) {
+    document.getElementById('reg-status').innerHTML = '<div class="banner error">Registration failed: ' + e + '</div>';
+  } finally {
+    btn.disabled = false; btn.textContent = '🔐 Register security key';
+  }
+}
+</script>
+{% endblock %}

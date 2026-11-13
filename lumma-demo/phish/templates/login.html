@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in — Northwind Secure Mail</title>
+  <link rel="stylesheet" href="/theme/theme.css">
+</head>
+<body class="accent-portal">
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> Northwind <span style="font-weight:400">Secure Mail</span></div>
+    <span class="sub">portal.{{ 'localhost' }} — secure sign-in</span>
+    <div class="spacer"></div>
+    <span class="chip">Protected by Yubico YubiKey</span>
+  </div>
+
+  <div class="authbox">
+    <div class="card">
+      <div class="logo"><span class="dot"></span> Northwind Secure Mail</div>
+      <div class="tagline">Corporate webmail</div>
+
+      <div id="stage-password">
+        <div class="field">
+          <label>Email</label>
+          <input id="email" type="email" value="{{ target or '' }}" placeholder="you@northwind.demo">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input id="password" type="password" placeholder="••••••••••">
+        </div>
+        <button class="primary" style="width:100%" onclick="doLogin()">Sign in</button>
+        <div id="error-box"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sim-ribbon">DEMO / SIMULATION</div>
+  <script>
+  let CURRENT_EMAIL = '';
+  async function doLogin() {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    CURRENT_EMAIL = email;
+    const r = await fetch('/login', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams({email, password})
+    });
+    const data = await r.json().catch(() => ({}));
+    if (data.next === '/totp') { window.location = '/totp?email=' + encodeURIComponent(email); return; }
+    if (data.next === '/webauthn') { window.location = '/webauthn?email=' + encodeURIComponent(email) + '&challenge=' + encodeURIComponent(data.challenge || ''); return; }
+    if (data.next === '/done') { window.location = '/done'; return; }
+    document.getElementById('error-box').innerHTML = '<div class="banner error">' + (data.error || 'Sign-in failed.') + '</div>';
+  }
+  </script>
+</body>
+</html>

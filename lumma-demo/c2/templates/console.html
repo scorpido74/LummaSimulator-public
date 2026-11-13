@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumma C2 — Attacker Console (simulation)</title>
+  <link rel="stylesheet" href="/theme/theme.css">
+</head>
+<body class="accent-c2">
+  <div class="topbar">
+    <div class="brand"><span class="dot" style="background:var(--bad);box-shadow:0 0 14px var(--bad)"></span> Lumma C2</div>
+    <span class="sub">attacker console — SIMULATION</span>
+    <div class="spacer"></div>
+    <span class="chip bad">ransomware-free zone: it's just an infostealer demo</span>
+  </div>
+
+  <div class="hero">
+    <h1>Attacker console</h1>
+    <p>What the criminal actually sees. All data is fake, generated locally for the demo.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="grid cols-3">
+      <div class="card"><div class="num">{{ sessions|length }}</div><h3>Stolen sessions</h3><div class="hint">from phishing / AiTM</div></div>
+      <div class="card"><div class="num">{{ exfil|length }}</div><h3>Exfil batches</h3><div class="hint">from the infostealer</div></div>
+      <div class="card"><div class="num" style="color:var(--ok)">{{ webauthn|selectattr('kind','equalto','webauthn_blocked')|list|length }}</div><h3>Passkeys that blocked us</h3><div class="hint">the YubiKey wall</div></div>
+    </div>
+
+    <div class="card mt">
+      <h3>Stolen sessions (phishing / AiTM)</h3>
+      <table class="tbl">
+        <tr><th>User</th><th>Obtained via</th><th>Session cookie</th><th>Time</th><th></th></tr>
+        {% for s in sessions %}
+        <tr>
+          <td class="mono">{{ s.user }}</td>
+          <td>{{ s.via }}</td>
+          <td class="mono small">{{ (s.cookie or '')[:28] }}…</td>
+          <td class="mono small">{{ (s.ts or '')[:19] }}</td>
+          <td><a class="btn small danger" href="/session/{{ s.id }}/mail" target="_blank">Open victim mailbox →</a></td>
+        </tr>
+        {% else %}
+        <tr><td colspan="5" class="muted">No stolen sessions yet — run the phishing demo.</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="card mt">
+      <h3>Passkey / YubiKey encounters</h3>
+      <table class="tbl">
+        <tr><th>Event</th><th>User</th><th>Detail</th><th>Time</th></tr>
+        {% for w in webauthn %}
+        <tr>
+          <td>
+            {% if w.kind == 'webauthn_blocked' %}
+              <span class="chip bad">BLOCKED by origin binding</span>
+            {% else %}
+              <span class="chip warn">relay attempt started</span>
+            {% endif %}
+          </td>
+          <td class="mono">{{ w.user }}</td>
+          <td class="small">{{ w.via or w.note or w.error }}</td>
+          <td class="mono small">{{ (w.ts or '')[:19] }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="4" class="muted">No passkey encounters yet.</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="card mt">
+      <h3>Infostealer loot (exfiltrated)</h3>
+      <table class="tbl">
+        <tr><th>Host</th><th>Campaign</th><th>Artifacts</th><th>Summary</th><th>Time</th></tr>
+        {% for e in exfil %}
+        <tr>
+          <td class="mono">{{ e.host }}</td>
+          <td>{{ e.campaign }}</td>
+          <td class="mono small">
+            {% for a in (e.artifacts or [])[:6] %}{{ a.type }}@{{ a.browser }}{% if not loop.last %}, {% endif %}{% endfor %}
+            {% if (e.artifacts or [])|length > 6 %} +{{ (e.artifacts or [])|length - 6 }} more{% endif %}
+          </td>
+          <td class="small">{{ e.summary }}</td>
+          <td class="mono small">{{ (e.ts or '')[:19] }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="5" class="muted">Nothing exfiltrated yet — deploy via ClickFix or the endpoint simulator.</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="card mt">
+      <h3>Payload deliveries (ClickFix)</h3>
+      <table class="tbl">
+        <tr><th>Origin</th><th>User</th><th>Status</th><th>Time</th></tr>
+        {% for c in clickfix %}
+        <tr><td>{{ c.origin }}</td><td class="mono">{{ c.user }}</td><td><span class="chip bad">{{ c.status }}</span></td><td class="mono small">{{ (c.ts or '')[:19] }}</td></tr>
+        {% else %}
+        <tr><td colspan="4" class="muted">No deliveries yet.</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  <div class="sim-ribbon">DEMO / SIMULATION</div>
+  <script>setTimeout(() => location.reload(), 5000);</script>
+</body>
+</html>

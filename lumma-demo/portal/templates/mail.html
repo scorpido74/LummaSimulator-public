@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Inbox — Northwind Secure Mail{% endblock %}
+{% block body %}
+<div class="wrap">
+  <div class="row" style="margin-bottom:18px">
+    <h2 style="margin:0;font-size:20px">{% if item %}{{ item.subject }}{% else %}Inbox{% endif %}</h2>
+    <div class="spacer"></div>
+    <span class="chip {% if user.requires_passkey %}ok{% elif user.totp_secret %}warn{% else %}bad{% endif %}">
+      {% if user.requires_passkey %}🔐 YubiKey protected{% elif user.totp_secret %}📱 TOTP protected{% else %}⚠ password only{% endif %}
+    </span>
+  </div>
+
+  <div class="grid cols-3" style="margin-bottom:20px">
+    <div class="card"><div class="num">{{ mails|length if mails else 0 }}</div><h3>Messages</h3></div>
+    <div class="card"><div class="num" style="color:var(--ok)">100%</div><h3>Mailbox health</h3></div>
+    <div class="card"><div class="num" style="color:var(--accent)">E2E</div><h3>Encryption</h3></div>
+  </div>
+
+  {% if item %}
+    <div class="card">
+      <div class="row" style="margin-bottom:6px">
+        <a class="btn small" href="/mail">← Back to inbox</a>
+        <div class="spacer"></div>
+        <span class="faint small">{{ item.ts }}</span>
+      </div>
+      <div style="font-weight:700;font-size:16px">{{ item.subject }}</div>
+      <div class="muted small" style="margin-bottom:14px">From: {{ item.sender }}</div>
+      <div class="mail-body">{{ item.body_html | safe }}</div>
+    </div>
+  {% else %}
+    <div class="card mail-list" style="padding:0">
+      {% for m in mails %}
+        <a href="/mail/{{ m.id }}" class="mail-item" style="color:inherit;text-decoration:none">
+          <span class="statusdot {% if m.unread %}warn{% else %}ok{% endif %}" style="margin-top:6px"></span>
+          <div>
+            <div class="from">{{ m.sender }}</div>
+            <div class="subject">{{ m.subject }}</div>
+            <div class="preview">{{ m.body_html | striptags | truncate(90) }}</div>
+          </div>
+          <span class="when">{{ m.ts[:19].replace('T',' ') }}</span>
+        </a>
+      {% else %}
+        <div style="padding:22px;color:var(--muted)">No messages.</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

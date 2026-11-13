@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Security key — Northwind Secure Mail</title>
+  <link rel="stylesheet" href="/theme/theme.css">
+</head>
+<body class="accent-portal">
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> Northwind <span style="font-weight:400">Secure Mail</span></div>
+    <div class="spacer"></div>
+  </div>
+  <div class="authbox">
+    <div class="card">
+      <div class="logo"><span class="dot"></span> Security key</div>
+      <div class="tagline">Two-factor authentication</div>
+      <div class="banner info" style="margin-top:0">
+        This account is protected by a <b>YubiKey / passkey</b>. Continue with your security key.
+      </div>
+      <button class="primary" style="width:100%" id="pk-btn" onclick="tryKey()">🔐 Continue with security key</button>
+      <div id="status-box" style="margin-top:14px"></div>
+    </div>
+  </div>
+  <div class="sim-ribbon">DEMO / SIMULATION</div>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const EMAIL = params.get('email') || '';
+  const CHALLENGE = params.get('challenge') || '';
+
+  // The AiTM kit relays the REAL portal challenge and asks the victim's
+  // browser to sign it — but navigator.credentials.get is bound to the
+  // phishing origin. The browser throws NotAllowedError/SecurityError
+  // because the RP ID 'portal.localhost' does not belong to this origin.
+  async function tryKey() {
+    const btn = document.getElementById('pk-btn');
+    const status = document.getElementById('status-box');
+    btn.disabled = true; btn.textContent = 'Waiting for your security key…';
+    try {
+      // Attempt to request credentials for the PORTAL's RP ID from here (the
+      // phishing origin). The browser MUST refuse — RP ID not registrable.
+      const cred = await navigator.credentials.get({
+        publicKey: {
+          challenge: b64ToBuf(CHALLENGE),
+          rpId: 'portal.localhost',
+          timeout: 60000,
+          userVerification: 'preferred'
+        }
+      });
+      // If some browser ever allowed this, we would relay the assertion to the
+      // portal — which would still reject it (origin mismatch in clientData).
+      status.innerHTML = '<div class="banner error">The portal rejected the relayed assertion (origin mismatch).</div>';
+    } catch (err) {
+      // Expected path: the browser refuses the ceremony on this origin.
+      fetch('/webauthn/failed', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email: EMAIL, error: String(err)})
+      }).catch(() => {});
+      status.innerHTML =
+        '<div class="banner error"><b>Verification failed.</b> Your security key could not be used ' +
+        'on this page. Please contact IT support if the problem persists.</div>';
+    } finally {
+      btn.disabled = false; btn.textContent = '🔐 Try again';
+    }
+  }
+  function b64ToBuf(b64) {
+    const s = atob((b64 || '').replace(/-/g,'+').replace(/_/g,'/'));
+    return Uint8Array.from(s, c => c.charCodeAt(0));
+  }
+  </script>
+</body>
+</html>

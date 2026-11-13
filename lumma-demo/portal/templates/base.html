@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Northwind Secure Mail{% endblock %}</title>
+  <link rel="stylesheet" href="/theme/theme.css">
+  <style>{% block head %}{% endblock %}</style>
+</head>
+<body class="accent-portal">
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> Northwind <span style="font-weight:400">Secure Mail</span></div>
+    <span class="sub">{{ company or "Northwind Logistics" }} — demo environment</span>
+    <div class="spacer"></div>
+    {% if user %}
+      <span class="chip ok"><span class="statusdot ok"></span>{{ user.display_name }}</span>
+      <a class="btn small" href="/security">Security</a>
+      <button class="small" onclick="logout()">Sign out</button>
+    {% else %}
+      <span class="chip">Protected by Yubico YubiKey</span>
+    {% endif %}
+  </div>
+  {% block body %}{% endblock %}
+  <div class="sim-ribbon">DEMO / SIMULATION</div>
+  <script src="/static/portal.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

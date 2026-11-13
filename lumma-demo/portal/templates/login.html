@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% block title %}Sign in — Northwind Secure Mail{% endblock %}
+{% block body %}
+<div class="authbox">
+  <div class="card">
+    <div class="logo"><span class="dot"></span> Northwind Secure Mail</div>
+    <div class="tagline">Corporate webmail — {{ rp.origin }}</div>
+
+    <div id="stage-password">
+      <div class="field">
+        <label>Email</label>
+        <input id="email" type="email" value="{{ prefill_email or '' }}" placeholder="you@northwind.demo" autocomplete="username">
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input id="password" type="password" placeholder="••••••••••" autocomplete="current-password">
+      </div>
+      <button class="primary" style="width:100%" onclick="doLogin()">Sign in</button>
+    </div>
+
+    <div id="stage-totp" style="display:none">
+      <div class="banner info" style="margin-top:0">
+        Enter the 6-digit code from your <b>authenticator app</b>.
+      </div>
+      <div class="field">
+        <label>One-time code</label>
+        <input id="totp" inputmode="numeric" maxlength="6" placeholder="123456" style="font-family:var(--mono);font-size:20px;letter-spacing:.3em;text-align:center">
+      </div>
+      <button class="primary" style="width:100%" onclick="doTotp()">Verify code</button>
+      <div class="demo-hint" id="totp-helper" style="display:none">
+        <b>Demo helper</b> — Riley's authenticator currently shows:
+        <span class="mono" id="totp-code" style="font-size:16px"></span>
+        <span class="faint">(shown because this is a demo)</span>
+      </div>
+    </div>
+
+    <div id="stage-passkey" style="display:none">
+      <div class="banner info" style="margin-top:0">
+        This account is protected by a <b>YubiKey / passkey</b>.
+        Insert your security key and continue.
+      </div>
+      <button class="primary" style="width:100%" id="pk-btn" onclick="doPasskey()">🔐 Continue with security key</button>
+      <div class="small faint" style="margin-top:10px;text-align:center">
+        The browser will only complete this on <span class="mono">{{ rp.id }}</span> — the real site.
+      </div>
+    </div>
+
+    <div id="error-box"></div>
+
+    <div class="demo-hint">
+      <b>Demo accounts</b> (anonymous demo users):<br>
+      <span class="mono">alex@northwind.demo</span> — password only<br>
+      <span class="mono">riley@northwind.demo</span> — password + authenticator (TOTP)<br>
+      <span class="mono">sam@northwind.demo</span> — password + <b>YubiKey</b> (register first via Security settings)
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+const PREFILL = {{ (prefill_email or '') | tojson }};
+if (PREFILL) { document.getElementById('email').value = PREFILL; }
+let CURRENT_EMAIL = '';
+
+async function doLogin() {
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+  CURRENT_EMAIL = email;
+  const r = await fetch('/login', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams({email, password})
+  });
+  const data = await r.json().catch(() => ({}));
+  if (r.ok && data.stage === 'done') { window.location = '/mail'; return; }
+  if (r.ok && data.stage === 'passkey_enrollment') { window.location = '/security?enroll=1'; return; }
+  if (r.ok && data.stage === 'totp') { show('stage-totp'); startTotpHelper(email); return; }
+  if (r.ok && data.stage === 'passkey') { show('stage-passkey'); return; }
+  showError(data.error || 'Sign-in failed.');
+}
+
+async function doTotp() {
+  const code = document.getElementById('totp').value.trim();
+  const r = await fetch('/login/totp', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams({email: CURRENT_EMAIL, code})
+  });
+  const data = await r.json().catch(() => ({}));
+  if (r.ok) { window.location = '/mail'; return; }
+  showError(data.error || 'Invalid code.');
+}
+
+async function doPasskey() {
+  const btn = document.getElementById('pk-btn');
+  btn.disabled = true; btn.textContent = 'Waiting for your security key…';
+  try {
+    const opt = await (await fetch('/api/webauthn/authenticate/options?email=' + encodeURIComponent(CURRENT_EMAIL))).json();
+    if (!opt.ok) throw new Error(opt.error || 'no options');
+    const cred = await navigator.credentials.get({
+      publicKey: {
+        challenge: b64ToBuf(opt.challenge),
+        rpId: opt.rpId,
+        allowCredentials: (opt.allowCredentials || []).map(c => ({type: c.type, id: b64ToBuf(c.id)})),
+        timeout: opt.timeout,
+        userVerification: 'preferred'
+      }
+    });
+    const r = await fetch('/api/webauthn/authenticate', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: CURRENT_EMAIL,
+        response: {
+          id: cred.id, rawId: bufToB64(cred.rawId), type: cred.type,
+          response: {
+            clientDataJSON: bufToB64(cred.response.clientDataJSON),
+            authenticatorData: bufToB64(cred.response.authenticatorData),
+            signature: bufToB64(cred.response.signature),
+            userHandle: cred.response.userHandle ? bufToB64(cred.response.userHandle) : null
+          }
+        }
+      })
+    });
+    const data = await r.json().catch(() => ({}));
+    if (r.ok) { window.location = '/mail'; return; }
+    showError('Security key verification failed: ' + (data.detail || data.error || ''));
+  } catch (e) {
+    showError('Security key ceremony failed: ' + e);
+  } finally {
+    btn.disabled = false; btn.textContent = '🔐 Continue with security key';
+  }
+}
+
+function startTotpHelper(email) {
+  const box = document.getElementById('totp-helper');
+  const span = document.getElementById('totp-code');
+  box.style.display = 'block';
+  const tick = async () => {
+    try {
+      const r = await fetch('/api/demo/totp?email=' + encodeURIComponent(email));
+      const d = await r.json();
+      if (d.ok) span.textContent = d.code;
+    } catch (e) {}
+  };
+  tick(); setInterval(tick, 5000);
+}
+
+function show(id) {
+  for (const s of ['stage-password','stage-totp','stage-passkey']) {
+    document.getElementById(s).style.display = (s === id) ? 'block' : 'none';
+  }
+  document.getElementById('error-box').innerHTML = '';
+}
+function showError(msg) {
+  document.getElementById('error-box').innerHTML = '<div class="banner error">' + msg + '</div>';
+}
+function b64ToBuf(b64) {
+  const s = atob(b64.replace(/-/g,'+').replace(/_/g,'/'));
+  return Uint8Array.from(s, c => c.charCodeAt(0));
+}
+function bufToB64(buf) {
+  let s = '';
+  new Uint8Array(buf).forEach(b => s += String.fromCharCode(b));
+  return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+}
+function logout() {
+  fetch('/logout', {method:'POST'}).then(() => window.location='/login');
+}
+</script>
+{% endblock %}

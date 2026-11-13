@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merlon Security — Detection &amp; Response (demo)</title>
+  <link rel="stylesheet" href="/theme/theme.css">
+  <style>
+    .partner-strip {
+      display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+      margin: 18px auto 0; max-width: 720px;
+    }
+    .partner-strip .chip { font-size: 12px; }
+  </style>
+</head>
+<body class="accent-soc">
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> Merlon Security</div>
+    <span class="sub">detection &amp; response console — demo</span>
+    <div class="spacer"></div>
+    <span class="chip" id="clock"></span>
+  </div>
+
+  <div class="hero">
+    <h1>SOC — Northwind Logistics</h1>
+    <p>Live view of detections, phishing attempts and response actions.</p>
+    <div class="partner-strip">
+      <span class="chip ok">Detection: WithSecure™ Elements (simulated)</span>
+      <span class="chip accent">MFA: Yubico YubiKey</span>
+      <span class="chip info">Phishing-resistant: WebAuthn / FIDO2</span>
+      <span class="chip warn">Threat: Lumma stealer (simulated)</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="grid cols-4" id="stat-cards">
+      <div class="card"><div class="num" id="c-alerts">0</div><h3>Detection alerts</h3><div class="hint">from WithSecure Elements</div></div>
+      <div class="card"><div class="num" style="color:var(--bad)" id="c-critical">0</div><h3>Critical</h3><div class="hint">stealer behaviour</div></div>
+      <div class="card"><div class="num" style="color:var(--ok)" id="c-mfa">0</div><h3>MFA blocks</h3><div class="hint">YubiKey stopped phishing</div></div>
+      <div class="card"><div class="num" id="c-events">0</div><h3>Portal events</h3><div class="hint">auth telemetry</div></div>
+    </div>
+
+    <div class="grid cols-2 mt">
+      <div class="card">
+        <h3>Detections timeline (WithSecure Elements)</h3>
+        <div class="timeline" id="alert-timeline">
+          <div class="tl-item"><div class="tl-desc">No detections yet.</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>Incident response</h3>
+          <div id="incident-box">
+            <div class="banner info">No active incident detected. Start the ClickFix or phishing demo to generate activity.</div>
+          </div>
+          <div class="row mt">
+            <button class="danger" onclick="act('contain')">🔒 Isolate WS-DEMO-01</button>
+            <button class="danger" onclick="act('terminate')">⛔ Terminate process</button>
+            <button onclick="act('release')">♻ Release host</button>
+          </div>
+          <div id="action-log" class="mt"></div>
+        </div>
+
+        <div class="card mt">
+          <h3>Portal security events</h3>
+          <div class="timeline" id="event-timeline">
+            <div class="tl-item"><div class="tl-desc">No events yet.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sim-ribbon">DEMO / SIMULATION</div>
+
+<script>
+const SEV = {critical:'bad', high:'bad', medium:'warn', low:'', info:'ok'};
+
+function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML;}
+
+async function refresh() {
+  try {
+    const r = await fetch('/api/state');
+    const d = await r.json();
+    document.getElementById('c-alerts').textContent = d.counts.alerts;
+    document.getElementById('c-critical').textContent = d.counts.critical;
+    document.getElementById('c-mfa').textContent = d.counts.mfa_wins;
+    document.getElementById('c-events').textContent = d.counts.events;
+
+    document.getElementById('alert-timeline').innerHTML = d.alerts.length ? d.alerts.map(a => `
+      <div class="tl-item ${SEV[a.severity] || ''}">
+        <div class="tl-ts">${(a.ts||'').slice(11,19)} · WS-DEMO-01 · MITRE ${esc(a.mitre||'-')}</div>
+        <div class="tl-title">${esc(a.detection)}</div>
+        <div class="tl-desc">${esc(a.narrative)}</div>
+        <div class="tl-desc faint">↳ ${esc(a.advice||'')}</div>
+      </div>`).join('') : '<div class="tl-item"><div class="tl-desc">No detections yet.</div></div>';
+
+    document.getElementById('event-timeline').innerHTML = d.events.length ? d.events.map(e => {
+      const det = e.details || {};
+      const sev = det.severity || 'info';
+      const good = (e.kind === 'webauthn_origin_rejected' || e.kind === 'webauthn_relay_suspected');
+      return `
+      <div class="tl-item ${good ? 'ok' : (SEV[sev] || '')}">
+        <div class="tl-ts">${(e.ts||'').slice(11,19)} · ${esc(e.email || 'portal')}</div>
+        <div class="tl-title">${esc(det.title || e.kind)}</div>
+        <div class="tl-desc">${esc(det.detail || '')}</div>
+      </div>`;
+    }).join('') : '<div class="tl-item"><div class="tl-desc">No events yet.</div></div>';
+
+    const incident = d.alerts.find(a => a.severity === 'critical' || a.severity === 'high');
+    document.getElementById('incident-box').innerHTML = incident
+      ? `<div class="banner error"><b>${esc(incident.detection)}</b> on ${esc(incident.host)} — ${esc(incident.mitre)}. ${esc(incident.narrative)}</div>`
+      : `<div class="banner info">No active incident detected.</div>`;
+
+    document.getElementById('action-log').innerHTML = d.actions.map(a =>
+      `<div class="chip ${a.ok ? 'ok' : 'bad'} small" style="margin:3px">${(a.ts||'').slice(11,19)} ${esc(a.action)} → ${a.ok ? 'done' : 'failed'}</div>`).join('');
+  } catch (e) { /* keep last view */ }
+}
+
+async function act(kind) {
+  await fetch('/api/respond/' + kind, {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({host: 'WS-DEMO-01'})
+  });
+  refresh();
+}
+
+function tick(){const n=new Date();document.getElementById('clock').textContent=n.toISOString().slice(11,19)+' UTC';}
+tick(); setInterval(tick, 1000);
+refresh(); setInterval(refresh, 2500);
+</script>
+</body>
+</html>

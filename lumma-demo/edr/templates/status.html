@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EDR sensor — WithSecure Elements (simulation)</title>
+  <link rel="stylesheet" href="/theme/theme.css">
+</head>
+<body class="accent-soc">
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> WithSecure <span style="font-weight:400">Elements — EDR sensor</span></div>
+    <span class="sub">endpoint detection &amp; response (simulated detections)</span>
+    <div class="spacer"></div>
+    <span class="chip">host: WS-DEMO-01</span>
+    {% if contained %}<span class="chip bad">CONTAINED</span>{% else %}<span class="chip ok">monitoring</span>{% endif %}
+  </div>
+
+  <div class="hero">
+    <h1>Endpoint telemetry &amp; detections</h1>
+    <p>Simulates the WithSecure™ Elements endpoint protection agent on workstation WS-DEMO-01.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Detections (WithSecure Elements style)</h3>
+        <div class="timeline">
+          {% for a in alerts %}
+          <div class="tl-item {% if a.severity in ('critical','high') %}bad{% elif a.severity == 'medium' %}warn{% endif %}">
+            <div class="tl-ts">{{ a.ts[:19] }} · MITRE {{ a.mitre }}</div>
+            <div class="tl-title">{{ a.detection }}</div>
+            <div class="tl-desc">{{ a.narrative }}</div>
+          </div>
+          {% else %}
+          <div class="tl-item"><div class="tl-desc">No detections yet.</div></div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="card">
+        <h3>Raw telemetry</h3>
+        <table class="tbl">
+          <tr><th>Time</th><th>Category</th><th>Action</th><th>Detail</th></tr>
+          {% for e in events %}
+          <tr>
+            <td class="mono small">{{ e.ts[11:19] }}</td>
+            <td><span class="chip small">{{ e.category }}</span></td>
+            <td class="mono small">{{ e.action }}</td>
+            <td class="mono small muted">{{ (e.details.get('path') or e.details.get('detail') or e.details.get('match') or '')[:48] }}</td>
+          </tr>
+          {% else %}
+          <tr><td colspan="4" class="muted">No telemetry yet.</td></tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="sim-ribbon">DEMO / SIMULATION</div>
+</body>
+</html>

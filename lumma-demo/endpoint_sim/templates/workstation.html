@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WS-DEMO-01 — Endpoint simulator</title>
+  <link rel="stylesheet" href="/theme/theme.css">
+</head>
+<body class="accent-endpoint">
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> WS-DEMO-01</div>
+    <span class="sub">simulated corporate workstation — Northwind Logistics</span>
+    <div class="spacer"></div>
+    {% if contained %}<span class="chip bad">🔒 CONTAINED (isolated by SOC)</span>{% else %}<span class="chip ok">monitoring</span>{% endif %}
+  </div>
+
+  <div class="wrap">
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Fake browser profile (victim data)</h3>
+        <p class="muted small">
+          A synthetic user profile lives here: browser login stores, cookies, wallet
+          extensions, chat tokens. This — and nothing else — is what the stealer can take.
+        </p>
+        <table class="tbl">
+          <tr><th>Root</th><td class="mono small">{{ profile.root }}</td></tr>
+          <tr><th>Files</th><td class="mono">{{ profile.files }}</td></tr>
+          <tr><th>Size</th><td class="mono">{{ profile.bytes }} bytes</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Run the stealer (simulation)</h3>
+        <p class="muted small">
+          Deploys the contained Lumma simulator on this workstation. Use the
+          <b>ClickFix page</b> for the realistic delivery story, or the button below.
+        </p>
+        <button class="danger" onclick="deploy()" {% if contained %}disabled{% endif %}>
+          ☣ Deploy Lumma simulator
+        </button>
+        <div id="deploy-status" style="margin-top:12px">
+          {% if contained %}<div class="banner error">Host is contained — deployment refused. Release from the SOC console first.</div>{% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt">
+      <h3>Payload runs</h3>
+      <table class="tbl">
+        <tr><th>Time</th><th>Origin</th><th>User</th><th>PID</th></tr>
+        {% for r in runs %}
+        <tr><td class="mono small">{{ r.ts[:19] }}</td><td>{{ r.origin }}</td><td class="mono small">{{ r.user }}</td><td class="mono">{{ r.pid }}</td></tr>
+        {% else %}
+        <tr><td colspan="4" class="muted">No runs yet.</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  <div class="sim-ribbon">DEMO / SIMULATION</div>
+  <script>
+  async function deploy() {
+    const s = document.getElementById('deploy-status');
+    s.innerHTML = '<div class="banner info">Running contained simulator… watch EDR + SOC + C2.</div>';
+    const r = await fetch('/deploy', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({origin: 'manual', user: 'alex@northwind.demo'})
+    });
+    const d = await r.json().catch(() => ({}));
+    if (r.ok) {
+      s.innerHTML = '<div class="banner success">Simulator started (pid ' + d.pid + '). Detection should appear within seconds.</div>';
+      setTimeout(() => location.reload(), 4000);
+    } else {
+      s.innerHTML = '<div class="banner error">' + (d.error || 'deploy failed') + '</div>';
+    }
+  }
+  </script>
+</body>
+</html>

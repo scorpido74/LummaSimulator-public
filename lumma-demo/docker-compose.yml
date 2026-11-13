@@ -1,0 +1,88 @@
+# LummaSimulator demo platform — Docker Compose
+#
+#   docker compose up --build
+#
+# Then open the same URLs as with ./demo.sh (portal.localhost etc.).
+# Requires Docker; the plain `./demo.sh start` flow needs no Docker.
+#
+# NOTE: services communicate via /etc/hosts entries with static IPs instead
+# of Docker's embedded DNS, which is not reliable on every daemon/setup.
+
+x-common: &common
+  restart: unless-stopped
+  build:
+    context: .
+  extra_hosts: &hosts
+    portal: 172.28.0.2
+    phish: 172.28.0.3
+    c2: 172.28.0.4
+    soc: 172.28.0.5
+    edr: 172.28.0.6
+    endpoint: 172.28.0.7
+  environment: &common-env
+    PORTAL_URL: http://portal:8000
+    PHISH_URL: http://phish:8000
+    C2_URL: http://c2:8000
+    SOC_URL: http://soc:8000
+    EDR_URL: http://edr:8000
+    ENDPOINT_URL: http://endpoint:8000
+    LUMMA_STATE: /data
+  networks:
+    lummanet:
+      ipv4_address: ""
+
+services:
+  portal:
+    <<: *common
+    build: { context: ., args: { SERVICE: portal } }
+    networks: { lummanet: { ipv4_address: 172.28.0.2 } }
+    ports: ["127.0.0.1:8000:8000"]
+    volumes: ["portal-data:/data"]
+
+  phish:
+    <<: *common
+    build: { context: ., args: { SERVICE: phish } }
+    networks: { lummanet: { ipv4_address: 172.28.0.3 } }
+    ports: ["127.0.0.1:8001:8000"]
+    environment:
+      <<: *common-env
+      PHISH_PORT: "8001" # display-only: phishing URLs shown to the victim
+
+  c2:
+    <<: *common
+    build: { context: ., args: { SERVICE: c2 } }
+    networks: { lummanet: { ipv4_address: 172.28.0.4 } }
+    ports: ["127.0.0.1:8002:8000"]
+
+  soc:
+    <<: *common
+    build: { context: ., args: { SERVICE: soc } }
+    networks: { lummanet: { ipv4_address: 172.28.0.5 } }
+    ports: ["127.0.0.1:8003:8000"]
+
+  edr:
+    <<: *common
+    build: { context: ., args: { SERVICE: edr } }
+    networks: { lummanet: { ipv4_address: 172.28.0.6 } }
+    ports: ["127.0.0.1:8004:8000"]
+
+  endpoint:
+    <<: *common
+    build: { context: ., args: { SERVICE: endpoint_sim } }
+    networks: { lummanet: { ipv4_address: 172.28.0.7 } }
+    ports: ["127.0.0.1:8005:8000"]
+    volumes: ["endpoint-data:/data"]
+    # endpoint_sim spawns agent/lumma_agent.py — same image, runs the agent
+    command: >
+      sh -c "python -m uvicorn endpoint_sim.app:app --host 0.0.0.0 --port 8000 --log-level warning"
+
+networks:
+  lummanet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/24
+
+volumes:
+  portal-data:
+  endpoint-data:

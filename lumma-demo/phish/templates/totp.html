@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Verification — Northwind Secure Mail</title>
+  <link rel="stylesheet" href="/theme/theme.css">
+</head>
+<body class="accent-portal">
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> Northwind <span style="font-weight:400">Secure Mail</span></div>
+    <div class="spacer"></div>
+  </div>
+  <div class="authbox">
+    <div class="card">
+      <div class="logo"><span class="dot"></span> Verification required</div>
+      <div class="tagline">Two-factor authentication</div>
+      <div class="banner info" style="margin-top:0">
+        Enter the 6-digit code from your <b>authenticator app</b>.
+      </div>
+      <div class="field">
+        <label>One-time code</label>
+        <input id="totp" inputmode="numeric" maxlength="6" placeholder="123456" style="font-family:var(--mono);font-size:20px;letter-spacing:.3em;text-align:center">
+      </div>
+      <button class="primary" style="width:100%" onclick="doTotp()">Verify code</button>
+      <div id="error-box"></div>
+    </div>
+  </div>
+  <div class="sim-ribbon">DEMO / SIMULATION</div>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const EMAIL = params.get('email') || '';
+  async function doTotp() {
+    const code = document.getElementById('totp').value.trim();
+    const r = await fetch('/totp', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams({email: EMAIL, code})
+    });
+    const data = await r.json().catch(() => ({}));
+    if (data.ok) { window.location = '/done'; return; }
+    document.getElementById('error-box').innerHTML = '<div class="banner error">' + (data.error || 'Invalid code.') + '</div>';
+  }
+  </script>
+</body>
+</html>
