@@ -1,0 +1,11 @@
+# Standaardbezoekersevenement
+
+In Evenementbeheer kiest een portalbeheerder een actief Experience- of Prize-evenement. Vink **Gebruik dit evenement als standaard op de hoofdpagina** aan en klik op **Instellingen opslaan**. De server controleert de keuze en de rechten. Als opnieuw verifiëren nodig is, opent Opslaan de bestaande passkeyprompt en herhaalt het de oorspronkelijke aanvraag één keer na verificatie. Bij annuleren of mislukken blijven keuze en vinkje staan. De lijst vermeldt evenementtype en toont het oorspronkelijke Experience-evenement bovenaan zolang dit bezoekers kan toelaten.
+
+Zonder opgeslagen keuze gebruikt de portal het bestaande Experience-evenement uit onboarding. Op oudere installaties zonder bruikbaar onboardingevenement geldt het eerste toegankelijke actieve Experience-evenement op startdatum en ID. Is er helemaal geen toegankelijke Experience, dan blijft de bestaande algemene startpagina of de bestaande automatische selectie van één toegankelijk Edition-evenement beschikbaar.
+
+Een expliciet opgeslagen keuze heeft voorrang op de impliciete standaard. Bij sluiting, verwijdering of geblokkeerde deelname blijft die combinatie van type en ID opgeslagen. Een nieuw anoniem bezoek toont dan een melding. Een evenementlink met expliciete parameters, een QR-link en een bestaande bezoekerssessie behouden hun evenement. Prize gebruikt dezelfde toelatingsroute, actuele ronde en voorwaarden als de bestaande vaste Prize-link.
+
+De keuze staat als optioneel veld in de bestaande presentatie-instellingen. Hiervoor is geen wijziging aan het SQLite-schema nodig. Bestaande installaties hoeven geen gegevens aan te passen. Een oudere versie leest het extra veld niet. Gebruik bij terugrollen de reguliere consistente databaseback-up als ook de gekozen standaard bewaard moet blijven, omdat een oude versie dit veld bij het opslaan van presentatie-instellingen niet kent.
+
+De gerichte HTTPS- en Prize-rondetests gebruiken synthetische gegevens. Ze controleren onder meer de beveiligde opslag, de standaard na herinitialisatie van SQLite, het verschil tussen gelijknamige evenementen, terugkerende sessies en behoud van ronde-inschrijvingen. De fysieke eventinstallatie en het geaccepteerde pakket zijn buiten deze verificatie gehouden.

@@ -1,0 +1,17 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.Prizes.IndexModel
+@{ ViewData["Title"]=T["PrizeOverview"].Value;ViewData["TitleKey"]="PrizeOverview"; }
+<div class="section-heading"><h1><local-text key="PrizeOverview"></local-text></h1><a class="button button-primary" asp-page="New"><local-text key="PrizeNew"></local-text></a></div>
+<p class="notice"><local-text key="PrizeManagementIntro"></local-text></p>
+<a asp-page="/Presenter/Index"><local-text key="PrizeDashboard"></local-text></a>
+@if(Model.ErrorKey is {} error){<p class="notice error" role="alert"><local-text key="@error"></local-text></p>}
+@if(Model.Events.Events.Count==0){<p><local-text key="PrizeNone"></local-text></p>}
+else {
+<div class="table-scroll"><table><thead><tr><th><local-text key="PrizeName"></local-text></th><th><local-text key="PrizeStatus"></local-text></th><th><local-text key="PrizeCreated"></local-text></th></tr></thead><tbody>
+@foreach(var item in Model.Events.Events){<tr><td><a asp-page="Event" asp-route-id="@item.Id">@item.Name</a></td><td><local-text key="@("PrizeStatus"+item.Status)"></local-text></td><td>@DateTimeOffset.FromUnixTimeMilliseconds(item.CreatedAt).UtcDateTime.ToString("g")</td></tr>}
+</tbody></table></div>
+}
+<nav class="presenter-nav">
+@if(Model.Events.Page>0){<a asp-route-pageIndex="@(Model.Events.Page-1)"><local-text key="PrizePrevious"></local-text></a>}
+@if(Model.Events.HasNext){<a asp-route-pageIndex="@(Model.Events.Page+1)"><local-text key="PrizeNext"></local-text></a>}
+</nav>

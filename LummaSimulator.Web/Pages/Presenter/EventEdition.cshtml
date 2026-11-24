@@ -1,0 +1,28 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.EventEditionModel
+@{ ViewData["Title"] = T["EventEditionTitle"].Value; ViewData["TitleKey"] = "EventEditionTitle"; }
+<a asp-page="/Presenter/Index"><local-text key="EventEditionBack"></local-text></a>
+<section class="panel"><h1><local-text key="EventEditionTitle"></local-text></h1><p><local-text key="EventEditionInfo"></local-text></p>
+@if(Model.Notice is not null){<p class="notice error" role="alert"><local-text key="@Model.Notice"></local-text></p>}
+@if(Model.Code is not null){<div class="notice"><strong><local-text key="EventEditionCode"></local-text></strong><p><code>@Model.Code</code></p><local-text key="EventEditionCodeHelp"></local-text></div>}
+<form method="post" class="prize-event-form">
+    <input type="hidden" name="operation" value="create"/>
+    <label for="edition-name"><local-text key="EventEditionName"></local-text></label><input id="edition-name" name="name" required maxlength="100"/>
+    <label for="edition-start"><local-text key="EventEditionStartDate"></local-text></label><input id="edition-start" type="datetime-local" name="start" required/>
+    <label for="edition-end"><local-text key="EventEditionEndDate"></local-text></label><input id="edition-end" type="datetime-local" name="end" required/>
+    <p><local-text key="EventEditionAssignment"></local-text> @User.Identity?.Name</p>
+    <label><input type="checkbox" name="confirmed" value="true" required/> <local-text key="EventEditionConfirm"></local-text></label>
+    <button class="button button-primary" type="submit"><local-text key="EventEditionCreate"></local-text></button>
+</form></section>
+@foreach(var item in Model.Events.OrderByDescending(e=>e.PlannedStart)){
+<section class="panel"><h2>@item.Name</h2><p><local-text key="@("EventEdition"+item.Status)"></local-text> · @item.PlannedStart.ToString("u") – @item.PlannedEnd.ToString("u") (UTC)</p><p><local-text key="EventEditionPresenter"></local-text>: <code>@item.PresenterId</code></p>
+@if(item.Status != "Closed"){
+<form method="post"><input type="hidden" name="id" value="@item.Id"/><input type="hidden" name="operation" value="@(item.Status=="Scheduled"?"start":"close")"/><label><input type="checkbox" name="confirmed" value="true" required/> <local-text key="EventEditionConfirm"></local-text></label><button class="button button-outline" type="submit"><local-text key="@(item.Status=="Scheduled"?"EventEditionStart":"EventEditionClose")"></local-text></button></form>}
+@if(item.Status == "Active"){
+<form method="post" class="prize-event-form"><input type="hidden" name="operation" value="link"/><input type="hidden" name="id" value="@item.Id"/>
+<label for="portal-@item.Id"><local-text key="EventEditionPortalRun"></local-text></label><input id="portal-@item.Id" name="portalRun" required maxlength="36"/>
+<label for="wpf-@item.Id"><local-text key="EventEditionWpfRun"></local-text></label><input id="wpf-@item.Id" name="wpfRun" required maxlength="36"/>
+<label><input type="checkbox" name="confirmed" value="true" required/> <local-text key="EventEditionConfirm"></local-text></label><button class="button button-primary" type="submit"><local-text key="EventEditionLink"></local-text></button></form>}
+<ul>@foreach(var run in item.Runs){<li><code>@run.WpfRunId</code> ↔ <code>@run.PortalRunId</code> · @(run.Action?.ActionType ?? "—") · @run.Action?.OccurredAtUtc.ToString("u")</li>}</ul>
+</section>}
+@if(User.IsInRole("Administrator")){<details class="panel"><summary><local-text key="EventEditionRecover"></local-text></summary><p><local-text key="EventEditionRecoverHelp"></local-text></p><form method="post"><input type="hidden" name="operation" value="recover"/><label><input type="checkbox" name="confirmed" value="true" required/> <local-text key="EventEditionConfirm"></local-text></label><button type="submit" class="button button-danger"><local-text key="EventEditionRecover"></local-text></button></form></details>}

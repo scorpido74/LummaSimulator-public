@@ -1,0 +1,18 @@
+<Project>
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)../tools/LummaSimulator.LocalTestServer/LummaSimulator.LocalTestServer.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+  <Target Name="CopyLocalTestServer" AfterTargets="Build">
+    <MSBuild Projects="$(MSBuildThisFileDirectory)../tools/LummaSimulator.LocalTestServer/LummaSimulator.LocalTestServer.csproj" Targets="GetTargetPath" BuildInParallel="false">
+      <Output TaskParameter="TargetOutputs" ItemName="LocalServerAssembly" />
+    </MSBuild>
+    <PropertyGroup><LocalServerDirectory>@(LocalServerAssembly->'%(RootDir)%(Directory)')</LocalServerDirectory></PropertyGroup>
+    <ItemGroup><LocalServerFile Include="$(LocalServerDirectory)LummaSimulator.LocalTestServer.*" /></ItemGroup>
+    <Copy SourceFiles="@(LocalServerFile)" DestinationFolder="$(TargetDir)LocalTestServer" SkipUnchangedFiles="true" />
+  </Target>
+  <!-- Publish the existing server for the same Windows RID/deployment mode; no SDK/dotnet run at runtime. -->
+  <Target Name="PublishLocalTestServer" AfterTargets="Publish">
+    <MSBuild Projects="$(MSBuildThisFileDirectory)../tools/LummaSimulator.LocalTestServer/LummaSimulator.LocalTestServer.csproj" Targets="Publish" BuildInParallel="false"
+      Properties="PublishDir=$([System.IO.Path]::GetFullPath('$(PublishDir)LocalTestServer/'));RuntimeIdentifier=$(RuntimeIdentifier);SelfContained=$(SelfContained)" />
+  </Target>
+</Project>

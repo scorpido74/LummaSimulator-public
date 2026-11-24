@@ -1,0 +1,25 @@
+@page
+@model LummaSimulator.Web.Pages.SessionsModel
+@{ ViewData["Title"]=T["IdentitySessions"].Value;ViewData["TitleKey"]="IdentitySessions"; }
+<section class="panel table-panel">
+<h1><local-text key="IdentitySessions"></local-text></h1>
+<p><local-text key="IdentitySessionInfo"></local-text></p>
+<a asp-page="/Demo"><local-text key="IdentityBack"></local-text></a>
+<table><thead><tr>
+<th><local-text key="IdentityCreated"></local-text></th><th><local-text key="IdentityActivity"></local-text></th>
+<th><local-text key="IdentityMethod"></local-text></th><th><local-text key="IdentityType"></local-text></th>
+<th><local-text key="IdentityStatus"></local-text></th><th><local-text key="IdentityCurrent"></local-text></th><th></th>
+</tr></thead><tbody>
+@foreach(var session in Model.Sessions) {
+<tr><td>@session.CreatedAt.ToString("u")</td><td>@session.LastActivity.ToString("u")</td><td>@session.AuthenticationMethod</td>
+<td><local-text key="@("IdentityType"+session.SessionType)"></local-text></td><td><local-text key="@("IdentityStatus"+session.Status)"></local-text></td>
+<td>@if(session.Current){<local-text key="IdentityCurrent"></local-text>}</td>
+<td>@if(session.Status=="Active") {
+<form method="post" asp-page-handler="Revoke"><input type="hidden" name="id" value="@session.Id" />
+<input type="hidden" name="logout" value="@(session.Current ? "true" : "false")" />
+<button type="submit" class="button button-outline"><local-text key="IdentityRevoke"></local-text></button></form>
+}</td></tr>
+}
+</tbody></table>
+@if(Model.Sessions.Count==50){<a asp-page="/Sessions" asp-route-offset="@(Model.Offset+50)"><local-text key="IdentityMore"></local-text></a>}
+</section>

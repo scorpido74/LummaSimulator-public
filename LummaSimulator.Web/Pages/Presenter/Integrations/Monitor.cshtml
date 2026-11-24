@@ -1,0 +1,19 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.Integrations.MonitorModel
+@{ ViewData["Title"] = T["MonitorManageTitle"].Value; ViewData["TitleKey"] = "MonitorManageTitle"; }
+<section class="panel reading-page"><a asp-page="/Presenter/Index"><local-text key="Presentatordashboard"></local-text></a>
+<h1><local-text key="MonitorManageTitle"></local-text></h1><p><local-text key="MonitorManageInfo"></local-text></p>
+@if (Model.Notice is string notice) { <p role="alert" class="notice error"><local-text key="@notice"></local-text></p> }
+<dl><dt><local-text key="MonitorManageState"></local-text></dt><dd>@Model.Status.Source · @(Model.Status.Configured ? T["MonitorManageEnabled"] : T["MonitorManageDisabled"])</dd>
+<dt><local-text key="MonitorManageCreated"></local-text></dt><dd>@(Model.Status.CreatedAt?.ToString("u") ?? "—")</dd>
+<dt><local-text key="MonitorManageRotated"></local-text></dt><dd>@(Model.Status.RotatedAt?.ToString("u") ?? "—")</dd></dl>
+@if (Model.IssuedKey is string issued) { <section id="monitor-issued" class="notice"><h2><local-text key="MonitorManageOnce"></local-text></h2><code id="monitor-issued-key">@issued</code><p><local-text key="MonitorManageTransfer"></local-text></p></section> }
+<form method="post" data-presenter-action="reauth"><button type="submit" class="button button-outline"><local-text key="PresenterReauthButton"></local-text></button></form>
+<button id="presenter-cancel" type="button" class="button button-outline" hidden><local-text key="Aanvraag annuleren"></local-text></button><p id="presenter-status" role="status"></p>
+<form method="post" asp-page-handler="Change"><input type="hidden" name="revision" value="@Model.Status.Revision" />
+<label><input type="checkbox" name="confirmed" value="true" required /><local-text key="MonitorManageConfirm"></local-text></label>
+<div class="confirmation-actions"><button class="button button-primary" name="operation" value="generate" disabled="@Model.Status.Configured"><local-text key="MonitorManageGenerate"></local-text></button>
+<button class="button button-outline" name="operation" value="rotate" disabled="@(!Model.Status.Configured)"><local-text key="MonitorManageRotate"></local-text></button>
+<button class="button button-danger" name="operation" value="revoke" disabled="@(!Model.Status.Configured)"><local-text key="MonitorManageRevoke"></local-text></button>
+@if (Model.Status.Source == "Legacy") { <button class="button button-outline" name="operation" value="adopt"><local-text key="MonitorManageAdopt"></local-text></button> }</div></form></section>
+@section Scripts { <script src="~/js/presenter.js" asp-append-version="true" defer></script><script src="~/js/monitor-keys.js" asp-append-version="true" defer></script> }

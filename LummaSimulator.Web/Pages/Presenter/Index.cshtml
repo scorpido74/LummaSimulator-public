@@ -1,0 +1,46 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.IndexModel
+@{ ViewData["Title"] = T["Presentatordashboard"].Value; ViewData["TitleKey"] = "Presentatordashboard"; }
+@if(Model.MonitorCapability is string capability){<section class="notice" id="monitor-issued"><p><local-text key="P65GrantCopy"></local-text></p><code id="monitor-issued-key">@capability</code></section>}
+@if (TempData["MonitorNotice"] is string notice) { <div class="notice error" role="alert"><local-text key="@notice"></local-text></div> }
+<div class="section-heading dashboard-heading"><div><span class="eyebrow"><local-text key="PRESENTATOROMGEVING"></local-text></span><h1><local-text key="De demonstraties in beeld."></local-text></h1><p><local-text key="Actieve tijdelijke accounts. Geen gevoelige WebAuthn-gegevens."></local-text></p></div><form method="post" asp-page-handler="Logout"><button class="button button-outline" type="submit"><local-text key="Uitloggen"></local-text></button></form></div>
+<p>@User.Identity?.Name · <local-text key="@(User.IsInRole("Administrator")?"RoleAdministrator":"RolePresenter")"></local-text></p>
+<p><a class="button button-primary" asp-page="/Presenter/Events/Index"><local-text key="P65Events"></local-text></a></p>
+<p><a asp-page="/Presenter/EventEdition"><local-text key="EventEditionTitle"></local-text></a></p>
+<p><a asp-page="/Presenter/AuditExport"><local-text key="AuditExportTitle"></local-text></a></p>
+@if (User.IsInRole("Administrator")) { <p><a asp-page="/Presenter/Integrations/Monitor"><local-text key="MonitorManageTitle"></local-text></a></p> }
+<nav class="presenter-nav"><a asp-page="/Presenter/Prizes/Index"><local-text key="PrizeOverview"></local-text></a><a asp-page="/Presenter/Security"><local-text key="PresenterKeys"></local-text></a>@if(User.IsInRole("Administrator")){<a asp-page="/Presenter/Accounts"><local-text key="PresenterAccounts"></local-text></a><a asp-page="/Presenter/Audit"><local-text key="PresenterAudit"></local-text></a>}</nav>
+<section class="panel"><h2><local-text key="PresenterCurrentEvent"></local-text>: <local-text key="@Model.Summary.ActiveEvent.Name"></local-text></h2><p><local-text key="@("EventStatus"+Model.Summary.ActiveEvent.Status)"></local-text></p>
+<p><local-text key="PresenterCountsInfo"></local-text></p>
+<div class="metrics">
+<div><span><local-text key="PresenterTotalVisitors"></local-text></span><strong>@Model.Summary.TotalVisitors</strong></div>
+<div><span><local-text key="PresenterToday"></local-text></span><strong>@Model.Summary.VisitorsToday</strong></div>
+<div><span><local-text key="PresenterEventVisitors"></local-text></span><strong>@Model.Summary.EventVisitors</strong></div>
+<div><span><local-text key="PresenterTotalAuthentications"></local-text></span><strong>@Model.Summary.Authentications</strong></div>
+<div><span><local-text key="PresenterEventAuthentications"></local-text></span><strong>@Model.Summary.ActiveEvent.Authentications</strong></div>
+<div><span><local-text key="Actieve demonstraties"></local-text></span><strong>@Model.Summary.ActiveAccounts</strong></div>
+</div>
+<form method="post" asp-page-handler="Event"><input type="hidden" name="expected" value="@Model.Summary.ActiveEvent.Id" /><label for="event-name"><local-text key="PresenterEventName"></local-text></label><input id="event-name" name="name" required maxlength="100" />
+<label><input type="checkbox" name="confirmed" value="true" required /><local-text key="PresenterConfirm"></local-text></label><button type="submit" class="button button-primary"><local-text key="PresenterStartEvent"></local-text></button></form>
+@if(Model.Summary.ActiveEvent.Status=="Active") {
+<form method="post" asp-page-handler="Event"><input type="hidden" name="expected" value="@Model.Summary.ActiveEvent.Id" /><input type="hidden" name="close" value="true" /><label><input type="checkbox" name="confirmed" value="true" required /><local-text key="PresenterConfirm"></local-text></label><button type="submit" class="button button-outline"><local-text key="PresenterCloseEvent"></local-text></button></form>
+@if(User.IsInRole("Administrator")){<form method="post" asp-page-handler="Rename"><input type="hidden" name="id" value="@Model.Summary.ActiveEvent.Id" /><input type="hidden" name="oldName" value="@Model.Summary.ActiveEvent.Name" /><label for="rename"><local-text key="PresenterEventName"></local-text></label><input id="rename" name="name" value="@Model.Summary.ActiveEvent.Name" required maxlength="100" /><label><input type="checkbox" name="confirmed" value="true" required /><local-text key="PresenterConfirm"></local-text></label><button type="submit" class="button button-outline"><local-text key="PresenterRenameEvent"></local-text></button></form>}
+}
+</section>
+<section class="panel table-panel"><h2><local-text key="PresenterEventHistory"></local-text></h2><div class="table-scroll"><table><thead><tr><th><local-text key="PresenterEventName"></local-text></th><th><local-text key="PresenterState"></local-text></th><th><local-text key="PresenterStarted"></local-text></th><th><local-text key="PresenterEnded"></local-text></th><th><local-text key="PresenterEventVisitors"></local-text></th><th><local-text key="PresenterTotalAuthentications"></local-text></th></tr></thead><tbody>
+@foreach(var item in Model.Summary.Events.OrderByDescending(e=>e.StartedAt)){<tr><td><local-text key="@item.Name"></local-text></td><td><local-text key="@("EventStatus"+item.Status)"></local-text></td><td>@DateTimeOffset.FromUnixTimeMilliseconds(item.StartedAt).ToString("u")</td><td>@(item.EndedAt is long ended ? DateTimeOffset.FromUnixTimeMilliseconds(ended).ToString("u") : "—")</td><td>@item.Visitors</td><td>@item.Authentications</td></tr>}
+</tbody></table></div></section>
+<div class="metrics"><div class="panel"><span><local-text key="Actieve demonstraties"></local-text></span><strong>@Model.Demos.Count</strong></div><div class="panel"><span><local-text key="Geregistreerde credentials"></local-text></span><strong>@Model.Demos.Sum(d => d.CredentialCount)</strong></div><div class="panel"><span><local-text key="PresenterActiveAuthentications"></local-text></span><strong>@Model.Demos.Sum(d => d.Successes)</strong></div><div class="panel"><span><local-text key="Mislukte authenticaties"></local-text></span><strong>@Model.Demos.Sum(d => d.Failures)</strong></div><div class="panel"><span><local-text key="Verlopen demo's sinds start"></local-text></span><strong>@Model.ExpiredCount</strong></div></div>
+<section class="panel table-panel"><div class="section-heading"><h2><local-text key="Actieve tijdelijke gebruikers"></local-text></h2><a class="button button-outline" asp-page="/Presenter/Index"><local-text key="Vernieuwen ↻"></local-text></a></div><p class="small-note"><local-text key="Tellingen horen bij actieve accounts. Verlopen demo's worden alleen als aantal bijgehouden, zonder bezoekershistorie. Vernieuwen en de monitor houden bezoekerssessies niet actief."></local-text></p>
+@if (!Model.MonitorConfigured) { <p class="notice"><local-text key="De lokale sessiemonitor is gesloten totdat het aparte integratiegeheim is geconfigureerd."></local-text></p> }
+@if (Model.Demos.Count == 0) { <div class="empty-state"><local-text key="Nog geen actieve demonstraties. De eerste bezoeker kan direct beginnen."></local-text></div> }
+else {
+<div class="table-scroll"><table><thead><tr><th><local-text key="Gebruiker / DemoRunId"></local-text></th><th><local-text key="Route"></local-text></th><th><local-text key="Passkeys"></local-text></th><th><local-text key="Geslaagd / mislukt"></local-text></th><th><local-text key="Laatste activiteit"></local-text></th><th><local-text key="Verstreken"></local-text></th><th><local-text key="Lokale monitor"></local-text></th><th><local-text key="Actie"></local-text></th></tr></thead><tbody>
+@foreach (var demo in Model.Demos) {
+<tr><td><strong>@demo.Name</strong><code class="run-reference">@demo.DemoRunId</code></td><td>@demo.Route</td><td>@demo.CredentialCount</td><td>@demo.Successes / @demo.Failures</td><td>@DateTimeOffset.FromUnixTimeMilliseconds(demo.LastSeen).ToLocalTime().ToString("HH:mm:ss")</td><td><time data-start="@demo.Created">@Model.Elapsed(demo.Created)</time></td>
+<td><form method="post" asp-page-handler="Monitor"><input type="hidden" name="id" value="@demo.Id" /><input type="hidden" name="enabled" value="@(Model.MonitorGrants.Contains(demo.Id) ? "false" : "true")" /><button class="button button-outline" type="submit" disabled="@(!Model.MonitorConfigured && !Model.MonitorGrants.Contains(demo.Id))"><local-text key="@(Model.MonitorGrants.Contains(demo.Id) ? "Intrekken" : "Toestaan")"></local-text></button></form></td>
+<td><form method="post" asp-page-handler="End"><input type="hidden" name="id" value="@demo.Id" /><button class="button button-danger" type="submit"><local-text key="Beëindigen"></local-text></button></form></td></tr>
+}
+</tbody></table></div> }
+</section>
+@section Scripts { <script src="~/js/dashboard.js" asp-append-version="true" defer></script><script src="~/js/monitor-keys.js" asp-append-version="true" defer></script> }

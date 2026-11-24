@@ -1,0 +1,8 @@
+@model bool
+<section id="session-demo-consent" class="panel" hidden data-authenticated="@(Model ? "true" : "false")">
+<h2><local-text key="SessionDemoConsentTitle"></local-text></h2>
+<p id="session-demo-context"></p><p id="session-demo-consent-status" role="status"><local-text key="SessionDemoConsentInfo"></local-text></p>
+<div id="session-demo-confirmation"><label><input id="session-demo-confirm" type="checkbox"/><local-text key="SessionDemoConsentConfirm"></local-text></label></div>
+<button id="session-demo-allow" type="button" class="button button-primary" disabled><local-text key="SessionDemoAllow"></local-text></button>
+<button id="session-demo-deny" type="button" class="button button-outline"><local-text key="SessionDemoDecline"></local-text></button>
+</section>

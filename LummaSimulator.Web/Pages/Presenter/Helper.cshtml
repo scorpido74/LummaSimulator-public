@@ -1,0 +1,9 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.HelperModel
+@{ViewData["Title"]="Presenter Helper";}
+<section class="panel"><h1>Presenter Helper</h1>
+<p>Start Presenter Helper op de pc van de presentator; de Lumma WPF-app en de portal mogen op afzonderlijke demo-hosts draaien. Registreer met de uitnodiging van de administrator of meld je aan met je bestaande passkey. Kies daarna hetzelfde evenement als de Lumma-app.</p>
+@if(Model.DownloadUrl is string download){<p><a class="button button-primary" href="@download">Presenter Helper voor Windows downloaden (ZIP)</a></p>}
+else{<p role="status">De beheerder heeft nog geen download voor Presenter Helper ingesteld.</p>}
+@if(Model.GuideUrl is string guide){<p><a href="@guide">Presenter Helper installeren en koppelen</a></p>}
+<p>Een OS-keuze of passkeyregistratie bewijst niet welk hardwaretype is gebruikt. Gebruik voor deze demo je door de organisatie ingerichte beveiligingssleutel.</p></section>

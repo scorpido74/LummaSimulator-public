@@ -1,0 +1,16 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.SecurityModel
+@{ ViewData["Title"]=T["PresenterKeys"].Value; ViewData["TitleKey"]="PresenterKeys"; }
+<section class="panel reading-page"><h1><local-text key="PresenterKeys"></local-text></h1>
+@if(TempData["OwnKeyNotice"] is string notice){<p class="notice error" role="alert"><local-text key="@notice"></local-text></p>}
+<p><local-text key="PresenterAuthenticatorInfo"></local-text></p><a asp-page="/Presenter/Index"><local-text key="Presentatordashboard"></local-text></a>
+<table><thead><tr><th><local-text key="PresenterKeyName"></local-text></th><th><local-text key="PresenterRegistered"></local-text></th><th><local-text key="PresenterLastUsed"></local-text></th><th><local-text key="Actie"></local-text></th></tr></thead><tbody>
+@foreach(var key in Model.Keys) { <tr><td>@key.Name</td><td>@DateTimeOffset.FromUnixTimeMilliseconds(key.Registered).ToString("u")</td><td>@(key.Used is long time ? DateTimeOffset.FromUnixTimeMilliseconds(time).ToString("u") : "—")</td><td><form method="post" asp-page-handler="Remove"><input type="hidden" name="key" value="@key.Id" /><label><input type="checkbox" name="confirmed" value="true" required /><local-text key="P65RemoveOwnKeyConfirm"></local-text></label><button class="button button-outline" type="submit" disabled="@(Model.Keys.Count<=1)"><local-text key="P65RemoveOwnKey"></local-text></button></form></td></tr> }
+</tbody></table><p><local-text key="PresenterReauthInfo"></local-text></p>
+<form method="post" data-presenter-action="reauth"><button type="submit" class="button button-outline"><local-text key="PresenterReauthButton"></local-text></button></form>
+<form method="post" data-presenter-action="enroll"><label for="own-key"><local-text key="PresenterKeyName"></local-text></label><input id="own-key" name="keyName" required maxlength="60" /><button type="submit" class="button button-primary"><local-text key="PresenterRegisterKey"></local-text></button></form>
+<button id="presenter-cancel" class="button button-outline" type="button" hidden><local-text key="Aanvraag annuleren"></local-text></button><p id="presenter-status" class="notice" role="status" aria-live="polite"></p></section>
+@section Scripts { <script src="~/js/presenter.js" asp-append-version="true" defer></script> }
+<section class="panel"><h2><local-text key="P65OwnSessions"></local-text></h2>
+@foreach(var session in Model.Sessions){<form method="post" asp-page-handler="Session"><p>@DateTimeOffset.FromUnixTimeMilliseconds(session.Expires).ToString("u") @if(session.Current){<local-text key="P65CurrentSession"></local-text>}</p><input type="hidden" name="reference" value="@session.Id"/><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button class="button button-outline"><local-text key="P65RevokeSession"></local-text></button></form>}
+</section>

@@ -1,0 +1,8 @@
+@page
+@model LummaSimulator.Web.Pages.ParticipationModel
+@{ViewData["Title"]=T["PrizeRoundLabel"].Value;}
+<section class="panel completion"><h1>@Model.Status.Round.EventName · <local-text key="PrizeRoundLabel"></local-text> @Model.Status.Round.Number</h1><p><strong>@Model.Status.Round.Alias</strong></p>
+@if(Model.Status.Round.Status=="Closed"){<p>@T[Model.Status.Round.PrizeMessageKey] @Model.Status.Round.PrizeName</p>}
+else if(!Model.Status.PrizesEnabled){<p><local-text key="RoundPrizesDisabled"></local-text></p>}
+else{<p><local-text key="PrizeRoundWaiting"></local-text></p>}
+<a class="button button-outline" asp-page="/Demo"><local-text key="ClickFixBack"></local-text></a></section>

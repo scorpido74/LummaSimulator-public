@@ -1,0 +1,28 @@
+<Window x:Class="LummaSimulator.PresenterHelper.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Lumma Presenterhelper · 0.1.0" Width="700" Height="670" MinWidth="520" MinHeight="480" Background="#101722" Foreground="#EDF2F8">
+<ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel Margin="24">
+<TextBlock FontSize="25" Text="Lumma Presenterhelper"/><TextBlock Margin="0,8" TextWrapping="Wrap" Text="Meld je aan via de centrale portal. Alleen een administrator kan je uitnodigen. Gebruik je ingerichte beveiligingssleutel; de browser verzorgt de verificatie."/>
+<WrapPanel><Button x:Name="LoginButton" Content="Aanmelden bij portal" Click="OnLogin" Padding="12,8" Margin="0,4,8,4"/><Button Content="Uitnodiging openen" Click="OnInvitation" Padding="12,8"/></WrapPanel>
+<TextBox x:Name="Invitation" ToolTip="Volledige uitnodigingslink van de administrator; wordt niet bewaard" Margin="0,6"/>
+<TextBlock Margin="0,10,0,4" Text="Bevoegd evenement"/><ComboBox x:Name="Events" DisplayMemberPath="Name" SelectionChanged="OnEventChanged" MinHeight="32"/>
+<WrapPanel><Button Content="Evenementen vernieuwen" Click="OnRefresh" Padding="12,8" Margin="0,8,8,8"/><Button x:Name="OpenButton" IsEnabled="False" Content="Evenement kiezen en deelnemerspagina openen" Click="OnOpen" Padding="12,8"/></WrapPanel>
+<Border x:Name="ParticipantQrPanel" Visibility="Collapsed" Background="#192333" CornerRadius="8" Padding="12" Margin="0,12">
+<StackPanel><TextBlock x:Name="ParticipantQrName" FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap"/>
+<TextBlock Text="Scan de QR-code en meld je zelf aan met een tijdelijke demo-passkey." TextWrapping="Wrap" Margin="0,6"/>
+<Image x:Name="ParticipantQrImage" Width="270" Height="270" HorizontalAlignment="Left" RenderOptions.BitmapScalingMode="NearestNeighbor" AutomationProperties.Name="QR-code deelnemerslink"/>
+<TextBox x:Name="ParticipantQrLink" IsReadOnly="True" TextWrapping="Wrap" Margin="0,8" AutomationProperties.Name="Deelnemerslink"/>
+<Button x:Name="CopyParticipantLink" Content="Kopieer deelnemerslink" IsEnabled="False" Click="OnCopyParticipantLink" HorizontalAlignment="Left" Padding="12,8"/>
+<TextBlock x:Name="ParticipantQrLocal" Text="Deze URL werkt alleen op de demo-laptop (localhost). Een telefoon kan hiermee niet aanmelden." TextWrapping="Wrap" Foreground="#FFD17C" Margin="0,8"/>
+</StackPanel></Border>
+<TextBlock x:Name="Status" TextWrapping="Wrap" Margin="0,10" Foreground="#FFD17C" AutomationProperties.LiveSetting="Polite"/>
+<TextBlock x:Name="UpdateStatus" TextWrapping="Wrap" Margin="0,6"/>
+<Button Content="Controleren op updates" Click="OnUpdate" HorizontalAlignment="Left" Padding="12,8"/>
+<Expander Header="Installatie-instellingen" Margin="0,20,0,0"><StackPanel>
+<TextBlock Text="Portal-URL"/><TextBox x:Name="Portal"/>
+<TextBlock Text="HTTPS-app-locatie (TCP 443)"/><TextBox x:Name="AppOrigin"/>
+<TextBlock Text="Ingerichte certificaatpin (SHA-256)"/><TextBox x:Name="Pin"/>
+<TextBlock Text="Vertrouwde release-uitgever (certificaat SHA-256)"/><TextBox x:Name="Publisher"/>
+<TextBlock Text="Ingericht koppeltoken (alleen bij eerste inrichting of vervanging)"/><PasswordBox x:Name="Pairing"/>
+<Button Content="Instellingen bewaren" Click="OnSave" HorizontalAlignment="Left" Padding="10,6" Margin="0,8"/>
+<TextBlock TextWrapping="Wrap" Text="De beheerprocedure verstrekt de pin, uitgever en koppeling. Dagelijks gebruik vraagt geen codes, tokens of run-ID’s. De instellingen blijven buiten de programmaversie bewaard."/>
+</StackPanel></Expander>
+</StackPanel></ScrollViewer></Window>

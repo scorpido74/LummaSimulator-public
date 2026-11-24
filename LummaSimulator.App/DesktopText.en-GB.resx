@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+<resheader name="version"><value>2.0</value></resheader>
+  <data name="text.0" xml:space="preserve"><value>LUMMA / ATTACK SIMULATOR</value></data>
+  <data name="text.1" xml:space="preserve"><value>LIVE TELEMETRY (real local activity)</value></data>
+  <data name="text.2" xml:space="preserve"><value>Local HTTP POST</value></data>
+  <data name="text.3" xml:space="preserve"><value>127.0.0.1 port:</value></data>
+  <data name="text.4" xml:space="preserve"><value>HTTP is off by default. No proxy or redirects. EDR visibility and detection require confirmation in the security platform.</value></data>
+  <data name="text.5" xml:space="preserve"><value>▶  Start</value></data>
+  <data name="text.6" xml:space="preserve"><value>■  Stop</value></data>
+  <data name="text.7" xml:space="preserve"><value>↺  Reset</value></data>
+  <data name="text.8" xml:space="preserve"><value>Scenario</value></data>
+  <data name="text.9" xml:space="preserve"><value>Clean demo files</value></data>
+  <data name="text.10" xml:space="preserve"><value>Remove only recognized synthetic demo files; retain all JSON session logs.</value></data>
+  <data name="text.11" xml:space="preserve"><value>Export MITRE ATT&amp;CK</value></data>
+  <data name="text.12" xml:space="preserve"><value>ATT&amp;CK · six phases</value></data>
+  <data name="text.13" xml:space="preserve"><value>MITRE ATT&amp;CK · Enterprise 20.0 · activity is not a detection</value></data>
+  <data name="text.14" xml:space="preserve"><value>Presenter confirmation</value></data>
+  <data name="text.15" xml:space="preserve"><value>No endpoint observation or detection is inferred from simulation. Confirm only after reviewing the selected product.</value></data>
+  <data name="text.16" xml:space="preserve"><value>Technique</value></data>
+  <data name="text.17" xml:space="preserve"><value>Product</value></data>
+  <data name="text.18" xml:space="preserve"><value>Assessment</value></data>
+  <data name="text.19" xml:space="preserve"><value>Presenter: I explicitly confirmed this assessment in the selected product.</value></data>
+  <data name="text.20" xml:space="preserve"><value>Save confirmation</value></data>
+  <data name="text.21" xml:space="preserve"><value>Session Exposure Monitor</value></data>
+  <data name="text.22" xml:space="preserve"><value>Secure local connection</value></data>
+  <data name="text.23" xml:space="preserve"><value>Requires a local integration secret and permission for this demo in the presenter dashboard.</value></data>
+  <data name="text.24" xml:space="preserve"><value>Portal DemoRunId</value></data>
+  <data name="text.25" xml:space="preserve"><value>Check session status</value></data>
+  <data name="text.26" xml:space="preserve"><value>Cancel</value></data>
+  <data name="text.27" xml:space="preserve"><value>Simulate fictional exposure</value></data>
+  <data name="text.28" xml:space="preserve"><value>Simulate fictional replay</value></data>
+  <data name="text.29" xml:space="preserve"><value>Passkeys protect authentication against phishing. Misuse of an existing session is a separate risk. This demo uses fictional objects only.</value></data>
+  <data name="text.30" xml:space="preserve"><value>Event Edition</value></data>
+  <data name="text.31" xml:space="preserve"><value>Guided ClickFix run — SAFE only; wait for presenter confirmation</value></data>
+  <data name="text.32" xml:space="preserve"><value>1. Prepare the WPF run. 2. Link the portal run to it in the presenter portal. 3. Enter the temporary code. 4. Start and explicitly confirm progress.</value></data>
+  <data name="text.33" xml:space="preserve"><value>Prepare new event run</value></data>
+  <data name="text.34" xml:space="preserve"><value>WPF run (copy to presenter portal):</value></data>
+  <data name="text.35" xml:space="preserve"><value>Temporary run-bound read code (do not save or share):</value></data>
+  <data name="text.36" xml:space="preserve"><value>Check portal</value></data>
+  <data name="text.37" xml:space="preserve"><value>I explicitly confirm progress. This does not confirm MDR detection.</value></data>
+  <data name="text.38" xml:space="preserve"><value>Confirm received choice and continue</value></data>
+  <data name="text.39" xml:space="preserve"><value>Continue manually — no server confirmation</value></data>
+  <data name="text.40" xml:space="preserve"><value>WithSecure remains manual: separately authorise a pre-approved test on the victim VM. Verify actual detection and response in Elements. This connection starts no endpoint or MDR action.</value></data>
+  <data name="text.41" xml:space="preserve"><value>ACTIVITY LOG</value></data>
+  <data name="text.42" xml:space="preserve"><value>EVENT EDITION · GUIDED DEMONSTRATION</value></data>
+  <data name="text.43" xml:space="preserve"><value>Attacker goal</value></data>
+  <data name="text.44" xml:space="preserve"><value>The six existing ATT&amp;CK phases</value></data>
+  <data name="text.45" xml:space="preserve"><value>What do we learn?</value></data>
+  <data name="text.46" xml:space="preserve"><value>▶  Start scenario</value></data>
+  <data name="text.47" xml:space="preserve"><value>Open existing controls / select mode</value></data>
+  <data name="text.48" xml:space="preserve"><value>Ready</value></data>
+  <data name="text.49" xml:space="preserve"><value>Running</value></data>
+  <data name="text.50" xml:space="preserve"><value>Completed</value></data>
+  <data name="text.51" xml:space="preserve"><value>Stopped</value></data>
+  <data name="text.52" xml:space="preserve"><value>Failed</value></data>
+  <data name="text.53" xml:space="preserve"><value>pending</value></data>
+  <data name="text.54" xml:space="preserve"><value>running</value></data>
+  <data name="text.55" xml:space="preserve"><value>completed</value></data>
+  <data name="text.56" xml:space="preserve"><value>failed</value></data>
+  <data name="text.57" xml:space="preserve"><value>SAFE SIMULATION</value></data>
+  <data name="text.58" xml:space="preserve"><value>LIVE TELEMETRY</value></data>
+  <data name="text.59" xml:space="preserve"><value>Not evaluated</value></data>
+  <data name="text.60" xml:space="preserve"><value>Not detected</value></data>
+  <data name="text.61" xml:space="preserve"><value>Detected</value></data>
+  <data name="text.62" xml:space="preserve"><value>Observed</value></data>
+  <data name="text.63" xml:space="preserve"><value>Simulated</value></data>
+  <data name="text.64" xml:space="preserve"><value>Executed</value></data>
+  <data name="text.65" xml:space="preserve"><value>Invalid local port</value></data>
+  <data name="text.66" xml:space="preserve"><value>Choose a local HTTP port from 1 through 65535.</value></data>
+  <data name="text.67" xml:space="preserve"><value>Cleaning demo files</value></data>
+  <data name="text.68" xml:space="preserve"><value>Cleanup completed</value></data>
+  <data name="text.69" xml:space="preserve"><value>Cleanup stopped</value></data>
+  <data name="text.70" xml:space="preserve"><value>Cleanup failed</value></data>
+  <data name="text.71" xml:space="preserve"><value>Waiting for presenter confirmation · no phase started</value></data>
+  <data name="text.72" xml:space="preserve"><value>Stopped · visitor declined ClickFix</value></data>
+  <data name="text.73" xml:space="preserve"><value>Visual training only: no process execution, browser file access or network traffic.</value></data>
+  <data name="text.74" xml:space="preserve"><value>Real local process and file activity; synthetic browser data only. HTTP is optional and loopback-only.</value></data>
+  <data name="text.75" xml:space="preserve"><value>JSON logs are saved locally during each run.</value></data>
+  <data name="text.76" xml:space="preserve"><value>User Execution</value></data>
+  <data name="text.77" xml:space="preserve"><value>System Information Discovery</value></data>
+  <data name="text.78" xml:space="preserve"><value>Browser Information Discovery</value></data>
+  <data name="text.79" xml:space="preserve"><value>Credentials from Web Browsers</value></data>
+  <data name="text.80" xml:space="preserve"><value>Local Data Staging</value></data>
+  <data name="text.81" xml:space="preserve"><value>Exfiltration Over C2 Channel</value></data>
+  <data name="text.82" xml:space="preserve"><value>System Owner/User Discovery</value></data>
+  <data name="text.83" xml:space="preserve"><value>Steal Web Session Cookie</value></data>
+  <data name="text.84" xml:space="preserve"><value>Web Session Cookie</value></data>
+  <data name="text.85" xml:space="preserve"><value>Execution</value></data>
+  <data name="text.86" xml:space="preserve"><value>Discovery</value></data>
+  <data name="text.87" xml:space="preserve"><value>Credential Access</value></data>
+  <data name="text.88" xml:space="preserve"><value>Collection</value></data>
+  <data name="text.89" xml:space="preserve"><value>Exfiltration</value></data>
+  <data name="text.90" xml:space="preserve"><value>Lateral Movement</value></data>
+  <data name="text.91" xml:space="preserve"><value>Fictional user-approved training payload; no process or malicious content is launched.</value></data>
+  <data name="text.92" xml:space="preserve"><value>Display a predefined fictional system inventory; no real inventory query.</value></data>
+  <data name="text.93" xml:space="preserve"><value>List fictional browsers and profiles.</value></data>
+  <data name="text.94" xml:space="preserve"><value>Generate fictional credential records in memory.</value></data>
+  <data name="text.95" xml:space="preserve"><value>Simulate an imaginary local package.</value></data>
+  <data name="text.96" xml:space="preserve"><value>Simulate C2-channel delivery; optional loopback HTTP provides local transport telemetry only.</value></data>
+  <data name="text.97" xml:space="preserve"><value>Visible whoami.exe queries the current Windows identity; output is not captured.</value></data>
+  <data name="text.98" xml:space="preserve"><value>Create an owned synthetic browser inventory JSON; no real browser profiles accessed.</value></data>
+  <data name="text.99" xml:space="preserve"><value>Read only the owned dummy browser JSON.</value></data>
+  <data name="text.100" xml:space="preserve"><value>Write collected-data.json containing only fixed dummy records.</value></data>
+  <data name="text.101" xml:space="preserve"><value>Simulate exposure of a fictitious in-memory session object, separate from the real portal session.</value></data>
+  <data name="text.102" xml:space="preserve"><value>Simulate replay of the same fictitious object in an isolated application sandbox.</value></data>
+  <data name="text.103" xml:space="preserve"><value>From phishing to session risk</value></data>
+  <data name="text.104" xml:space="preserve"><value>A guided demonstration: sign in safely with a passkey, recognise a deceptive recovery message and distinguish simulation from actual detection.</value></data>
+  <data name="text.105" xml:space="preserve"><value>The attacker uses a convincing message to persuade a visitor to take an unsafe action. This demonstration uses fictional data only.</value></data>
+  <data name="text.106" xml:space="preserve"><value>Attacker — operates this WPF simulator and narrates the attack scenario.</value></data>
+  <data name="text.107" xml:space="preserve"><value>Visitor — registers a passkey in the separate portal, signs in and practises a safe ClickFix choice.</value></data>
+  <data name="text.108" xml:space="preserve"><value>SOC — investigates only actually observed detections and responses in the existing security console.</value></data>
+  <data name="text.109" xml:space="preserve"><value>Check the website before signing in. A passkey is bound to the correct website.</value></data>
+  <data name="text.110" xml:space="preserve"><value>Do not follow instructions from an unexpected recovery message. Stop and verify through a trusted channel.</value></data>
+  <data name="text.111" xml:space="preserve"><value>Passkeys protect authentication but do not prevent every risk on a signed-in endpoint.</value></data>
+  <data name="text.112" xml:space="preserve"><value>The six phases below are simulated. Local LIVE activity is not evidence of MDR detection.</value></data>
+  <data name="text.113" xml:space="preserve"><value>Portal and WPF work independently. A visitor choice starts no WPF or MDR activity.</value></data>
+  <data name="text.114" xml:space="preserve"><value>Fictional user approved training payload SIM-001; no real malicious content.</value></data>
+  <data name="text.115" xml:space="preserve"><value>Simulated execution complete; no process launched.</value></data>
+  <data name="text.116" xml:space="preserve"><value>Mock host: TRAINING-PC; mock user: demo-user; mock OS: Windows Demo.</value></data>
+  <data name="text.117" xml:space="preserve"><value>Fictional inventory ready; no host information queried.</value></data>
+  <data name="text.118" xml:space="preserve"><value>Mock browsers: Example Browser A and Example Browser B.</value></data>
+  <data name="text.119" xml:space="preserve"><value>Two imaginary profiles listed; no browser directories accessed.</value></data>
+  <data name="text.120" xml:space="preserve"><value>Dummy record: demo@example.invalid / FAKE-PASSWORD-001.</value></data>
+  <data name="text.121" xml:space="preserve"><value>Three fictional credentials prepared; no secrets read.</value></data>
+  <data name="text.122" xml:space="preserve"><value>Imaginary package SIM-PACKAGE-001 assembled in memory.</value></data>
+  <data name="text.123" xml:space="preserve"><value>Mock size: 12 KB; no archive or staging files created.</value></data>
+  <data name="text.124" xml:space="preserve"><value>Simulating a fictional C2-channel delivery to an imaginary in-memory sink.</value></data>
+  <data name="text.125" xml:space="preserve"><value>Mock acknowledgement: no C2 connection or real exfiltration occurred.</value></data>
+  <data name="text.126" xml:space="preserve"><value>SIMULATION · fictional Lumma Stealer installation</value></data>
+  <data name="text.127" xml:space="preserve"><value>Fictional Lumma Stealer installation started after explicit presenter confirmation. No download, installer or process.</value></data>
+  <data name="text.128" xml:space="preserve"><value>Fictional installation complete in the presentation. Nothing was installed on the endpoint.</value></data>
+  <data name="text.129" xml:space="preserve"><value>Visitor stopped ClickFix. No fictional installation or attack phase started.</value></data>
+  <data name="text.130" xml:space="preserve"><value>Reveal: ClickFix persuades people to follow instructions. Passkeys protect sign-in; they do not prevent endpoint compromise. This installation and all attack activities were fictional; no MDR detection confirmed.</value></data>
+  <data name="text.131" xml:space="preserve"><value>All six visual phases completed. No real data collected or transmitted.</value></data>
+  <data name="text.132" xml:space="preserve"><value>Local telemetry run completed. This does not confirm an EDR alert or detection.</value></data>
+  <data name="format.134" xml:space="preserve"><value>{0}   •   SYNTHETIC BROWSER DATA ONLY</value></data>
+  <data name="format.135" xml:space="preserve"><value>Windows activity: {0}</value></data>
+  <data name="format.136" xml:space="preserve"><value>ATT&amp;CK technique: {0}</value></data>
+  <data name="format.137" xml:space="preserve"><value>ATT&amp;CK: {0}</value></data>
+  <data name="format.138" xml:space="preserve"><value>Portal run: {0}</value></data>
+  <data name="format.139" xml:space="preserve"><value>DemoRunId: {0}</value></data>
+  <data name="format.140" xml:space="preserve"><value>Local JSON directory: {0}</value></data>
+  <data name="format.141" xml:space="preserve"><value>Start in current mode: {0}</value></data>
+  <data name="text.142" xml:space="preserve"><value>Optional and off by default. Prepare a run and link it in the presenter portal.</value></data>
+  <data name="text.143" xml:space="preserve"><value>Event not checked yet</value></data>
+  <data name="text.144" xml:space="preserve"><value>No visitor action received</value></data>
+  <data name="text.145" xml:space="preserve"><value>No linked portal run confirmed yet</value></data>
+  <data name="text.146" xml:space="preserve"><value>Manually confirmed progress — no received visitor action or MDR detection confirmed.</value></data>
+  <data name="text.147" xml:space="preserve"><value>Received visitor choice manually confirmed — no MDR detection confirmed.</value></data>
+  <data name="text.148" xml:space="preserve"><value>Progress not yet confirmed by the presenter.</value></data>
+  <data name="text.149" xml:space="preserve"><value>Copy this WPF run to the presenter portal. Enter the temporary code issued there below.</value></data>
+  <data name="text.150" xml:space="preserve"><value>Event closed. Stop this run; historical results have been retained.</value></data>
+  <data name="text.151" xml:space="preserve"><value>Server checked. A choice is not evidence of endpoint execution or MDR detection.</value></data>
+  <data name="text.152" xml:space="preserve"><value>Portal unavailable or pairing invalid. Retry or explicitly confirm manual progress. No new server confirmation.</value></data>
+  <data name="text.153" xml:space="preserve"><value>Manually confirmed progress — no visitor action or MDR detection established.</value></data>
+  <data name="text.154" xml:space="preserve"><value>Received visitor choice manually confirmed — no MDR detection established.</value></data>
+  <data name="text.155" xml:space="preserve"><value>Server metadata only. No browser cookies or session tokens are read.</value></data>
+  <data name="text.156" xml:space="preserve"><value>Separate integration secret configured</value></data>
+  <data name="text.157" xml:space="preserve"><value>Unavailable: configure LUMMA_MONITOR_KEY for this process</value></data>
+  <data name="text.158" xml:space="preserve"><value>No authenticated session</value></data>
+  <data name="text.159" xml:space="preserve"><value>Active, server-confirmed WebAuthn session</value></data>
+  <data name="text.160" xml:space="preserve"><value>Fictionally exposed demo session · sandbox only</value></data>
+  <data name="text.161" xml:space="preserve"><value>Invalid, revoked or expired session</value></data>
+  <data name="text.162" xml:space="preserve"><value>Session status unavailable · no conclusion possible</value></data>
+  <data name="text.163" xml:space="preserve"><value>Not evaluated · not checked yet</value></data>
+  <data name="text.164" xml:space="preserve"><value>Active session: confirmed at last check; no stolen session.</value></data>
+  <data name="text.165" xml:space="preserve"><value>No active WebAuthn session confirmed.</value></data>
+  <data name="text.166" xml:space="preserve"><value>No server confirmation received yet</value></data>
+  <data name="text.167" xml:space="preserve"><value>Simulated session replay: fictional object in memory; no real session used.</value></data>
+  <data name="text.168" xml:space="preserve"><value>Simulated session replay: not performed yet.</value></data>
+  <data name="text.169" xml:space="preserve"><value>No active server confirmation. The fictional step was not performed.</value></data>
+  <data name="text.170" xml:space="preserve"><value>Start fictional exposure first.</value></data>
+  <data name="text.171" xml:space="preserve"><value>Only a fictional session object was used. The real application session and security products were unchanged.</value></data>
+  <data name="text.172" xml:space="preserve"><value>Server metadata checked (snapshot). Check again for current status. This is not cookie access, EDR observation or detection.</value></data>
+  <data name="text.173" xml:space="preserve"><value>Demo unknown, expired or not authorised by the presenter.</value></data>
+  <data name="text.174" xml:space="preserve"><value>Monitor action cancelled. Check again for current server confirmation.</value></data>
+  <data name="text.175" xml:space="preserve"><value>Check local HTTPS/DNS, the integration secret and presenter dashboard permission. No session takeover has been established.</value></data>
+  <data name="text.176" xml:space="preserve"><value> The local audit log could not be saved.</value></data>
+  <data name="text.177" xml:space="preserve"><value>Ready. Browser data is always fictional. No EDR detection has been confirmed.</value></data>
+  <data name="text.178" xml:space="preserve"><value>Ready. All browser records are fictional. Existing demo files and logs retained.</value></data>
+  <data name="text.179" xml:space="preserve"><value>Visual simulation started. No host discovery or external connections.</value></data>
+  <data name="text.180" xml:space="preserve"><value>Controlled Windows telemetry started. Only owned synthetic files will be accessed.</value></data>
+  <data name="text.181" xml:space="preserve"><value>Stopped by user. Interrupted phase failed; remaining phases pending. Demo files remain available for cleanup.</value></data>
+  <data name="text.182" xml:space="preserve"><value>Cleanup started. Only recognized demo run directories are eligible; JSON logs are preserved.</value></data>
+  <data name="text.183" xml:space="preserve"><value>Cleanup cancelled. Remaining demo files retained.</value></data>
+  <data name="text.184" xml:space="preserve"><value>MITRE ATT&amp;CK layer exported locally. Scores are not detection coverage.</value></data>
+  <data name="text.185" xml:space="preserve"><value>Initial execution</value></data>
+  <data name="text.186" xml:space="preserve"><value>System discovery</value></data>
+  <data name="text.187" xml:space="preserve"><value>Browser discovery</value></data>
+  <data name="text.188" xml:space="preserve"><value>Credential collection</value></data>
+  <data name="text.189" xml:space="preserve"><value>Data staging</value></data>
+  <data name="text.190" xml:space="preserve"><value>Simulated exfiltration</value></data>
+  <data name="text.191" xml:space="preserve"><value>Simulated session exposure</value></data>
+  <data name="text.192" xml:space="preserve"><value>Simulated session replay</value></data>
+  <data name="text.193" xml:space="preserve"><value>Active</value></data>
+  <data name="text.194" xml:space="preserve"><value>Closed</value></data>
+  <data name="text.195" xml:space="preserve"><value>ClickFixFollowSimulated</value></data>
+  <data name="text.196" xml:space="preserve"><value>ClickFixStopSelected</value></data>
+  <data name="text.197" xml:space="preserve"><value>ManualFallback</value></data>
+  <data name="text.198" xml:space="preserve"><value>VictimChoiceConfirmed</value></data>
+  <data name="text.199" xml:space="preserve"><value>VictimStopConfirmed</value></data>
+  <data name="text.200" xml:space="preserve"><value>Controlled identity query, not User Execution or malicious code delivery.</value></data>
+  <data name="text.201" xml:space="preserve"><value>Educational scenario only; pressing Start does not itself demonstrate adversarial User Execution.</value></data>
+  <data name="text.202" xml:space="preserve"><value>Technique remains simulated in both modes.</value></data>
+  <data name="text.203" xml:space="preserve"><value>Browser discovery is simulated. Creating a dummy file is real telemetry, not discovery of a real browser.</value></data>
+  <data name="text.204" xml:space="preserve"><value>Credential access remains simulated; no browser secrets, cookies or tokens are collected.</value></data>
+  <data name="text.205" xml:space="preserve"><value>Local staging refines parent T1074. Any executed staging uses synthetic records only.</value></data>
+  <data name="text.206" xml:space="preserve"><value>There is no C2 channel or real exfiltration. A loopback POST never makes T1041 Executed.</value></data>
+  <data name="text.207" xml:space="preserve"><value>Educational cookie-exposure scenario only. No real browser cookies or session tokens are read.</value></data>
+  <data name="text.208" xml:space="preserve"><value>Fictional SaaS/web-session scenario only. The object grants no real application access and is never sent as a cookie.</value></data>
+  <data name="pattern.209" xml:space="preserve"><value>Running · {0}</value></data>
+  <data name="pattern.210" xml:space="preserve"><value>Phase {0}: {1} started.</value></data>
+  <data name="pattern.211" xml:space="preserve"><value>{0} completed in {1}.</value></data>
+  <data name="pattern.212" xml:space="preserve"><value>Saved: {0}</value></data>
+  <data name="pattern.213" xml:space="preserve"><value>JSON save failed: {0}</value></data>
+  <data name="pattern.214" xml:space="preserve"><value>Export failed: {0}</value></data>
+  <data name="pattern.215" xml:space="preserve"><value>Assessment could not be saved: {0}</value></data>
+  <data name="pattern.216" xml:space="preserve"><value>ATT&amp;CK layer saved: {0}</value></data>
+  <data name="pattern.217" xml:space="preserve"><value>Presenter confirmed {0} for {1} in {2}.</value></data>
+  <data name="pattern.218" xml:space="preserve"><value>Observation: {0} · Detection: {1}</value></data>
+  <data name="pattern.219" xml:space="preserve"><value>{0}: {1} / {2}</value></data>
+  <data name="pattern.220" xml:space="preserve"><value>Last checked: {0} · snapshot</value></data>
+  <data name="pattern.221" xml:space="preserve"><value>Visitor choice received: {0} · {1} · sequence {2}</value></data>
+  <data name="pattern.222" xml:space="preserve"><value>{0} · DemoRunId={1}. No EDR detection has been confirmed.</value></data>
+  <data name="pattern.223" xml:space="preserve"><value>Event Edition: {0}. No MDR detection is inferred.</value></data>
+  <data name="pattern.224" xml:space="preserve"><value>{0} · {1} · {2} – {3}</value></data>
+  <data name="pattern.225" xml:space="preserve"><value>{0} · {1}</value></data>
+  <data name="text.http.Disabled" xml:space="preserve"><value>Disabled</value></data>
+  <data name="text.http.Starting" xml:space="preserve"><value>Starting...</value></data>
+  <data name="pattern.http.Ready" xml:space="preserve"><value>Active – 127.0.0.1:{0}</value></data>
+  <data name="text.http.Error" xml:space="preserve"><value>Error – server unavailable</value></data>
+  <data name="text.http.PortConflict" xml:space="preserve"><value>Port occupied by an unknown service. It will not be stopped.</value></data>
+  <data name="text.http.ServerFilesMissing" xml:space="preserve"><value>Test server files are missing. Repair the installation.</value></data>
+  <data name="text.http.Info" xml:space="preserve"><value>Synthetic data on loopback only. An externally started server is left running.</value></data>
+  <data name="text.http.InvalidPort" xml:space="preserve"><value>Choose a local port from 1 through 65535.</value></data>
+  <data name="text.http.UnavailableDetail" xml:space="preserve"><value>The receiver has stopped or is unavailable. HTTP telemetry is not active. Toggle off and on to try again.</value></data>
+  <data name="telemetry.0" xml:space="preserve"><value>SIMULATED: fixed inventory TRAINING-PC / demo-user; no host inventory read.</value></data>
+  <data name="telemetry.1" xml:space="preserve"><value>ACTUAL: created owned demo run directory.</value></data>
+  <data name="telemetry.2" xml:space="preserve"><value>ACTUAL ATTEMPT: creating demo ownership marker.</value></data>
+  <data name="telemetry.3" xml:space="preserve"><value>ACTUAL: created demo ownership marker.</value></data>
+  <data name="telemetry.4" xml:space="preserve"><value>ACTUAL ATTEMPT: writing synthetic browser JSON.</value></data>
+  <data name="telemetry.5" xml:space="preserve"><value>ACTUAL: wrote synthetic browser JSON in the owned demo directory.</value></data>
+  <data name="telemetry.6" xml:space="preserve"><value>ACTUAL ATTEMPT: reading this run's synthetic browser JSON.</value></data>
+  <data name="telemetry.7" xml:space="preserve"><value>ACTUAL: read only the synthetic browser JSON created by this run.</value></data>
+  <data name="telemetry.8" xml:space="preserve"><value>ACTUAL ATTEMPT: writing collected dummy JSON.</value></data>
+  <data name="telemetry.9" xml:space="preserve"><value>ACTUAL: wrote collected-data.json containing dummy data only.</value></data>
+  <data name="telemetry.10" xml:space="preserve"><value>SIMULATED: delivery only; local HTTP is disabled. No connection made.</value></data>
+  <data name="telemetry.11" xml:space="preserve"><value>ACTUAL ATTEMPT: starting visible whoami.exe; output will not be collected.</value></data>
+  <data name="telemetry.12" xml:space="preserve"><value>ACTUAL ATTEMPT: POST dummy JSON to local test server only.</value></data>
+  <data name="telemetry.13" xml:space="preserve"><value>No owned demo directory exists; logs retained.</value></data>
+  <data name="telemetry.14" xml:space="preserve"><value>Unrecognized demo directory retained.</value></data>
+  <data name="telemetry.15" xml:space="preserve"><value>Directory with unknown contents retained.</value></data>
+  <data name="telemetry.16" xml:space="preserve"><value>ACTUAL: removed owned synthetic file.</value></data>
+  <data name="telemetry.17" xml:space="preserve"><value>ACTUAL: removed demo ownership marker.</value></data>
+  <data name="telemetry.18" xml:space="preserve"><value>ACTUAL: removed empty demo run directory; session logs retained.</value></data>
+  <data name="telemetry.19" xml:space="preserve"><value>Owned demo cleanup complete. JSON logs retained.</value></data>
+  <data name="telemetry.20" xml:space="preserve"><value>Synthetic browser JSON is empty.</value></data>
+  <data name="telemetry.21" xml:space="preserve"><value>Synthetic data was modified or does not belong to this DemoRunId.</value></data>
+  <data name="telemetry.22" xml:space="preserve"><value>No synthetic data collected.</value></data>
+  <data name="telemetry.23" xml:space="preserve"><value>whoami.exe did not start.</value></data>
+  <data name="telemetry.24" xml:space="preserve"><value>Local endpoint is not an identified Lumma test server.</value></data>
+  <data name="telemetry.25" xml:space="preserve"><value>Local test server identity changed during POST.</value></data>
+  <data name="telemetry.26" xml:space="preserve"><value>Path lies outside the dedicated demo root.</value></data>
+  <data name="telemetry.27" xml:space="preserve"><value>Only an explicit presenter confirmation for a finished or interrupted phase is allowed.</value></data>
+  <data name="pattern.telemetry.0" xml:space="preserve"><value>ACTUAL: whoami.exe started, PID {0}.</value></data>
+  <data name="pattern.telemetry.1" xml:space="preserve"><value>ACTUAL: whoami.exe exited, PID {0}, code {1}.</value></data>
+  <data name="pattern.telemetry.2" xml:space="preserve"><value>whoami.exe returned {0}.</value></data>
+  <data name="pattern.telemetry.3" xml:space="preserve"><value>ACTUAL: local HTTP status {0}; redirects are not followed.</value></data>
+  <data name="pattern.telemetry.4" xml:space="preserve"><value>Local HTTP did not complete successfully: {0}</value></data>
+  <data name="pattern.telemetry.5" xml:space="preserve"><value>Reparse point refused: {0}</value></data>
+  <data name="ShutdownFailed" xml:space="preserve"><value>Shutdown did not complete. This window stays open because background-task cleanup was not confirmed. No forced exit is performed.</value></data>
+  <data name="IntegrationSettings" xml:space="preserve"><value>Settings</value></data>
+  <data name="IntegrationTitle" xml:space="preserve"><value>Monitor integration</value></data>
+  <data name="IntegrationPortal" xml:space="preserve"><value>Portal address (existing HTTPS host boundaries apply)</value></data>
+  <data name="IntegrationStatus" xml:space="preserve"><value>Connection status — snapshot</value></data>
+  <data name="IntegrationHasKey" xml:space="preserve"><value>Key present</value></data>
+  <data name="IntegrationLastSuccess" xml:space="preserve"><value>Last successful connection since this app started</value></data>
+  <data name="IntegrationTest" xml:space="preserve"><value>Test connection</value></data>
+  <data name="IntegrationReplace" xml:space="preserve"><value>Replace key</value></data>
+  <data name="IntegrationRemove" xml:space="preserve"><value>Remove connection</value></data>
+  <data name="IntegrationPassword" xml:space="preserve"><value>New one-time key — the stored key is never displayed</value></data>
+  <data name="IntegrationConsent" xml:space="preserve"><value>I confirm this local connection to the displayed portal.</value></data>
+  <data name="IntegrationSave" xml:space="preserve"><value>Store key securely</value></data>
+  <data name="IntegrationInfo" xml:space="preserve"><value>DPAPI CurrentUser protects local storage. A temporary LUMMA_MONITOR_KEY override takes precedence. Session metadata also requires a grant for the portal DemoRunId; do not use a WPF run ID.</value></data>
+  <data name="IntegrationNoKey" xml:space="preserve"><value>Monitor disconnected</value></data>
+  <data name="IntegrationPresent" xml:space="preserve"><value>Monitor key present; not tested</value></data>
+  <data name="IntegrationStorage" xml:space="preserve"><value>Monitor credential storage unavailable</value></data>
+  <data name="IntegrationSaveFailed" xml:space="preserve"><value>Monitor key could not be stored</value></data>
+  <data name="IntegrationRemoveFailed" xml:space="preserve"><value>Monitor key could not be removed</value></data>
+  <data name="IntegrationConnected" xml:space="preserve"><value>Connected; monitor key verified</value></data>
+  <data name="IntegrationRejected" xml:space="preserve"><value>Monitor key rejected or revoked</value></data>
+  <data name="IntegrationCancelled" xml:space="preserve"><value>Monitor connection cancelled</value></data>
+  <data name="IntegrationOffline" xml:space="preserve"><value>Monitor portal unavailable or configuration invalid</value></data>
+  <data name="IntegrationGrant" xml:space="preserve"><value>Monitor grant or active session missing</value></data>
+  <data name="IntegrationEnvironment" xml:space="preserve"><value>Temporary environment override</value></data>
+  <data name="IntegrationEnter" xml:space="preserve"><value>Enter the new monitor key</value></data>
+  <data name="IntegrationYes" xml:space="preserve"><value>Yes</value></data>
+  <data name="IntegrationNo" xml:space="preserve"><value>No</value></data>
+  <data name="IntegrationGrantApply" xml:space="preserve"><value>Use demo grant</value></data>
+  <data name="IntegrationGrantInvalid" xml:space="preserve"><value>Set a valid portal DemoRunId first and enter the one-time demo grant.</value></data>
+  <data name="EventParticipantsIntro" xml:space="preserve"><value>Manage rounds through Event management in the web portal. Connect the app and select the event and participant here.</value></data>
+  <data name="EventParticipantsConnect" xml:space="preserve"><value>Sign in to web portal</value></data>
+  <data name="EventParticipantsEvent" xml:space="preserve"><value>Event</value></data>
+  <data name="EventParticipantsRound" xml:space="preserve"><value>Round</value></data>
+  <data name="EventParticipantsAlias" xml:space="preserve"><value>Alias</value></data>
+  <data name="EventParticipantsConsent" xml:space="preserve"><value>Consent</value></data>
+  <data name="EventParticipantsList" xml:space="preserve"><value>Active participants</value></data>
+  <data name="EventParticipantsRefresh" xml:space="preserve"><value>Refresh list</value></data>
+  <data name="EventParticipantsOpen" xml:space="preserve"><value>Open as participant</value></data>
+  <data name="EventParticipantsStart" xml:space="preserve"><value>Start with visitor consent</value></data>
+  <data name="EventParticipantsLegacy" xml:space="preserve"><value>Advanced: existing code connection</value></data>
+  <data name="EventParticipantsLegacyEnable" xml:space="preserve"><value>Use existing ClickFix code connection</value></data>
+  <data name="EventParticipantsConnectInfo" xml:space="preserve"><value>Sign in to see active round participants.</value></data>
+  <data name="EventParticipantsConnecting" xml:space="preserve"><value>Approve the app connection in the opened browser using your presenter sign-in.</value></data>
+  <data name="EventParticipantsSelect" xml:space="preserve"><value>Connected. Select the event and an active participant.</value></data>
+  <data name="EventParticipantsReady" xml:space="preserve"><value>Select a participant and start the simulation. The visitor must first give explicit consent in their own portal.</value></data>
+  <data name="EventParticipantsWaiting" xml:space="preserve"><value>Waiting for explicit consent from the selected visitor. No simulation phase has started.</value></data>
+  <data name="EventParticipantsGranted" xml:space="preserve"><value>Temporary session demo approved. Open as participant displays only fictional data. The visitor can withdraw consent.</value></data>
+  <data name="EventParticipantsNoConsent" xml:space="preserve"><value>No consent received. The simulation did not start.</value></data>
+  <data name="EventParticipantsUnavailable" xml:space="preserve"><value>Connection or consent is unavailable. Refresh the list or sign in again.</value></data>
+  <data name="SessionConsentNone" xml:space="preserve"><value>Not requested</value></data>
+  <data name="SessionConsentPending" xml:space="preserve"><value>Waiting for visitor</value></data>
+  <data name="SessionConsentGranted" xml:space="preserve"><value>Approved</value></data>
+  <data name="SessionConsentDeclined" xml:space="preserve"><value>Declined</value></data>
+  <data name="SessionConsentRevoked" xml:space="preserve"><value>Withdrawn</value></data>
+  <data name="SessionConsentExpired" xml:space="preserve"><value>Expired</value></data>
+  <data name="ParticipantModeDescription" xml:space="preserve"><value>Visual simulation with an optional HTTPS participant session; fictional data only.</value></data>
+  <data name="ParticipantWaitingStatus" xml:space="preserve"><value>Waiting for visitor consent · no phase started</value></data>
+  <data name="ParticipantNoConsentStatus" xml:space="preserve"><value>Stopped · no visitor consent</value></data>
+  <data name="EventParticipantsEnable" xml:space="preserve"><value>Use Event Edition · session demo with visitor consent</value></data>
+  <data name="EventParticipantsEmpty" xml:space="preserve"><value>List loaded: no active signed-in participants in this event. Use this event's fixed QR link and sign in.</value></data>
+  <data name="EventParticipantsDenied" xml:space="preserve"><value>The portal refused the participant request. Sign the app in again and select the event again. The list has not loaded.</value></data>
+  <data name="EventParticipantsThrottled" xml:space="preserve"><value>The portal is receiving too many requests. Wait a moment and refresh the list. The list has not loaded.</value></data>
+  <data name="EventParticipantsInvalidResponse" xml:space="preserve"><value>The portal's participant response could not be processed safely. Check that the app and portal use the same version and event.</value></data>
+  <data name="EventParticipantsLoadFailed" xml:space="preserve"><value>The participant list could not be loaded. Check the portal connection and try Refresh list. This is not an empty participant list.</value></data>
+  <data name="CardDetails" xml:space="preserve"><value>Phase details</value></data>
+  <data name="LogDetails" xml:space="preserve"><value>Log and export details</value></data>
+  <data name="AssessmentToggle" xml:space="preserve"><value>Record assessment</value></data>
+</root>

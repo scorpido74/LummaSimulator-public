@@ -1,0 +1,36 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.SetupModel
+@{ ViewData["Title"] = T["SetupTitle"].Value; ViewData["TitleKey"] = "SetupTitle"; }
+<section class="login-panel panel">
+<h1><local-text key="SetupTitle"></local-text></h1>
+<h2><local-text key="SetupWelcome"></local-text></h2>
+<p><local-text key="SetupWelcomeInfo"></local-text></p>
+@if(Model.Notice is string notice){<p role="alert" class="notice error"><local-text key="@notice"></local-text></p>}
+@if(Model.Local) {
+<h2><local-text key="SetupAccount"></local-text></h2>
+@if(Model.NewInstallation){
+<form method="post" asp-page-handler="Begin"><label><local-text key="PresenterLoginName"></local-text><input name="login" required maxlength="64" autocomplete="username"/></label><label><local-text key="PresenterDisplayName"></local-text><input name="name" required maxlength="100"/></label><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button class="button button-primary"><local-text key="P65FirstAdmin"></local-text></button></form>
+}else{
+<p><local-text key="SetupAccountInfo"></local-text></p>
+<pre>LummaSimulator.Web.exe --bootstrap-administrator</pre>
+<p><local-text key="SetupPackagedInfo"></local-text></p>
+}
+<p><local-text key="SetupOriginInfo"></local-text></p>
+<h2><local-text key="SetupRegister"></local-text></h2>
+<p><local-text key="PresenterAuthenticatorInfo"></local-text></p>
+<form data-presenter-action="enroll" data-use-invitation="true" data-bootstrap="true" method="post">
+<label for="setup-code"><local-text key="PresenterCode"></local-text></label>
+<input id="setup-code" name="code" type="password" value="@Model.IssuedCode" required minlength="43" maxlength="43" autocomplete="off" />
+<label for="setup-key"><local-text key="PresenterKeyName"></local-text></label>
+<input id="setup-key" name="keyName" required maxlength="60" autocomplete="off" />
+<button class="button button-primary" type="submit"><local-text key="PresenterRegisterKey"></local-text></button>
+</form>
+<button id="presenter-cancel" class="button button-outline" type="button" hidden><local-text key="Aanvraag annuleren"></local-text></button>
+<p id="presenter-status" class="notice" role="status" aria-live="polite"></p>
+<h2><local-text key="SetupLogin"></local-text></h2>
+<p><local-text key="SetupLoginInfo"></local-text></p>
+} else {
+<p class="notice"><local-text key="SetupLocalOnly"></local-text></p>
+}
+</section>
+@section Scripts { <script src="~/js/presenter.js" asp-append-version="true" defer></script> }

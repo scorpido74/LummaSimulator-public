@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name=". Geen officiële Yubico-website." xml:space="preserve">
+    <value>. Not an official Yubico website.</value>
+  </data>
+  <data name="ALLEEN VOOR PRESENTATOREN" xml:space="preserve">
+    <value>PRESENTERS ONLY</value>
+  </data>
+  <data name="AUTHENTICATIE VOLTOOID" xml:space="preserve">
+    <value>AUTHENTICATION COMPLETE</value>
+  </data>
+  <data name="Aanvraag annuleren" xml:space="preserve">
+    <value>Cancel request</value>
+  </data>
+  <data name="Actie" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Actieve demonstraties" xml:space="preserve">
+    <value>Active demonstrations</value>
+  </data>
+  <data name="Actieve tijdelijke accounts. Geen gevoelige WebAuthn-gegevens." xml:space="preserve">
+    <value>Active temporary accounts. No sensitive WebAuthn data.</value>
+  </data>
+  <data name="Actieve tijdelijke gebruikers" xml:space="preserve">
+    <value>Active temporary users</value>
+  </data>
+  <data name="Alle demoplekken zijn bezet. Probeer het later opnieuw." xml:space="preserve">
+    <value>All demo places are occupied. Try again later.</value>
+  </data>
+  <data name="Alleen een referentie; hiermee kun je geen account openen." xml:space="preserve">
+    <value>A reference only; it cannot be used to access an account.</value>
+  </data>
+  <data name="Annulering" xml:space="preserve">
+    <value>Cancellation</value>
+  </data>
+  <data name="Authenticatie geslaagd. De server heeft de passkey-handtekening en gebruikersverificatie gecontroleerd." xml:space="preserve">
+    <value>Authentication successful. The server verified the passkey signature and user verification.</value>
+  </data>
+  <data name="Bedankt voor je deelname" xml:space="preserve">
+    <value>Thank you for taking part</value>
+  </data>
+  <data name="Bedankt voor je deelname!" xml:space="preserve">
+    <value>Thank you for taking part!</value>
+  </data>
+  <data name="Beschikbare opties verschillen per browser, apparaat en passkeymanager. De keuze hierboven begeleidt je; de browser bepaalt welke authenticators beschikbaar zijn." xml:space="preserve">
+    <value>Available options vary by browser, device and passkey manager. Your choice above provides guidance; the browser determines which authenticators are available.</value>
+  </data>
+  <data name="Beëindigen" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="Bij beëindiging worden de serverregistratie en de bijbehorende sessie en challenges verwijderd. Inactieve accounts verlopen na 29 minuten; een opruimtaak draait elke 30 seconden zolang de server actief is. Dezelfde vervalcontrole geldt bij toegang tot je account. Een gestopte server kan niet opruimen; bij de volgende start worden verlopen gegevens eerst verwijderd." xml:space="preserve">
+    <value>Ending a demo deletes its server registration, session and challenges. Inactive accounts expire after at most 29 minutes; cleanup runs every 30 seconds while the server is running. Expiry is also checked when accessing your account. A stopped server cannot clean up; expired data is deleted on its next startup.</value>
+  </data>
+  <data name="Browserceremonie" xml:space="preserve">
+    <value>Browser ceremony</value>
+  </data>
+  <data name="Controleer de HTTPS-origin en RP ID met de presentator. Localhost en het publieke domein gebruiken verschillende passkeys." xml:space="preserve">
+    <value>Check the HTTPS origin and RP ID with the presenter. Localhost and the public domain use different passkeys.</value>
+  </data>
+  <data name="Cookies en logging" xml:space="preserve">
+    <value>Cookies and logging</value>
+  </data>
+  <data name="Credential" xml:space="preserve">
+    <value>Credential</value>
+  </data>
+  <data name="DE IPAD-DEMONSTRATIE" xml:space="preserve">
+    <value>THE IPAD DEMONSTRATION</value>
+  </data>
+  <data name="DEMONSTRATIE AFGEROND" xml:space="preserve">
+    <value>DEMONSTRATION COMPLETE</value>
+  </data>
+  <data name="De aanvraag is geannuleerd. Je kunt opnieuw proberen." xml:space="preserve">
+    <value>The request was cancelled. You can try again.</value>
+  </data>
+  <data name="De aanvraag is verlopen. Je kunt opnieuw proberen." xml:space="preserve">
+    <value>The request timed out. You can try again.</value>
+  </data>
+  <data name="De actie kon niet worden voltooid." xml:space="preserve">
+    <value>The action could not be completed.</value>
+  </data>
+  <data name="De browser heeft geen credential teruggegeven." xml:space="preserve">
+    <value>The browser did not return a credential.</value>
+  </data>
+  <data name="De browser kon de aanvraag niet starten. Controleer andere tabs en probeer opnieuw." xml:space="preserve">
+    <value>The browser could not start the request. Check other tabs and try again.</value>
+  </data>
+  <data name="De demonstratie is verlopen. Start opnieuw." xml:space="preserve">
+    <value>The demonstration has expired. Start again.</value>
+  </data>
+  <data name="De demonstraties in beeld." xml:space="preserve">
+    <value>Demonstrations at a glance.</value>
+  </data>
+  <data name="De lokale sessiemonitor is gesloten totdat het aparte integratiegeheim is geconfigureerd." xml:space="preserve">
+    <value>The local session monitor is closed until its separate integration secret is configured.</value>
+  </data>
+  <data name="De passkey kan nog op je apparaat staan, maar werkt niet meer voor dit demoaccount. Je kunt deze zelf verwijderen via de instellingen van je passkeymanager." xml:space="preserve">
+    <value>The passkey may remain on your device but no longer works for this demo account. You can delete it in your passkey manager settings.</value>
+  </data>
+  <data name="De server heeft de verificatie niet bevestigd." xml:space="preserve">
+    <value>The server did not confirm verification.</value>
+  </data>
+  <data name="De server heeft geen privésleutel ontvangen." xml:space="preserve">
+    <value>The server has not received a private key.</value>
+  </data>
+  <data name="De server is tijdelijk niet beschikbaar. Vraag de presentator om hulp." xml:space="preserve">
+    <value>The server is temporarily unavailable. Ask the presenter for help.</value>
+  </data>
+  <data name="De server kon de annulering niet bevestigen; een achtergebleven aanvraag vervalt binnen twee minuten." xml:space="preserve">
+    <value>The server could not confirm cancellation; any remaining request expires within two minutes.</value>
+  </data>
+  <data name="DemoRunId voor de presentator" xml:space="preserve">
+    <value>DemoRunId for the presenter</value>
+  </data>
+  <data name="Demonstratie beëindigen" xml:space="preserve">
+    <value>End demonstration</value>
+  </data>
+  <data name="Deze authenticator heeft mogelijk al een passkey voor dit demoaccount. Probeer in te loggen of kies een andere provider." xml:space="preserve">
+    <value>This authenticator may already have a passkey for this demo account. Try signing in or choose another provider.</value>
+  </data>
+  <data name="Deze bevestiging volgt uitsluitend op een geslaagde server-side WebAuthn-verificatie voor dit demoaccount." xml:space="preserve">
+    <value>This confirmation appears only after successful server-side WebAuthn verification for this demo account.</value>
+  </data>
+  <data name="Deze browser biedt hier geen WebAuthn aan. Gebruik een ondersteunde browser via de juiste HTTPS-origin." xml:space="preserve">
+    <value>This browser does not offer WebAuthn here. Use a supported browser with the correct HTTPS origin.</value>
+  </data>
+  <data name="Deze login staat los van de tijdelijke bezoekersaccounts." xml:space="preserve">
+    <value>This sign-in is separate from temporary visitor accounts.</value>
+  </data>
+  <data name="Dit is een Infinigate-demonstratieomgeving, geen officiële Yubico-website. Er zijn geen externe analytics of scripts toegevoegd. De apparaatkeuze bewijst niet dat een passkey is gesynchroniseerd of hardwaregebonden." xml:space="preserve">
+    <value>This is an Infinigate demonstration environment, not an official Yubico website. No external analytics or scripts have been added. Device selection does not prove that a passkey is synchronised or hardware-bound.</value>
+  </data>
+  <data name="Een demonstratieomgeving van" xml:space="preserve">
+    <value>A demonstration environment by</value>
+  </data>
+  <data name="Een eventueel opgeslagen passkey op je eigen apparaat kun je zelf verwijderen." xml:space="preserve">
+    <value>You can delete any passkey remaining on your own device yourself.</value>
+  </data>
+  <data name="Een passkey op je iPad" xml:space="preserve">
+    <value>A passkey on your iPad</value>
+  </data>
+  <data name="Een tijdelijk account, geen inschrijfformulier" xml:space="preserve">
+    <value>A temporary account, no registration form</value>
+  </data>
+  <data name="Een willekeurige accountidentificatie, gebruikersnaam en DemoRunId, een afzonderlijke WebAuthn user handle, publieke credentialgegevens, tijdelijke challenges, sessiecontrole en succes-/faaltellingen. De willekeurige identifiers kunnen binnen deze demo bij elkaar horen. We gebruiken deze uitsluitend om de demonstratie te laten werken." xml:space="preserve">
+    <value>A random account identifier, username and DemoRunId, a separate WebAuthn user handle, public credential data, temporary challenges, session checks and success/failure counts. These random identifiers may be linked within this demo. We use them solely to operate the demonstration.</value>
+  </data>
+  <data name="Er is al een demonstratie actief in deze browser." xml:space="preserve">
+    <value>A demonstration is already active in this browser.</value>
+  </data>
+  <data name="Er is al een passkey-aanvraag actief voor jouw demonstratie. Rond die af of annuleer hem in de andere tab." xml:space="preserve">
+    <value>A passkey request is already active for your demonstration. Complete or cancel it in the other tab.</value>
+  </data>
+  <data name="Er is een passkey-aanvraag actief in een andere tab. Rond die eerst af of annuleer hem." xml:space="preserve">
+    <value>A passkey request is active in another tab. Complete or cancel it first.</value>
+  </data>
+  <data name="Er is een technische fout opgetreden. Neem zo nodig contact op met de presentator." xml:space="preserve">
+    <value>A technical error occurred. Contact the presenter if necessary.</value>
+  </data>
+  <data name="Er is een technische fout opgetreden. Probeer opnieuw of neem contact op met de presentator." xml:space="preserve">
+    <value>A technical error occurred. Try again or contact the presenter.</value>
+  </data>
+  <data name="Er staat nog een browseraanvraag open. Rond die af of annuleer hem, ook in andere tabs, en probeer daarna opnieuw." xml:space="preserve">
+    <value>A browser request is still pending. Complete or cancel it, including in other tabs, then try again.</value>
+  </data>
+  <data name="Ervaar de kracht" xml:space="preserve">
+    <value>Experience the power</value>
+  </data>
+  <data name="Ervaar de kracht van passkeys" xml:space="preserve">
+    <value>Experience the power of passkeys</value>
+  </data>
+  <data name="Ervaar veilig inloggen" xml:space="preserve">
+    <value>Experience secure sign-in</value>
+  </data>
+  <data name="Even opnieuw proberen." xml:space="preserve">
+    <value>Please try again.</value>
+  </data>
+  <data name="Eén keer registreren. Daarna veilig inloggen met jouw passkey." xml:space="preserve">
+    <value>Register once. Then sign in securely with your passkey.</value>
+  </data>
+  <data name="Ga verder met jouw demonstratie →" xml:space="preserve">
+    <value>Continue your demonstration →</value>
+  </data>
+  <data name="Geannuleerd, verlopen of geen passende passkey gevonden. Kies de oorspronkelijke provider en controleer of deze demosessie nog actief is." xml:space="preserve">
+    <value>Cancelled, timed out or no matching passkey found. Choose the original provider and check that this demo session is still active.</value>
+  </data>
+  <data name="Gebonden aan de juiste website" xml:space="preserve">
+    <value>Bound to the correct website</value>
+  </data>
+  <data name="Gebruik Windows Hello waar beschikbaar. Je browser kan daarnaast andere authenticators aanbieden. Vraag de presentator om hulp als Windows Hello nog niet is ingesteld." xml:space="preserve">
+    <value>Use Windows Hello where available. Your browser may also offer other authenticators. Ask the presenter for help if Windows Hello is not configured.</value>
+  </data>
+  <data name="Gebruik de geconfigureerde HTTPS-origin." xml:space="preserve">
+    <value>Use the configured HTTPS origin.</value>
+  </data>
+  <data name="Gebruik deze pagina op je iPad met een ondersteunde browser en ingestelde passkeymanager. Bevestig wanneer gevraagd met Face ID, Touch ID of de apparaatcode." xml:space="preserve">
+    <value>Use this page on your iPad with a supported browser and configured passkey manager. Confirm with Face ID, Touch ID or your device code when asked.</value>
+  </data>
+  <data name="Gebruik een YubiKey" xml:space="preserve">
+    <value>Use a YubiKey</value>
+  </data>
+  <data name="Gebruik een passkey op je telefoon. Je browser kan je begeleiden met een QR-code of apparaatkeuze." xml:space="preserve">
+    <value>Use a passkey on your phone. Your browser may guide you with a QR code or device selection.</value>
+  </data>
+  <data name="Gebruiker / DemoRunId" xml:space="preserve">
+    <value>User / DemoRunId</value>
+  </data>
+  <data name="Gebruikersnaam" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Geen account aanmaken." xml:space="preserve">
+    <value>No account form to complete.</value>
+  </data>
+  <data name="Geregistreerde credentials" xml:space="preserve">
+    <value>Registered credentials</value>
+  </data>
+  <data name="Geregistreerde passkeys" xml:space="preserve">
+    <value>Registered passkeys</value>
+  </data>
+  <data name="Geslaagd / mislukt" xml:space="preserve">
+    <value>Successful / failed</value>
+  </data>
+  <data name="Geslaagde authenticaties" xml:space="preserve">
+    <value>Successful authentications</value>
+  </data>
+  <data name="Geverifieerde passkeyregistratie" xml:space="preserve">
+    <value>Verified passkey registration</value>
+  </data>
+  <data name="HIER OP DEZE COMPUTER" xml:space="preserve">
+    <value>HERE ON THIS COMPUTER</value>
+  </data>
+  <data name="Hoe wil je inloggen?" xml:space="preserve">
+    <value>How would you like to sign in?</value>
+  </data>
+  <data name="Hoofdnavigatie" xml:space="preserve">
+    <value>Main navigation</value>
+  </data>
+  <data name="Infinigate" xml:space="preserve">
+    <value>Infinigate</value>
+  </data>
+  <data name="Inloggen met mijn passkey" xml:space="preserve">
+    <value>Sign in with my passkey</value>
+  </data>
+  <data name="Inloggen niet gelukt. Controleer het presentatorwachtwoord." xml:space="preserve">
+    <value>Sign-in failed. Check the presenter password.</value>
+  </data>
+  <data name="Intrekken" xml:space="preserve">
+    <value>Revoke</value>
+  </data>
+  <data name="JE EIGEN APPARAAT" xml:space="preserve">
+    <value>YOUR OWN DEVICE</value>
+  </data>
+  <data name="JOUW DEMONSTRATIE" xml:space="preserve">
+    <value>YOUR DEMONSTRATION</value>
+  </data>
+  <data name="Je bent veilig aangemeld!" xml:space="preserve">
+    <value>You have signed in securely!</value>
+  </data>
+  <data name="Je browser opent de apparaatkeuze. Volg de aanwijzingen en bevestig met je apparaat of beveiligingssleutel." xml:space="preserve">
+    <value>Your browser opens the device selection. Follow the instructions and confirm with your device or security key.</value>
+  </data>
+  <data name="Je demonstratie is verlopen. Start opnieuw." xml:space="preserve">
+    <value>Your demonstration has expired. Start again.</value>
+  </data>
+  <data name="Je krijgt automatisch een willekeurige gebruikersnaam. We vragen niet om je naam of e-mailadres." xml:space="preserve">
+    <value>You automatically receive a random username. We do not ask for your name or email address.</value>
+  </data>
+  <data name="Je krijgt vanzelf een tijdelijke gebruikersnaam." xml:space="preserve">
+    <value>You automatically receive a temporary username.</value>
+  </data>
+  <data name="Je passkey blijft op je eigen apparaat. Wij ontvangen nooit je privésleutel." xml:space="preserve">
+    <value>Your passkey stays on your device. We never receive your private key.</value>
+  </data>
+  <data name="Je sessiecontrole is verlopen. Vernieuw de pagina." xml:space="preserve">
+    <value>Your session check has expired. Refresh the page.</value>
+  </data>
+  <data name="Je tijdelijke demoaccount en de bijbehorende registratie zijn verwijderd." xml:space="preserve">
+    <value>Your temporary demo account and its registration have been deleted.</value>
+  </data>
+  <data name="Jij houdt de controle" xml:space="preserve">
+    <value>You stay in control</value>
+  </data>
+  <data name="Jouw apparaat. Jouw sleutel." xml:space="preserve">
+    <value>Your device. Your key.</value>
+  </data>
+  <data name="Jouw passkey-demonstratie" xml:space="preserve">
+    <value>Your passkey demonstration</value>
+  </data>
+  <data name="Jouw privacy" xml:space="preserve">
+    <value>Your privacy</value>
+  </data>
+  <data name="Jouw privacy staat voorop." xml:space="preserve">
+    <value>Your privacy comes first.</value>
+  </data>
+  <data name="Kies bij het inloggen dezelfde provider als bij de registratie. De browser beheert deze keuze; deze portal dwingt geen provider af. Een verwijderde of verlopen demo en een ander RP-domein herkennen een oude registratie niet." xml:space="preserve">
+    <value>When signing in, choose the same provider used for registration. Your browser controls this choice; this portal does not force a provider. A deleted or expired demo and a different RP domain will not recognise an old registration.</value>
+  </data>
+  <data name="Kies een geldige demonstratie." xml:space="preserve">
+    <value>Choose a valid demonstration.</value>
+  </data>
+  <data name="Kies in de browser zo nodig 'ander apparaat' of een telefoon. Een QR-code en nabijheidscontrole worden door de browser aangeboden als jouw combinatie dit ondersteunt." xml:space="preserve">
+    <value>If needed, choose another device or phone in the browser. A QR code and proximity check are offered when your combination supports them.</value>
+  </data>
+  <data name="Klaar om te beginnen. Je browser vraagt om toestemming." xml:space="preserve">
+    <value>Ready to begin. Your browser will ask for permission.</value>
+  </data>
+  <data name="Laat zien dat jij de passkey kunt gebruiken. De server controleert de handtekening en de juiste website." xml:space="preserve">
+    <value>Demonstrate that you can use the passkey. The server verifies the signature and the correct website.</value>
+  </data>
+  <data name="Laatste activiteit" xml:space="preserve">
+    <value>Last activity</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageSaveFailed" xml:space="preserve">
+    <value>The language preference could not be saved. Try again.</value>
+  </data>
+  <data name="LastPass" xml:space="preserve">
+    <value>LastPass</value>
+  </data>
+  <data name="Lees hoe we met tijdelijke gegevens omgaan →" xml:space="preserve">
+    <value>Read how we handle temporary data →</value>
+  </data>
+  <data name="Log in om actieve demonstraties te bekijken en te beëindigen." xml:space="preserve">
+    <value>Sign in to view and end active demonstrations.</value>
+  </data>
+  <data name="Log veilig in zonder wachtwoord. Ontdek het verschil tussen een gesynchroniseerde passkey en een hardwaregebonden YubiKey." xml:space="preserve">
+    <value>Sign in securely without a password. Explore the difference between a synchronised passkey and a hardware-bound YubiKey.</value>
+  </data>
+  <data name="Lokale monitor" xml:space="preserve">
+    <value>Local monitor</value>
+  </data>
+  <data name="MET EEN BEVEILIGINGSSLEUTEL" xml:space="preserve">
+    <value>WITH A SECURITY KEY</value>
+  </data>
+  <data name="MET EEN FIDO2-SLEUTEL" xml:space="preserve">
+    <value>WITH A FIDO2 KEY</value>
+  </data>
+  <data name="MET JE TELEFOON" xml:space="preserve">
+    <value>WITH YOUR PHONE</value>
+  </data>
+  <data name="Maak jouw passkey" xml:space="preserve">
+    <value>Create your passkey</value>
+  </data>
+  <data name="Makkelijk om te beginnen" xml:space="preserve">
+    <value>An easy way to start</value>
+  </data>
+  <data name="Maximaal vijf passkeys per demonstratie." xml:space="preserve">
+    <value>A maximum of five passkeys is allowed per demonstration.</value>
+  </data>
+  <data name="Mijn telefoon" xml:space="preserve">
+    <value>My phone</value>
+  </data>
+  <data name="Mislukte authenticaties" xml:space="preserve">
+    <value>Failed authentications</value>
+  </data>
+  <data name="Na afloop verwijderen we je tijdelijke account en de bijbehorende registratie." xml:space="preserve">
+    <value>At the end we delete your temporary account and its registration.</value>
+  </data>
+  <data name="Na inactiviteit verwijderen we je demo automatisch, uiterlijk na 30 minuten zolang de server actief is." xml:space="preserve">
+    <value>After inactivity we automatically delete your demo, within 30 minutes while the server is running.</value>
+  </data>
+  <data name="Naar de inhoud" xml:space="preserve">
+    <value>Skip to content</value>
+  </data>
+  <data name="Naar de startpagina →" xml:space="preserve">
+    <value>Go to the home page →</value>
+  </data>
+  <data name="Nog een passkey toevoegen" xml:space="preserve">
+    <value>Add another passkey</value>
+  </data>
+  <data name="Nog geen actieve demonstraties. De eerste bezoeker kan direct beginnen." xml:space="preserve">
+    <value>No active demonstrations yet. The first visitor can start now.</value>
+  </data>
+  <data name="Nog niet geregistreerd" xml:space="preserve">
+    <value>Not registered yet</value>
+  </data>
+  <data name="Noodzakelijke beveiligingscookies houden jouw demo gescheiden van andere bezoekers en voorkomen ongewenste aanvragen. Het presentatordashboard gebruikt aparte authenticatie. Applicatielogs bevatten geen volledige IP-adressen, browserfingerprints, gebruikersnamen of authenticatietokens. De infrastructuur, browser, passkeymanager en eventuele hostingprovider kunnen eigen gegevens verwerken; er wordt daarom niet beweerd dat nergens persoonsgegevens worden verwerkt." xml:space="preserve">
+    <value>Essential security cookies separate your demo from other visitors and prevent unwanted requests. The presenter dashboard uses separate authentication. Application logs do not contain full IP addresses, browser fingerprints, usernames or authentication tokens. Infrastructure, browsers, passkey managers and hosting providers may process their own data; we do not claim that no personal data is processed anywhere.</value>
+  </data>
+  <data name="ONTDEK DE KRACHT VAN PASSKEYS" xml:space="preserve">
+    <value>DISCOVER THE POWER OF PASSKEYS</value>
+  </data>
+  <data name="OOK OP IPAD" xml:space="preserve">
+    <value>ALSO ON IPAD</value>
+  </data>
+  <data name="OP DE DEMOLAPTOP" xml:space="preserve">
+    <value>ON THE DEMO LAPTOP</value>
+  </data>
+  <data name="OPEN EN TRANSPARANT" xml:space="preserve">
+    <value>OPEN AND TRANSPARENT</value>
+  </data>
+  <data name="Ongeldige aanvraagorigin." xml:space="preserve">
+    <value>Invalid request origin.</value>
+  </data>
+  <data name="Ongeldige operatie-identificatie." xml:space="preserve">
+    <value>Invalid operation identifier.</value>
+  </data>
+  <data name="Ontdek inloggen met Windows Hello. Bevestig met je gezicht, vingerafdruk of apparaat-PIN." xml:space="preserve">
+    <value>Try signing in with Windows Hello. Confirm with your face, fingerprint or device PIN.</value>
+  </data>
+  <data name="Onverwacht serverantwoord. Vernieuw de pagina en controleer je demosessie." xml:space="preserve">
+    <value>Unexpected server response. Refresh the page and check your demo session.</value>
+  </data>
+  <data name="Open deze portal op je iPad en ervaar de registratie en authenticatie in de browser." xml:space="preserve">
+    <value>Open this portal on your iPad and try registration and authentication in your browser.</value>
+  </data>
+  <data name="Opnieuw aanmelden" xml:space="preserve">
+    <value>Sign in again</value>
+  </data>
+  <data name="Opties ophalen" xml:space="preserve">
+    <value>Fetching options</value>
+  </data>
+  <data name="Over deze omgeving" xml:space="preserve">
+    <value>About this environment</value>
+  </data>
+  <data name="PRESENTATOROMGEVING" xml:space="preserve">
+    <value>PRESENTER AREA</value>
+  </data>
+  <data name="PROBEER HET ZELF" xml:space="preserve">
+    <value>TRY IT YOURSELF</value>
+  </data>
+  <data name="Passkey Demo Portal" xml:space="preserve">
+    <value>Passkey Demo Portal</value>
+  </data>
+  <data name="Passkey registreren" xml:space="preserve">
+    <value>Register a passkey</value>
+  </data>
+  <data name="Passkeys" xml:space="preserve">
+    <value>Passkeys</value>
+  </data>
+  <data name="Presentator inloggen" xml:space="preserve">
+    <value>Presenter sign-in</value>
+  </data>
+  <data name="Presentatorauthenticatie is nog niet geconfigureerd. De toegang blijft gesloten. Raadpleeg de lokale installatie-instructies." xml:space="preserve">
+    <value>Presenter authentication is not configured yet. Access remains closed. See the local installation instructions.</value>
+  </data>
+  <data name="Presentatordashboard" xml:space="preserve">
+    <value>Presenter dashboard</value>
+  </data>
+  <data name="Presentatorwachtwoord" xml:space="preserve">
+    <value>Presenter password</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="Probeer een FIDO2-beveiligingssleutel. Houd je sleutel en de bijbehorende FIDO2-PIN bij de hand." xml:space="preserve">
+    <value>Try a FIDO2 security key. Have your key and its FIDO2 PIN ready.</value>
+  </data>
+  <data name="Probeer met mijn telefoon" xml:space="preserve">
+    <value>Try with my phone</value>
+  </data>
+  <data name="Registratie voltooid" xml:space="preserve">
+    <value>Registration complete</value>
+  </data>
+  <data name="Registratie voltooid. Je passkey is opgeslagen voor dit tijdelijke account. Test nu de afzonderlijke authenticatie." xml:space="preserve">
+    <value>Registration complete. Your passkey is saved for this temporary account. Now test the separate authentication.</value>
+  </data>
+  <data name="Registreer eerst een passkey." xml:space="preserve">
+    <value>Register a passkey first.</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>Route</value>
+  </data>
+  <data name="Schakel JavaScript in om de WebAuthn-functie van je browser te gebruiken." xml:space="preserve">
+    <value>Enable JavaScript to use your browser’s WebAuthn functionality.</value>
+  </data>
+  <data name="Server-side geverifieerd · gebruikersverificatie bevestigd" xml:space="preserve">
+    <value>Server-side verified · user verification confirmed</value>
+  </data>
+  <data name="Serververificatie" xml:space="preserve">
+    <value>Server verification</value>
+  </data>
+  <data name="Sluit een FIDO2-geschikte YubiKey aan of gebruik NFC waar ondersteund. Kies een beveiligingssleutel en bevestig wanneer gevraagd met de sleutel en FIDO2-PIN." xml:space="preserve">
+    <value>Connect a FIDO2-compatible YubiKey or use NFC where supported. Choose a security key and confirm with your key and FIDO2 PIN when asked.</value>
+  </data>
+  <data name="Start de iPad-demo" xml:space="preserve">
+    <value>Start the iPad demo</value>
+  </data>
+  <data name="Start op deze laptop" xml:space="preserve">
+    <value>Start on this laptop</value>
+  </data>
+  <data name="TIJDELIJK DEMOACCOUNT" xml:space="preserve">
+    <value>TEMPORARY DEMO ACCOUNT</value>
+  </data>
+  <data name="Te veel aanvragen. Wacht een minuut en probeer opnieuw." xml:space="preserve">
+    <value>Too many requests. Wait a minute and try again.</value>
+  </data>
+  <data name="Technische fout" xml:space="preserve">
+    <value>Technical error</value>
+  </data>
+  <data name="Tellingen horen bij actieve accounts. Verlopen demo's worden alleen als aantal bijgehouden, zonder bezoekershistorie. Vernieuwen en de monitor houden bezoekerssessies niet actief." xml:space="preserve">
+    <value>Counts relate to active accounts. Expired demos are counted without retaining visitor history. Refreshing and monitoring do not keep visitor sessions active.</value>
+  </data>
+  <data name="Terug naar de demonstratie →" xml:space="preserve">
+    <value>Back to the demonstration →</value>
+  </data>
+  <data name="Terug naar de startpagina →" xml:space="preserve">
+    <value>Back to the home page →</value>
+  </data>
+  <data name="Tijdelijke gebruiker" xml:space="preserve">
+    <value>Temporary user</value>
+  </data>
+  <data name="Tijdstip" xml:space="preserve">
+    <value>Date and time</value>
+  </data>
+  <data name="Toestaan" xml:space="preserve">
+    <value>Allow</value>
+  </data>
+  <data name="Uitloggen" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="Veilig inloggen →" xml:space="preserve">
+    <value>Sign in securely →</value>
+  </data>
+  <data name="Verificatie mislukt of verlopen. Probeer opnieuw met de passkey van deze demonstratie." xml:space="preserve">
+    <value>Verification failed or expired. Try again with this demonstration’s passkey.</value>
+  </data>
+  <data name="Verificatiestatus" xml:space="preserve">
+    <value>Verification status</value>
+  </data>
+  <data name="Verlopen demo's sinds start" xml:space="preserve">
+    <value>Expired demos since startup</value>
+  </data>
+  <data name="Vernieuwen ↻" xml:space="preserve">
+    <value>Refresh ↻</value>
+  </data>
+  <data name="Verstreken" xml:space="preserve">
+    <value>Elapsed</value>
+  </data>
+  <data name="Volg de aanwijzingen van je browser. Kies de provider waar jouw passkey is opgeslagen." xml:space="preserve">
+    <value>Follow your browser’s instructions. Choose the provider where your passkey is stored.</value>
+  </data>
+  <data name="Voor presentatoren" xml:space="preserve">
+    <value>For presenters</value>
+  </data>
+  <data name="Wanneer verwijderen we deze gegevens?" xml:space="preserve">
+    <value>When do we delete this data?</value>
+  </data>
+  <data name="Wat bewaart de demo tijdelijk?" xml:space="preserve">
+    <value>What does the demo store temporarily?</value>
+  </data>
+  <data name="We ontvangen nooit je privésleutel. We doen geen uitspraak over synchronisatie of hardwarebinding van jouw passkey." xml:space="preserve">
+    <value>We never receive your private key. We make no claim about synchronisation or hardware binding of your passkey.</value>
+  </data>
+  <data name="Welke passkey kies ik?" xml:space="preserve">
+    <value>Which passkey should I choose?</value>
+  </data>
+  <data name="Welkom terug." xml:space="preserve">
+    <value>Welcome back.</value>
+  </data>
+  <data name="Welkom," xml:space="preserve">
+    <value>Welcome,</value>
+  </data>
+  <data name="Windows Hello" xml:space="preserve">
+    <value>Windows Hello</value>
+  </data>
+  <data name="YubiKey" xml:space="preserve">
+    <value>YubiKey</value>
+  </data>
+  <data name="gebruikt een ingestelde authenticator van Windows. Een" xml:space="preserve">
+    <value>uses a configured Windows authenticator. A</value>
+  </data>
+  <data name="is een fysieke FIDO2-sleutel. Een" xml:space="preserve">
+    <value>is a physical FIDO2 key. A</value>
+  </data>
+  <data name="kan een passkey aanbieden als jouw browser, extensie en provider die functie ondersteunen en de passkey daar is opgeslagen." xml:space="preserve">
+    <value>may offer a passkey if your browser, extension and provider support it and the passkey is stored there.</value>
+  </data>
+  <data name="kan via de browser worden aangeboden, soms met een QR-code en nabijheidscontrole. Een provider zoals" xml:space="preserve">
+    <value>may be offered by the browser, sometimes with a QR code and proximity check. A provider such as</value>
+  </data>
+  <data name="telefoon" xml:space="preserve">
+    <value>phone</value>
+  </data>
+  <data name="v0.4" xml:space="preserve">
+    <value>v0.4</value>
+  </data>
+  <data name="van passkeys" xml:space="preserve">
+    <value>of passkeys</value>
+  </data>
+  <data name="← Over deze demonstratie" xml:space="preserve">
+    <value>← About this demonstration</value>
+  </data>
+  <data name="✓ Echte WebAuthn-demo" xml:space="preserve">
+    <value>✓ Real WebAuthn demo</value>
+  </data>
+  <data name="✓ Geen wachtwoord nodig" xml:space="preserve">
+    <value>✓ No password needed</value>
+  </data>
+  <data name="✓ Jij houdt de controle" xml:space="preserve">
+    <value>✓ You stay in control</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home page</value>
+  </data>
+  <data name="Configureer eerst het aparte monitorgeheim." xml:space="preserve">
+    <value>Configure the separate monitor secret first.</value>
+  </data>
+  <data name="Recommended" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
+  <data name="NewVisitor" xml:space="preserve">
+    <value>New visitor</value>
+  </data>
+  <data name="VisitorCongratulations" xml:space="preserve">
+    <value>Congratulations, you're visitor #{0}!</value>
+  </data>
+  <data name="VisitorSwitchPrivacy" xml:space="preserve">
+    <value>New visitor closes access to the previous demo. Its account and passkeys remain until automatic cleanup.</value>
+  </data>
+  <data name="PresenterLogin" xml:space="preserve">
+    <value>Presenter sign-in</value>
+  </data>
+  <data name="PresenterLoginName" xml:space="preserve">
+    <value>Account name</value>
+  </data>
+  <data name="PresenterSignIn" xml:space="preserve">
+    <value>Sign in with a passkey</value>
+  </data>
+  <data name="PresenterAuthenticatorInfo" xml:space="preserve">
+    <value>Prefer a physical security key and register a backup key. User verification is required. Your browser determines which authenticators are available; the brand or physical form is not cryptographically established.</value>
+  </data>
+  <data name="PresenterEnrollmentLink" xml:space="preserve">
+    <value>Register a key with an invitation</value>
+  </data>
+  <data name="PresenterInviteInfo" xml:space="preserve">
+    <value>There is no public account registration. Use the short-lived one-time code from your administrator. The first administrator uses the local maintenance procedure on the same computer and HTTPS origin.</value>
+  </data>
+  <data name="PresenterCode" xml:space="preserve">
+    <value>One-time enrollment code</value>
+  </data>
+  <data name="PresenterKeyName" xml:space="preserve">
+    <value>Security key name</value>
+  </data>
+  <data name="PresenterRegisterKey" xml:space="preserve">
+    <value>Register security key</value>
+  </data>
+  <data name="PresenterKeys" xml:space="preserve">
+    <value>My security keys</value>
+  </data>
+  <data name="PresenterRegistered" xml:space="preserve">
+    <value>Registered</value>
+  </data>
+  <data name="PresenterLastUsed" xml:space="preserve">
+    <value>Last used</value>
+  </data>
+  <data name="PresenterReauthInfo" xml:space="preserve">
+    <value>First verify your identity again with an existing key. This authorizes one security change for up to five minutes. Each further change requires fresh verification.</value>
+  </data>
+  <data name="PresenterReauthButton" xml:space="preserve">
+    <value>Verify identity again</value>
+  </data>
+  <data name="PresenterReauthenticated" xml:space="preserve">
+    <value>Identity verified. You can now perform one security change.</value>
+  </data>
+  <data name="PresenterVerified" xml:space="preserve">
+    <value>WebAuthn verification successful.</value>
+  </data>
+  <data name="PresenterWorking" xml:space="preserve">
+    <value>Follow the instructions from your browser and security key.</value>
+  </data>
+  <data name="PresenterPending" xml:space="preserve">
+    <value>A presenter request is still active. Complete or cancel it and try again.</value>
+  </data>
+  <data name="PresenterDenied" xml:space="preserve">
+    <value>The request was denied or expired. Check your account, key or invitation and try again.</value>
+  </data>
+  <data name="PresenterReauthenticate" xml:space="preserve">
+    <value>First verify your identity again with an existing key.</value>
+  </data>
+  <data name="PresenterLastAdmin" xml:space="preserve">
+    <value>The last active administrator cannot be disabled or demoted.</value>
+  </data>
+  <data name="PresenterLastKey" xml:space="preserve">
+    <value>The last key cannot be removed. Register and test a backup key first.</value>
+  </data>
+  <data name="PresenterConfirm" xml:space="preserve">
+    <value>I confirm this change.</value>
+  </data>
+  <data name="PresenterAccounts" xml:space="preserve">
+    <value>Manage presenter accounts</value>
+  </data>
+  <data name="PresenterCodeIssued" xml:space="preserve">
+    <value>This code is usable once, expires after ten minutes and will not be shown again. Share it securely with the intended person and ask them to open /Presenter/Enroll. An earlier unused code for this invitation is invalid.</value>
+  </data>
+  <data name="PresenterCreateAccount" xml:space="preserve">
+    <value>Create account and invite</value>
+  </data>
+  <data name="PresenterDisplayName" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="PresenterRole" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="RolePresenter" xml:space="preserve">
+    <value>Presenter</value>
+  </data>
+  <data name="RoleAdministrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="PresenterState" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="PresenterActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="PresenterInactive" xml:space="preserve">
+    <value>Inactive or awaiting registration</value>
+  </data>
+  <data name="PresenterSave" xml:space="preserve">
+    <value>Save change</value>
+  </data>
+  <data name="PresenterIssueInvite" xml:space="preserve">
+    <value>Issue one-time key invitation</value>
+  </data>
+  <data name="PresenterRemoveKey" xml:space="preserve">
+    <value>Remove key and revoke target sessions</value>
+  </data>
+  <data name="PresenterAudit" xml:space="preserve">
+    <value>Audit log</value>
+  </data>
+  <data name="PresenterAuditInfo" xml:space="preserve">
+    <value>Only administrators can view this append-only log. Account IDs refer to account management. No keys, credential IDs or session secrets are displayed.</value>
+  </data>
+  <data name="PresenterActor" xml:space="preserve">
+    <value>Acting account ID</value>
+  </data>
+  <data name="PresenterTarget" xml:space="preserve">
+    <value>Target account or event</value>
+  </data>
+  <data name="PresenterOlder" xml:space="preserve">
+    <value>Older entries</value>
+  </data>
+  <data name="PresenterCurrentEvent" xml:space="preserve">
+    <value>Current event</value>
+  </data>
+  <data name="PresenterCountsInfo" xml:space="preserve">
+    <value>Visitors are temporary demo accounts with a first successful authentication, not verified unique natural persons. Repeat sign-ins are separate authentications. Daily statistics use UTC.</value>
+  </data>
+  <data name="PresenterTotalVisitors" xml:space="preserve">
+    <value>Total successful demo accounts</value>
+  </data>
+  <data name="PresenterToday" xml:space="preserve">
+    <value>Successful demo accounts today (UTC)</value>
+  </data>
+  <data name="PresenterEventVisitors" xml:space="preserve">
+    <value>Successful demo accounts in event</value>
+  </data>
+  <data name="PresenterTotalAuthentications" xml:space="preserve">
+    <value>Total successful authentications</value>
+  </data>
+  <data name="PresenterEventAuthentications" xml:space="preserve">
+    <value>Authentications in event</value>
+  </data>
+  <data name="PresenterEventName" xml:space="preserve">
+    <value>Event name</value>
+  </data>
+  <data name="PresenterStartEvent" xml:space="preserve">
+    <value>Start new event</value>
+  </data>
+  <data name="PresenterCloseEvent" xml:space="preserve">
+    <value>Close active event</value>
+  </data>
+  <data name="PresenterRenameEvent" xml:space="preserve">
+    <value>Rename event</value>
+  </data>
+  <data name="PresenterEventHistory" xml:space="preserve">
+    <value>Event history and activity</value>
+  </data>
+  <data name="PresenterStarted" xml:space="preserve">
+    <value>Started</value>
+  </data>
+  <data name="PresenterEnded" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="PresenterActiveAuthentications" xml:space="preserve">
+    <value>Authentications of active demo accounts</value>
+  </data>
+  <data name="PresenterNoPrizes" xml:space="preserve">
+    <value>Prize Experience is not available yet. No prizes are drawn or handed out.</value>
+  </data>
+  <data name="PresenterEventChanged" xml:space="preserve">
+    <value>The active event changed. Refresh the page and confirm the action again.</value>
+  </data>
+  <data name="NoActiveEvent" xml:space="preserve">
+    <value>No active event</value>
+  </data>
+  <data name="Open demo" xml:space="preserve">
+    <value>Open demo without an event</value>
+  </data>
+  <data name="EventStatusActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="EventStatusClosed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="EventStatusImported" xml:space="preserve">
+    <value>Historical statistics bucket</value>
+  </data>
+  <data name="EventStatusNone" xml:space="preserve">
+    <value>No active event; the public demo continues to work.</value>
+  </data>
+  <data name="AuditBootstrapIssued" xml:space="preserve">
+    <value>Local bootstrap issued</value>
+  </data>
+  <data name="AuditEnrollmentOpened" xml:space="preserve">
+    <value>Enrollment authorization consumed</value>
+  </data>
+  <data name="AuditCredentialRegistered" xml:space="preserve">
+    <value>Key registered</value>
+  </data>
+  <data name="AuditSignedIn" xml:space="preserve">
+    <value>Signed in</value>
+  </data>
+  <data name="AuditSignedOut" xml:space="preserve">
+    <value>Signed out</value>
+  </data>
+  <data name="AuditReauthenticated" xml:space="preserve">
+    <value>Identity reverified</value>
+  </data>
+  <data name="AuditCeremonyRejected" xml:space="preserve">
+    <value>WebAuthn request rejected</value>
+  </data>
+  <data name="AuditAccountCreated" xml:space="preserve">
+    <value>Account created</value>
+  </data>
+  <data name="AuditAccountUpdated" xml:space="preserve">
+    <value>Account changed and sessions revoked</value>
+  </data>
+  <data name="AuditEnrollmentInvited" xml:space="preserve">
+    <value>Key invitation issued</value>
+  </data>
+  <data name="AuditCredentialRemoved" xml:space="preserve">
+    <value>Key removed</value>
+  </data>
+  <data name="AuditEventClosed" xml:space="preserve">
+    <value>Event closed</value>
+  </data>
+  <data name="AuditEventStarted" xml:space="preserve">
+    <value>Event started</value>
+  </data>
+  <data name="AuditEventRenamed" xml:space="preserve">
+    <value>Event renamed</value>
+  </data>
+  <data name="AuditDemoEndRequested" xml:space="preserve">
+    <value>Demo end requested</value>
+  </data>
+  <data name="AuditMonitorGrantChangeRequested" xml:space="preserve">
+    <value>Monitor grant change requested</value>
+  </data>
+  <data name="PresenterForbidden" xml:space="preserve">
+    <value>Your account does not have permission for this action.</value>
+  </data>
+  <data name="AuditRoleChangedToAdministrator" xml:space="preserve">
+    <value>Role changed to administrator</value>
+  </data>
+  <data name="AuditRoleChangedToPresenter" xml:space="preserve">
+    <value>Role changed to presenter</value>
+  </data>
+  <data name="AuditAccountEnabled" xml:space="preserve">
+    <value>Account enabled</value>
+  </data>
+  <data name="AuditAccountDisabled" xml:space="preserve">
+    <value>Account disabled</value>
+  </data>
+  <data name="PresenterLastSignIn" xml:space="preserve">
+    <value>Last successful sign-in (UTC)</value>
+  </data>
+  <data name="PresenterDiscoverableInfo" xml:space="preserve">
+    <value>Choose your registered passkey in the browser. You do not need to enter an account name.</value>
+  </data>
+  <data name="PrizeOverview" xml:space="preserve"><value>Prize events</value></data>
+  <data name="PrizeNew" xml:space="preserve"><value>New event</value></data>
+  <data name="PrizeManagementOnly" xml:space="preserve"><value>Event management only. Visitors cannot enter the prize experience yet.</value></data>
+  <data name="PrizeDashboard" xml:space="preserve"><value>Back to dashboard</value></data>
+  <data name="PrizeProfile" xml:space="preserve"><value>Event profile</value></data>
+  <data name="PrizeApplyProfile" xml:space="preserve"><value>Apply profile</value></data>
+  <data name="PrizeProfileHint" xml:space="preserve"><value>Choose a profile first. Applying it fills in its settings; existing events remain unchanged.</value></data>
+  <data name="PrizeName" xml:space="preserve"><value>Event name</value></data>
+  <data name="PrizeBasics" xml:space="preserve"><value>Basic settings</value></data>
+  <data name="PrizeAdvanced" xml:space="preserve"><value>Advanced</value></data>
+  <data name="PrizeGroupSize" xml:space="preserve"><value>Group size</value></data>
+  <data name="PrizeEnabled" xml:space="preserve"><value>Enable prizes</value></data>
+  <data name="PrizeDefaultRoundCapacity" xml:space="preserve"><value>Default round capacity</value></data>
+  <data name="PrizeNextRoundCapacity" xml:space="preserve"><value>Next round capacity</value></data>
+  <data name="PrizeRounds" xml:space="preserve"><value>Rounds</value></data>
+  <data name="PrizeFixedVisitorLink" xml:space="preserve"><value>Fixed visitor link (QR)</value></data>
+  <data name="PrizeRoundLabel" xml:space="preserve"><value>Round</value></data>
+  <data name="PrizeRoundCapacity" xml:space="preserve"><value>Occupancy</value></data>
+  <data name="PrizeRoundFull" xml:space="preserve"><value>This round is full. Ask the presenter for help.</value></data>
+  <data name="PrizeCloseRound" xml:space="preserve"><value>Close round and show result</value></data>
+  <data name="PrizeRoundWaiting" xml:space="preserve"><value>You are assigned to a round. Wait for the presenter to show the result.</value></data>
+  <data name="PrizeRoundWon" xml:space="preserve"><value>Your alias wins: {0}</value></data>
+  <data name="PrizeRoundNoPrize" xml:space="preserve"><value>No prize was available in this round.</value></data>
+  <data name="PrizeWinners" xml:space="preserve"><value>Winners per group</value></data>
+  <data name="PrizeSelection" xml:space="preserve"><value>Prize selection</value></data>
+  <data name="PrizeFixed" xml:space="preserve"><value>Fixed prize</value></data>
+  <data name="PrizeRandom" xml:space="preserve"><value>Random prize type</value></data>
+  <data name="PrizePriceName" xml:space="preserve"><value>Prize name</value></data>
+  <data name="PrizeStock" xml:space="preserve"><value>Stock (empty = unlimited)</value></data>
+  <data name="PrizeStartCodes" xml:space="preserve"><value>Start code required</value></data>
+  <data name="PrizeVisibility" xml:space="preserve"><value>Access</value></data>
+  <data name="PrizePrivate" xml:space="preserve"><value>Private</value></data>
+  <data name="PrizePublic" xml:space="preserve"><value>Public</value></data>
+  <data name="PrizePublicCodes" xml:space="preserve"><value>Public events require a start code. Code issuance and participation are not available yet.</value></data>
+  <data name="PrizeMode" xml:space="preserve"><value>Winning mode</value></data>
+  <data name="PrizeGroupMode" xml:space="preserve"><value>Group draw</value></data>
+  <data name="PrizeInstantMode" xml:space="preserve"><value>Instant win</value></data>
+  <data name="PrizeAssignment" xml:space="preserve"><value>Group assignment</value></data>
+  <data name="PrizeAutomatic" xml:space="preserve"><value>Automatic</value></data>
+  <data name="PrizeByCode" xml:space="preserve"><value>Group code required</value></data>
+  <data name="PrizeNextGroup" xml:space="preserve"><value>Next group</value></data>
+  <data name="PrizeManual" xml:space="preserve"><value>Manual</value></data>
+  <data name="PrizeReveal" xml:space="preserve"><value>Winner announcement</value></data>
+  <data name="PrizeTogether" xml:space="preserve"><value>All together</value></data>
+  <data name="PrizeSequential" xml:space="preserve"><value>One at a time</value></data>
+  <data name="PrizeAnimation" xml:space="preserve"><value>Animation duration (seconds)</value></data>
+  <data name="PrizeChanceNumerator" xml:space="preserve"><value>Winning chances</value></data>
+  <data name="PrizeChanceDenominator" xml:space="preserve"><value>Total chances</value></data>
+  <data name="PrizeChanceHint" xml:space="preserve"><value>For example: 1 out of 10. A maximum does not guarantee a fixed number of winners.</value></data>
+  <data name="PrizeMaxWins" xml:space="preserve"><value>Maximum winning moments (empty = no policy cap)</value></data>
+  <data name="PrizeReaction" xml:space="preserve"><value>Winner response period (seconds)</value></data>
+  <data name="PrizeRetention" xml:space="preserve"><value>Retention after closing (days)</value></data>
+  <data name="PrizePostClose" xml:space="preserve"><value>Claim period after closing (minutes)</value></data>
+  <data name="PrizeTimeHint" xml:space="preserve"><value>Defaults: a 120-second response period and 1440 minutes (24 hours) after closing. Retention is the hard deadline.</value></data>
+  <data name="PrizeFields" xml:space="preserve"><value>Information for future prize fulfilment</value></data>
+  <data name="PrizeFieldsHint" xml:space="preserve"><value>These are preparatory settings. No participant personal information is collected now.</value></data>
+  <data name="PrizeFirstName" xml:space="preserve"><value>First name</value></data>
+  <data name="PrizeLastName" xml:space="preserve"><value>Last name</value></data>
+  <data name="PrizeEmail" xml:space="preserve"><value>Email address</value></data>
+  <data name="PrizeCompany" xml:space="preserve"><value>Company</value></data>
+  <data name="PrizeShippingAddress" xml:space="preserve"><value>Shipping address</value></data>
+  <data name="PrizeHidden" xml:space="preserve"><value>Do not ask</value></data>
+  <data name="PrizeOptional" xml:space="preserve"><value>Optional</value></data>
+  <data name="PrizeRequired" xml:space="preserve"><value>Required</value></data>
+  <data name="PrizeStart" xml:space="preserve"><value>Start event</value></data>
+  <data name="PrizeSaveDraft" xml:space="preserve"><value>Save draft</value></data>
+  <data name="PrizeSave" xml:space="preserve"><value>Save settings</value></data>
+  <data name="PrizeBack" xml:space="preserve"><value>Back to events</value></data>
+  <data name="PrizeDetails" xml:space="preserve"><value>Event details</value></data>
+  <data name="PrizeStatus" xml:space="preserve"><value>Status</value></data>
+  <data name="PrizeStatusDraft" xml:space="preserve"><value>Draft</value></data>
+  <data name="PrizeStatusOpen" xml:space="preserve"><value>Started</value></data>
+  <data name="PrizeStatusClosed" xml:space="preserve"><value>Closed</value></data>
+  <data name="PrizeStatusPurging" xml:space="preserve"><value>Unavailable</value></data>
+  <data name="PrizeCreated" xml:space="preserve"><value>Created (UTC)</value></data>
+  <data name="PrizeClosed" xml:space="preserve"><value>Closed (UTC)</value></data>
+  <data name="PrizePurge" xml:space="preserve"><value>Retain until (UTC)</value></data>
+  <data name="PrizeClose" xml:space="preserve"><value>Close event</value></data>
+  <data name="PrizeReopen" xml:space="preserve"><value>Reopen event</value></data>
+  <data name="PrizeConfirm" xml:space="preserve"><value>I confirm this change.</value></data>
+  <data name="PrizeRename" xml:space="preserve"><value>Change name</value></data>
+  <data name="PrizeTemplateName" xml:space="preserve"><value>New profile name</value></data>
+  <data name="PrizeSaveProfile" xml:space="preserve"><value>Save as new profile</value></data>
+  <data name="PrizeTemplateHint" xml:space="preserve"><value>A profile is a template. Saving it does not change this or other events.</value></data>
+  <data name="PrizeSettingsLocked" xml:space="preserve"><value>These settings are locked for this event.</value></data>
+  <data name="PrizeExpired" xml:space="preserve"><value>Retention has expired. This event can no longer be changed or reopened.</value></data>
+  <data name="PrizeNone" xml:space="preserve"><value>There are no prize events yet.</value></data>
+  <data name="PrizePrevious" xml:space="preserve"><value>Previous</value></data>
+  <data name="PrizeNext" xml:space="preserve"><value>Next</value></data>
+  <data name="PrizeBuiltinCybertruck" xml:space="preserve"><value>Cybertruck</value></data>
+  <data name="PrizeBuiltinInstant" xml:space="preserve"><value>Instant win</value></data>
+  <data name="PrizeBuiltinDraw" xml:space="preserve"><value>Event with a draw</value></data>
+  <data name="PrizeBuiltinCustom" xml:space="preserve"><value>Custom</value></data>
+  <data name="PrizeInvalidSettings" xml:space="preserve"><value>Check the settings. Use valid numbers and require start codes for public access.</value></data>
+  <data name="PrizeInvalidName" xml:space="preserve"><value>Enter a name of 1 to 100 characters.</value></data>
+  <data name="PrizeInvalidRequest" xml:space="preserve"><value>The request is invalid. Open the form again.</value></data>
+  <data name="PrizeWrongEvent" xml:space="preserve"><value>This request does not belong to this event.</value></data>
+  <data name="PrizeNotFound" xml:space="preserve"><value>The event no longer exists.</value></data>
+  <data name="PrizeConfirmRequired" xml:space="preserve"><value>Confirm the change before continuing.</value></data>
+  <data name="PrizeEventChanged" xml:space="preserve"><value>Another presenter changed the event. Refresh the page and review its current settings.</value></data>
+  <data name="PrizeIntentChanged" xml:space="preserve"><value>This request was already used with different data. Open a new form.</value></data>
+  <data name="PrizeEventExpired" xml:space="preserve"><value>Retention has expired. Reopening or editing is no longer possible.</value></data>
+  <data name="PrizeBusy" xml:space="preserve"><value>Storage is temporarily busy. Retry the same request.</value></data>
+  <data name="ClickFixTitle" xml:space="preserve"><value>Spot a misleading repair message</value></data>
+  <data name="ClickFixBack" xml:space="preserve"><value>Back to my demo →</value></data>
+  <data name="ClickFixSafe" xml:space="preserve"><value>SAFE BROWSER EXERCISE</value></data>
+  <data name="ClickFixIntro" xml:space="preserve"><value>You signed in with your passkey. Practise responding to an unexpected repair message. The exercise runs only in your browser: nothing is installed, copied or executed on your device.</value></data>
+  <data name="ClickFixProgress" xml:space="preserve"><value>Exercise progress</value></data>
+  <data name="ClickFixReady" xml:space="preserve"><value>Recovery check ready. Choose your next step.</value></data>
+  <data name="ClickFixPromptTitle" xml:space="preserve"><value>Fictional message: verification failed</value></data>
+  <data name="ClickFixPrompt" xml:space="preserve"><value>Imagine a website claiming your device must be repaired before you can continue. It asks you to follow instructions outside the browser.</value></data>
+  <data name="ClickFixFiction" xml:space="preserve"><value>This is a simulated message, not a real error. Only choose what you would do in this exercise below.</value></data>
+  <data name="ClickFixFollow" xml:space="preserve"><value>I would follow the repair message (simulate)</value></data>
+  <data name="ClickFixStop" xml:space="preserve"><value>I stop and check through a trusted channel</value></data>
+  <data name="ClickFixResultTitle" xml:space="preserve"><value>What does your choice mean?</value></data>
+  <data name="ClickFixFollowResult" xml:space="preserve"><value>You chose to follow the message. Nothing was executed in this exercise. A real attacker hopes you trust an unsafe instruction because it looks like a solution.</value></data>
+  <data name="ClickFixStopResult" xml:space="preserve"><value>You chose to stop and check the message. This interrupts the deception. Find a known contact yourself rather than using the contact details in the message.</value></data>
+  <data name="ClickFixExplanation" xml:space="preserve"><value>This is called ClickFix: an attacker shows a problem or verification prompt and tricks you into taking the dangerous next step yourself. In a real attack this could start software, expose files or endanger an already signed-in session. This exercise does none of that.</value></data>
+  <data name="ClickFixPasskeys" xml:space="preserve"><value>Your YubiKey protects you against phishing when you sign in. An infostealer can still steal your session cookie from your browser afterwards. An MDR solution can detect that suspicious behaviour on your device, allowing the security team to respond.</value></data>
+  <data name="ClickFixFinish" xml:space="preserve"><value>Understood — show the learning points</value></data>
+  <data name="ClickFixComplete" xml:space="preserve"><value>Step 3 of 3: exercise complete</value></data>
+  <data name="ClickFixLearn1" xml:space="preserve"><value>Stop at unexpected repair or verification requests.</value></data>
+  <data name="ClickFixLearn2" xml:space="preserve"><value>Do not follow instructions outside the browser just because a website asks you to.</value></data>
+  <data name="ClickFixLearn3" xml:space="preserve"><value>Check through a trusted channel and report the suspicious message.</value></data>
+  <data name="ClickFixNoDetection" xml:space="preserve"><value>A reported choice is not proof of malware activity, session theft or MDR detection. Restarting the exercise does not change a recorded choice.</value></data>
+  <data name="ClickFixReset" xml:space="preserve"><value>Start the exercise again</value></data>
+  <data name="ClickFixNoScript" xml:space="preserve"><value>Enable JavaScript for the interactive exercise. No commands are executed.</value></data>
+  <data name="ClickFixOpen" xml:space="preserve"><value>Continue: safe ClickFix exercise</value></data>
+  <data name="ClickFixReview" xml:space="preserve"><value>Review what happened in this exercise.</value></data>
+  <data name="ClickFixSignInRequired" xml:space="preserve"><value>Sign in with your passkey before opening the ClickFix exercise. If your sign-in has expired, sign in again.</value></data>
+  <data name="EventEditionTitle" xml:space="preserve"><value>Event Edition — events and run pairing</value></data>
+  <data name="EventEditionBack" xml:space="preserve"><value>← Back to presenter overview</value></data>
+  <data name="EventEditionInfo" xml:space="preserve"><value>This separate event register does not change existing statistics events. Existing authorized presenters can manage it. Assignment grants no extra rights. Planned dates are metadata; starting and closing are manual.</value></data>
+  <data name="EventEditionName" xml:space="preserve"><value>Name (no sensitive data)</value></data>
+  <data name="EventEditionStartDate" xml:space="preserve"><value>Planned start (UTC)</value></data>
+  <data name="EventEditionEndDate" xml:space="preserve"><value>Planned end (UTC)</value></data>
+  <data name="EventEditionAssignment" xml:space="preserve"><value>Assigned presenter: current operator</value></data>
+  <data name="EventEditionPresenter" xml:space="preserve"><value>Assigned presenter reference</value></data>
+  <data name="EventEditionConfirm" xml:space="preserve"><value>I confirm this action.</value></data>
+  <data name="EventEditionCreate" xml:space="preserve"><value>Schedule event</value></data>
+  <data name="EventEditionScheduled" xml:space="preserve"><value>Scheduled</value></data>
+  <data name="EventEditionActive" xml:space="preserve"><value>Active</value></data>
+  <data name="EventEditionClosed" xml:space="preserve"><value>Closed (history retained)</value></data>
+  <data name="EventEditionStart" xml:space="preserve"><value>Start event</value></data>
+  <data name="EventEditionClose" xml:space="preserve"><value>Close event</value></data>
+  <data name="EventEditionPortalRun" xml:space="preserve"><value>Portal DemoRunId of the selected visitor</value></data>
+  <data name="EventEditionWpfRun" xml:space="preserve"><value>Prepared WPF run reference</value></data>
+  <data name="EventEditionLink" xml:space="preserve"><value>Pair runs and issue temporary code</value></data>
+  <data name="EventEditionCode" xml:space="preserve"><value>Temporary read code — shown once</value></data>
+  <data name="EventEditionCodeHelp" xml:space="preserve"><value>Enter this code in the protected WPF field for this run only. Do not save, log or share it. Valid for at most 30 minutes and only while your operator session remains valid. Ask the visitor to reopen ClickFix. A run cannot be paired again; use a new visitor and WPF run for the next demonstration.</value></data>
+  <data name="EventEditionDenied" xml:space="preserve"><value>Action denied. Check your sign-in, active event and unique run references. An existing choice or closed run cannot be overwritten.</value></data>
+  <data name="EventEditionStorageFailed" xml:space="preserve"><value>Event storage is unavailable or failed integrity validation. Nothing was automatically recovered. Ask an administrator to investigate.</value></data>
+  <data name="EventEditionRecover" xml:space="preserve"><value>Explicitly recover previous manifest version</value></data>
+  <data name="EventEditionRecoverHelp" xml:space="preserve"><value>Only for a confirmed storage fault. Recovery may lose the last metadata change. The damaged version is retained. All recovered events are closed and all read codes revoked. Use new runs afterwards. SQLite data is unaffected.</value></data>
+  <data name="ClickFixNotLinked" xml:space="preserve"><value>Standalone exercise: no WPF pairing. No choice is sent.</value></data>
+  <data name="ClickFixLinked" xml:space="preserve"><value>Paired exercise: only your explicit choice is recorded by the server. No browser data or endpoint activity.</value></data>
+  <data name="ClickFixSending" xml:space="preserve"><value>Sending your choice securely…</value></data>
+  <data name="ClickFixDelivered" xml:space="preserve"><value>The first choice of this run was recorded by the server. Practising again does not change it. The presenter controls the next step. No MDR detection established.</value></data>
+  <data name="ClickFixDeliveryFailed" xml:space="preserve"><value>Your choice could not be confirmed. Retry the same report or ask the presenter to continue manually. Nothing starts automatically.</value></data>
+  <data name="ClickFixRetry" xml:space="preserve"><value>Retry reporting the same choice</value></data>
+  <data name="ClickFixNotificationUnavailable" xml:space="preserve"><value>Reporting to the presenter is temporarily unavailable. The safe exercise still works. Ask the presenter to continue manually.</value></data>
+  <data name="SetupTitle" xml:space="preserve"><value>Set up the first administrator</value></data>
+  <data name="SetupWelcome" xml:space="preserve"><value>1. Welcome</value></data>
+  <data name="SetupWelcomeInfo" xml:space="preserve"><value>Only an authorized local administrator can create the first administrator account.</value></data>
+  <data name="SetupAccount" xml:space="preserve"><value>2. Create administrator account</value></data>
+  <data name="SetupAccountInfo" xml:space="preserve"><value>Open an administrator terminal in the portal installation directory on this computer. Use the same database, environment and storage configuration as the portal. Run the command below, enter account details and confirm with BOOTSTRAP. Paste the one-time code below; it expires after ten minutes.</value></data>
+  <data name="SetupOriginInfo" xml:space="preserve"><value>Open this wizard on this computer at the configured HTTPS origin. Do not change the RP ID or origin. Never place the code in a URL or log.</value></data>
+  <data name="SetupRegister" xml:space="preserve"><value>3. Register YubiKey/passkey</value></data>
+  <data name="SetupLogin" xml:space="preserve"><value>4. Sign in and continue</value></data>
+  <data name="SetupLoginInfo" xml:space="preserve"><value>After registration this wizard closes and the sign-in page appears. Sign in separately with the registered key to open the presenter dashboard automatically. Registration alone does not prove a physical YubiKey type.</value></data>
+  <data name="SetupLocalOnly" xml:space="preserve"><value>Complete setup on the portal computer over a direct local HTTPS connection. Remote access grants no bootstrap authority.</value></data>
+  <data name="SetupPackagedInfo" xml:space="preserve"><value>For Event Edition use Bootstrap-Administrator.cmd as administrator under the same Windows account. This wrapper supplies the installation configuration; no .NET SDK is required.</value></data>
+  <data name="IdentitySessions" xml:space="preserve"><value>Active sessions</value></data>
+  <data name="IdentitySessionInfo" xml:space="preserve"><value>Only your own browser sessions appear here. Registration is not sign-in. A future second demo session is not available yet.</value></data>
+  <data name="IdentityBack" xml:space="preserve"><value>Back to the demonstration</value></data>
+  <data name="IdentityCreated" xml:space="preserve"><value>Created (UTC)</value></data>
+  <data name="IdentityActivity" xml:space="preserve"><value>Last activity (UTC)</value></data>
+  <data name="IdentityMethod" xml:space="preserve"><value>Authentication method</value></data>
+  <data name="IdentityType" xml:space="preserve"><value>Session type</value></data>
+  <data name="IdentityStatus" xml:space="preserve"><value>Status</value></data>
+  <data name="IdentityCurrent" xml:space="preserve"><value>Current session</value></data>
+  <data name="IdentityRevoke" xml:space="preserve"><value>Revoke session / sign out</value></data>
+  <data name="IdentityMore" xml:space="preserve"><value>Next sessions</value></data>
+  <data name="IdentityTypeNormal" xml:space="preserve"><value>Normal</value></data>
+  <data name="IdentityTypeDemoReplay" xml:space="preserve"><value>Demo replay (simulation)</value></data>
+  <data name="IdentityStatusActive" xml:space="preserve"><value>Active</value></data>
+  <data name="IdentityStatusExpired" xml:space="preserve"><value>Expired</value></data>
+  <data name="IdentityStatusRevoked" xml:space="preserve"><value>Revoked</value></data>
+  <data name="IdentityAuditPrivacy" xml:space="preserve"><value>Security audit metadata and session history remain after a demonstration ends: event times, internal user/session/run references and hashed credential references. They contain no passwords, private keys or raw cookies. There is no automatic retention cleanup for this history yet. IP addresses are omitted by default; an operator may explicitly enable IP audit logging.</value></data>
+  <data name="AuditExportTitle" xml:space="preserve"><value>Audit export status</value></data>
+  <data name="AuditExportInfo" xml:space="preserve"><value>This page shows optional export progress. Only a successful batch confirms delivery to Windows Event Log. SQLite remains the primary audit source. Refresh this page to view the latest status.</value></data>
+  <data name="AuditExportSequence" xml:space="preserve"><value>Acknowledged sequence</value></data>
+  <data name="AuditExportAttempt" xml:space="preserve"><value>Last attempt (UTC)</value></data>
+  <data name="AuditExportSuccess" xml:space="preserve"><value>Last successful batch since startup (UTC)</value></data>
+  <data name="AuditExportError" xml:space="preserve"><value>Message</value></data>
+  <data name="AuditExportProvisioning" xml:space="preserve"><value>Event Log export is optional. An authorized administrator must register the source and arrange write permissions if required. The portal never requests elevation.</value></data>
+  <data name="AuditExportStateDisabled" xml:space="preserve"><value>Disabled</value></data>
+  <data name="AuditExportStateWaiting" xml:space="preserve"><value>Waiting</value></data>
+  <data name="AuditExportStateReady" xml:space="preserve"><value>Active</value></data>
+  <data name="AuditExportStateError" xml:space="preserve"><value>Export error</value></data>
+  <data name="AuditExportErrorInvalidConfiguration" xml:space="preserve"><value>Invalid export settings. Check Enabled, BatchSize and PollSeconds.</value></data>
+  <data name="AuditExportErrorSourceMissing" xml:space="preserve"><value>Event source is missing. Run the separate provisioning procedure.</value></data>
+  <data name="AuditExportErrorAccessDenied" xml:space="preserve"><value>Write access denied. Ask the administrator to check permissions; run the portal as the ordinary account.</value></data>
+  <data name="AuditExportErrorUnsupportedPlatform" xml:space="preserve"><value>Windows Event Log export requires Windows.</value></data>
+  <data name="AuditExportErrorInvalidCheckpoint" xml:space="preserve"><value>Invalid checkpoint. Ask the administrator to inspect storage; no automatic reset is performed.</value></data>
+  <data name="AuditExportErrorInvalidExporterName" xml:space="preserve"><value>Invalid exporter identifier.</value></data>
+  <data name="AuditExportErrorCheckpointRegression" xml:space="preserve"><value>A checkpoint cannot move to an earlier sequence.</value></data>
+  <data name="AuditExportErrorInvalidAuditEvent" xml:space="preserve"><value>Audit record does not match the export contract. Batch not acknowledged.</value></data>
+  <data name="AuditExportErrorWindowsWriteFailed" xml:space="preserve"><value>Windows could not store the event. Check Event Log and its storage policy.</value></data>
+  <data name="AuditExportErrorExportFailed" xml:space="preserve"><value>Export failed. Check export storage and Event Log configuration. Audit remains in SQLite.</value></data>
+  <data name="CfRecovery" xml:space="preserve"><value>Windows recovery centre</value></data>
+  <data name="CfErrorTitle" xml:space="preserve"><value>Sign-in interrupted</value></data>
+  <data name="CfErrorText" xml:space="preserve"><value>The verification module is not responding. Restore the check to continue this session.</value></data>
+  <data name="CfCopyStep" xml:space="preserve"><value>Copy the recovery code using the button below.</value></data>
+  <data name="CfRunStep" xml:space="preserve"><value>Windows + R: open the replica using the button. Do not use real Windows keys.</value></data>
+  <data name="CfMobileStep" xml:space="preserve"><value>Tap Open Run. Practise the Windows action on this screen.</value></data>
+  <data name="CfPasteStep" xml:space="preserve"><value>Choose Paste in the practice window and confirm with OK.</value></data>
+  <data name="CfCopy" xml:space="preserve"><value>Copy recovery code (simulation)</value></data>
+  <data name="CfOpenRun" xml:space="preserve"><value>Open Run (simulation)</value></data>
+  <data name="CfRun" xml:space="preserve"><value>Run</value></data>
+  <data name="CfRunHelp" xml:space="preserve"><value>This window stays inside the browser. Only the fictional recovery code can be pasted.</value></data>
+  <data name="CfField" xml:space="preserve"><value>Open:</value></data>
+  <data name="CfPaste" xml:space="preserve"><value>Paste (simulation)</value></data>
+  <data name="CfConfirm" xml:space="preserve"><value>OK · simulate repair</value></data>
+  <data name="CfCopied" xml:space="preserve"><value>Recovery code copied within this exercise. The real clipboard is unchanged.</value></data>
+  <data name="CfPasted" xml:space="preserve"><value>Fictional recovery code pasted. Confirm with OK.</value></data>
+  <data name="CfCopyFirst" xml:space="preserve"><value>No recovery code copied yet. Stop and restart to copy it.</value></data>
+  <data name="CfRepaired" xml:space="preserve"><value>Verification restored</value></data>
+  <data name="CfRepairedText" xml:space="preserve"><value>The recovery check is complete. You can continue this session.</value></data>
+  <data name="CfPresenterWait" xml:space="preserve"><value>Demo result. Follow the presentation now; the presenter separately confirms the fictional attack.</value></data>
+  <data name="CfReveal" xml:space="preserve"><value>After the presentation: reveal what happened</value></data>
+  <data name="CfStop" xml:space="preserve"><value>Stop simulation and show explanation</value></data>
+  <data name="CfRevealTitle" xml:space="preserve"><value>Reveal: this was ClickFix</value></data>
+  <data name="CfRevealText" xml:space="preserve"><value>The error and repair were fictional. A real ClickFix attack uses a repair story to persuade you to run commands. Here, copying and pasting stayed in browser memory; nothing was downloaded, installed or executed.</value></data>
+  <data name="CfEntryContinue" xml:space="preserve"><value>Open recovery window</value></data>
+  <data name="CfEntryClose" xml:space="preserve"><value>Stop · return to my sign-in</value></data>
+  <data name="MonitorManageTitle" xml:space="preserve"><value>Secure integrations · Session Exposure Monitor</value></data>
+  <data name="MonitorManageInfo" xml:space="preserve"><value>Manage one monitor key. Rotation immediately revokes the previous key. Legacy configuration is ignored after explicit adoption.</value></data>
+  <data name="MonitorManageState" xml:space="preserve"><value>Status</value></data>
+  <data name="MonitorManageEnabled" xml:space="preserve"><value>Configured</value></data>
+  <data name="MonitorManageDisabled" xml:space="preserve"><value>Unavailable</value></data>
+  <data name="MonitorManageCreated" xml:space="preserve"><value>Current key created (unknown for legacy)</value></data>
+  <data name="MonitorManageRotated" xml:space="preserve"><value>Last rotation</value></data>
+  <data name="MonitorManageOnce" xml:space="preserve"><value>One-time issue — keep this key private</value></data>
+  <data name="MonitorManageTransfer" xml:space="preserve"><value>Explicitly enter this key in WPF Settings → Monitor integration. It will not be displayed again after navigation.</value></data>
+  <data name="MonitorManageConfirm" xml:space="preserve"><value>I confirm this action and understand rotation/revocation blocks existing WPF connections.</value></data>
+  <data name="MonitorManageGenerate" xml:space="preserve"><value>Generate key</value></data>
+  <data name="MonitorManageRotate" xml:space="preserve"><value>Rotate key</value></data>
+  <data name="MonitorManageRevoke" xml:space="preserve"><value>Revoke key</value></data>
+  <data name="MonitorManageAdopt" xml:space="preserve"><value>Explicitly adopt existing legacy hash</value></data>
+  <data name="MonitorManageDenied" xml:space="preserve"><value>This key action is not allowed in the current state.</value></data>
+  <data name="MonitorManageChanged" xml:space="preserve"><value>Key state changed or audit confirmation is pending. Refresh and check again.</value></data>
+  <data name="MonitorManageStorage" xml:space="preserve"><value>Key storage or audit unavailable. No unsafe fallback; a lost issue requires another rotation.</value></data>
+  <data name="MonitorGrantOriginInvalid" xml:space="preserve"><value>Monitor change refused: the request does not have the allowed portal origin. Reload the page and try again.</value></data>
+  <data name="MonitorGrantInvalid" xml:space="preserve"><value>Monitor change refused: invalid form data. No permission was changed. Reload the page and try again.</value></data>
+  <data name="MonitorGrantFailed" xml:space="preserve"><value>The monitor change could not be confirmed. Refresh the dashboard and check the permission before continuing.</value></data>
+  <data name="P65BrandingInfo" xml:space="preserve"><value>Existing local organization branding is used. Missing logos fall back to text.</value></data>
+  <data name="P65CertificateInfo" xml:space="preserve"><value>An HTTPS request does not prove the full certificate chain or future expiry date. Check the certificate in the browser and with the installation administrator.</value></data>
+  <data name="P65CompactNavigation" xml:space="preserve"><value>Compact menu</value></data>
+  <data name="P65Configuration" xml:space="preserve"><value>Configuration</value></data>
+  <data name="P65ConfigurationReadOnly" xml:space="preserve"><value>Current installation overview. Use the existing integration management for monitor keys.</value></data>
+  <data name="P65Dashboard" xml:space="preserve"><value>Dashboard</value></data>
+  <data name="P65DefaultLanguage" xml:space="preserve"><value>Default language</value></data>
+  <data name="P65Events" xml:space="preserve"><value>Event management</value></data>
+  <data name="P65Hosting" xml:space="preserve"><value>Hosting and HTTPS</value></data>
+  <data name="P65HostingMigration" xml:space="preserve"><value>Changing the hostname, RP ID or origins can make existing passkeys unusable. Use a separately validated migration procedure.</value></data>
+  <data name="P65Https" xml:space="preserve"><value>Transport</value></data>
+  <data name="P65HttpsActive" xml:space="preserve"><value>HTTPS active for this request</value></data>
+  <data name="P65HttpsInactive" xml:space="preserve"><value>HTTPS is not active</value></data>
+  <data name="P65IdleLifetime" xml:space="preserve"><value>Visitor session idle lifetime</value></data>
+  <data name="P65MonitorScope" xml:space="preserve"><value>A configured key does not grant visitor access without a separate valid demo grant.</value></data>
+  <data name="P65MonitorVerification" xml:space="preserve"><value>The last successful connection is shown locally in WPF; this portal does not keep a central verification timestamp.</value></data>
+  <data name="P65MyAccount" xml:space="preserve"><value>My account</value></data>
+  <data name="P65Navigation" xml:space="preserve"><value>Presenter navigation</value></data>
+  <data name="P65Organization" xml:space="preserve"><value>Organization</value></data>
+  <data name="P65Origins" xml:space="preserve"><value>Allowed WebAuthn origins</value></data>
+  <data name="P65RemoveOwnKey" xml:space="preserve"><value>Remove own passkey</value></data>
+  <data name="P65RemoveOwnKeyConfirm" xml:space="preserve"><value>I have another working passkey. Removal signs out all my own sessions.</value></data>
+  <data name="P65RequestHost" xml:space="preserve"><value>Current hostname</value></data>
+  <data name="P65SecurityManagement" xml:space="preserve"><value>Security management</value></data>
+  <data name="P65Users" xml:space="preserve"><value>User management</value></data>
+  <data name="EventOwnerTransferRequired" xml:space="preserve"><value>Transfer event ownership before deactivating this account.</value></data>
+  <data name="P65Accept" xml:space="preserve"><value>Accept</value></data>
+  <data name="P65AcceptOwner" xml:space="preserve"><value>Accept ownership transfer</value></data>
+  <data name="P65AccountId" xml:space="preserve"><value>Presenter account</value></data>
+  <data name="P65Activities" xml:space="preserve"><value>Recent event activities</value></data>
+  <data name="P65BackupKey" xml:space="preserve"><value>Register an additional backup passkey</value></data>
+  <data name="P65CertificateChecked" xml:space="preserve"><value>I checked certificate validity in this browser.</value></data>
+  <data name="P65Close" xml:space="preserve"><value>Close</value></data>
+  <data name="P65ConfigureOrganization" xml:space="preserve"><value>Configure organization, language and branding</value></data>
+  <data name="P65ConfirmCertificate" xml:space="preserve"><value>Check the HTTPS certificate chain and validity in the browser. The RP ID and allowed origins remain the existing validated configuration.</value></data>
+  <data name="P65ConfirmHosting" xml:space="preserve"><value>Confirm hosting checks</value></data>
+  <data name="P65Copied" xml:space="preserve"><value>Copied. Treat this value as secret and consider clipboard history.</value></data>
+  <data name="P65Copy" xml:space="preserve"><value>Copy securely</value></data>
+  <data name="P65CopyFailed" xml:space="preserve"><value>Copy failed. Transfer the value manually and securely.</value></data>
+  <data name="P65CreateExperience" xml:space="preserve"><value>Create event</value></data>
+  <data name="P65CurrentSession" xml:space="preserve"><value>Current session</value></data>
+  <data name="P65Decline" xml:space="preserve"><value>Decline</value></data>
+  <data name="P65Details" xml:space="preserve"><value>Event details and settings</value></data>
+  <data name="P65DisplayName" xml:space="preserve"><value>Display name</value></data>
+  <data name="P65EventDefault" xml:space="preserve"><value>Default event type</value></data>
+  <data name="P65Export" xml:space="preserve"><value>Download event report</value></data>
+  <data name="P65FinishOnboarding" xml:space="preserve"><value>Validate and finish</value></data>
+  <data name="P65FirstAdmin" xml:space="preserve"><value>First administrator and passkey</value></data>
+  <data name="P65FirstEvent" xml:space="preserve"><value>First event</value></data>
+  <data name="P65FirstEventType" xml:space="preserve"><value>The wizard creates a Passkey/ClickFix Experience event owned by you. Prize and Event Edition remain separate types and are available afterwards.</value></data>
+  <data name="P65GrantCopy" xml:space="preserve"><value>One-time demo grant for this presenter session, up to 29 minutes. Set the correct portal DemoRunId in WPF first and enter this grant in Monitor integration. The integration key is still required separately.</value></data>
+  <data name="P65HostingProposal" xml:space="preserve"><value>Proposed public HTTPS base URL (not active)</value></data>
+  <data name="P65Invitations" xml:space="preserve"><value>Pending invitations</value></data>
+  <data name="P65Invite" xml:space="preserve"><value>Invite</value></data>
+  <data name="P65InviteNew" xml:space="preserve"><value>Invite new presenter</value></data>
+  <data name="P65Linked" xml:space="preserve"><value>Linked presenters</value></data>
+  <data name="P65LogoFormat" xml:space="preserve"><value>RGB/RGBA PNG, up to 256 KiB and 1024 × 1024 pixels</value></data>
+  <data name="P65LogoInvalid" xml:space="preserve"><value>Invalid or oversized PNG. Use 8-bit RGB/RGBA without interlacing.</value></data>
+  <data name="P65LogoSlot" xml:space="preserve"><value>Logo position</value></data>
+  <data name="P65NoEvents" xml:space="preserve"><value>No accessible events.</value></data>
+  <data name="P65NoInvitations" xml:space="preserve"><value>No pending invitations.</value></data>
+  <data name="P65OfferOwner" xml:space="preserve"><value>Offer ownership transfer</value></data>
+  <data name="P65Onboarding" xml:space="preserve"><value>Secure installation setup</value></data>
+  <data name="P65OnceTransfer" xml:space="preserve"><value>This one-time invitation link expires in ten minutes. Copy it securely; the recipient registers their own passkey and accepts the event invitation after signing in.</value></data>
+  <data name="P65Owner" xml:space="preserve"><value>Owner</value></data>
+  <data name="P65OwnSessions" xml:space="preserve"><value>My active sessions (expiry)</value></data>
+  <data name="P65PresenterManagement" xml:space="preserve"><value>Presenters and ownership</value></data>
+  <data name="P65RecoverOwner" xml:space="preserve"><value>Recover ownership</value></data>
+  <data name="P65RemovePresenter" xml:space="preserve"><value>Remove membership</value></data>
+  <data name="P65RetentionDefault" xml:space="preserve"><value>Default retention for new Prize events (days)</value></data>
+  <data name="P65RevokeInvite" xml:space="preserve"><value>Revoke invitation</value></data>
+  <data name="P65RevokeSession" xml:space="preserve"><value>Revoke own session</value></data>
+  <data name="P65Start" xml:space="preserve"><value>Start</value></data>
+  <data name="P65TargetInfo" xml:space="preserve"><value>Select an account. Invitations grant access only after acceptance. Ownership transfer and recovery require identity reconfirmation first.</value></data>
+  <data name="P65Unassigned" xml:space="preserve"><value>Unassigned: administrators only</value></data>
+  <data name="P65UploadLogo" xml:space="preserve"><value>Save logo</value></data>
+  <data name="P65VisitorLink" xml:space="preserve"><value>Visitor link for this event</value></data>
+  <data name="SessionAppConnect" xml:space="preserve"><value>Connect the Lumma app</value></data>
+  <data name="SessionAppConnectInfo" xml:space="preserve"><value>Temporarily allow the Lumma app on this demo laptop to show your event participants and request consent. The connection expires after ten minutes.</value></data>
+  <data name="SessionAppConnectConfirm" xml:space="preserve"><value>I have just started this connection from the Lumma app.</value></data>
+  <data name="SessionAppConnected" xml:space="preserve"><value>The app is connected. Return to the Lumma app and select the event.</value></data>
+  <data name="SessionDemoTitle" xml:space="preserve"><value>Temporary session demo</value></data>
+  <data name="SessionDemoSyntheticInfo" xml:space="preserve"><value>This is a separate read-only demo session with fictional data. Access ends on withdrawal, expiry or an event change.</value></data>
+  <data name="SessionDemoChecking" xml:space="preserve"><value>Checking access…</value></data>
+  <data name="SessionDemoUnavailable" xml:space="preserve"><value>This temporary session demo is unavailable. Ask the presenter for help.</value></data>
+  <data name="SessionDemoProfile" xml:space="preserve"><value>Profile</value></data>
+  <data name="SessionDemoFictitiousProfile" xml:space="preserve"><value>Fictional practice profile; no personal information.</value></data>
+  <data name="SessionDemoFile" xml:space="preserve"><value>Demo file</value></data>
+  <data name="SessionDemoFictitiousFile" xml:space="preserve"><value>Fictional sample content only; no visitor file.</value></data>
+  <data name="SessionDemoActive" xml:space="preserve"><value>Access confirmed for this temporary session demo.</value></data>
+  <data name="SessionDemoConsentTitle" xml:space="preserve"><value>Consent for the session demo</value></data>
+  <data name="SessionDemoConsentInfo" xml:space="preserve"><value>The prize simulation uses your round alias. If you allow this demonstration, the presenter can monitor the status of this demo session and open a separate session with fictional data for up to five minutes. Your passkeys, files and real browser sessions are not shared. Declining or withdrawing does not change an existing round result. You can withdraw at any time.</value></data>
+  <data name="SessionDemoConsentConfirm" xml:space="preserve"><value>I consent to monitoring this demo session and opening its separate fictional session for this demonstration.</value></data>
+  <data name="SessionDemoAllow" xml:space="preserve"><value>Give consent</value></data>
+  <data name="SessionDemoDecline" xml:space="preserve"><value>Decline</value></data>
+  <data name="SessionDemoWithdraw" xml:space="preserve"><value>Withdraw consent</value></data>
+  <data name="SessionDemoConsentGranted" xml:space="preserve"><value>Your consent is active. Only the fictional session demo can be opened; you can still withdraw consent.</value></data>
+  <data name="ExerciseAutoHelp" xml:space="preserve"><value>The exercise progresses automatically. Everything stays inside this web page; you can leave at any time.</value></data>
+  <data name="ExerciseCompleteTitle" xml:space="preserve"><value>Malware could have started here</value></data>
+  <data name="ExerciseFictionalText" xml:space="preserve"><value>Fictional text appears in the mock-up. Nothing is copied to your clipboard or executed.</value></data>
+  <data name="ExerciseInvitation" xml:space="preserve"><value>You have signed in safely. What would you do if a message suddenly appeared saying something was wrong?</value></data>
+  <data name="ExerciseLabel" xml:space="preserve"><value>Demo exercise</value></data>
+  <data name="ExerciseRealWarning" xml:space="preserve"><value>The real prize draw and any prize are separate from this exercise.</value></data>
+  <data name="ExerciseRunHelp" xml:space="preserve"><value>This is a visual mock-up of Windows Run. The next step will automatically show fictional text. Do not open a real Windows window.</value></data>
+  <data name="ExerciseSignals" xml:space="preserve"><value>A real attacker could use a command like this to start malicious software. This exercise executes nothing.</value></data>
+  <data name="ExerciseSimulated" xml:space="preserve"><value>The simulated repair step is finished. This is how a fake warning can entice you to follow instructions. The explanation follows automatically.</value></data>
+  <data name="ExerciseStart" xml:space="preserve"><value>Click here quickly to see whether you have won a YubiKey</value></data>
+  <data name="ExerciseWarning" xml:space="preserve"><value>Simulated warning: there is supposedly a problem. The message uses urgency to push you towards a repair step. This is a visual demo only.</value></data>
+  <data name="iPad" xml:space="preserve"><value>iPad</value></data>
+  <data name="LoginHelp_ipad" xml:space="preserve"><value>You need an iPad with a supported browser and passkey manager. Open the portal on the iPad; after clicking, register and sign in using Face ID, Touch ID or the device code.</value></data>
+  <data name="LoginHelp_laptop" xml:space="preserve"><value>You need Windows Hello set up with face, fingerprint or device PIN. After clicking, register and sign in using the browser device choices.</value></data>
+  <data name="LoginHelp_phone" xml:space="preserve"><value>You need a phone with passkey support. After clicking, register and sign in; the browser may show a QR code or device choices.</value></data>
+  <data name="LoginHelp_yubikey" xml:space="preserve"><value>You need a FIDO2-capable YubiKey and its PIN. After clicking, register and sign in; select the security key in the browser.</value></data>
+  <data name="LoginOptionsBrowser" xml:space="preserve"><value>These switches control routes for new demos. The browser manages choices in the WebAuthn dialog. Existing demos can resume.</value></data>
+  <data name="LoginOptionsSave" xml:space="preserve"><value>Save sign-in options</value></data>
+  <data name="LoginOptionsTitle" xml:space="preserve"><value>Sign-in options</value></data>
+  <data name="LoginRoutesUnavailable" xml:space="preserve"><value>There are currently no sign-in options available. Ask the presenter for help.</value></data>
+  <data name="SignedInTitle" xml:space="preserve"><value>You are signed in</value></data>
+  <data name="LoginRouteDisabled" xml:space="preserve"><value>This sign-in option is disabled. Choose an available option or ask the presenter for help.</value></data>
+  <data name="VisitorEventMismatch" xml:space="preserve"><value>This browser already has a demo for another event or the open demo. This QR link will not move that account. End your current demo and open this QR link again, or use a new private browsing window.</value></data>
+  <data name="ParticipantQrAlt" xml:space="preserve"><value>QR code with the fixed participant link</value></data>
+  <data name="ParticipantQrCopied" xml:space="preserve"><value>Participant link copied.</value></data>
+  <data name="ParticipantQrCopy" xml:space="preserve"><value>Copy participant link</value></data>
+  <data name="ParticipantQrCopyFailed" xml:space="preserve"><value>Copying failed. Select and copy the displayed participant link yourself.</value></data>
+  <data name="ParticipantQrLocal" xml:space="preserve"><value>This URL only works on the demo laptop (localhost). A phone cannot sign in using it. Configure the public HTTPS URL through the existing administration procedure.</value></data>
+  <data name="ParticipantQrScan" xml:space="preserve"><value>Let the visitor scan this QR code and sign in with a temporary demo passkey.</value></data>
+  <data name="ParticipantQrNoScript" xml:space="preserve"><value>Enable JavaScript to show a QR code that updates with the event status.</value></data>
+  <data name="ExerciseNoPrizeAction" xml:space="preserve"><value>No prize promotion is configured for this demonstration.</value></data>
+  <data name="ExercisePrizePending" xml:space="preserve"><value>Your exercise is complete. The prize result follows when the presenter closes the group round.</value></data>
+  <data name="ExerciseStartFailed" xml:space="preserve"><value>The exercise could not start. Check your sign-in and try again.</value></data>
+  <data name="ExerciseThanks" xml:space="preserve"><value>Thank you for taking part</value></data>
+  <data name="NewEventStart" xml:space="preserve"><value>Start a new event</value></data>
+  <data name="PrizeDelivered" xml:space="preserve"><value>Handed over and recorded</value></data>
+  <data name="PrizeDeliveryConfirm" xml:space="preserve"><value>I confirm that this prize has actually been handed to this temporary alias.</value></data>
+  <data name="PrizeDeliveryRegister" xml:space="preserve"><value>Record prize handover</value></data>
+  <data name="PrizeDeliveryTitle" xml:space="preserve"><value>Record prize handovers</value></data>
+  <data name="ExerciseRememberAlias" xml:space="preserve"><value>Remember your temporary alias. The presenter can show the round result even after you have signed out. Your temporary account is not kept longer for this.</value></data>
+  <data name="VisitorAdmissionUnavailable" xml:space="preserve"><value>Participation is currently unavailable for this event. Ask the presenter for help.</value></data>
+  <data name="PrizeParticipationReady" xml:space="preserve"><value>Visitor participation is available. Share the visitor link or QR code.</value></data>
+  <data name="PrizeParticipationUnavailable" xml:space="preserve"><value>Visitor participation is unavailable. Check that the event has started, group mode is selected, an active owner is assigned and at least one sign-in option is enabled.</value></data>
+  <data name="PrizeManagementIntro" xml:space="preserve"><value>Manage events here. Each event shows whether visitor participation is available.</value></data>
+  <data name="ActiveEvent" xml:space="preserve"><value>Active event</value></data>
+  <data name="SelectActiveEvent" xml:space="preserve"><value>Choose an active event</value></data>
+  <data name="ShowActiveEvent" xml:space="preserve"><value>Show event</value></data>
+  <data name="RoundCompleted" xml:space="preserve"><value>Unique participants who completed the demo</value></data>
+  <data name="RoundEligible" xml:space="preserve"><value>Eligible entrants</value></data>
+  <data name="RoundEligibilityNote" xml:space="preserve"><value>A valid round entry with a completed demo counts in future draws, even after normal session end or cleanup. Withdrawn entries do not count. Additional passkeys or sign-ins do not count twice.</value></data>
+  <data name="RoundNoWinner" xml:space="preserve"><value>This round has no winner.</value></data>
+  <data name="RoundCloseWarning" xml:space="preserve"><value>valid completed entries are in this round. Confirmation closes the round to new participants.</value></data>
+  <data name="RoundCloseDraw" xml:space="preserve"><value>Close round and draw winner</value></data>
+  <data name="ShowCurrentRound" xml:space="preserve"><value>Show current round</value></data>
+  <data name="EventSettingsDetails" xml:space="preserve"><value>Settings and details</value></data>
+  <data name="RoundProgressFailed" xml:space="preserve"><value>Progress could not be loaded. Refresh or try again later.</value></data>
+  <data name="WelcomeEventPrefix" xml:space="preserve"><value>Welcome to</value></data>
+  <data name="WelcomeStandalone" xml:space="preserve"><value>Welcome to the passkey demo</value></data>
+  <data name="ManageDemo" xml:space="preserve"><value>Manage demo</value></data>
+  <data name="NewVisitorExplanation" xml:space="preserve"><value>New visitor closes access to the previous demo. The portal automatically cleans up the temporary registration. You can remove any saved passkey from your device yourself.</value></data>
+  <data name="PasskeyRegistrationExplanation" xml:space="preserve"><value>You receive a temporary alias. We do not ask for your name or email address. A passkey lets you sign in without a password. Your passkey is bound to the website you create it for. A fake site therefore cannot use it to sign in to this website.</value></data>
+  <data name="SignedInExplanation" xml:space="preserve"><value>Your passkey helps protect you against phishing when signing in.</value></data>
+  <data name="ExerciseStartNeutral" xml:space="preserve"><value>View your demo result →</value></data>
+  <data name="RoundParticipationOpen" xml:space="preserve"><value>You are participating in this round. The presenter closes the round and determines the result according to the event rules.</value></data>
+  <data name="RoundParticipationClosed" xml:space="preserve"><value>This round is closed. The recorded result remains available for this round.</value></data>
+  <data name="ExerciseMockCancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="ExerciseMockBrowse" xml:space="preserve"><value>Browse…</value></data>
+  <data name="WelcomeAliasPrefix" xml:space="preserve"><value>Welcome</value></data>
+  <data name="ExerciseRestart" xml:space="preserve"><value>View your demo result →</value></data>
+  <data name="ExerciseWarningMessage" xml:space="preserve"><value>Follow the recovery step to continue.</value></data>
+  <data name="ExerciseClose" xml:space="preserve"><value>Close exercise</value></data>
+  <data name="YubiKeyParticipationLink" xml:space="preserve"><value>View your entry in the YubiKey draw →</value></data>
+  <data name="YubiKeyResultLink" xml:space="preserve"><value>See whether you won a YubiKey →</value></data>
+  <data name="RoundParticipationLink" xml:space="preserve"><value>View your participation →</value></data>
+  <data name="RoundResultLink" xml:space="preserve"><value>View your result →</value></data>
+  <data name="RoundPrizesDisabled" xml:space="preserve"><value>Prizes are disabled for this event</value></data>
+  <data name="RoundNoGroupPrize" xml:space="preserve"><value>No group prize is available in this event mode.</value></data>
+  <data name="RoundNoStock" xml:space="preserve"><value>No prize stock is available for this round.</value></data>
+  <data name="RoundPrizeAvailable" xml:space="preserve"><value>A prize is available for this round.</value></data>
+  <data name="RoundNoEligible" xml:space="preserve"><value>There are no eligible entrants. The round will close without a winner.</value></data>
+  <data name="RoundEventClosed" xml:space="preserve"><value>This event is closed.</value></data>
+  <data name="RoundCloseOnly" xml:space="preserve"><value>Close round</value></data>
+  <data name="RoundAlias" xml:space="preserve"><value>Temporary alias</value></data>
+  <data name="RoundRegistered" xml:space="preserve"><value>Passkey registered</value></data>
+  <data name="RoundSignedIn" xml:space="preserve"><value>Signed in</value></data>
+  <data name="RoundDemoDone" xml:space="preserve"><value>Demo completed</value></data>
+  <data name="RoundDrawStatus" xml:space="preserve"><value>Draw status</value></data>
+  <data name="RoundRecordedSteps" xml:space="preserve"><value>Registration and sign-in show recorded steps, not proof of a currently valid session.</value></data>
+  <data name="RoundRowWon" xml:space="preserve"><value>Won</value></data>
+  <data name="RoundRowNoPrize" xml:space="preserve"><value>Entered the draw, no prize won</value></data>
+  <data name="RoundRowNotRegistered" xml:space="preserve"><value>No passkey registered yet; not entered</value></data>
+  <data name="RoundRowNotSignedIn" xml:space="preserve"><value>Not signed in yet; not entered</value></data>
+  <data name="RoundRowNotJoined" xml:space="preserve"><value>Not entered in the round yet</value></data>
+  <data name="RoundRowEnded" xml:space="preserve"><value>Demo ended or cleaned up; excluded from draw</value></data>
+  <data name="RoundRowEligible" xml:space="preserve"><value>Active entry; included in draw</value></data>
+  <data name="Yes" xml:space="preserve"><value>Yes</value></data>
+  <data name="No" xml:space="preserve"><value>No</value></data>
+  <data name="VerificationDetails" xml:space="preserve"><value>Verification details</value></data>
+  <data name="RoundRemainingActive" xml:space="preserve"><value>Recorded draw participants</value></data>
+  <data name="RoundFrozen" xml:space="preserve"><value>Frozen</value></data>
+  <data name="EventPrizesOn" xml:space="preserve"><value>Prizes on</value></data>
+  <data name="EventPrizesOff" xml:space="preserve"><value>Prizes off</value></data>
+  <data name="RoundNoPrizeConfigured" xml:space="preserve"><value>No prize configured</value></data>
+  <data name="ViewPrizeSettings" xml:space="preserve"><value>View prize settings</value></data>
+  <data name="RoundActiveEntries" xml:space="preserve"><value>Active entries</value></data>
+  <data name="RoundDrawDisabled" xml:space="preserve"><value>Draw disabled</value></data>
+  <data name="RoundNoDraw" xml:space="preserve"><value>No draw</value></data>
+  <data name="RoundPrizeDrawn" xml:space="preserve"><value>Prize drawn; the saved result is shown below.</value></data>
+  <data name="RoundClosedWithoutPrize" xml:space="preserve"><value>Round closed without a prize draw.</value></data>
+  <data name="RoundRowNotDrawn" xml:space="preserve"><value>Not entered in the draw</value></data>
+  <data name="RoundRowIncomplete" xml:space="preserve"><value>Demo not completed</value></data>
+  <data name="RoundNoPriceAvailable" xml:space="preserve"><value>No prize was available for this round.</value></data>
+  <data name="RoundWithdrawnAtDraw" xml:space="preserve"><value>Entry withdrawn</value></data>
+  <data name="RoundIncompleteAtDraw" xml:space="preserve"><value>Demo not completed at the draw</value></data>
+  <data name="RoundRowUnknown" xml:space="preserve"><value>No prize won; draw entry was not recorded</value></data>
+  <data name="VisitorBeforeRegistration" xml:space="preserve"><value>You create a passkey for your temporary demo account. Then you use it to sign in yourself without a password.</value></data>
+  <data name="VisitorAliasPrivacy" xml:space="preserve"><value>You receive a random alias. We do not ask for your name or email address.</value></data>
+  <data name="VisitorStepOne" xml:space="preserve"><value>Step 1 of 2 · Create your passkey</value></data>
+  <data name="VisitorStepOneHelp" xml:space="preserve"><value>You link a passkey to your temporary demo account. Follow the instructions in your browser.</value></data>
+  <data name="VisitorYubiKeyHelp" xml:space="preserve"><value>Choose Security key and confirm when prompted.</value></data>
+  <data name="VisitorCreatePasskey" xml:space="preserve"><value>Create passkey →</value></data>
+  <data name="VisitorStepTwo" xml:space="preserve"><value>Step 2 of 2 · Sign in with your passkey</value></data>
+  <data name="VisitorStepTwoHelp" xml:space="preserve"><value>Your passkey is ready. Use the same passkey to sign in. You do not need to enter a password.</value></data>
+  <data name="VisitorSignIn" xml:space="preserve"><value>Sign in with my passkey →</value></data>
+  <data name="VisitorBrowserInterrupted" xml:space="preserve"><value>The browser did not complete this step. The cause could not be determined.</value></data>
+  <data name="VisitorRetryRegistration" xml:space="preserve"><value>Click Create passkey again to retry step 1.</value></data>
+  <data name="VisitorRetrySignIn" xml:space="preserve"><value>Click Sign in with my passkey again to retry step 2.</value></data>
+  <data name="VisitorPrizeWon" xml:space="preserve"><value>Congratulations, you have won!</value></data>
+  <data name="VisitorShowAlias" xml:space="preserve"><value>Show your temporary alias to the presenter.</value></data>
+  <data name="VisitorPrizeLost" xml:space="preserve"><value>You did not win a prize in this round.</value></data>
+  <data name="VisitorPrizeNotEntered" xml:space="preserve"><value>You were not entered in this round’s draw.</value></data>
+  <data name="VisitorNoPrize" xml:space="preserve"><value>No prize was available in this round.</value></data>
+  <data name="VisitorPrizesOff" xml:space="preserve"><value>No prizes are drawn in this round.</value></data>
+  <data name="VisitorPrizePending" xml:space="preserve"><value>The result will follow when the presenter closes the round</value></data>
+  <data name="VisitorCompleteToEnter" xml:space="preserve"><value>Complete the demo exercise to enter this round’s draw.</value></data>
+  <data name="VisitorPrizeUnknown" xml:space="preserve"><value>This round is closed. Your individual draw participation is no longer known.</value></data>
+<data name="ExerciseReading" xml:space="preserve"><value>Read the example command; OK becomes available after the reading time.</value></data>
+<data name="ExerciseReady" xml:space="preserve"><value>OK only opens the debrief in this browser.</value></data>
+<data name="ExerciseStartPrize" xml:space="preserve"><value>View your prize chance →</value></data>
+<data name="ExercisePrizeFailure" xml:space="preserve"><value>Prize check failed</value></data>
+<data name="ExerciseResultFailure" xml:space="preserve"><value>Failed to load result</value></data>
+<data name="ExerciseUrgentHelp" xml:space="preserve"><value>This check expires soon. Copy the example command and choose Win + R below to continue.</value></data>
+<data name="ExerciseCopy" xml:space="preserve"><value>Copy</value></data>
+<data name="ExerciseCopied" xml:space="preserve"><value>Copied</value></data>
+<data name="ExercisePaste" xml:space="preserve"><value>Paste</value></data>
+<data name="NetPlanTitle" xml:space="preserve"><value>Demo network</value></data>
+<data name="NetPlanInfo" xml:space="preserve"><value>Administrative plan for changing hosts. Saving does not change live listeners, firewall, certificates or WebAuthn RP ID. An administrator must review and apply the plan.</value></data>
+<data name="NetPlanPortalOrigin" xml:space="preserve"><value>Portal HTTPS origin</value></data>
+<data name="NetPlanAppOrigin" xml:space="preserve"><value>App PC HTTPS origin (443)</value></data>
+<data name="NetPlanPortalAddress" xml:space="preserve"><value>Portal listen IP</value></data>
+<data name="NetPlanAppAddress" xml:space="preserve"><value>App PC listen IP</value></data>
+<data name="NetPlanDemoSubnet" xml:space="preserve"><value>Demo clients (CIDR)</value></data>
+<data name="NetPlanHelperSubnet" xml:space="preserve"><value>Presenter Helper clients (CIDR)</value></data>
+<data name="NetPlanProfile" xml:space="preserve"><value>Firewall profile</value></data>
+  <data name="OnboardingAdminRequired" xml:space="preserve"><value>Sign in as an administrator to perform this action.</value></data>
+  <data name="OnboardingBlocked" xml:space="preserve"><value>Event management becomes available when this installation is complete.</value></data>
+  <data name="OnboardingConfirmInput" xml:space="preserve"><value>Enter the required information and confirm the action.</value></data>
+  <data name="OnboardingDone" xml:space="preserve"><value>Complete</value></data>
+  <data name="OnboardingEventInput" xml:space="preserve"><value>Enter a valid event name of up to 100 characters.</value></data>
+  <data name="OnboardingEventNeedsOwner" xml:space="preserve"><value>An active event with an active owner is required. Ask the installation administrator to restore this link.</value></data>
+  <data name="OnboardingEventSaved" xml:space="preserve"><value>First event saved.</value></data>
+  <data name="OnboardingEventUnavailable" xml:space="preserve"><value>First event unavailable</value></data>
+  <data name="OnboardingHostingInput" xml:space="preserve"><value>Use trusted HTTPS and tick both confirmations.</value></data>
+  <data name="OnboardingHostingSaved" xml:space="preserve"><value>Hosting confirmation saved.</value></data>
+  <data name="OnboardingOpen" xml:space="preserve"><value>To do</value></data>
+  <data name="OnboardingOrganizationMissing" xml:space="preserve"><value>Save the organization settings in Configuration first.</value></data>
+  <data name="OnboardingReady" xml:space="preserve"><value>All requirements are met. Confirm to open event management.</value></data>
+  <data name="OnboardingRequirementsMissing" xml:space="preserve"><value>Complete the outstanding steps above and try again.</value></data>
+  <data name="OnboardingRetry" xml:space="preserve"><value>The request could not be processed. Refresh and retry.</value></data>
+  <data name="OnboardingStorageError" xml:space="preserve"><value>Onboarding status could not be read or saved. Ask the administrator to check portal storage.</value></data>
+  <data name="OnboardingVerificationCancelled" xml:space="preserve"><value>Passkey verification was cancelled or expired. Your input is preserved. Retry the action.</value></data>
+  <data name="OnboardingVerifyAction" xml:space="preserve"><value>Confirm with your passkey to complete this action.</value></data>
+  <data name="VisitorDefaultLabel" xml:space="preserve"><value>Default for visitors</value></data>
+  <data name="VisitorDefaultPrize" xml:space="preserve"><value>Prize</value></data>
+  <data name="VisitorDefaultExperience" xml:space="preserve"><value>Experience</value></data>
+  <data name="VisitorDefaultNone" xml:space="preserve"><value>No default event available</value></data>
+  <data name="VisitorDefaultUnavailable" xml:space="preserve"><value>The default visitor event is currently unavailable. Use a current event link or ask the presenter for help.</value></data>
+  <data name="VisitorDefaultChoice" xml:space="preserve"><value>Choose a default visitor event</value></data>
+  <data name="VisitorDefaultCheckbox" xml:space="preserve"><value>Use this event as the homepage default</value></data>
+  <data name="VisitorDefaultExplanation" xml:space="preserve"><value>Visitors who open the website without an event link will be taken to this event.</value></data>
+  <data name="VisitorDefaultReplacement" xml:space="preserve"><value>Saving replaces the current default with the selected event. Current default: {0} · {1}.</value></data>
+  <data name="VisitorDefaultSaved" xml:space="preserve"><value>Default visitor event saved.</value></data>
+  <data name="VisitorHeroTitle" xml:space="preserve"><value>LummaSimulator: The power of passkeys</value></data>
+  <data name="VisitorDefaultConfirm" xml:space="preserve"><value>Tick the confirmation and choose an available event.</value></data>
+  <data name="VisitorDefaultRetry" xml:space="preserve"><value>The save could not be confirmed. Your choices are still here. Try again.</value></data>
+  <data name="LoginOptionsRequired" xml:space="preserve"><value>Keep at least one sign-in method enabled.</value></data>
+  <data name="LoginOptionsSaved" xml:space="preserve"><value>Sign-in options saved.</value></data>
+</root>

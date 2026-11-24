@@ -1,0 +1,6 @@
+@model LummaSimulator.Web.Services.HelperPackage?
+@if(Model is {} package){
+    <p><a class="button button-primary" asp-page="/Downloads/PresenterHelper" asp-page-handler="Zip">Presenter Helper downloaden</a></p>
+    <dl class="helper-download-details"><dt>Helperversie</dt><dd>@package.Version</dd><dt>SHA-256 van de ZIP</dt><dd><code>@package.Sha256</code></dd>
+    @if(package.CertificateThumbprint is {} thumbprint){<dt>Thumbprint van Portal.cer</dt><dd><code>@thumbprint</code></dd>}</dl>
+}else{<p role="status">Het Presenter Helper-pakket is momenteel niet beschikbaar.</p>}

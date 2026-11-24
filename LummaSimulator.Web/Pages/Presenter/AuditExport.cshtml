@@ -1,0 +1,19 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.AuditExportModel
+@{ViewData["Title"]=T["AuditExportTitle"].Value;ViewData["TitleKey"]="AuditExportTitle";}
+<section class="panel table-panel">
+<h1><local-text key="AuditExportTitle"></local-text></h1>
+<p><local-text key="AuditExportInfo"></local-text></p>
+<p><a asp-page="/Presenter/Index"><local-text key="Presentatordashboard"></local-text></a>
+ · <a asp-page="/Presenter/AuditExport"><local-text key="Vernieuwen ↻"></local-text></a></p>
+<table><thead><tr><th>Exporter</th><th><local-text key="IdentityStatus"></local-text></th>
+<th><local-text key="AuditExportSequence"></local-text></th><th><local-text key="AuditExportAttempt"></local-text></th>
+<th><local-text key="AuditExportSuccess"></local-text></th><th><local-text key="AuditExportError"></local-text></th></tr></thead><tbody>
+@foreach(var exporter in Model.Exporters) {
+<tr><td>@exporter.Exporter</td><td><local-text key="@("AuditExportState"+exporter.State)"></local-text></td>
+<td>@exporter.LastSequence</td><td>@exporter.LastAttempt?.ToString("u")</td><td>@exporter.LastSuccess?.ToString("u")</td>
+<td>@if(exporter.ErrorCode is { } error){<local-text key="@("AuditExportError"+error)"></local-text>}</td></tr>
+}
+</tbody></table>
+<p class="small-note"><local-text key="AuditExportProvisioning"></local-text></p>
+</section>

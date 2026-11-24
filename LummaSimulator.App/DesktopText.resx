@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+<resheader name="version"><value>2.0</value></resheader>
+  <data name="text.0" xml:space="preserve"><value>LUMMA / AANVALSSIMULATOR</value></data>
+  <data name="text.1" xml:space="preserve"><value>LIVE-TELEMETRIE (echte lokale activiteit)</value></data>
+  <data name="text.2" xml:space="preserve"><value>Lokale HTTP POST</value></data>
+  <data name="text.3" xml:space="preserve"><value>127.0.0.1 poort:</value></data>
+  <data name="text.4" xml:space="preserve"><value>HTTP staat standaard uit. Geen proxy of redirects. EDR-waarneming en detectie vereisen bevestiging in het beveiligingsplatform.</value></data>
+  <data name="text.5" xml:space="preserve"><value>▶  Start</value></data>
+  <data name="text.6" xml:space="preserve"><value>■  Stop</value></data>
+  <data name="text.7" xml:space="preserve"><value>↺  Opnieuw</value></data>
+  <data name="text.8" xml:space="preserve"><value>Scenario</value></data>
+  <data name="text.9" xml:space="preserve"><value>Demobestanden opruimen</value></data>
+  <data name="text.10" xml:space="preserve"><value>Verwijder alleen herkende synthetische demobestanden; bewaar alle JSON-sessielogs.</value></data>
+  <data name="text.11" xml:space="preserve"><value>MITRE ATT&amp;CK exporteren</value></data>
+  <data name="text.12" xml:space="preserve"><value>ATT&amp;CK · zes fases</value></data>
+  <data name="text.13" xml:space="preserve"><value>MITRE ATT&amp;CK · Enterprise 20.0 · activiteit is geen detectie</value></data>
+  <data name="text.14" xml:space="preserve"><value>Presentatorbevestiging</value></data>
+  <data name="text.15" xml:space="preserve"><value>Simulatie bewijst geen endpointwaarneming of detectie. Bevestig alleen na controle in het gekozen product.</value></data>
+  <data name="text.16" xml:space="preserve"><value>Techniek</value></data>
+  <data name="text.17" xml:space="preserve"><value>Product</value></data>
+  <data name="text.18" xml:space="preserve"><value>Beoordeling</value></data>
+  <data name="text.19" xml:space="preserve"><value>Presentator: ik heb deze beoordeling expliciet in het gekozen product bevestigd.</value></data>
+  <data name="text.20" xml:space="preserve"><value>Bevestiging opslaan</value></data>
+  <data name="text.21" xml:space="preserve"><value>Monitor voor sessierisico</value></data>
+  <data name="text.22" xml:space="preserve"><value>Beveiligde lokale koppeling</value></data>
+  <data name="text.23" xml:space="preserve"><value>Vereist: lokaal integratiegeheim en toestemming voor deze demo in het presentatordashboard.</value></data>
+  <data name="text.24" xml:space="preserve"><value>Portal DemoRunId</value></data>
+  <data name="text.25" xml:space="preserve"><value>Sessiestatus controleren</value></data>
+  <data name="text.26" xml:space="preserve"><value>Annuleren</value></data>
+  <data name="text.27" xml:space="preserve"><value>Fictieve exposure simuleren</value></data>
+  <data name="text.28" xml:space="preserve"><value>Fictieve replay simuleren</value></data>
+  <data name="text.29" xml:space="preserve"><value>Passkeys beschermen de authenticatie tegen phishing. Het misbruik van een reeds bestaande sessie is een afzonderlijk risico. Deze demo gebruikt daarvoor uitsluitend fictieve objecten.</value></data>
+  <data name="text.30" xml:space="preserve"><value>Event Edition</value></data>
+  <data name="text.31" xml:space="preserve"><value>Begeleide ClickFix-run — uitsluitend SAFE; wacht op presentatorbevestiging</value></data>
+  <data name="text.32" xml:space="preserve"><value>1. Bereid de WPF-run voor. 2. Koppel in het presentatorportaal de portalrun aan deze WPF-run. 3. Plaats de tijdelijke code. 4. Start en bevestig de voortgang bewust.</value></data>
+  <data name="text.33" xml:space="preserve"><value>Nieuwe evenementrun voorbereiden</value></data>
+  <data name="text.34" xml:space="preserve"><value>WPF-run (kopieer naar presentatorportaal):</value></data>
+  <data name="text.35" xml:space="preserve"><value>Tijdelijke rungebonden leescode (niet opslaan of delen):</value></data>
+  <data name="text.36" xml:space="preserve"><value>Controleer portaal</value></data>
+  <data name="text.37" xml:space="preserve"><value>Ik bevestig de voortgang bewust. Dit is geen bevestiging van een MDR-detectie.</value></data>
+  <data name="text.38" xml:space="preserve"><value>Ontvangen keuze bevestigen en verder</value></data>
+  <data name="text.39" xml:space="preserve"><value>Handmatig verder — geen serverbevestiging</value></data>
+  <data name="text.40" xml:space="preserve"><value>WithSecure blijft handmatig: geef afzonderlijk toestemming voor een vooraf goedgekeurde test op de slachtoffer-VM. Controleer echte detectie en respons uitsluitend in Elements. Deze koppeling start geen endpoint- of MDR-actie.</value></data>
+  <data name="text.41" xml:space="preserve"><value>ACTIVITEITENLOG</value></data>
+  <data name="text.42" xml:space="preserve"><value>EVENT EDITION · BEGELEIDE DEMONSTRATIE</value></data>
+  <data name="text.43" xml:space="preserve"><value>Doel van de aanvaller</value></data>
+  <data name="text.44" xml:space="preserve"><value>De zes bestaande ATT&amp;CK-fases</value></data>
+  <data name="text.45" xml:space="preserve"><value>Wat nemen we mee?</value></data>
+  <data name="text.46" xml:space="preserve"><value>▶  Start scenario</value></data>
+  <data name="text.47" xml:space="preserve"><value>Naar bestaande bediening / modus kiezen</value></data>
+  <data name="text.48" xml:space="preserve"><value>Gereed</value></data>
+  <data name="text.49" xml:space="preserve"><value>Bezig</value></data>
+  <data name="text.50" xml:space="preserve"><value>Voltooid</value></data>
+  <data name="text.51" xml:space="preserve"><value>Gestopt</value></data>
+  <data name="text.52" xml:space="preserve"><value>Mislukt</value></data>
+  <data name="text.53" xml:space="preserve"><value>wachtend</value></data>
+  <data name="text.54" xml:space="preserve"><value>bezig</value></data>
+  <data name="text.55" xml:space="preserve"><value>voltooid</value></data>
+  <data name="text.56" xml:space="preserve"><value>mislukt</value></data>
+  <data name="text.57" xml:space="preserve"><value>VEILIGE SIMULATIE</value></data>
+  <data name="text.58" xml:space="preserve"><value>LIVE-TELEMETRIE</value></data>
+  <data name="text.59" xml:space="preserve"><value>Niet beoordeeld</value></data>
+  <data name="text.60" xml:space="preserve"><value>Niet gedetecteerd</value></data>
+  <data name="text.61" xml:space="preserve"><value>Gedetecteerd</value></data>
+  <data name="text.62" xml:space="preserve"><value>Waargenomen</value></data>
+  <data name="text.63" xml:space="preserve"><value>Gesimuleerd</value></data>
+  <data name="text.64" xml:space="preserve"><value>Uitgevoerd</value></data>
+  <data name="text.65" xml:space="preserve"><value>Ongeldige lokale poort</value></data>
+  <data name="text.66" xml:space="preserve"><value>Kies een lokale HTTP-poort van 1 tot en met 65535.</value></data>
+  <data name="text.67" xml:space="preserve"><value>Demobestanden opruimen</value></data>
+  <data name="text.68" xml:space="preserve"><value>Opruimen voltooid</value></data>
+  <data name="text.69" xml:space="preserve"><value>Opruimen gestopt</value></data>
+  <data name="text.70" xml:space="preserve"><value>Opruimen mislukt</value></data>
+  <data name="text.71" xml:space="preserve"><value>Wacht op presentatorbevestiging · nog geen fase gestart</value></data>
+  <data name="text.72" xml:space="preserve"><value>Gestopt · bezoeker weigerde ClickFix</value></data>
+  <data name="text.73" xml:space="preserve"><value>Visuele oefening: geen procesuitvoering, toegang tot browserbestanden of netwerkverkeer.</value></data>
+  <data name="text.74" xml:space="preserve"><value>Echte lokale proces- en bestandsactiviteit; uitsluitend synthetische browsergegevens. HTTP is optioneel en uitsluitend loopback.</value></data>
+  <data name="text.75" xml:space="preserve"><value>JSON-logs worden lokaal opgeslagen tijdens iedere run.</value></data>
+  <data name="text.76" xml:space="preserve"><value>Uitvoering door gebruiker</value></data>
+  <data name="text.77" xml:space="preserve"><value>Systeeminformatie ontdekken</value></data>
+  <data name="text.78" xml:space="preserve"><value>Browserinformatie ontdekken</value></data>
+  <data name="text.79" xml:space="preserve"><value>Aanmeldgegevens uit webbrowsers</value></data>
+  <data name="text.80" xml:space="preserve"><value>Gegevens lokaal verzamelen</value></data>
+  <data name="text.81" xml:space="preserve"><value>Exfiltratie via C2-kanaal</value></data>
+  <data name="text.82" xml:space="preserve"><value>Windows-gebruikersidentiteit opvragen</value></data>
+  <data name="text.83" xml:space="preserve"><value>Websessiecookie stelen</value></data>
+  <data name="text.84" xml:space="preserve"><value>Websessiecookie</value></data>
+  <data name="text.85" xml:space="preserve"><value>Uitvoering</value></data>
+  <data name="text.86" xml:space="preserve"><value>Verkenning</value></data>
+  <data name="text.87" xml:space="preserve"><value>Toegang tot aanmeldgegevens</value></data>
+  <data name="text.88" xml:space="preserve"><value>Verzameling</value></data>
+  <data name="text.89" xml:space="preserve"><value>Exfiltratie</value></data>
+  <data name="text.90" xml:space="preserve"><value>Laterale beweging</value></data>
+  <data name="text.91" xml:space="preserve"><value>Fictieve, door de gebruiker goedgekeurde oefenpayload; er wordt geen proces of schadelijke inhoud gestart.</value></data>
+  <data name="text.92" xml:space="preserve"><value>Toon een vooraf vastgelegde fictieve systeeminventaris; geen echte inventarisatie.</value></data>
+  <data name="text.93" xml:space="preserve"><value>Fictieve browsers en profielen tonen.</value></data>
+  <data name="text.94" xml:space="preserve"><value>Fictieve aanmeldgegevens in het geheugen maken.</value></data>
+  <data name="text.95" xml:space="preserve"><value>Een denkbeeldig lokaal pakket simuleren.</value></data>
+  <data name="text.96" xml:space="preserve"><value>C2-overdracht simuleren; optioneel loopback-HTTP levert alleen lokale transporttelemetrie.</value></data>
+  <data name="text.97" xml:space="preserve"><value>Zichtbare whoami.exe vraagt de huidige Windows-identiteit op; uitvoer wordt niet opgeslagen.</value></data>
+  <data name="text.98" xml:space="preserve"><value>Eigen synthetisch browserinventarisbestand maken; geen echte browserprofielen openen.</value></data>
+  <data name="text.99" xml:space="preserve"><value>Alleen het eigen fictieve browser-JSON lezen.</value></data>
+  <data name="text.100" xml:space="preserve"><value>collected-data.json schrijven met uitsluitend vaste fictieve gegevens.</value></data>
+  <data name="text.101" xml:space="preserve"><value>Simuleer blootstelling van een fictief sessieobject in geheugen, los van de echte portalsessie.</value></data>
+  <data name="text.102" xml:space="preserve"><value>Simuleer hergebruik van hetzelfde fictieve object in een geïsoleerde applicatiesandbox.</value></data>
+  <data name="text.103" xml:space="preserve"><value>Van phishing naar sessierisico</value></data>
+  <data name="text.104" xml:space="preserve"><value>Een begeleide demonstratie: veilig aanmelden met een passkey, een misleidende herstelmelding herkennen en onderscheid maken tussen simulatie en echte detectie.</value></data>
+  <data name="text.105" xml:space="preserve"><value>De aanvaller probeert een bezoeker met een geloofwaardige melding tot een onveilige handeling te verleiden. Deze demonstratie gebruikt uitsluitend fictieve gegevens.</value></data>
+  <data name="text.106" xml:space="preserve"><value>Hacker — bedient deze WPF-simulator en vertelt het aanvalsscenario.</value></data>
+  <data name="text.107" xml:space="preserve"><value>Slachtoffer — registreert een passkey in de afzonderlijke portal, meldt zich aan en oefent met een veilige ClickFix-keuze.</value></data>
+  <data name="text.108" xml:space="preserve"><value>SOC — onderzoekt uitsluitend werkelijk waargenomen detecties en respons in de bestaande beveiligingsconsole.</value></data>
+  <data name="text.109" xml:space="preserve"><value>Controleer de website vóór het aanmelden. Een passkey is aan de juiste website gebonden.</value></data>
+  <data name="text.110" xml:space="preserve"><value>Voer geen instructies van een onverwachte herstelmelding uit. Stop en verifieer via een vertrouwd kanaal.</value></data>
+  <data name="text.111" xml:space="preserve"><value>Passkeys beschermen authenticatie, maar voorkomen niet ieder risico op een al aangemeld endpoint.</value></data>
+  <data name="text.112" xml:space="preserve"><value>De zes fases hieronder zijn een simulatie. Lokale LIVE-activiteit is geen bewijs van MDR-detectie.</value></data>
+  <data name="text.113" xml:space="preserve"><value>Portal en WPF werken zelfstandig. Een bezoekerkeuze start geen WPF- of MDR-activiteit.</value></data>
+  <data name="text.114" xml:space="preserve"><value>Fictieve gebruiker keurde oefenpayload SIM-001 goed; geen echte schadelijke inhoud.</value></data>
+  <data name="text.115" xml:space="preserve"><value>Gesimuleerde uitvoering voltooid; er is geen proces gestart.</value></data>
+  <data name="text.116" xml:space="preserve"><value>Fictieve host: TRAINING-PC; fictieve gebruiker: demo-user; fictief OS: Windows Demo.</value></data>
+  <data name="text.117" xml:space="preserve"><value>Fictieve inventaris gereed; geen hostinformatie opgevraagd.</value></data>
+  <data name="text.118" xml:space="preserve"><value>Fictieve browsers: Example Browser A en Example Browser B.</value></data>
+  <data name="text.119" xml:space="preserve"><value>Twee denkbeeldige profielen getoond; geen browsermappen geopend.</value></data>
+  <data name="text.120" xml:space="preserve"><value>Fictief record: demo@example.invalid / FAKE-PASSWORD-001.</value></data>
+  <data name="text.121" xml:space="preserve"><value>Drie fictieve aanmeldgegevens voorbereid; geen geheimen gelezen.</value></data>
+  <data name="text.122" xml:space="preserve"><value>Denkbeeldig pakket SIM-PACKAGE-001 in geheugen samengesteld.</value></data>
+  <data name="text.123" xml:space="preserve"><value>Fictieve grootte: 12 KB; geen archief of verzamelbestanden gemaakt.</value></data>
+  <data name="text.124" xml:space="preserve"><value>Fictieve C2-overdracht naar een denkbeeldige ontvanger in geheugen simuleren.</value></data>
+  <data name="text.125" xml:space="preserve"><value>Fictieve ontvangstbevestiging: geen C2-verbinding of echte exfiltratie.</value></data>
+  <data name="text.126" xml:space="preserve"><value>SIMULATIE · fictieve Lumma Stealer-installatie</value></data>
+  <data name="text.127" xml:space="preserve"><value>Fictieve Lumma Stealer-installatie gestart na expliciete presentatorbevestiging. Geen download, installer of proces.</value></data>
+  <data name="text.128" xml:space="preserve"><value>Fictieve installatie voltooid in de presentatie. Er is niets op het endpoint geïnstalleerd.</value></data>
+  <data name="text.129" xml:space="preserve"><value>ClickFix gestopt door bezoeker. Geen fictieve installatie of aanvalsfase gestart.</value></data>
+  <data name="text.130" xml:space="preserve"><value>Onthulling: ClickFix verleidt tot uitvoeren van instructies. Passkeys beschermen de aanmelding; ze voorkomen geen endpointcompromittering. Deze installatie en alle aanvallersactiviteiten waren fictief; geen MDR-detectie bevestigd.</value></data>
+  <data name="text.131" xml:space="preserve"><value>Alle zes visuele fases voltooid. Geen echte gegevens verzameld of verzonden.</value></data>
+  <data name="text.132" xml:space="preserve"><value>Lokale telemetrierun voltooid. Dit bevestigt geen EDR-alert of detectie.</value></data>
+  <data name="format.134" xml:space="preserve"><value>{0}   •   UITSLUITEND FICTIEVE BROWSERGEGEVENS</value></data>
+  <data name="format.135" xml:space="preserve"><value>Windows-activiteit: {0}</value></data>
+  <data name="format.136" xml:space="preserve"><value>ATT&amp;CK-techniek: {0}</value></data>
+  <data name="format.137" xml:space="preserve"><value>ATT&amp;CK: {0}</value></data>
+  <data name="format.138" xml:space="preserve"><value>Portalrun: {0}</value></data>
+  <data name="format.139" xml:space="preserve"><value>DemoRunId: {0}</value></data>
+  <data name="format.140" xml:space="preserve"><value>Lokale JSON-map: {0}</value></data>
+  <data name="format.141" xml:space="preserve"><value>Start in huidige modus: {0}</value></data>
+  <data name="text.142" xml:space="preserve"><value>Optioneel en standaard uit. Bereid een run voor en koppel die via het presentatorportaal.</value></data>
+  <data name="text.143" xml:space="preserve"><value>Evenement nog niet gecontroleerd</value></data>
+  <data name="text.144" xml:space="preserve"><value>Geen slachtofferactie ontvangen</value></data>
+  <data name="text.145" xml:space="preserve"><value>Nog geen gekoppelde portalrun bevestigd</value></data>
+  <data name="text.146" xml:space="preserve"><value>Handmatig bevestigde voortgang — geen ontvangen slachtofferactie of MDR-detectie bevestigd.</value></data>
+  <data name="text.147" xml:space="preserve"><value>Ontvangen slachtofferkeuze handmatig bevestigd — geen MDR-detectie bevestigd.</value></data>
+  <data name="text.148" xml:space="preserve"><value>Voortgang nog niet door de presentator bevestigd.</value></data>
+  <data name="text.149" xml:space="preserve"><value>Kopieer deze WPF-run naar het presentatorportaal. Plaats de daar uitgegeven tijdelijke code hieronder.</value></data>
+  <data name="text.150" xml:space="preserve"><value>Evenement afgesloten. Stop deze run; historische resultaten zijn behouden.</value></data>
+  <data name="text.151" xml:space="preserve"><value>Server gecontroleerd. Een keuze is geen bewijs van endpointuitvoering of MDR-detectie.</value></data>
+  <data name="text.152" xml:space="preserve"><value>Portaal niet beschikbaar of koppeling ongeldig. Probeer opnieuw of bevestig expliciet handmatige voortgang. Geen nieuwe serverbevestiging.</value></data>
+  <data name="text.153" xml:space="preserve"><value>Handmatig bevestigde voortgang — geen slachtofferactie of MDR-detectie vastgesteld.</value></data>
+  <data name="text.154" xml:space="preserve"><value>Ontvangen slachtofferkeuze handmatig bevestigd — geen MDR-detectie vastgesteld.</value></data>
+  <data name="text.155" xml:space="preserve"><value>Alleen servermetadata. Er worden geen browsercookies of sessietokens gelezen.</value></data>
+  <data name="text.156" xml:space="preserve"><value>Apart integratiegeheim geconfigureerd</value></data>
+  <data name="text.157" xml:space="preserve"><value>Gesloten: configureer LUMMA_MONITOR_KEY voor dit proces</value></data>
+  <data name="text.158" xml:space="preserve"><value>Geen geauthenticeerde sessie</value></data>
+  <data name="text.159" xml:space="preserve"><value>Actieve, server-side bevestigde WebAuthn-sessie</value></data>
+  <data name="text.160" xml:space="preserve"><value>Fictief blootgestelde demosessie · uitsluitend sandbox</value></data>
+  <data name="text.161" xml:space="preserve"><value>Ongeldige, ingetrokken of verlopen sessie</value></data>
+  <data name="text.162" xml:space="preserve"><value>Sessiestatus niet beschikbaar · geen conclusie mogelijk</value></data>
+  <data name="text.163" xml:space="preserve"><value>Not evaluated · nog niet gecontroleerd</value></data>
+  <data name="text.164" xml:space="preserve"><value>Active session: bevestigd bij de laatste controle; geen gestolen sessie.</value></data>
+  <data name="text.165" xml:space="preserve"><value>Geen actieve WebAuthn-sessie bevestigd.</value></data>
+  <data name="text.166" xml:space="preserve"><value>Nog geen serverbevestiging ontvangen</value></data>
+  <data name="text.167" xml:space="preserve"><value>Simulated session replay: fictief object in geheugen; geen echte sessie gebruikt.</value></data>
+  <data name="text.168" xml:space="preserve"><value>Simulated session replay: nog niet uitgevoerd.</value></data>
+  <data name="text.169" xml:space="preserve"><value>Geen actieve serverbevestiging. De fictieve stap is niet uitgevoerd.</value></data>
+  <data name="text.170" xml:space="preserve"><value>Start de fictieve exposure eerst.</value></data>
+  <data name="text.171" xml:space="preserve"><value>Alleen een fictief sessieobject is gebruikt. De echte applicatiesessie en beveiligingsproducten zijn niet gewijzigd.</value></data>
+  <data name="text.172" xml:space="preserve"><value>Servermetadata gecontroleerd (momentopname). Controleer opnieuw voor de actuele status. Dit is geen cookie-uitlezing, EDR-waarneming of detectie.</value></data>
+  <data name="text.173" xml:space="preserve"><value>Demo onbekend, verlopen of niet door de presentator vrijgegeven.</value></data>
+  <data name="text.174" xml:space="preserve"><value>Monitoractie geannuleerd. Controleer opnieuw voor een actuele serverbevestiging.</value></data>
+  <data name="text.175" xml:space="preserve"><value>Controleer lokale HTTPS/DNS, het integratiegeheim en de toestemming in het presentatordashboard. Er is geen sessieovername vastgesteld.</value></data>
+  <data name="text.176" xml:space="preserve"><value> De lokale auditlog kon niet worden opgeslagen.</value></data>
+  <data name="text.177" xml:space="preserve"><value>Gereed. Browsergegevens zijn altijd fictief. Geen EDR-detectie bevestigd.</value></data>
+  <data name="text.178" xml:space="preserve"><value>Gereed. Alle browserrecords zijn fictief. Bestaande demobestanden en logs blijven bewaard.</value></data>
+  <data name="text.179" xml:space="preserve"><value>Visuele simulatie gestart. Geen hostverkenning of externe verbindingen.</value></data>
+  <data name="text.180" xml:space="preserve"><value>Gecontroleerde Windows-telemetrie gestart. Alleen eigen synthetische bestanden worden geopend.</value></data>
+  <data name="text.181" xml:space="preserve"><value>Gestopt door gebruiker. Onderbroken fase mislukt; overige fases wachten. Demobestanden blijven beschikbaar voor opruimen.</value></data>
+  <data name="text.182" xml:space="preserve"><value>Opruimen gestart. Alleen herkende demorunmappen komen in aanmerking; JSON-logs blijven bewaard.</value></data>
+  <data name="text.183" xml:space="preserve"><value>Opruimen geannuleerd. Overige demobestanden blijven bewaard.</value></data>
+  <data name="text.184" xml:space="preserve"><value>MITRE ATT&amp;CK-laag lokaal geëxporteerd. Scores zijn geen detectiedekking.</value></data>
+  <data name="text.185" xml:space="preserve"><value>Initiële uitvoering</value></data>
+  <data name="text.186" xml:space="preserve"><value>Systeemverkenning</value></data>
+  <data name="text.187" xml:space="preserve"><value>Browserverkenning</value></data>
+  <data name="text.188" xml:space="preserve"><value>Aanmeldgegevens verzamelen</value></data>
+  <data name="text.189" xml:space="preserve"><value>Gegevens verzamelen</value></data>
+  <data name="text.190" xml:space="preserve"><value>Gesimuleerde exfiltratie</value></data>
+  <data name="text.191" xml:space="preserve"><value>Gesimuleerde sessieblootstelling</value></data>
+  <data name="text.192" xml:space="preserve"><value>Gesimuleerd sessiehergebruik</value></data>
+  <data name="text.193" xml:space="preserve"><value>Actief</value></data>
+  <data name="text.194" xml:space="preserve"><value>Gesloten</value></data>
+  <data name="text.195" xml:space="preserve"><value>Ontvangen volgkeuze (simulatie)</value></data>
+  <data name="text.196" xml:space="preserve"><value>Ontvangen stopkeuze</value></data>
+  <data name="text.197" xml:space="preserve"><value>Handmatige terugval</value></data>
+  <data name="text.198" xml:space="preserve"><value>Bezoekerkeuze bevestigd</value></data>
+  <data name="text.199" xml:space="preserve"><value>Stopkeuze bevestigd</value></data>
+  <data name="text.200" xml:space="preserve"><value>Gecontroleerde identiteitsvraag, geen kwaadaardige code of uitvoering door een bezoeker.</value></data>
+  <data name="text.201" xml:space="preserve"><value>Alleen een educatief scenario; Start indrukken bewijst geen kwaadaardige uitvoering door een gebruiker.</value></data>
+  <data name="text.202" xml:space="preserve"><value>De techniek blijft in beide modi gesimuleerd.</value></data>
+  <data name="text.203" xml:space="preserve"><value>Browserverkenning is gesimuleerd. Een fictief bestand maken is echte telemetrie, geen ontdekking van een echte browser.</value></data>
+  <data name="text.204" xml:space="preserve"><value>Toegang tot aanmeldgegevens blijft gesimuleerd; geen browsergeheimen, cookies of tokens worden verzameld.</value></data>
+  <data name="text.205" xml:space="preserve"><value>Lokale verzameling verfijnt T1074. Uitgevoerde verzameling gebruikt uitsluitend synthetische gegevens.</value></data>
+  <data name="text.206" xml:space="preserve"><value>Geen C2-kanaal of echte exfiltratie. Een loopback-POST maakt T1041 nooit uitgevoerd.</value></data>
+  <data name="text.207" xml:space="preserve"><value>Alleen een educatief sessiecookiescenario. Geen echte browsercookies of sessietokens worden gelezen.</value></data>
+  <data name="text.208" xml:space="preserve"><value>Alleen een fictief SaaS-/websessiescenario. Het object geeft geen echte applicatietoegang en wordt nooit als cookie verzonden.</value></data>
+  <data name="pattern.209" xml:space="preserve"><value>Bezig · {0}</value></data>
+  <data name="pattern.210" xml:space="preserve"><value>Fase {0}: {1} gestart.</value></data>
+  <data name="pattern.211" xml:space="preserve"><value>{0} voltooid in {1}.</value></data>
+  <data name="pattern.212" xml:space="preserve"><value>Opgeslagen: {0}</value></data>
+  <data name="pattern.213" xml:space="preserve"><value>JSON opslaan mislukt: {0}</value></data>
+  <data name="pattern.214" xml:space="preserve"><value>Export mislukt: {0}</value></data>
+  <data name="pattern.215" xml:space="preserve"><value>Beoordeling kon niet worden opgeslagen: {0}</value></data>
+  <data name="pattern.216" xml:space="preserve"><value>ATT&amp;CK-laag opgeslagen: {0}</value></data>
+  <data name="pattern.217" xml:space="preserve"><value>Presentator bevestigde {0} voor {1} in {2}.</value></data>
+  <data name="pattern.218" xml:space="preserve"><value>Waarneming: {0} · Detectie: {1}</value></data>
+  <data name="pattern.219" xml:space="preserve"><value>{0}: {1} / {2}</value></data>
+  <data name="pattern.220" xml:space="preserve"><value>Laatst gecontroleerd: {0} · momentopname</value></data>
+  <data name="pattern.221" xml:space="preserve"><value>Slachtofferkeuze ontvangen: {0} · {1} · volgnummer {2}</value></data>
+  <data name="pattern.222" xml:space="preserve"><value>{0} · DemoRunId={1}. Geen EDR-detectie bevestigd.</value></data>
+  <data name="pattern.223" xml:space="preserve"><value>Event Edition: {0}. Geen MDR-detectie afgeleid.</value></data>
+  <data name="pattern.224" xml:space="preserve"><value>{0} · {1} · {2} – {3}</value></data>
+  <data name="pattern.225" xml:space="preserve"><value>{0} · {1}</value></data>
+  <data name="text.http.Disabled" xml:space="preserve"><value>Uitgeschakeld</value></data>
+  <data name="text.http.Starting" xml:space="preserve"><value>Starten...</value></data>
+  <data name="pattern.http.Ready" xml:space="preserve"><value>Actief – 127.0.0.1:{0}</value></data>
+  <data name="text.http.Error" xml:space="preserve"><value>Fout – server niet bereikbaar</value></data>
+  <data name="text.http.PortConflict" xml:space="preserve"><value>Poort bezet door een onbekende service. Deze wordt niet gestopt.</value></data>
+  <data name="text.http.ServerFilesMissing" xml:space="preserve"><value>Testserverbestanden ontbreken. Herstel de installatie.</value></data>
+  <data name="text.http.Info" xml:space="preserve"><value>Alleen synthetische gegevens op loopback. Een extern gestarte server blijft ongemoeid.</value></data>
+  <data name="text.http.InvalidPort" xml:space="preserve"><value>Kies een lokale poort van 1 tot en met 65535.</value></data>
+  <data name="text.http.UnavailableDetail" xml:space="preserve"><value>De testserver is gestopt of niet bereikbaar. HTTP-telemetrie is niet actief. Schakel uit en opnieuw in om te proberen.</value></data>
+  <data name="telemetry.0" xml:space="preserve"><value>GESIMULEERD: vaste inventaris TRAINING-PC / demo-user; geen echte hostinventaris gelezen.</value></data>
+  <data name="telemetry.1" xml:space="preserve"><value>ECHT: eigen demorunmap gemaakt.</value></data>
+  <data name="telemetry.2" xml:space="preserve"><value>ECHTE POGING: eigendomsmarkering voor demo maken.</value></data>
+  <data name="telemetry.3" xml:space="preserve"><value>ECHT: eigendomsmarkering voor demo gemaakt.</value></data>
+  <data name="telemetry.4" xml:space="preserve"><value>ECHTE POGING: synthetisch browser-JSON schrijven.</value></data>
+  <data name="telemetry.5" xml:space="preserve"><value>ECHT: synthetisch browser-JSON in de eigen demomap geschreven.</value></data>
+  <data name="telemetry.6" xml:space="preserve"><value>ECHTE POGING: synthetisch browser-JSON van deze run lezen.</value></data>
+  <data name="telemetry.7" xml:space="preserve"><value>ECHT: alleen het door deze run gemaakte synthetische browser-JSON gelezen.</value></data>
+  <data name="telemetry.8" xml:space="preserve"><value>ECHTE POGING: verzameld fictief JSON schrijven.</value></data>
+  <data name="telemetry.9" xml:space="preserve"><value>ECHT: collected-data.json met uitsluitend fictieve gegevens geschreven.</value></data>
+  <data name="telemetry.10" xml:space="preserve"><value>GESIMULEERD: alleen overdracht; lokaal HTTP staat uit. Geen verbinding gemaakt.</value></data>
+  <data name="telemetry.11" xml:space="preserve"><value>ECHTE POGING: zichtbare whoami.exe starten; uitvoer wordt niet verzameld.</value></data>
+  <data name="telemetry.12" xml:space="preserve"><value>ECHTE POGING: fictief JSON alleen naar de lokale testserver POSTen.</value></data>
+  <data name="telemetry.13" xml:space="preserve"><value>Geen eigen demomap aanwezig; logs behouden.</value></data>
+  <data name="telemetry.14" xml:space="preserve"><value>Onherkende demomap behouden.</value></data>
+  <data name="telemetry.15" xml:space="preserve"><value>Map met onbekende inhoud behouden.</value></data>
+  <data name="telemetry.16" xml:space="preserve"><value>ECHT: eigen synthetisch bestand verwijderd.</value></data>
+  <data name="telemetry.17" xml:space="preserve"><value>ECHT: eigendomsmarkering voor demo verwijderd.</value></data>
+  <data name="telemetry.18" xml:space="preserve"><value>ECHT: lege demorunmap verwijderd; sessielogs behouden.</value></data>
+  <data name="telemetry.19" xml:space="preserve"><value>Opruimen eigen demo voltooid. JSON-logs behouden.</value></data>
+  <data name="telemetry.20" xml:space="preserve"><value>Synthetisch browser-JSON is leeg.</value></data>
+  <data name="telemetry.21" xml:space="preserve"><value>Synthetische gegevens zijn gewijzigd of horen niet bij deze DemoRunId.</value></data>
+  <data name="telemetry.22" xml:space="preserve"><value>Geen synthetische gegevens verzameld.</value></data>
+  <data name="telemetry.23" xml:space="preserve"><value>whoami.exe is niet gestart.</value></data>
+  <data name="telemetry.24" xml:space="preserve"><value>Lokaal endpoint is geen herkende Lumma-testserver.</value></data>
+  <data name="telemetry.25" xml:space="preserve"><value>Identiteit van lokale testserver veranderde tijdens POST.</value></data>
+  <data name="telemetry.26" xml:space="preserve"><value>Pad ligt buiten de afgeschermde demoroot.</value></data>
+  <data name="telemetry.27" xml:space="preserve"><value>Alleen een expliciete presentatorbevestiging voor een voltooide of onderbroken fase is toegestaan.</value></data>
+  <data name="pattern.telemetry.0" xml:space="preserve"><value>ECHT: whoami.exe gestart, PID {0}.</value></data>
+  <data name="pattern.telemetry.1" xml:space="preserve"><value>ECHT: whoami.exe afgesloten, PID {0}, code {1}.</value></data>
+  <data name="pattern.telemetry.2" xml:space="preserve"><value>whoami.exe gaf {0} terug.</value></data>
+  <data name="pattern.telemetry.3" xml:space="preserve"><value>ECHT: lokale HTTP-status {0}; redirects worden niet gevolgd.</value></data>
+  <data name="pattern.telemetry.4" xml:space="preserve"><value>Lokale HTTP-actie niet geslaagd: {0}</value></data>
+  <data name="pattern.telemetry.5" xml:space="preserve"><value>Reparsepunt geweigerd: {0}</value></data>
+  <data name="ShutdownFailed" xml:space="preserve"><value>Afsluiten niet voltooid. Het venster blijft open omdat de opruiming van achtergrondtaken niet is bevestigd. Er wordt niet geforceerd afgesloten.</value></data>
+  <data name="IntegrationSettings" xml:space="preserve"><value>Instellingen</value></data>
+  <data name="IntegrationTitle" xml:space="preserve"><value>Monitorintegratie</value></data>
+  <data name="IntegrationPortal" xml:space="preserve"><value>Portaladres (bestaande HTTPS-hostgrenzen blijven gelden)</value></data>
+  <data name="IntegrationStatus" xml:space="preserve"><value>Verbindingsstatus — momentopname</value></data>
+  <data name="IntegrationHasKey" xml:space="preserve"><value>Sleutel aanwezig</value></data>
+  <data name="IntegrationLastSuccess" xml:space="preserve"><value>Laatste succesvolle verbinding sinds deze appstart</value></data>
+  <data name="IntegrationTest" xml:space="preserve"><value>Koppeling testen</value></data>
+  <data name="IntegrationReplace" xml:space="preserve"><value>Sleutel vervangen</value></data>
+  <data name="IntegrationRemove" xml:space="preserve"><value>Koppeling verwijderen</value></data>
+  <data name="IntegrationPassword" xml:space="preserve"><value>Nieuwe eenmalige sleutel — opgeslagen sleutel wordt nooit getoond</value></data>
+  <data name="IntegrationConsent" xml:space="preserve"><value>Ik bevestig deze lokale koppeling met de getoonde portal.</value></data>
+  <data name="IntegrationSave" xml:space="preserve"><value>Sleutel beveiligd opslaan</value></data>
+  <data name="IntegrationInfo" xml:space="preserve"><value>DPAPI CurrentUser beschermt de lokale opslag. Een tijdelijke LUMMA_MONITOR_KEY-override heeft voorrang. Voor sessiemetadata is daarnaast een grant voor de portal-DemoRunId nodig; gebruik geen WPF-run-ID.</value></data>
+  <data name="IntegrationNoKey" xml:space="preserve"><value>Monitor niet gekoppeld</value></data>
+  <data name="IntegrationPresent" xml:space="preserve"><value>Monitorsleutel aanwezig; niet getest</value></data>
+  <data name="IntegrationStorage" xml:space="preserve"><value>Monitorcredentialopslag niet beschikbaar</value></data>
+  <data name="IntegrationSaveFailed" xml:space="preserve"><value>Monitorsleutel kon niet worden opgeslagen</value></data>
+  <data name="IntegrationRemoveFailed" xml:space="preserve"><value>Monitorsleutel kon niet worden verwijderd</value></data>
+  <data name="IntegrationConnected" xml:space="preserve"><value>Verbonden; monitorsleutel geverifieerd</value></data>
+  <data name="IntegrationRejected" xml:space="preserve"><value>Monitorsleutel geweigerd of ingetrokken</value></data>
+  <data name="IntegrationCancelled" xml:space="preserve"><value>Monitorverbinding geannuleerd</value></data>
+  <data name="IntegrationOffline" xml:space="preserve"><value>Monitorportal niet bereikbaar of configuratie ongeldig</value></data>
+  <data name="IntegrationGrant" xml:space="preserve"><value>Monitorgrant of actieve sessie ontbreekt</value></data>
+  <data name="IntegrationEnvironment" xml:space="preserve"><value>Tijdelijke omgevings-override; beheer hier uitgeschakeld</value></data>
+  <data name="IntegrationEnter" xml:space="preserve"><value>Voer de nieuwe monitorsleutel in</value></data>
+  <data name="IntegrationYes" xml:space="preserve"><value>Ja</value></data>
+  <data name="IntegrationNo" xml:space="preserve"><value>Nee</value></data>
+  <data name="IntegrationGrantApply" xml:space="preserve"><value>Demotoestemming gebruiken</value></data>
+  <data name="IntegrationGrantInvalid" xml:space="preserve"><value>Stel eerst een geldige portal-DemoRunId in en voer de eenmalige demotoestemming in.</value></data>
+  <data name="EventParticipantsIntro" xml:space="preserve"><value>Beheer de rondes via Evenementbeheer in de webportal. Verbind de app en kies hier het evenement en de deelnemer.</value></data>
+  <data name="EventParticipantsConnect" xml:space="preserve"><value>Aanmelden in webportal</value></data>
+  <data name="EventParticipantsEvent" xml:space="preserve"><value>Evenement</value></data>
+  <data name="EventParticipantsRound" xml:space="preserve"><value>Ronde</value></data>
+  <data name="EventParticipantsAlias" xml:space="preserve"><value>Alias</value></data>
+  <data name="EventParticipantsConsent" xml:space="preserve"><value>Toestemming</value></data>
+  <data name="EventParticipantsList" xml:space="preserve"><value>Actieve deelnemers</value></data>
+  <data name="EventParticipantsRefresh" xml:space="preserve"><value>Lijst vernieuwen</value></data>
+  <data name="EventParticipantsOpen" xml:space="preserve"><value>Open als deelnemer</value></data>
+  <data name="EventParticipantsStart" xml:space="preserve"><value>Start met toestemming bezoeker</value></data>
+  <data name="EventParticipantsLegacy" xml:space="preserve"><value>Geavanceerd: bestaande codekoppeling</value></data>
+  <data name="EventParticipantsLegacyEnable" xml:space="preserve"><value>Bestaande ClickFix-codekoppeling gebruiken</value></data>
+  <data name="EventParticipantsConnectInfo" xml:space="preserve"><value>Meld je aan om actieve ronde-deelnemers te zien.</value></data>
+  <data name="EventParticipantsConnecting" xml:space="preserve"><value>Keur de appverbinding goed in de geopende browser. Dit vereist je presentatoraanmelding.</value></data>
+  <data name="EventParticipantsSelect" xml:space="preserve"><value>Verbonden. Kies het evenement en een actieve deelnemer.</value></data>
+  <data name="EventParticipantsReady" xml:space="preserve"><value>Kies een deelnemer en start de simulatie. De bezoeker geeft eerst expliciet toestemming in de eigen portal.</value></data>
+  <data name="EventParticipantsWaiting" xml:space="preserve"><value>Wachten op expliciete toestemming van de geselecteerde bezoeker. Er is nog geen simulatiefase gestart.</value></data>
+  <data name="EventParticipantsGranted" xml:space="preserve"><value>Tijdelijke sessiedemo toegestaan. Open als deelnemer toont uitsluitend fictieve gegevens. De bezoeker kan dit intrekken.</value></data>
+  <data name="EventParticipantsNoConsent" xml:space="preserve"><value>Geen toestemming ontvangen. De simulatie is niet gestart.</value></data>
+  <data name="EventParticipantsUnavailable" xml:space="preserve"><value>De verbinding of toestemming is niet beschikbaar. Vernieuw de lijst of meld je opnieuw aan.</value></data>
+  <data name="SessionConsentNone" xml:space="preserve"><value>Niet gevraagd</value></data>
+  <data name="SessionConsentPending" xml:space="preserve"><value>Wacht op bezoeker</value></data>
+  <data name="SessionConsentGranted" xml:space="preserve"><value>Toegestaan</value></data>
+  <data name="SessionConsentDeclined" xml:space="preserve"><value>Geweigerd</value></data>
+  <data name="SessionConsentRevoked" xml:space="preserve"><value>Ingetrokken</value></data>
+  <data name="SessionConsentExpired" xml:space="preserve"><value>Verlopen</value></data>
+  <data name="ParticipantModeDescription" xml:space="preserve"><value>Visuele simulatie met een optionele HTTPS-sessiedemo; uitsluitend fictieve gegevens.</value></data>
+  <data name="ParticipantWaitingStatus" xml:space="preserve"><value>Wachten op toestemming bezoeker · geen fase gestart</value></data>
+  <data name="ParticipantNoConsentStatus" xml:space="preserve"><value>Gestopt · geen toestemming bezoeker</value></data>
+  <data name="EventParticipantsEnable" xml:space="preserve"><value>Event Edition gebruiken · sessiedemo met toestemming van de bezoeker</value></data>
+  <data name="EventParticipantsEmpty" xml:space="preserve"><value>Lijst geladen: geen actieve aangemelde deelnemers in dit evenement. Gebruik de vaste QR-link van dit evenement en meld je aan.</value></data>
+  <data name="EventParticipantsDenied" xml:space="preserve"><value>De portal weigert de deelnemersaanvraag. Meld de app opnieuw aan en selecteer het evenement opnieuw. De lijst is niet geladen.</value></data>
+  <data name="EventParticipantsThrottled" xml:space="preserve"><value>De portal ontvangt te veel aanvragen. Wacht even en vernieuw de lijst. De lijst is niet geladen.</value></data>
+  <data name="EventParticipantsInvalidResponse" xml:space="preserve"><value>Het portalantwoord voor de deelnemerslijst kon niet veilig worden verwerkt. Controleer of app en portal dezelfde versie en hetzelfde evenement gebruiken.</value></data>
+  <data name="EventParticipantsLoadFailed" xml:space="preserve"><value>De deelnemerslijst kon niet worden geladen. Controleer de portalverbinding en probeer Lijst vernieuwen. Dit is geen lege deelnemerslijst.</value></data>
+  <data name="CardDetails" xml:space="preserve"><value>Fasedetails</value></data>
+  <data name="LogDetails" xml:space="preserve"><value>Log- en exportdetails</value></data>
+  <data name="AssessmentToggle" xml:space="preserve"><value>Beoordeling vastleggen</value></data>
+</root>

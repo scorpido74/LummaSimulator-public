@@ -1,0 +1,28 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.Prizes.NewModel
+@{ ViewData["Title"]=T["PrizeNew"].Value;ViewData["TitleKey"]="PrizeNew";
+var settingsData=new Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary(ViewData);
+settingsData.TemplateInfo.HtmlFieldPrefix="Input";
+}
+<h1><local-text key="PrizeNew"></local-text></h1>
+<p class="notice"><local-text key="PrizeManagementIntro"></local-text></p>
+<a asp-page="Index"><local-text key="PrizeBack"></local-text></a>
+@if(Model.ErrorKey is {} error){<p class="notice error" role="alert"><local-text key="@error"></local-text></p>}
+<form method="get" class="panel prize-profile-picker">
+<label for="profile-choice"><local-text key="PrizeProfile"></local-text></label>
+<select id="profile-choice" name="profileId">
+@foreach(var profile in Model.Profiles){
+var key=profile.Id switch {"builtin-cybertruck"=>"PrizeBuiltinCybertruck","builtin-instant"=>"PrizeBuiltinInstant","builtin-draw"=>"PrizeBuiltinDraw","builtin-custom"=>"PrizeBuiltinCustom",_=>null};
+<option value="@profile.Id" selected="@(profile.Id==Model.ProfileId)" data-i18n="@key">@(key is null?profile.Name:T[key].Value)</option>
+}
+</select><button class="button button-outline" type="submit"><local-text key="PrizeApplyProfile"></local-text></button>
+<p><local-text key="PrizeProfileHint"></local-text></p>
+</form>
+<form method="post" class="panel prize-event-form">
+<input asp-for="ProfileId" type="hidden" /><input asp-for="OperationKey" type="hidden" />
+<label asp-for="Name"><local-text key="PrizeName"></local-text></label><input asp-for="Name" maxlength="100" required autocomplete="off" />
+<h2><local-text key="PrizeBasics"></local-text></h2>
+<partial name="_Settings" model="Model.Input" view-data="settingsData" />
+<div class="prize-actions"><button class="button button-primary" type="submit" name="start" value="true"><local-text key="PrizeStart"></local-text></button>
+<button class="button button-outline" type="submit" name="start" value="false"><local-text key="PrizeSaveDraft"></local-text></button></div>
+</form>

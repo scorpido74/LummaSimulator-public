@@ -1,0 +1,38 @@
+@model LummaSimulator.Web.Pages.Presenter.Prizes.PrizeEventInput
+<div class="prize-settings-grid">
+    <div class="prize-checkbox"><label><input asp-for="PrizeEnabled" /><local-text key="PrizeEnabled"></local-text></label></div>
+    <div><label asp-for="GroupSize"><local-text key="PrizeDefaultRoundCapacity"></local-text></label><input asp-for="GroupSize" type="number" min="1" max="200" required /></div>
+    <div><label asp-for="WinnersPerGroup"><local-text key="PrizeWinners"></local-text></label><input asp-for="WinnersPerGroup" type="number" min="1" max="200" required /></div>
+    <div><label asp-for="PrizeSelection"><local-text key="PrizeSelection"></local-text></label><select asp-for="PrizeSelection"><option value="Fixed" data-i18n="PrizeFixed">@T["PrizeFixed"]</option><option value="Random" data-i18n="PrizeRandom">@T["PrizeRandom"]</option></select></div>
+    <div><label asp-for="PrizeName"><local-text key="PrizePriceName"></local-text></label><input asp-for="PrizeName" maxlength="100" required /></div>
+    <div><label asp-for="Stock"><local-text key="PrizeStock"></local-text></label><input asp-for="Stock" type="number" min="0" /></div>
+    <div class="prize-checkbox"><label><input asp-for="StartCodeRequired" /><local-text key="PrizeStartCodes"></local-text></label></div>
+</div>
+<details class="prize-advanced">
+    <summary><local-text key="PrizeAdvanced"></local-text></summary>
+    <div class="prize-settings-grid">
+        <div><label asp-for="Visibility"><local-text key="PrizeVisibility"></local-text></label><select asp-for="Visibility"><option value="Private" data-i18n="PrizePrivate">@T["PrizePrivate"]</option><option value="Public" data-i18n="PrizePublic">@T["PrizePublic"]</option></select></div>
+        <div><label asp-for="Mode"><local-text key="PrizeMode"></local-text></label><select asp-for="Mode"><option value="Group" data-i18n="PrizeGroupMode">@T["PrizeGroupMode"]</option><option value="Instant" data-i18n="PrizeInstantMode">@T["PrizeInstantMode"]</option></select></div>
+        <div><label asp-for="AssignmentMode"><local-text key="PrizeAssignment"></local-text></label><select asp-for="AssignmentMode"><option value="Automatic" data-i18n="PrizeAutomatic">@T["PrizeAutomatic"]</option><option value="Code" data-i18n="PrizeByCode">@T["PrizeByCode"]</option></select></div>
+        <div><label asp-for="NextGroupMode"><local-text key="PrizeNextGroup"></local-text></label><select asp-for="NextGroupMode"><option value="Manual" data-i18n="PrizeManual">@T["PrizeManual"]</option><option value="Automatic" data-i18n="PrizeAutomatic">@T["PrizeAutomatic"]</option></select></div>
+        <div><label asp-for="RevealMode"><local-text key="PrizeReveal"></local-text></label><select asp-for="RevealMode"><option value="Together" data-i18n="PrizeTogether">@T["PrizeTogether"]</option><option value="Sequential" data-i18n="PrizeSequential">@T["PrizeSequential"]</option></select></div>
+        <div><label asp-for="AnimationSeconds"><local-text key="PrizeAnimation"></local-text></label><select asp-for="AnimationSeconds"><option value="5">5</option><option value="10">10</option><option value="15">15</option></select></div>
+        <div><label asp-for="ChanceNumerator"><local-text key="PrizeChanceNumerator"></local-text></label><input asp-for="ChanceNumerator" type="number" min="0" /></div>
+        <div><label asp-for="ChanceDenominator"><local-text key="PrizeChanceDenominator"></local-text></label><input asp-for="ChanceDenominator" type="number" min="1" /></div>
+        <div><label asp-for="MaxInstantWins"><local-text key="PrizeMaxWins"></local-text></label><input asp-for="MaxInstantWins" type="number" min="0" /></div>
+        <div><label asp-for="ReactionSeconds"><local-text key="PrizeReaction"></local-text></label><input asp-for="ReactionSeconds" type="number" min="1" max="86400" /></div>
+        <div><label asp-for="RetentionDays"><local-text key="PrizeRetention"></local-text></label><input asp-for="RetentionDays" type="number" min="1" max="90" /></div>
+        <div><label asp-for="PostCloseClaimMinutes"><local-text key="PrizePostClose"></local-text></label><input asp-for="PostCloseClaimMinutes" type="number" min="0" max="129600" /></div>
+    </div>
+    <p><local-text key="PrizePublicCodes"></local-text></p>
+    <p><local-text key="PrizeChanceHint"></local-text></p>
+    <p><local-text key="PrizeTimeHint"></local-text></p>
+    <h3><local-text key="PrizeFields"></local-text></h3><p><local-text key="PrizeFieldsHint"></local-text></p>
+    <div class="prize-settings-grid">
+        <div><label asp-for="FirstName"><local-text key="PrizeFirstName"></local-text></label><select asp-for="FirstName"><option value="Hidden" data-i18n="PrizeHidden">@T["PrizeHidden"]</option><option value="Optional" data-i18n="PrizeOptional">@T["PrizeOptional"]</option><option value="Required" data-i18n="PrizeRequired">@T["PrizeRequired"]</option></select></div>
+        <div><label asp-for="LastName"><local-text key="PrizeLastName"></local-text></label><select asp-for="LastName"><option value="Hidden" data-i18n="PrizeHidden">@T["PrizeHidden"]</option><option value="Optional" data-i18n="PrizeOptional">@T["PrizeOptional"]</option><option value="Required" data-i18n="PrizeRequired">@T["PrizeRequired"]</option></select></div>
+        <div><label asp-for="Email"><local-text key="PrizeEmail"></local-text></label><select asp-for="Email"><option value="Hidden" data-i18n="PrizeHidden">@T["PrizeHidden"]</option><option value="Optional" data-i18n="PrizeOptional">@T["PrizeOptional"]</option><option value="Required" data-i18n="PrizeRequired">@T["PrizeRequired"]</option></select></div>
+        <div><label asp-for="Company"><local-text key="PrizeCompany"></local-text></label><select asp-for="Company"><option value="Hidden" data-i18n="PrizeHidden">@T["PrizeHidden"]</option><option value="Optional" data-i18n="PrizeOptional">@T["PrizeOptional"]</option><option value="Required" data-i18n="PrizeRequired">@T["PrizeRequired"]</option></select></div>
+        <div><label asp-for="ShippingAddress"><local-text key="PrizeShippingAddress"></local-text></label><select asp-for="ShippingAddress"><option value="Hidden" data-i18n="PrizeHidden">@T["PrizeHidden"]</option><option value="Optional" data-i18n="PrizeOptional">@T["PrizeOptional"]</option><option value="Required" data-i18n="PrizeRequired">@T["PrizeRequired"]</option></select></div>
+    </div>
+</details>

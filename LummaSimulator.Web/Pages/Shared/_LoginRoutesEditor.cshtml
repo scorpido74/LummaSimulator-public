@@ -1,0 +1,19 @@
+@model LummaSimulator.Web.Services.LoginRoutesEditor
+<section aria-labelledby="login-options">
+    <h3 id="login-options"><local-text key="LoginOptionsTitle"></local-text></h3>
+    <p><local-text key="LoginOptionsBrowser"></local-text></p>
+    @if(TempData[$"LoginRoutesNotice:{Model.Kind}:{Model.Id}"] is string notice){
+        <p class="notice" role="status"><local-text key="@notice"></local-text></p>
+    }
+    <form method="post" asp-page="/Presenter/Events/Index" asp-page-handler="LoginRoutes" class="login-options">
+        <input type="hidden" name="kind" value="@Model.Kind" />
+        <input type="hidden" name="id" value="@Model.Id" />
+        @if(Model.PrizeDetails){<input type="hidden" name="prizeDetails" value="true" />}
+        <label><input type="checkbox" role="switch" name="yubikey" value="true" checked="@(Model.Routes.Allows("yubikey"))"/><strong><local-text key="YubiKey"></local-text></strong><span><local-text key="LoginHelp_yubikey"></local-text></span></label>
+        <label><input type="checkbox" role="switch" name="laptop" value="true" checked="@(Model.Routes.Allows("laptop"))"/><strong><local-text key="Windows Hello"></local-text></strong><span><local-text key="LoginHelp_laptop"></local-text></span></label>
+        <label><input type="checkbox" role="switch" name="phone" value="true" checked="@(Model.Routes.Allows("phone"))"/><strong><local-text key="Mijn telefoon"></local-text></strong><span><local-text key="LoginHelp_phone"></local-text></span></label>
+        <label><input type="checkbox" role="switch" name="ipad" value="true" checked="@(Model.Routes.Allows("ipad"))"/><strong><local-text key="iPad"></local-text></strong><span><local-text key="LoginHelp_ipad"></local-text></span></label>
+        <label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label>
+        <button class="button button-primary"><local-text key="LoginOptionsSave"></local-text></button>
+    </form>
+</section>

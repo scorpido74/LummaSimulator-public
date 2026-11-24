@@ -1,0 +1,14 @@
+@model LummaSimulator.Web.Services.ParticipantQrEntry
+<section id="participant-qr" class="participant-qr panel" data-event-id="@Model.EventId" data-event-kind="@Model.Kind"
+ data-state-url="@Url.Page("/Presenter/ParticipantQr","State",new{id=Model.EventId,kind=Model.Kind})"
+ data-qr-url="@Url.Page("/Presenter/ParticipantQr","Image",new{id=Model.EventId,kind=Model.Kind})">
+<h3 id="participant-qr-name">@Model.EventName</h3><p><local-text key="ParticipantQrScan"></local-text></p>
+<img id="participant-qr-image" width="270" height="270" src="@Url.Page("/Presenter/ParticipantQr","Image",new{id=Model.EventId,kind=Model.Kind})" alt="@T["ParticipantQrAlt"]" data-i18n-alt="ParticipantQrAlt"/>
+<div>
+<p><local-text key="P65VisitorLink"></local-text></p>
+<p><a id="participant-qr-link" href="@Model.Url">@Model.Url</a></p>
+<button id="participant-qr-copy" type="button" class="button button-outline"><local-text key="ParticipantQrCopy"></local-text></button>
+<p id="participant-qr-status" role="status" aria-live="polite"></p>
+<p id="participant-qr-local" class="notice error" hidden="@(!Model.LaptopOnly)"><local-text key="ParticipantQrLocal"></local-text></p>
+</div></section>
+<noscript><p class="notice"><local-text key="ParticipantQrNoScript"></local-text></p></noscript>

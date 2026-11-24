@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <UserSecretsId>LummaSimulator-PasskeyPortal-v03</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Formats.Cbor" Version="9.0.24" />
+    <PackageReference Include="Fido2.AspNet" Version="4.3.1" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.14" />
+  </ItemGroup>
+
+  <ItemGroup><Compile Include="../shared/RuntimePaths.cs" Link="Configuration/RuntimePaths.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../shared/BrandingAssets.cs" Link="Configuration/BrandingAssets.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../shared/UserPrivateFiles.cs" Link="Configuration/UserPrivateFiles.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../shared/ParticipantQr.cs" Link="Shared/ParticipantQr.cs" /></ItemGroup>
+</Project>

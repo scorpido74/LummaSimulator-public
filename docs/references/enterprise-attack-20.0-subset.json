@@ -1,0 +1,180 @@
+{
+  "attackVersion": "20.0",
+  "source": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-20.0.json",
+  "sourceSha256": "81113BA98AFA2928F3DCFF62022539F7CE30C315C32E14422F11FF95CE534352",
+  "checked": "2026-10-29",
+  "techniques": [
+    {
+      "id": "T1033",
+      "name": "System Owner/User Discovery",
+      "tactics": [
+        "discovery"
+      ],
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--03d7999c-1f4c-42cc-8373-e7690d318104",
+      "techniqueVersion": "1.6"
+    },
+    {
+      "id": "T1074.001",
+      "name": "Local Data Staging",
+      "tactics": [
+        "collection"
+      ],
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--1c34f7aa-9341-4a48-bfab-af22e51aca6c",
+      "techniqueVersion": "1.2"
+    },
+    {
+      "id": "T1082",
+      "name": "System Information Discovery",
+      "tactics": [
+        "discovery"
+      ],
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Network Devices",
+        "Windows"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+      "techniqueVersion": "3.0"
+    },
+    {
+      "id": "T1555.003",
+      "name": "Credentials from Web Browsers",
+      "tactics": [
+        "credential-access"
+      ],
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--58a3e6aa-4453-4cc8-a51f-4befe80b31a8",
+      "techniqueVersion": "1.2"
+    },
+    {
+      "id": "T1217",
+      "name": "Browser Information Discovery",
+      "tactics": [
+        "discovery"
+      ],
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--5e4a2073-9643-44cb-a0b5-e7f4048446c7",
+      "techniqueVersion": "2.0"
+    },
+    {
+      "id": "T1074",
+      "name": "Data Staged",
+      "tactics": [
+        "collection"
+      ],
+      "platforms": [
+        "ESXi",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--7dd95ff6-712e-4056-9626-312ea4ab4c5e",
+      "techniqueVersion": "1.5"
+    },
+    {
+      "id": "T1204",
+      "name": "User Execution",
+      "tactics": [
+        "execution"
+      ],
+      "platforms": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "IaaS",
+        "Containers"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--8c32eb4d-805f-4fc5-bf60-c4d476c131b5",
+      "techniqueVersion": "1.8"
+    },
+    {
+      "id": "T1041",
+      "name": "Exfiltration Over C2 Channel",
+      "tactics": [
+        "exfiltration"
+      ],
+      "platforms": [
+        "ESXi",
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d",
+      "techniqueVersion": "2.4"
+    },
+    {
+      "id": "T1539",
+      "name": "Steal Web Session Cookie",
+      "tactics": [
+        "credential-access"
+      ],
+      "platforms": [
+        "Linux",
+        "macOS",
+        "Office Suite",
+        "SaaS",
+        "Windows"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--10ffac09-e42d-4f56-ab20-db94c67d76ff",
+      "techniqueVersion": "1.5"
+    },
+    {
+      "id": "T1550.004",
+      "name": "Web Session Cookie",
+      "tactics": [
+        "lateral-movement"
+      ],
+      "platforms": [
+        "IaaS",
+        "Office Suite",
+        "SaaS"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "stixId": "attack-pattern--c3c8c916-2f3c-4e71-94b2-240bdfc996f0",
+      "techniqueVersion": "2.0"
+    }
+  ]
+}

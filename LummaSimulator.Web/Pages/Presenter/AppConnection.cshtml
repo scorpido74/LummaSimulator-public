@@ -1,0 +1,15 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.AppConnectionModel
+@{ViewData["Title"]=T["SessionAppConnect"].Value;ViewData["TitleKey"]="SessionAppConnect";}
+<section class="panel">
+<h1><local-text key="SessionAppConnect"></local-text></h1>
+@if(Model.Notice is string notice){<p role="alert" class="notice error"><local-text key="@notice"></local-text></p>}
+@if(Model.Connected){<p class="notice success" role="status"><local-text key="SessionAppConnected"></local-text></p>}
+else{
+<p><local-text key="SessionAppConnectInfo"></local-text></p>
+<form method="post"><input asp-for="RequestId" type="hidden"/>
+<label><input type="checkbox" name="confirmed" value="true" required/><local-text key="SessionAppConnectConfirm"></local-text></label>
+<button class="button button-primary" type="submit"><local-text key="SessionAppConnect"></local-text></button></form>
+}
+<a asp-page="/Presenter/Events/Index"><local-text key="P65Events"></local-text></a>
+</section>

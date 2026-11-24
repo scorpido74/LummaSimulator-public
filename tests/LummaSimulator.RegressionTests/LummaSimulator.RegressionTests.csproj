@@ -1,0 +1,33 @@
+<Project>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework Condition="'$(OS)' == 'Windows_NT'">net10.0-windows</TargetFramework>
+    <IsTestProject>true</IsTestProject>
+    <IsPackable>false</IsPackable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../LummaSimulator.Helper.Tests/LummaSimulator.Helper.Tests.csproj" ReferenceOutputAssembly="false" Condition="'$(OS)' == 'Windows_NT'" />
+    <ProjectReference Include="../../LummaSimulator.PresenterHelper/LummaSimulator.PresenterHelper.csproj" ReferenceOutputAssembly="false" Condition="'$(OS)' == 'Windows_NT'" />
+    <ProjectReference Include="../../LummaSimulator.HelperUpdater/LummaSimulator.HelperUpdater.csproj" ReferenceOutputAssembly="false" Condition="'$(OS)' == 'Windows_NT'" />
+    <ProjectReference Include="../LummaSimulator.Web.Tests/LummaSimulator.Web.Tests.csproj" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="../LummaSimulator.SmokeTests/LummaSimulator.SmokeTests.csproj" ReferenceOutputAssembly="false" Condition="'$(OS)' == 'Windows_NT'" />
+    <ProjectReference Include="../../verification/Verification.csproj" ReferenceOutputAssembly="false" Condition="'$(OS)' == 'Windows_NT'" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <!-- No external test framework/adapter: dotnet test invokes these real assertion runners.
+       An assertion or child process failure fails the VSTest target and dotnet test itself. -->
+  <Target Name="VSTest" DependsOnTargets="Build">
+    <Message Importance="high" Text="Running dependency-free WebAuthn, UX, ATT&amp;CK/Navigator and Windows regression suites." />
+    <Exec StdOutEncoding="utf-8" StdErrEncoding="utf-8" Command="dotnet &quot;$(MSBuildThisFileDirectory)../LummaSimulator.Helper.Tests/bin/$(Configuration)/net10.0-windows/LummaSimulator.Helper.Tests.dll&quot;" Condition="'$(OS)' == 'Windows_NT'" />
+    <Exec StdOutEncoding="utf-8" StdErrEncoding="utf-8" EnvironmentVariables="LUMMA_DATA_DIRECTORY=$(MSBuildProjectDirectory)/bin/$(Configuration)/test-data;LUMMA_LOG_DIRECTORY=Logs;LUMMA_EXPORT_DIRECTORY=Exports;LUMMA_MONITOR_KEY=;LUMMA_PORTAL_ORIGIN=https://localhost:7243" Command="dotnet &quot;$(MSBuildThisFileDirectory)../LummaSimulator.Web.Tests/bin/$(Configuration)/net10.0/LummaSimulator.Web.Tests.dll&quot;" />
+    <Exec StdOutEncoding="utf-8" StdErrEncoding="utf-8" EnvironmentVariables="LUMMA_DATA_DIRECTORY=$(MSBuildProjectDirectory)/bin/$(Configuration)/test-data;LUMMA_LOG_DIRECTORY=Logs;LUMMA_EXPORT_DIRECTORY=Exports;LUMMA_MONITOR_KEY=;LUMMA_PORTAL_ORIGIN=https://localhost:7243" Command="node --test &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/passkeys.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/localization.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/presenter.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/session-demo.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/clickfix.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/branding.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/monitor-keys.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/presenter-shell.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/migration-preservation.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/event-invitation-authorization.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/experience-numbering.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/phase65e.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/participant-qr.test.cjs&quot; &quot;$(MSBuildThisFileDirectory)../WebAuthn.Ux.Tests/participant-qr-encoding.test.cjs&quot;" />
+    <Exec StdOutEncoding="utf-8" StdErrEncoding="utf-8" EnvironmentVariables="LUMMA_DATA_DIRECTORY=$(MSBuildProjectDirectory)/bin/$(Configuration)/test-data;LUMMA_LOG_DIRECTORY=Logs;LUMMA_EXPORT_DIRECTORY=Exports;LUMMA_MONITOR_KEY=;LUMMA_PORTAL_ORIGIN=https://localhost:7243" Command="dotnet &quot;$(MSBuildThisFileDirectory)../LummaSimulator.SmokeTests/bin/$(Configuration)/net10.0/LummaSimulator.SmokeTests.dll&quot;" Condition="'$(OS)' == 'Windows_NT'" />
+    <Exec StdOutEncoding="utf-8" StdErrEncoding="utf-8" EnvironmentVariables="LUMMA_DATA_DIRECTORY=$(MSBuildProjectDirectory)/bin/$(Configuration)/test-data;LUMMA_LOG_DIRECTORY=Logs;LUMMA_EXPORT_DIRECTORY=Exports;LUMMA_MONITOR_KEY=;LUMMA_PORTAL_ORIGIN=https://localhost:7243" Command="dotnet &quot;$(MSBuildThisFileDirectory)../../verification/bin/$(Configuration)/net10.0-windows/Verification.dll&quot;" Condition="'$(OS)' == 'Windows_NT'" />
+    <Message Importance="high" Text="All configured regression suites passed. Browser/provider hardware tests remain manual." />
+  </Target>
+</Project>
+
+

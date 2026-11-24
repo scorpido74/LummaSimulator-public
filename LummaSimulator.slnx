@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/tests/">
+    <Project Path="tests/LummaSimulator.RegressionTests/LummaSimulator.RegressionTests.csproj" />
+    <Project Path="tests/LummaSimulator.SmokeTests/LummaSimulator.SmokeTests.csproj" />
+    <Project Path="tests/LummaSimulator.Web.Tests/LummaSimulator.Web.Tests.csproj" />
+    <Project Path="tests/LummaSimulator.Helper.Tests/LummaSimulator.Helper.Tests.csproj" />
+  </Folder>
+  <Folder Name="/verification/">
+    <Project Path="verification/Verification.csproj" />
+  </Folder>
+  <Project Path="LummaSimulator.App/LummaSimulator.App.csproj" />
+  <Project Path="LummaSimulator.Web/LummaSimulator.Web.csproj" />
+  <Project Path="LummaSimulator.Helper.Core/LummaSimulator.Helper.Core.csproj" />
+  <Project Path="LummaSimulator.PresenterHelper/LummaSimulator.PresenterHelper.csproj" />
+  <Project Path="LummaSimulator.HelperUpdater/LummaSimulator.HelperUpdater.csproj" />
+</Solution>

@@ -1,0 +1,17 @@
+@page
+@model SignedInModel
+@{ ViewData["Title"] = T["SignedInTitle"].Value; ViewData["TitleKey"] = "SignedInTitle"; }
+<link rel="stylesheet" href="~/css/clickfix.css" asp-append-version="true" />
+<section class="panel completion signed-in-proof">
+    <h1><local-text key="SignedInTitle"></local-text></h1>
+    <p><local-text key="Tijdelijke gebruiker"></local-text>: <strong>@Model.UserName</strong></p>
+    <p><local-text key="SignedInExplanation"></local-text></p>
+    @if(Model.Round is {} round){<p>@round.EventName · <local-text key="PrizeRoundLabel"></local-text> @round.Number · <local-text key="@(round.Status=="Closed"?"RoundParticipationClosed":"RoundParticipationOpen")"></local-text></p>}
+    <p><button id="start-clickfix" data-start-key="@(Model.PrizesEnabled?"ExerciseStartPrize":"ExerciseStartNeutral")" type="button" class="button button-primary"><local-text key="@(Model.PrizesEnabled?"ExerciseStartPrize":"ExerciseStartNeutral")"></local-text></button></p>
+    <a asp-page="/Demo"><local-text key="ClickFixBack"></local-text></a>
+</section>
+<p id="exercise-start-status" role="status"></p>
+<partial name="_ClickFixExercise" model="@(Model.PrizesEnabled)" />
+<partial name="_SessionDemoConsent" model="@(true)" />
+<form id="antiforgery-form" method="post">@Html.AntiForgeryToken()</form>
+@section Scripts { <script src="~/js/clickfix.js" asp-append-version="true" defer></script> <script src="~/js/session-demo-consent.js" asp-append-version="true" defer></script> }

@@ -1,0 +1,15 @@
+@page "/SessionDemo/{id}"
+@model LummaSimulator.Web.Pages.SessionDemoModel
+@{ViewData["Title"]=T["SessionDemoTitle"].Value;ViewData["TitleKey"]="SessionDemoTitle";}
+<section class="panel" id="synthetic-session-view" data-view-id="@Model.ViewId">
+<h1><local-text key="SessionDemoTitle"></local-text></h1>
+<p class="notice"><local-text key="SessionDemoSyntheticInfo"></local-text></p>
+<p id="synthetic-session-status" role="status"><local-text key="SessionDemoChecking"></local-text></p>
+<div id="synthetic-session-data" hidden>
+<h2 id="synthetic-session-alias"></h2><p id="synthetic-session-event"></p>
+<dl><dt><local-text key="SessionDemoProfile"></local-text></dt><dd><local-text key="SessionDemoFictitiousProfile"></local-text></dd>
+<dt><local-text key="SessionDemoFile"></local-text></dt><dd><code>demo-notitie.txt</code> · <local-text key="SessionDemoFictitiousFile"></local-text></dd></dl>
+</div>
+<form id="session-view-antiforgery" method="post">@Html.AntiForgeryToken()</form>
+</section>
+@section Scripts{<script src="~/js/session-demo-view.js" asp-append-version="true" defer></script>}

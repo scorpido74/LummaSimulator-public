@@ -1,0 +1,52 @@
+@page
+@* Session management is independently authorized server-side after WebAuthn login. *@
+@model DemoModel
+@{ var titleKey=Model.IsAuthenticated?"WelcomeAliasPrefix":Model.EventName is null?"WelcomeStandalone":"WelcomeEventPrefix"; ViewData["Title"] = T[titleKey].Value; ViewData["TitleKey"] = titleKey; ViewData["TitleAlias"] = Model.IsAuthenticated?Model.DisplayName:Model.EventName; ViewData["TitleAliasSeparator"]=" "; }
+<link rel="stylesheet" href="~/css/clickfix.css" asp-append-version="true" />
+
+<div class="demo-topline"><a asp-page="/Index" class="back-link"><local-text key="← Over deze demonstratie"></local-text></a><span class="pill"><local-text key="TIJDELIJK DEMOACCOUNT"></local-text></span></div>
+
+@if (TempData["VisitorNotice"] is string notice) { <div class="notice error" role="alert"><local-text key="@notice"></local-text></div> }
+
+
+<div class="visitor-flow">
+<section class="demo-heading"><span class="eyebrow"><local-text key="@Model.RouteTitle"></local-text></span><h1 id="demo-welcome" data-event-name="@Model.EventName">@if(Model.IsAuthenticated){<local-text key="WelcomeAliasPrefix"></local-text> <span data-visitor-display-name>@Model.DisplayName</span>}else if(Model.EventName is {} eventName){<local-text key="WelcomeEventPrefix"></local-text> <span>@eventName</span>}else{<local-text key="WelcomeStandalone"></local-text>}</h1></section>
+<section id="prize-round-status" class="notice visitor-round @(Model.PrizeRound?.DrawPerformed==true?"draw-performed":"")" role="status" aria-live="polite" hidden="@(Model.PrizeRound is null)">
+<p id="visitor-round-heading">@if(Model.PrizeRound is {} round){<text>@round.EventName · </text><local-text key="PrizeRoundLabel"></local-text><text> @round.Number</text>}</p>
+<h2 id="visitor-round-outcome" data-i18n="@(Model.PrizeRound?.PrizeMessageKey??"VisitorPrizeUnknown")">@T[Model.PrizeRound?.PrizeMessageKey??"VisitorPrizeUnknown"]</h2>
+<p id="visitor-round-prize" hidden="@(Model.PrizeRound?.IsWinner!=true)">@Model.PrizeRound?.PrizeName</p>
+<p id="visitor-round-claim" hidden="@(Model.PrizeRound?.IsWinner!=true)"><local-text key="VisitorShowAlias"></local-text></p>
+</section>
+<div class="visitor-intro" id="visitor-intro" hidden="@Model.IsAuthenticated"><p><local-text key="VisitorBeforeRegistration"></local-text></p><p><local-text key="VisitorAliasPrivacy"></local-text></p></div>
+<partial name="_SessionDemoConsent" model="@(Model.Account.LastAuthenticatedAt is not null)" />
+<div class="signed-in-surface" id="signed-in-surface">
+<section id="auth-confirmation" class="panel authentication-confirmation" hidden="@(!Model.IsAuthenticated)" aria-labelledby="auth-confirmation-title">
+    <h2 id="auth-confirmation-title" tabindex="-1"><local-text key="SignedInTitle"></local-text></h2>
+    <dl><div><dt><local-text key="Tijdelijke gebruiker"></local-text></dt><dd id="verified-username">@Model.DisplayName</dd></div></dl><details class="verification-details"><summary><local-text key="VerificationDetails"></local-text></summary><dl><div><dt><local-text key="Tijdstip"></local-text></dt><dd><time id="verified-time" datetime="@(Model.IsAuthenticated&&Model.Account.LastAuthenticatedAt is {} authenticatedAt?DateTimeOffset.FromUnixTimeMilliseconds(authenticatedAt).ToString("O"):null)">@(Model.IsAuthenticated&&Model.Account.LastAuthenticatedAt is {} displayAt?DateTimeOffset.FromUnixTimeMilliseconds(displayAt).ToString("g"):null)</time></dd></div><div><dt><local-text key="Credential"></local-text></dt><dd id="verified-credential"></dd></div><div><dt><local-text key="Verificatiestatus"></local-text></dt><dd id="verification-result">@if(Model.IsAuthenticated){<local-text key="Server-side geverifieerd · gebruikersverificatie bevestigd"></local-text>}</dd></div></dl><p><local-text key="Deze bevestiging volgt uitsluitend op een geslaagde server-side WebAuthn-verificatie voor dit demoaccount."></local-text></p></details>
+
+    <p><local-text key="SignedInExplanation"></local-text></p>
+    <p><button id="start-clickfix" data-start-key="@(Model.HasPrizeDraw?"ExerciseStartPrize":"ExerciseStartNeutral")" class="button button-primary" type="button"><local-text key="@(Model.HasPrizeDraw?"ExerciseStartPrize":"ExerciseStartNeutral")"></local-text></button></p>
+
+<p><a id="participation-link" asp-page="/Participation" hidden="@(Model.PrizeStatus is null)"><local-text key="@(Model.PrizeStatus?.LinkKey??"RoundParticipationLink")"></local-text></a></p>
+    <p id="exercise-start-status" role="status"></p>
+    <div class="confirmation-actions"><form method="post" asp-page-handler="End"><button id="confirmation-end-demo" type="submit" class="button button-outline"><local-text key="Demonstratie beëindigen"></local-text></button></form></div>
+</section>
+<partial name="_ClickFixExercise" model="@(Model.HasPrizeDraw)" />
+</div>
+<div class="demo-grid" id="passkey-demo" data-authenticated="@(Model.IsAuthenticated?"true":"false")" data-registered="@(Model.Account.CredentialCount>0?"true":"false")" data-route="@Model.Account.Route" data-demo-run-id="@Model.Account.DemoRunId">
+    <section class="panel journey-panel" id="passkey-options" hidden="@Model.IsAuthenticated">
+    <div id="registration-step" class="step" hidden="@(Model.Account.CredentialCount>0)"><span class="step-number">01</span><div><h2><local-text key="VisitorStepOne"></local-text></h2><p><local-text key="VisitorStepOneHelp"></local-text></p>@if(Model.Account.Route=="yubikey"){<p><local-text key="VisitorYubiKeyHelp"></local-text></p>}</div></div>
+    <strong id="registration-state"><local-text key="@(Model.Account.CredentialCount>0?"Registratie voltooid":"Nog niet geregistreerd")"></local-text></strong>
+    <button id="register-passkey" type="button" class="button @(Model.Account.CredentialCount>0?"button-outline":"button-primary")"><local-text key="@(Model.Account.CredentialCount>0?"Nog een passkey toevoegen":"VisitorCreatePasskey")"></local-text></button>
+    <div id="authentication-step" class="step second-step" hidden="@(Model.Account.CredentialCount==0)"><span class="step-number">02</span><div><h2><local-text key="VisitorStepTwo"></local-text></h2><p><local-text key="VisitorStepTwoHelp"></local-text></p></div></div>
+    <button id="authenticate-passkey" type="button" class="button button-primary" hidden="@(Model.Account.CredentialCount==0)" disabled="@(Model.Account.CredentialCount==0)"><local-text key="VisitorSignIn"></local-text></button>
+    <div id="webauthn-status" class="notice" role="status" aria-live="polite"><local-text key="Klaar om te beginnen. Je browser vraagt om toestemming."></local-text></div><noscript><div class="notice error"><local-text key="Schakel JavaScript in om de WebAuthn-functie van je browser te gebruiken."></local-text></div></noscript>
+    <button id="cancel-passkey" type="button" class="button button-outline" hidden><local-text key="Aanvraag annuleren"></local-text></button>
+    <details class="provider-help"><summary><local-text key="Welke passkey kies ik?"></local-text></summary><p><strong><local-text key="Windows Hello"></local-text></strong> <local-text key="gebruikt een ingestelde authenticator van Windows. Een"></local-text> <strong><local-text key="YubiKey"></local-text></strong> <local-text key="is een fysieke FIDO2-sleutel. Een"></local-text> <strong><local-text key="telefoon"></local-text></strong> <local-text key="kan via de browser worden aangeboden, soms met een QR-code en nabijheidscontrole. Een provider zoals"></local-text> <strong><local-text key="LastPass"></local-text></strong> <local-text key="kan een passkey aanbieden als jouw browser, extensie en provider die functie ondersteunen en de passkey daar is opgeslagen."></local-text></p><p><local-text key="Kies bij het inloggen dezelfde provider als bij de registratie. De browser beheert deze keuze; deze portal dwingt geen provider af. Een verwijderde of verlopen demo en een ander RP-domein herkennen een oude registratie niet."></local-text></p></details>
+    <form id="antiforgery-form" method="post">@Html.AntiForgeryToken()</form>
+    </section>
+    <aside class="panel session-panel" id="visitor-session-details"><span class="eyebrow"><local-text key="JOUW DEMONSTRATIE"></local-text></span><h2><local-text key="Jij houdt de controle"></local-text></h2><p><local-text key="@Model.RouteInstructions"></local-text></p><dl><div><dt><local-text key="Gebruikersnaam"></local-text></dt><dd data-visitor-display-name>@Model.DisplayName</dd></div><div><dt><local-text key="Geregistreerde passkeys"></local-text></dt><dd id="credential-count">@Model.Account.CredentialCount</dd></div><div><dt><local-text key="Geslaagde authenticaties"></local-text></dt><dd id="success-count">@Model.Account.Successes</dd></div></dl><p class="small-note"><local-text key="We ontvangen nooit je privésleutel. We doen geen uitspraak over synchronisatie of hardwarebinding van jouw passkey."></local-text></p><p class="small-note"><local-text key="Na inactiviteit verwijderen we je demo automatisch, uiterlijk na 30 minuten zolang de server actief is."></local-text></p><form method="post" asp-page-handler="End"><button class="button button-outline" type="submit" id="end-demo"><local-text key="Demonstratie beëindigen"></local-text></button></form><details><summary><local-text key="DemoRunId voor de presentator"></local-text></summary><code>@Model.Account.DemoRunId</code><p class="small-note"><local-text key="Alleen een referentie; hiermee kun je geen account openen."></local-text></p></details></aside>
+</div>
+<details id="demo-management"><summary><local-text key="ManageDemo"></local-text></summary><p><a asp-page="/Sessions"><local-text key="IdentitySessions"></local-text></a></p><form method="post" asp-page-handler="NewVisitor"><button id="new-visitor" type="submit" class="button button-outline"><local-text key="NewVisitor"></local-text></button></form><p class="small-note"><local-text key="NewVisitorExplanation"></local-text></p></details>
+</div>
+@section Scripts { <script src="~/js/participation-status.js" asp-append-version="true" defer></script> <script src="~/js/clickfix.js" asp-append-version="true" defer></script> <script src="~/js/passkeys.js" asp-append-version="true" defer></script><script src="~/js/session-demo-consent.js" asp-append-version="true" defer></script> }

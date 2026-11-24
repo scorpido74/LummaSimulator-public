@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+ <ItemGroup>
+  <Compile Include="../../LummaSimulator.App/Infrastructure.cs" Link="Infrastructure.cs"/>
+  <Compile Include="../../LummaSimulator.App/Models.cs" Link="Models.cs"/>
+  <Compile Include="../../LummaSimulator.App/ScenarioOverview.cs" Link="ScenarioOverview.cs"/>
+  <Compile Include="../../LummaSimulator.App/EventEditionClient.cs" Link="EventEditionClient.cs"/>
+  <Compile Include="../../LummaSimulator.App/EventEditionViewModel.cs" Link="EventEditionViewModel.cs"/>
+  <Compile Include="../../LummaSimulator.App/EventParticipantsViewModel.cs" Link="EventParticipantsViewModel.cs"/>
+  <Compile Include="../../LummaSimulator.App/DesktopLanguage.cs" Link="DesktopLanguage.cs"/>
+  <Compile Include="../../LummaSimulator.App/AttackMapping.cs" Link="AttackMapping.cs"/>
+  <Compile Include="../../LummaSimulator.App/NavigatorExportService.cs" Link="NavigatorExportService.cs"/>
+  <Compile Include="../../shared/RuntimePaths.cs" Link="RuntimePaths.cs"/>
+  <Compile Include="../../LummaSimulator.App/DesktopSettings.cs" Link="DesktopSettings.cs"/>
+  <Compile Include="../../LummaSimulator.App/SessionMetadataClient.cs" Link="SessionMetadataClient.cs"/>
+  <Compile Include="../../LummaSimulator.App/MonitorCredentialStore.cs" Link="MonitorCredentialStore.cs"/>
+  <Compile Include="../../LummaSimulator.App/MonitorIntegrationSettings.cs" Link="MonitorIntegrationSettings.cs"/>
+  <Compile Include="../../shared/UserPrivateFiles.cs" Link="UserPrivateFiles.cs"/>
+  <Compile Include="../../LummaSimulator.App/SessionMonitorViewModel.cs" Link="SessionMonitorViewModel.cs"/>
+  <Compile Include="../../LummaSimulator.App/Services.cs" Link="Services.cs"/>
+  <Compile Include="../../LummaSimulator.App/TelemetryService.cs" Link="TelemetryService.cs"/>
+  <Compile Include="../../LummaSimulator.App/MainViewModel.cs" Link="MainViewModel.cs"/>
+   <Compile Include="../../LummaSimulator.App/LocalTestServerManager.cs" Link="LocalTestServerManager.cs"/>
+ </ItemGroup>
+ <ItemGroup><ProjectReference Include="../../LummaSimulator.Helper.Core/LummaSimulator.Helper.Core.csproj" /></ItemGroup>
+  <ItemGroup><Compile Include="../../shared/LocalTestServerProtocol.cs" Link="LocalTestServerProtocol.cs" /></ItemGroup>
+  <Import Project="../../shared/LocalTestServer.Build.targets" />
+  <ItemGroup><EmbeddedResource Include="../../LummaSimulator.App/LocalHttpText*.resx" Link="%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="../../LummaSimulator.App/DesktopText*.resx" Link="%(Filename)%(Extension)" LogicalName="LummaSimulator.App.%(Filename).resources" /></ItemGroup>
+</Project>

@@ -1,0 +1,76 @@
+@page "{id}"
+@model LummaSimulator.Web.Pages.Presenter.Prizes.EventModel
+@{ ViewData["Title"]=T["PrizeDetails"].Value;ViewData["TitleKey"]="PrizeDetails";
+var settingsData=new Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary(ViewData);
+settingsData.TemplateInfo.HtmlFieldPrefix="Input";
+}
+<h1>@Model.Event.Name</h1>
+<p class="notice"><local-text key="@(Model.ParticipationAvailable?"PrizeParticipationReady":"PrizeParticipationUnavailable")"></local-text></p>
+<a asp-page="Index"><local-text key="PrizeBack"></local-text></a>
+@if(Model.LoginRoutesEditor is {} loginRoutes){<div class="panel"><partial name="_LoginRoutesEditor" model="loginRoutes" /></div>}
+@if(Model.ErrorKey is {} error){<p class="notice error" role="alert"><local-text key="@error"></local-text></p>}
+<section class="panel">
+<h2><local-text key="PrizeDetails"></local-text></h2>
+<p><local-text key="PrizeStatus"></local-text>: <strong><local-text key="@("PrizeStatus"+Model.Event.Status)"></local-text></strong></p>
+<dl><dt><local-text key="PrizeCreated"></local-text></dt><dd>@DateTimeOffset.FromUnixTimeMilliseconds(Model.Event.CreatedAt).UtcDateTime.ToString("g")</dd>
+@if(Model.Event.ClosedAt is {} closed){<dt><local-text key="PrizeClosed"></local-text></dt><dd>@DateTimeOffset.FromUnixTimeMilliseconds(closed).UtcDateTime.ToString("g")</dd>}
+@if(Model.Event.PurgeAt is {} purge){<dt><local-text key="PrizePurge"></local-text></dt><dd>@DateTimeOffset.FromUnixTimeMilliseconds(purge).UtcDateTime.ToString("g")</dd>}
+</dl>
+@if(Model.Expired){<p class="notice"><local-text key="PrizeExpired"></local-text></p>}
+else if(Model.Event.Status!="Purging"){
+var handler=Model.Event.Status switch {"Draft"=>"Start","Open"=>"Close",_=>"Reopen"};
+var label=handler switch {"Start"=>"PrizeStart","Close"=>"PrizeClose",_=>"PrizeReopen"};
+<form method="post" asp-page-handler="@handler"><input asp-for="ExpectedEventId" type="hidden" /><input asp-for="Version" type="hidden" /><input asp-for="OperationKey" type="hidden" />
+<label><input type="checkbox" name="confirmed" value="true" required /><local-text key="PrizeConfirm"></local-text></label>
+<button class="button button-primary" type="submit"><local-text key="@label"></local-text></button></form>
+}
+</section>
+@if(Model.Event.Status=="Open"&&Model.Event.Configuration.Mode=="Group"){
+<section class="panel" id="prize-round-management">
+<h2><local-text key="PrizeRounds"></local-text></h2>
+@if(Model.ParticipantEntry is {} entry){<partial name="_ParticipantQr" model="entry" />}
+@if(Model.RoundBoard.Rounds.FirstOrDefault(r=>r.Status=="Open") is {} current){
+<p><strong>@Model.Event.Name · <local-text key="PrizeRoundLabel"></local-text> @current.Number</strong> · @current.Occupied / @current.Capacity</p>
+<form method="post" asp-page-handler="NextRoundCapacity" class="prize-event-form">
+<input asp-for="RoundId" value="@current.GroupId" type="hidden" /><label asp-for="NextRoundCapacity"><local-text key="PrizeNextRoundCapacity"></local-text></label>
+<input asp-for="NextRoundCapacity" type="number" min="1" max="200" required />
+<button class="button button-outline" type="submit"><local-text key="PrizeSave"></local-text></button>
+</form>
+<form method="post" asp-page-handler="CloseRound">
+<input asp-for="RoundId" value="@current.GroupId" type="hidden" /><label><input type="checkbox" name="confirmed" value="true" required /><local-text key="PrizeConfirm"></local-text></label>
+<button class="button button-primary" type="submit"><local-text key="PrizeCloseRound"></local-text></button>
+</form>
+}
+@foreach(var round in Model.RoundBoard.Rounds.Where(r=>r.Status=="Closed")){
+<section class="panel"><h3>@Model.Event.Name · <local-text key="PrizeRoundLabel"></local-text> @round.Number</h3>
+@if(round.Winners.Count==0){<p><local-text key="PrizeRoundNoPrize"></local-text></p>}
+else{<ul>@foreach(var winner in round.Winners){<li>@Model.Event.Name · <local-text key="PrizeRoundLabel"></local-text> @round.Number · @winner.Alias · @winner.PrizeName</li>}</ul>}
+</section>
+}
+</section>
+}
+@if(!Model.Expired && Model.Event.Status!="Purging"){
+<form method="post" asp-page-handler="Rename" class="panel prize-event-form"><input asp-for="ExpectedEventId" type="hidden" /><input asp-for="Version" type="hidden" /><input asp-for="OperationKey" type="hidden" />
+<label asp-for="Name"><local-text key="PrizeName"></local-text></label><input asp-for="Name" maxlength="100" required /><button class="button button-outline" type="submit"><local-text key="PrizeRename"></local-text></button></form>
+}
+<form method="post" asp-page-handler="Configure" id="prize-settings" class="panel prize-event-form">
+<input asp-for="ExpectedEventId" type="hidden" /><input asp-for="Version" type="hidden" /><input asp-for="OperationKey" type="hidden" />
+<h2><local-text key="PrizeBasics"></local-text></h2>
+@if(Model.Event.ConfigurationLocked){<p><local-text key="PrizeSettingsLocked"></local-text></p>}
+<fieldset disabled="@(Model.Event.ConfigurationLocked || Model.Expired)"><partial name="_Settings" model="Model.Input" view-data="settingsData" />
+<button class="button button-outline" type="submit"><local-text key="PrizeSave"></local-text></button></fieldset>
+</form>
+@if(!Model.Expired && Model.Event.Status!="Purging"){
+<form method="post" asp-page-handler="Profile" class="panel prize-event-form">
+<input asp-for="ExpectedEventId" type="hidden" /><input asp-for="Version" type="hidden" /><input asp-for="OperationKey" type="hidden" />
+<label asp-for="ProfileName"><local-text key="PrizeTemplateName"></local-text></label><input asp-for="ProfileName" maxlength="100" required />
+<p><local-text key="PrizeTemplateHint"></local-text></p><button class="button button-outline" type="submit"><local-text key="PrizeSaveProfile"></local-text></button>
+</form>
+}
+@if(Model.Deliveries.Count>0){<section class="panel"><h2><local-text key="PrizeDeliveryTitle"></local-text></h2>
+@foreach(var delivery in Model.Deliveries){<form method="post" asp-page-handler="Deliver"><p>@delivery.Round · @delivery.Alias · @delivery.PrizeName</p>
+@if(delivery.Delivered){<strong><local-text key="PrizeDelivered"></local-text></strong>}
+else{<input type="hidden" name="participantId" value="@delivery.ParticipantId"/><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PrizeDeliveryConfirm"></local-text></label><button class="button button-outline"><local-text key="PrizeDeliveryRegister"></local-text></button>}
+</form>}
+</section>}
+@section Scripts { <script src="~/js/participant-qr.js" asp-append-version="true" defer></script> }

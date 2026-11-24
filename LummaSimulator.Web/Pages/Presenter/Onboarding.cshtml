@@ -1,0 +1,52 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.OnboardingModel
+@{ViewData["Title"]=T["P65Onboarding"].Value;ViewData["TitleKey"]="P65Onboarding";}
+<h1><local-text key="P65Onboarding"></local-text></h1>
+@if(Model.ErrorKey is string error){<p class="notice error" role="alert"><local-text key="@error"></local-text></p>}
+@if(TempData["OnboardingSuccess"] is string success){<p class="notice" role="status"><local-text key="@success"></local-text></p>}
+@if(!Model.StorageUnavailable){
+<p><local-text key="OnboardingBlocked"></local-text></p>
+<ol class="onboarding-steps">
+    <li class="panel"><h2><local-text key="P65FirstAdmin"></local-text></h2>
+        <p><local-text key="@(Model.State.AdministratorReady?"OnboardingDone":"OnboardingOpen")"></local-text> · @User.Identity?.Name · @Model.Keys</p>
+        <a asp-page="/Presenter/Security"><local-text key="P65BackupKey"></local-text></a>
+    </li>
+    <li class="panel"><h2><local-text key="P65Organization"></local-text></h2>
+        <p><local-text key="@(Model.State.OrganizationReady?"OnboardingDone":"OnboardingOrganizationMissing")"></local-text></p>
+        <a asp-page="/Presenter/Configuration/Index"><local-text key="P65ConfigureOrganization"></local-text></a>
+    </li>
+    <li class="panel"><h2><local-text key="P65Hosting"></local-text></h2>
+        @if(Model.State.HostingConfirmed){<p><local-text key="OnboardingHostingSaved"></local-text></p>}
+        else{
+            <p><local-text key="P65ConfirmCertificate"></local-text></p>
+            <form method="post"><input type="hidden" name="action" value="hosting"/>
+                <label><input type="checkbox" name="certificateConfirmed" value="true" checked="@Model.CertificateChecked" required/><local-text key="P65CertificateChecked"></local-text></label>
+                <label><input type="checkbox" name="confirmed" value="true" checked="@Model.Confirmed" required/><local-text key="PresenterConfirm"></local-text></label>
+                <button class="button button-primary"><local-text key="P65ConfirmHosting"></local-text></button>
+            </form>
+        }
+    </li>
+    <li class="panel"><h2><local-text key="P65FirstEvent"></local-text></h2>
+        @if(Model.State.FirstEvent is not null){
+            <p><strong>@(Model.State.EventName??T["OnboardingEventUnavailable"].Value)</strong> · <local-text key="@(Model.State.EventReady?"OnboardingDone":"OnboardingEventNeedsOwner")"></local-text></p>
+        }else{
+            <p><local-text key="P65FirstEventType"></local-text></p>
+            <form method="post"><input type="hidden" name="action" value="event"/>
+                <label><local-text key="PresenterEventName"></local-text><input name="name" value="@Model.EventInput" maxlength="100" required/></label>
+                <label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label>
+                <button class="button button-primary"><local-text key="P65CreateExperience"></local-text></button>
+            </form>
+        }
+    </li>
+    <li class="panel"><h2><local-text key="P65FinishOnboarding"></local-text></h2>
+        <p><local-text key="@(Model.State.Ready?"OnboardingReady":"OnboardingRequirementsMissing")"></local-text></p>
+        <p id="presenter-status" role="status" aria-live="polite"></p>
+        <form method="post" asp-page="/Presenter/Onboarding" data-presenter-action="reauth" data-onboarding-submit><input type="hidden" name="action" value="finish"/>
+            <label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label>
+            <button class="button button-primary" disabled="@(!Model.State.Ready)"><local-text key="P65FinishOnboarding"></local-text></button>
+        </form>
+        <button id="presenter-cancel" class="button button-outline" type="button" hidden><local-text key="Aanvraag annuleren"></local-text></button>
+    </li>
+</ol>
+}
+@section Scripts{<script src="~/js/presenter.js" asp-append-version="true" defer></script>}

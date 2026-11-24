@@ -1,0 +1,13 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.LoginModel
+@{ ViewData["Title"] = T["Presentator inloggen"].Value; ViewData["TitleKey"]="Presentator inloggen"; }
+<section class="login-panel panel"><h1><local-text key="PresenterLogin"></local-text></h1>
+<p><local-text key="PresenterAuthenticatorInfo"></local-text></p>
+<form data-presenter-action="login" data-app-return-url="@Model.AppReturnUrl" method="post">
+<p><local-text key="PresenterDiscoverableInfo"></local-text></p>
+<button class="button button-primary" type="submit"><local-text key="PresenterSignIn"></local-text></button></form>
+<button id="presenter-cancel" class="button button-outline" type="button" hidden><local-text key="Aanvraag annuleren"></local-text></button>
+<p id="presenter-status" class="notice" role="status" aria-live="polite"></p>
+<a asp-page="/Presenter/Enroll"><local-text key="PresenterEnrollmentLink"></local-text></a>
+</section>
+@section Scripts { <script src="~/js/presenter.js" asp-append-version="true" defer></script> }

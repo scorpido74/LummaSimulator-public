@@ -1,0 +1,7 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.AuditModel
+@{ViewData["Title"]=T["PresenterAudit"].Value;ViewData["TitleKey"]="PresenterAudit";}
+<section class="panel table-panel"><h1><local-text key="PresenterAudit"></local-text></h1><a asp-page="/Presenter/Index"><local-text key="Presentatordashboard"></local-text></a>
+<p><local-text key="PresenterAuditInfo"></local-text></p><div class="table-scroll"><table><thead><tr><th><local-text key="Tijdstip"></local-text></th><th><local-text key="PresenterActor"></local-text></th><th><local-text key="Actie"></local-text></th><th><local-text key="PresenterTarget"></local-text></th></tr></thead><tbody>
+@foreach(var entry in Model.Entries){<tr><td>@DateTimeOffset.FromUnixTimeMilliseconds(entry.At).ToString("u")</td><td>@entry.Actor</td><td><local-text key="@("Audit"+entry.Action)"></local-text></td><td>@entry.Target</td></tr>}
+</tbody></table></div>@if(Model.Entries.Count==200){<a asp-page="/Presenter/Audit" asp-route-before="@Model.Entries.Last().Id"><local-text key="PresenterOlder"></local-text></a>}</section>

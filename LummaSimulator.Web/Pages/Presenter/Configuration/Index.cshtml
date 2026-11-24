@@ -1,0 +1,64 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.Configuration.IndexModel
+@{ ViewData["Title"] = T["P65Configuration"].Value; ViewData["TitleKey"] = "P65Configuration"; }
+<h1><local-text key="P65Configuration"></local-text></h1>
+<section class="panel reading-page"><h2>Presenter Helper</h2>
+<partial name="_HelperDownload" model="Model.HelperPackage" />
+@if(Model.HelperPackage is not null && Model.HelperDownloadUrl is {} downloadUrl){
+    <p><button type="button" class="button button-outline" data-helper-download="@downloadUrl">Downloadlink kopiëren</button> <span id="helper-copy-status" role="status"></span></p>
+    <p><a asp-page="/Downloads/PresenterHelper">Openbare downloadpagina</a></p>
+}
+<h3>Aangemelde installaties</h3>
+<p>Online tot 45 seconden na de laatste heartbeat, verouderd tot 120 seconden, daarna offline. De koppeling en gezondheid zijn de laatst gemelde waarden. Herlaad de pagina voor de actuele stand.</p>
+@if(Model.Helpers.Count==0){<p>Er hebben zich nog geen helpers aangemeld.</p>}
+else{
+<div class="table-scroll"><table><thead><tr><th>Apparaat</th><th>Installatie-ID</th><th>Versie</th><th>Portalgoedkeuring</th><th>App-koppeling</th><th>Gezondheid</th><th>Heartbeatstatus</th><th>Laatste heartbeat (UTC)</th></tr></thead><tbody>
+@foreach(var device in Model.Helpers){<tr><td>@device.Device</td><td><code>@device.Id</code></td><td>@device.Version</td><td>@(device.Approved?"Goedgekeurd":"Geen actieve goedkeuring")</td><td>@(device.Pairing switch {"Confirmed"=>"Bevestigd","Rejected"=>"Geweigerd","Unconfigured"=>"Niet ingesteld",_=>"Onbekend"})</td><td>@(device.Health switch {"Healthy"=>"In orde","Unreachable"=>"App onbereikbaar","Incompatible"=>"Incompatibel","Rejected"=>"App weigert koppeling",_=>"Onbekend"})</td><td>@device.Presence</td><td>@device.LastSeen.UtcDateTime.ToString("u")</td></tr>}
+</tbody></table></div>
+}
+</section>
+<section class="panel"><h2>Demonetwerk</h2>
+<p>Opslaan bewaart een beheerplan. Laat een netwerkbeheerder DNS en certificaten inrichten, de HTTPS-listeners configureren en de voorgestelde firewallregels op de juiste hosts controleren en toepassen.</p>
+@if(TempData["NetworkSaved"] is true){<p class="notice" role="status">Beheerplan opgeslagen. De netwerkbeheerder kan de voorgestelde instellingen nu controleren en toepassen.</p>}
+<form method="post" asp-page-handler="Network" class="network-plan"><input type="hidden" name="revision" value="@Model.Profile.Revision"/>
+<label>Portal-URL<input name="portalOrigin" type="url" value="@Model.Network?.PortalOrigin" placeholder="https://portal.example.test" required maxlength="255" aria-describedby="portal-url-help"/></label><small id="portal-url-help">HTTPS-adres van de website voor deelnemers, presentatoren en helperdownloads.</small>@Html.ValidationMessage("portalOrigin")
+<label>App-receiver-URL<input name="appOrigin" type="url" value="@Model.Network?.AppOrigin" placeholder="https://lumma-app.intern.example" required maxlength="255" aria-describedby="app-url-help"/></label><small id="app-url-help">HTTPS-adres waarop de Lumma-app de verbinding van de Presenter Helper ontvangt.</small>@Html.ValidationMessage("appOrigin")
+<label>Portal-IP (luisteradres)<input name="portalAddress" value="@Model.Network?.PortalAddress" placeholder="192.0.2.153" required maxlength="45" aria-describedby="portal-ip-help"/></label><small id="portal-ip-help">Lokaal IP-adres waarop de portal bereikbaar moet zijn.</small>@Html.ValidationMessage("portalAddress")
+<label>App-IP (luisteradres)<input name="appAddress" value="@Model.Network?.AppAddress" placeholder="192.0.2.154" required maxlength="45" aria-describedby="app-ip-help"/></label><small id="app-ip-help">LAN-adres van de pc waarop de Lumma-app draait en verbindingen ontvangt.</small>@Html.ValidationMessage("appAddress")
+<label>Demo-subnet<input name="demoSubnet" value="@Model.Network?.DemoSubnet" placeholder="192.0.2.0/24" required maxlength="49" aria-describedby="demo-subnet-help"/></label><small id="demo-subnet-help">Bronnetwerk van apparaten die de portal mogen bereiken.</small>@Html.ValidationMessage("demoSubnet")
+<label>Helper-subnet<input name="helperSubnet" value="@Model.Network?.HelperSubnet" placeholder="192.0.2.0/24" required maxlength="49" aria-describedby="helper-subnet-help"/></label><small id="helper-subnet-help">Bronnetwerk van apparaten die verbinding mogen maken met de App-receiver.</small>@Html.ValidationMessage("helperSubnet")
+<label>Windows-netwerkprofiel<select name="profile" required aria-describedby="network-profile-help"><option value="">Kies een profiel</option><option value="Private" selected="@(Model.Network?.Profile=="Private")">Privé</option><option value="Domain" selected="@(Model.Network?.Profile=="Domain")">Domein</option></select></label><small id="network-profile-help">Bepaalt voor welk Windows-firewallprofiel de regels gelden. Centraal beleid kan lokale regels uitsluiten.</small>@Html.ValidationMessage("profile")
+<label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button class="button button-primary">Beheerplan opslaan</button>
+</form></section>
+@if(TempData["ConfigurationNotice"] is string notice){<p class="notice error" role="alert"><local-text key="@notice"></local-text></p>}
+<section class="panel"><form method="post" data-presenter-action="reauth"><button class="button button-outline"><local-text key="PresenterReauthButton"></local-text></button></form><button id="presenter-cancel" type="button" class="button button-outline" hidden><local-text key="Aanvraag annuleren"></local-text></button><p id="presenter-status" role="status"></p>
+<form method="post" asp-page-handler="Save"><input type="hidden" name="revision" value="@Model.Profile.Revision"/>
+<label><local-text key="P65Organization"></local-text><input name="organization" value="@Model.Profile.Organization" required maxlength="80"/></label>
+<label><local-text key="P65DisplayName"></local-text><input name="displayName" value="@Model.Profile.DisplayName" required maxlength="100"/></label>
+<label><local-text key="P65DefaultLanguage"></local-text><select name="language"><option value="nl-NL" selected="@(Model.Profile.Language=="nl-NL")">Nederlands</option><option value="en-GB" selected="@(Model.Profile.Language=="en-GB")">English</option></select></label>
+<label><local-text key="P65EventDefault"></local-text><select name="eventType">@foreach(var kind in new[]{"experience","prize","edition"}){<option value="@kind" selected="@(Model.Profile.EventType==kind)">@kind</option>}</select></label>
+<label><local-text key="P65RetentionDefault"></local-text><select name="retentionDays">@foreach(var days in new[]{7,14,90}){<option value="@days" selected="@(Model.Profile.RetentionDays==days)">@days</option>}</select></label>
+<label><local-text key="P65HostingProposal"></local-text><input name="proposedBaseUrl" type="url" value="@Model.Profile.ProposedBaseUrl" maxlength="255"/></label><p><local-text key="P65HostingMigration"></local-text></p>
+<label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button class="button button-primary"><local-text key="PresenterSave"></local-text></button></form>
+<form method="post" enctype="multipart/form-data" asp-page-handler="Logo"><label><local-text key="P65LogoSlot"></local-text><select name="slot"><option value="organization">Organization</option><option value="presenter">Presenter</option><option value="visitor">Visitor</option></select></label><label><local-text key="P65LogoFormat"></local-text><input type="file" name="file" accept="image/png" required/></label><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button class="button button-outline"><local-text key="P65UploadLogo"></local-text></button></form>
+<p><a asp-page="/Presenter/Onboarding"><local-text key="P65Onboarding"></local-text></a></p>
+</section>
+<div class="presenter-cards">
+<section class="panel"><h2><local-text key="P65Organization"></local-text></h2><dl>
+<dt><local-text key="P65Organization"></local-text></dt><dd>@Experience.OrganizationName</dd>
+<dt><local-text key="P65DefaultLanguage"></local-text></dt><dd>@Experience.DefaultLanguage</dd>
+<dt><local-text key="P65IdleLifetime"></local-text></dt><dd>@Experience.AccountIdleMinutes min</dd>
+</dl><p><local-text key="P65BrandingInfo"></local-text></p></section>
+<section class="panel"><h2><local-text key="P65Hosting"></local-text></h2><dl>
+<dt><local-text key="P65RequestHost"></local-text></dt><dd>@ViewContext.HttpContext.Request.Host.Host</dd>
+<dt><local-text key="P65Https"></local-text></dt><dd>@(ViewContext.HttpContext.Request.IsHttps ? T["P65HttpsActive"] : T["P65HttpsInactive"])</dd>
+<dt>WebAuthn RP ID</dt><dd>@Model.RpId</dd><dt><local-text key="P65Origins"></local-text></dt><dd><ul>@foreach(var origin in Model.Origins){<li>@origin</li>}</ul></dd>
+</dl><p><local-text key="P65CertificateInfo"></local-text></p><p><local-text key="P65HostingMigration"></local-text></p></section>
+<section class="panel"><h2>Session Exposure Monitor</h2><p><local-text key="@(Model.Monitor.Configured ? "MonitorManageEnabled" : "MonitorManageDisabled")"></local-text></p>
+@if(Model.Monitor.StorageError || Model.Monitor.AuditPending){<p class="notice error" role="alert"><local-text key="MonitorManageStorage"></local-text></p>}
+<p><local-text key="P65MonitorVerification"></local-text></p><a class="button button-primary" asp-page="/Presenter/Integrations/Monitor"><local-text key="MonitorManageTitle"></local-text></a>
+<p><local-text key="P65MonitorScope"></local-text></p></section>
+<section class="panel"><h2><local-text key="P65SecurityManagement"></local-text></h2>
+<p><a asp-page="/Presenter/Accounts"><local-text key="P65Users"></local-text></a></p><p><a asp-page="/Presenter/Audit"><local-text key="PresenterAudit"></local-text></a></p><p><a asp-page="/Presenter/AuditExport"><local-text key="AuditExportTitle"></local-text></a></p>
+</section></div>
+@section Scripts{<script src="~/js/presenter.js" asp-append-version="true" defer></script><script src="~/js/helper-download.js" asp-append-version="true" defer></script>}

@@ -1,0 +1,16 @@
+@page
+@model ClickFixCompleteModel
+@{ ViewData["Title"] = T["ExerciseThanks"].Value; ViewData["TitleKey"] = "ExerciseThanks"; }
+<section class="panel completion">
+    <span class="pill"><local-text key="ExerciseLabel"></local-text></span>
+    <h1><local-text key="ExerciseThanks"></local-text></h1>
+    <p><strong>@Model.UserName</strong> · <local-text key="ExerciseCompleteTitle"></local-text></p>
+    <p id="exercise-prize-result" role="status">@T[Model.ResultKey,Model.PrizeName??""]</p>
+    @if(Model.ResultKey=="ExercisePrizePending"){<p><local-text key="ExerciseRememberAlias"></local-text></p>}
+    <p><local-text key="ExerciseSignals"></local-text></p>
+    <p><local-text key="ExerciseRealWarning"></local-text></p>
+    <p><local-text key="ClickFixPasskeys"></local-text></p>
+    <p class="small-note"><local-text key="ClickFixNoDetection"></local-text></p>
+    <a class="button button-outline" asp-page="/Demo"><local-text key="ClickFixBack"></local-text></a>
+</section>
+@section Scripts { <script src="~/js/exercise-result.js" asp-append-version="true" defer></script> }

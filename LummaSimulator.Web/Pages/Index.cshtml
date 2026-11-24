@@ -1,0 +1,41 @@
+@page
+@model IndexModel
+@{ ViewData["Title"] = T["VisitorHeroTitle"].Value; ViewData["TitleKey"] = "VisitorHeroTitle"; }
+<section class="hero">
+    <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> <local-text key="ONTDEK DE KRACHT VAN PASSKEYS"></local-text></span>
+        <h1 class="visitor-hero-title"><local-text key="VisitorHeroTitle"></local-text></h1>
+        <p class="hero-subtitle"><local-text key="Log veilig in zonder wachtwoord. Ontdek het verschil tussen een gesynchroniseerde passkey en een hardwaregebonden YubiKey."></local-text></p>
+        <div class="hero-points"><span><local-text key="✓ Geen wachtwoord nodig"></local-text></span><span><local-text key="✓ Jij houdt de controle"></local-text></span><span><local-text key="✓ Echte WebAuthn-demo"></local-text></span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="key-emblem"><svg viewBox="0 0 80 80" fill="none" aria-hidden="true"><path d="M40 8 65 18v22c0 16-12 27-25 32C27 67 15 56 15 40V18z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="40" cy="33" r="7" stroke="currentColor" stroke-width="3"/><path d="M40 40v14" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></div><div class="art-tag tag-top"><local-text key="Jouw apparaat. Jouw sleutel."></local-text></div><div class="art-tag tag-bottom"><span class="live-dot"></span> <local-text key="Gebonden aan de juiste website"></local-text></div></div>
+</section>
+<section class="choose-section" aria-labelledby="choose-title">
+    <div class="section-heading"><div><span class="eyebrow"><local-text key="PROBEER HET ZELF"></local-text></span><h2 id="choose-title"><local-text key="Hoe wil je inloggen?"></local-text></h2></div><p><local-text key="Geen account aanmaken."></local-text><br /><local-text key="Je krijgt vanzelf een tijdelijke gebruikersnaam."></local-text></p></div>
+    <div asp-validation-summary="All" data-localize-errors class="notice error" role="alert"></div>
+    @if(Model.PrizeRound is {} round){<div class="notice" id="prize-round-entry"><strong>@round.EventName · <local-text key="PrizeRoundLabel"></local-text> @round.Number</strong><p><local-text key="PrizeRoundCapacity"></local-text>: @round.Occupied / @round.Capacity</p></div>}
+    @if (Model.HasActiveDemo) { <div class="notice"><local-text key="@(Model.HasConflictingDemo ? "VisitorEventMismatch" : "Er is al een demonstratie actief in deze browser.")"></local-text> <a asp-page="/Demo"><local-text key="Ga verder met jouw demonstratie →"></local-text></a></div> }
+    @if(!Model.ParticipationAvailable){<div class="notice" id="visitor-admission-unavailable" role="status"><local-text key="@(Model.DefaultEventUnavailable?"VisitorDefaultUnavailable":"VisitorAdmissionUnavailable")"></local-text></div>}
+    else if(Model.PrizeRound?.Status=="Full"){<div class="notice error" role="status"><local-text key="PrizeRoundFull"></local-text></div>}
+    else if (!Model.HasConflictingDemo) {
+    <div class="choice-grid">
+@if (Model.LoginRoutes.Allows("yubikey")) {
+        <form method="post" class="choice-card featured" data-method="yubikey"><input type="hidden" name="eventKind" value="@Model.EventKind"/><input type="hidden" name="eventId" value="@Model.EventId"/><input type="hidden" name="route" value="yubikey" /><span class="card-badge"><local-text key="Recommended"></local-text></span><span class="device-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="6" y="12" width="20" height="13" rx="5"/><path d="M11 12V5h10v7M14 5v4m4-4v4"/><circle cx="16" cy="19" r="2"/></svg></span><span class="card-label"><local-text key="MET EEN BEVEILIGINGSSLEUTEL"></local-text></span><h3><local-text key="YubiKey"></local-text></h3><p><local-text key="Probeer een FIDO2-beveiligingssleutel. Houd je sleutel en de bijbehorende FIDO2-PIN bij de hand."></local-text></p><button class="button button-primary" type="submit"><local-text key="Gebruik een YubiKey"></local-text> <span aria-hidden="true">→</span></button></form>
+}
+@if (Model.LoginRoutes.Allows("laptop")) {
+        <form method="post" class="choice-card" data-method="windows-hello"><input type="hidden" name="eventKind" value="@Model.EventKind"/><input type="hidden" name="eventId" value="@Model.EventId"/><input type="hidden" name="route" value="laptop" /><span class="device-icon" aria-hidden="true"><svg class="windows-mark" viewBox="0 0 32 32" fill="currentColor" focusable="false"><path d="M3 5.6 14.5 4v11H3zm13-1.9L29 2v13H16.5zM3 17h11.5v11L3 26.4zm13.5 0H29v13l-12.5-1.7z"/></svg></span><span class="card-label"><local-text key="HIER OP DEZE COMPUTER"></local-text></span><h3><local-text key="Windows Hello"></local-text></h3><p><local-text key="Ontdek inloggen met Windows Hello. Bevestig met je gezicht, vingerafdruk of apparaat-PIN."></local-text></p><button class="button button-outline" type="submit"><local-text key="Start op deze laptop"></local-text> <span aria-hidden="true">→</span></button></form>
+}
+@if (Model.LoginRoutes.Allows("phone")) {
+        <form method="post" class="choice-card" data-method="phone"><input type="hidden" name="eventKind" value="@Model.EventKind"/><input type="hidden" name="eventId" value="@Model.EventId"/><input type="hidden" name="route" value="phone" /><span class="device-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="8" y="3" width="16" height="26" rx="3"/><path d="M13 6h6M14 25h4"/></svg></span><span class="card-label"><local-text key="JE EIGEN APPARAAT"></local-text></span><h3><local-text key="Mijn telefoon"></local-text></h3><p><local-text key="Gebruik een passkey op je telefoon. Je browser kan je begeleiden met een QR-code of apparaatkeuze."></local-text></p><button class="button button-outline" type="submit"><local-text key="Probeer met mijn telefoon"></local-text> <span aria-hidden="true">→</span></button></form>
+}
+@if (Model.LoginRoutes.Allows("ipad")) {
+    <form method="post" class="choice-card" data-method="ipad"><input type="hidden" name="eventKind" value="@Model.EventKind"/><input type="hidden" name="eventId" value="@Model.EventId"/><input type="hidden" name="route" value="ipad" /><span class="device-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="3" width="24" height="26" rx="3"/><path d="M14 25h4M14 6h4"/></svg></span><div><span class="card-label"><local-text key="OOK OP IPAD"></local-text></span><h3><local-text key="Een passkey op je iPad"></local-text></h3><p><local-text key="Open deze portal op je iPad en ervaar de registratie en authenticatie in de browser."></local-text></p></div><button type="submit" class="button button-outline"><local-text key="Start de iPad-demo"></local-text> <span aria-hidden="true">→</span></button></form>
+}
+    </div>
+    @if (Model.LoginRoutes.Mask == 0) { <p class="notice" role="status"><local-text key="LoginRoutesUnavailable"></local-text></p> }
+    <p class="fine-print"><local-text key="Beschikbare opties verschillen per browser, apparaat en passkeymanager. De keuze hierboven begeleidt je; de browser bepaalt welke authenticators beschikbaar zijn."></local-text></p>
+    }
+</section>
+<section class="privacy-card" aria-labelledby="privacy-title"><span class="privacy-icon" aria-hidden="true">◇</span><div><h2 id="privacy-title"><local-text key="Jouw privacy staat voorop."></local-text></h2><p><local-text key="Je krijgt automatisch een willekeurige gebruikersnaam. We vragen niet om je naam of e-mailadres."></local-text></p><p><local-text key="Je passkey blijft op je eigen apparaat. Wij ontvangen nooit je privésleutel."></local-text></p><p><local-text key="Na afloop verwijderen we je tijdelijke account en de bijbehorende registratie."></local-text></p><p><local-text key="Een eventueel opgeslagen passkey op je eigen apparaat kun je zelf verwijderen."></local-text></p><a asp-page="/Privacy"><local-text key="Lees hoe we met tijdelijke gegevens omgaan →"></local-text></a></div></section>
+
+

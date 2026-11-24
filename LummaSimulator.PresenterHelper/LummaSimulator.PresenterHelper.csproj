@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><Version>0.1.1</Version><FileVersion>0.1.1.0</FileVersion><AssemblyVersion>0.1.1.0</AssemblyVersion></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../LummaSimulator.Helper.Core/LummaSimulator.Helper.Core.csproj" /></ItemGroup>
+</Project>

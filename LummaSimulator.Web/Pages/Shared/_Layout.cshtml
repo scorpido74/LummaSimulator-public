@@ -1,0 +1,41 @@
+@inject LummaSimulator.Web.Services.PresentationSettings Presentation
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment BrandingEnvironment
+@{ var resellerLogo = Presentation.Logo("visitor") ?? Presentation.Logo("organization") ?? LummaSimulator.Web.Services.ResellerBranding.LogoUrl(Experience, BrandingEnvironment.WebRootPath, BrandingEnvironment.WebRootFileProvider); }
+<!DOCTYPE html>
+<html lang="@System.Globalization.CultureInfo.CurrentUICulture.Name">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title data-i18n-title="@ViewData["TitleKey"]" data-title-alias="@ViewData["TitleAlias"]" data-title-separator="@(ViewData["TitleAliasSeparator"] as string??" · ")" data-title-suffix=" · @Presentation.Current.Organization Passkey Demo">@ViewData["Title"]@(ViewData["TitleAlias"] is string alias ? (ViewData["TitleAliasSeparator"] as string??" · ") + alias : "") · @Presentation.Current.Organization Passkey Demo</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+<a class="skip-link" href="#main"><local-text key="Naar de inhoud"></local-text></a>
+<header class="site-header">
+    <div class="application-brand"><a asp-page="/Index" class="application-name">LummaSimulator</a>
+    <a class="brand" asp-page="/Index" data-i18n-aria-label="Home" aria-label="@T["Home"]">
+        @if (resellerLogo is not null) { <img src="@Url.Content(resellerLogo)" class="infinigate-logo reseller-logo" alt="@Presentation.Current.Organization" /> }
+        else { <span class="reseller-fallback">@Presentation.Current.Organization</span> }
+        <span class="brand-divider"></span><img src="~/images/yubico-official.svg" class="yubico-logo" alt="Yubico" />
+    </a></div>
+    <nav data-i18n-aria-label="Hoofdnavigatie" aria-label="@T["Hoofdnavigatie"]"><a asp-page="/Privacy"><local-text key="Privacy"></local-text></a><a asp-page="/Presenter/Index"><local-text key="Voor presentatoren"></local-text> <span aria-hidden="true">↗</span></a><a asp-page="/Presenter/Helper">Presenterhelper</a>
+    <form id="language-preference-form" class="language-switch" method="post" data-i18n-aria-label="Language" aria-label="@T["Language"]">
+        @Html.AntiForgeryToken()
+        @foreach (var language in Experience.AvailableLanguages) {
+            <button type="button" data-language="@language" aria-pressed="@(language == System.Globalization.CultureInfo.CurrentUICulture.Name ? "true" : "false")">@(language == "nl-NL" ? "🇳🇱 NL" : "🇬🇧 EN")</button>
+        }
+        <span id="language-notice" role="status" aria-live="polite"></span>
+    </form></nav>
+</header>
+<main id="main" class="page-shell">@RenderBody()</main>
+<footer class="site-footer"><span><local-text key="Een demonstratieomgeving van"></local-text> <strong>@Presentation.Current.Organization</strong><local-text key=". Geen officiële Yubico-website."></local-text></span><span><local-text key="Passkey Demo Portal"></local-text> <span class="version">v@(typeof(LummaSimulator.Web.Services.PresentationSettings).Assembly.GetCustomAttributes(typeof(System.Reflection.AssemblyInformationalVersionAttribute), false).Cast<System.Reflection.AssemblyInformationalVersionAttribute>().Single().InformationalVersion)</span></span></footer>
+<template id="localization-data">@Html.Raw(System.Text.Json.JsonSerializer.Serialize(new {
+    language = System.Globalization.CultureInfo.CurrentUICulture.Name,
+    audience = Context.Request.Path.StartsWithSegments("/Presenter") ? "presenter" : "visitor",
+    catalogs = Experience.AvailableLanguages.ToDictionary(language => language, language => UiText.Catalog(language))
+}))</template>
+<script src="~/js/localization.js" asp-append-version="true" defer></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

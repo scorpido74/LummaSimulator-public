@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name=". Geen officiële Yubico-website." xml:space="preserve">
+    <value>. Geen officiële Yubico-website.</value>
+  </data>
+  <data name="ALLEEN VOOR PRESENTATOREN" xml:space="preserve">
+    <value>ALLEEN VOOR PRESENTATOREN</value>
+  </data>
+  <data name="AUTHENTICATIE VOLTOOID" xml:space="preserve">
+    <value>AUTHENTICATIE VOLTOOID</value>
+  </data>
+  <data name="Aanvraag annuleren" xml:space="preserve">
+    <value>Aanvraag annuleren</value>
+  </data>
+  <data name="Actie" xml:space="preserve">
+    <value>Actie</value>
+  </data>
+  <data name="Actieve demonstraties" xml:space="preserve">
+    <value>Actieve demonstraties</value>
+  </data>
+  <data name="Actieve tijdelijke accounts. Geen gevoelige WebAuthn-gegevens." xml:space="preserve">
+    <value>Actieve tijdelijke accounts. Geen gevoelige WebAuthn-gegevens.</value>
+  </data>
+  <data name="Actieve tijdelijke gebruikers" xml:space="preserve">
+    <value>Actieve tijdelijke gebruikers</value>
+  </data>
+  <data name="Alle demoplekken zijn bezet. Probeer het later opnieuw." xml:space="preserve">
+    <value>Alle demoplekken zijn bezet. Probeer het later opnieuw.</value>
+  </data>
+  <data name="Alleen een referentie; hiermee kun je geen account openen." xml:space="preserve">
+    <value>Alleen een referentie; hiermee kun je geen account openen.</value>
+  </data>
+  <data name="Annulering" xml:space="preserve">
+    <value>Annulering</value>
+  </data>
+  <data name="Authenticatie geslaagd. De server heeft de passkey-handtekening en gebruikersverificatie gecontroleerd." xml:space="preserve">
+    <value>Authenticatie geslaagd. De server heeft de passkey-handtekening en gebruikersverificatie gecontroleerd.</value>
+  </data>
+  <data name="Bedankt voor je deelname" xml:space="preserve">
+    <value>Bedankt voor je deelname</value>
+  </data>
+  <data name="Bedankt voor je deelname!" xml:space="preserve">
+    <value>Bedankt voor je deelname!</value>
+  </data>
+  <data name="Beschikbare opties verschillen per browser, apparaat en passkeymanager. De keuze hierboven begeleidt je; de browser bepaalt welke authenticators beschikbaar zijn." xml:space="preserve">
+    <value>Beschikbare opties verschillen per browser, apparaat en passkeymanager. De keuze hierboven begeleidt je; de browser bepaalt welke authenticators beschikbaar zijn.</value>
+  </data>
+  <data name="Beëindigen" xml:space="preserve">
+    <value>Beëindigen</value>
+  </data>
+  <data name="Bij beëindiging worden de serverregistratie en de bijbehorende sessie en challenges verwijderd. Inactieve accounts verlopen na 29 minuten; een opruimtaak draait elke 30 seconden zolang de server actief is. Dezelfde vervalcontrole geldt bij toegang tot je account. Een gestopte server kan niet opruimen; bij de volgende start worden verlopen gegevens eerst verwijderd." xml:space="preserve">
+    <value>Bij beëindiging worden de serverregistratie en de bijbehorende sessie en challenges verwijderd. Inactieve accounts verlopen na 29 minuten; een opruimtaak draait elke 30 seconden zolang de server actief is. Dezelfde vervalcontrole geldt bij toegang tot je account. Een gestopte server kan niet opruimen; bij de volgende start worden verlopen gegevens eerst verwijderd.</value>
+  </data>
+  <data name="Browserceremonie" xml:space="preserve">
+    <value>Browserceremonie</value>
+  </data>
+  <data name="Controleer de HTTPS-origin en RP ID met de presentator. Localhost en het publieke domein gebruiken verschillende passkeys." xml:space="preserve">
+    <value>Controleer de HTTPS-origin en RP ID met de presentator. Localhost en het publieke domein gebruiken verschillende passkeys.</value>
+  </data>
+  <data name="Cookies en logging" xml:space="preserve">
+    <value>Cookies en logging</value>
+  </data>
+  <data name="Credential" xml:space="preserve">
+    <value>Credential</value>
+  </data>
+  <data name="DE IPAD-DEMONSTRATIE" xml:space="preserve">
+    <value>DE IPAD-DEMONSTRATIE</value>
+  </data>
+  <data name="DEMONSTRATIE AFGEROND" xml:space="preserve">
+    <value>DEMONSTRATIE AFGEROND</value>
+  </data>
+  <data name="De aanvraag is geannuleerd. Je kunt opnieuw proberen." xml:space="preserve">
+    <value>De aanvraag is geannuleerd. Je kunt opnieuw proberen.</value>
+  </data>
+  <data name="De aanvraag is verlopen. Je kunt opnieuw proberen." xml:space="preserve">
+    <value>De aanvraag is verlopen. Je kunt opnieuw proberen.</value>
+  </data>
+  <data name="De actie kon niet worden voltooid." xml:space="preserve">
+    <value>De actie kon niet worden voltooid.</value>
+  </data>
+  <data name="De browser heeft geen credential teruggegeven." xml:space="preserve">
+    <value>De browser heeft geen credential teruggegeven.</value>
+  </data>
+  <data name="De browser kon de aanvraag niet starten. Controleer andere tabs en probeer opnieuw." xml:space="preserve">
+    <value>De browser kon de aanvraag niet starten. Controleer andere tabs en probeer opnieuw.</value>
+  </data>
+  <data name="De demonstratie is verlopen. Start opnieuw." xml:space="preserve">
+    <value>De demonstratie is verlopen. Start opnieuw.</value>
+  </data>
+  <data name="De demonstraties in beeld." xml:space="preserve">
+    <value>De demonstraties in beeld.</value>
+  </data>
+  <data name="De lokale sessiemonitor is gesloten totdat het aparte integratiegeheim is geconfigureerd." xml:space="preserve">
+    <value>De lokale sessiemonitor is gesloten totdat het aparte integratiegeheim is geconfigureerd.</value>
+  </data>
+  <data name="De passkey kan nog op je apparaat staan, maar werkt niet meer voor dit demoaccount. Je kunt deze zelf verwijderen via de instellingen van je passkeymanager." xml:space="preserve">
+    <value>De passkey kan nog op je apparaat staan, maar werkt niet meer voor dit demoaccount. Je kunt deze zelf verwijderen via de instellingen van je passkeymanager.</value>
+  </data>
+  <data name="De server heeft de verificatie niet bevestigd." xml:space="preserve">
+    <value>De server heeft de verificatie niet bevestigd.</value>
+  </data>
+  <data name="De server heeft geen privésleutel ontvangen." xml:space="preserve">
+    <value>De server heeft geen privésleutel ontvangen.</value>
+  </data>
+  <data name="De server is tijdelijk niet beschikbaar. Vraag de presentator om hulp." xml:space="preserve">
+    <value>De server is tijdelijk niet beschikbaar. Vraag de presentator om hulp.</value>
+  </data>
+  <data name="De server kon de annulering niet bevestigen; een achtergebleven aanvraag vervalt binnen twee minuten." xml:space="preserve">
+    <value>De server kon de annulering niet bevestigen; een achtergebleven aanvraag vervalt binnen twee minuten.</value>
+  </data>
+  <data name="DemoRunId voor de presentator" xml:space="preserve">
+    <value>DemoRunId voor de presentator</value>
+  </data>
+  <data name="Demonstratie beëindigen" xml:space="preserve">
+    <value>Demonstratie beëindigen</value>
+  </data>
+  <data name="Deze authenticator heeft mogelijk al een passkey voor dit demoaccount. Probeer in te loggen of kies een andere provider." xml:space="preserve">
+    <value>Deze authenticator heeft mogelijk al een passkey voor dit demoaccount. Probeer in te loggen of kies een andere provider.</value>
+  </data>
+  <data name="Deze bevestiging volgt uitsluitend op een geslaagde server-side WebAuthn-verificatie voor dit demoaccount." xml:space="preserve">
+    <value>Deze bevestiging volgt uitsluitend op een geslaagde server-side WebAuthn-verificatie voor dit demoaccount.</value>
+  </data>
+  <data name="Deze browser biedt hier geen WebAuthn aan. Gebruik een ondersteunde browser via de juiste HTTPS-origin." xml:space="preserve">
+    <value>Deze browser biedt hier geen WebAuthn aan. Gebruik een ondersteunde browser via de juiste HTTPS-origin.</value>
+  </data>
+  <data name="Deze login staat los van de tijdelijke bezoekersaccounts." xml:space="preserve">
+    <value>Deze login staat los van de tijdelijke bezoekersaccounts.</value>
+  </data>
+  <data name="Dit is een Infinigate-demonstratieomgeving, geen officiële Yubico-website. Er zijn geen externe analytics of scripts toegevoegd. De apparaatkeuze bewijst niet dat een passkey is gesynchroniseerd of hardwaregebonden." xml:space="preserve">
+    <value>Dit is een Infinigate-demonstratieomgeving, geen officiële Yubico-website. Er zijn geen externe analytics of scripts toegevoegd. De apparaatkeuze bewijst niet dat een passkey is gesynchroniseerd of hardwaregebonden.</value>
+  </data>
+  <data name="Een demonstratieomgeving van" xml:space="preserve">
+    <value>Een demonstratieomgeving van</value>
+  </data>
+  <data name="Een eventueel opgeslagen passkey op je eigen apparaat kun je zelf verwijderen." xml:space="preserve">
+    <value>Een eventueel opgeslagen passkey op je eigen apparaat kun je zelf verwijderen.</value>
+  </data>
+  <data name="Een passkey op je iPad" xml:space="preserve">
+    <value>Een passkey op je iPad</value>
+  </data>
+  <data name="Een tijdelijk account, geen inschrijfformulier" xml:space="preserve">
+    <value>Een tijdelijk account, geen inschrijfformulier</value>
+  </data>
+  <data name="Een willekeurige accountidentificatie, gebruikersnaam en DemoRunId, een afzonderlijke WebAuthn user handle, publieke credentialgegevens, tijdelijke challenges, sessiecontrole en succes-/faaltellingen. De willekeurige identifiers kunnen binnen deze demo bij elkaar horen. We gebruiken deze uitsluitend om de demonstratie te laten werken." xml:space="preserve">
+    <value>Een willekeurige accountidentificatie, gebruikersnaam en DemoRunId, een afzonderlijke WebAuthn user handle, publieke credentialgegevens, tijdelijke challenges, sessiecontrole en succes-/faaltellingen. De willekeurige identifiers kunnen binnen deze demo bij elkaar horen. We gebruiken deze uitsluitend om de demonstratie te laten werken.</value>
+  </data>
+  <data name="Er is al een demonstratie actief in deze browser." xml:space="preserve">
+    <value>Er is al een demonstratie actief in deze browser.</value>
+  </data>
+  <data name="Er is al een passkey-aanvraag actief voor jouw demonstratie. Rond die af of annuleer hem in de andere tab." xml:space="preserve">
+    <value>Er is al een passkey-aanvraag actief voor jouw demonstratie. Rond die af of annuleer hem in de andere tab.</value>
+  </data>
+  <data name="Er is een passkey-aanvraag actief in een andere tab. Rond die eerst af of annuleer hem." xml:space="preserve">
+    <value>Er is een passkey-aanvraag actief in een andere tab. Rond die eerst af of annuleer hem.</value>
+  </data>
+  <data name="Er is een technische fout opgetreden. Neem zo nodig contact op met de presentator." xml:space="preserve">
+    <value>Er is een technische fout opgetreden. Neem zo nodig contact op met de presentator.</value>
+  </data>
+  <data name="Er is een technische fout opgetreden. Probeer opnieuw of neem contact op met de presentator." xml:space="preserve">
+    <value>Er is een technische fout opgetreden. Probeer opnieuw of neem contact op met de presentator.</value>
+  </data>
+  <data name="Er staat nog een browseraanvraag open. Rond die af of annuleer hem, ook in andere tabs, en probeer daarna opnieuw." xml:space="preserve">
+    <value>Er staat nog een browseraanvraag open. Rond die af of annuleer hem, ook in andere tabs, en probeer daarna opnieuw.</value>
+  </data>
+  <data name="Ervaar de kracht" xml:space="preserve">
+    <value>Ervaar de kracht</value>
+  </data>
+  <data name="Ervaar de kracht van passkeys" xml:space="preserve">
+    <value>Ervaar de kracht van passkeys</value>
+  </data>
+  <data name="Ervaar veilig inloggen" xml:space="preserve">
+    <value>Ervaar veilig inloggen</value>
+  </data>
+  <data name="Even opnieuw proberen." xml:space="preserve">
+    <value>Even opnieuw proberen.</value>
+  </data>
+  <data name="Eén keer registreren. Daarna veilig inloggen met jouw passkey." xml:space="preserve">
+    <value>Eén keer registreren. Daarna veilig inloggen met jouw passkey.</value>
+  </data>
+  <data name="Ga verder met jouw demonstratie →" xml:space="preserve">
+    <value>Ga verder met jouw demonstratie →</value>
+  </data>
+  <data name="Geannuleerd, verlopen of geen passende passkey gevonden. Kies de oorspronkelijke provider en controleer of deze demosessie nog actief is." xml:space="preserve">
+    <value>Geannuleerd, verlopen of geen passende passkey gevonden. Kies de oorspronkelijke provider en controleer of deze demosessie nog actief is.</value>
+  </data>
+  <data name="Gebonden aan de juiste website" xml:space="preserve">
+    <value>Gebonden aan de juiste website</value>
+  </data>
+  <data name="Gebruik Windows Hello waar beschikbaar. Je browser kan daarnaast andere authenticators aanbieden. Vraag de presentator om hulp als Windows Hello nog niet is ingesteld." xml:space="preserve">
+    <value>Gebruik Windows Hello waar beschikbaar. Je browser kan daarnaast andere authenticators aanbieden. Vraag de presentator om hulp als Windows Hello nog niet is ingesteld.</value>
+  </data>
+  <data name="Gebruik de geconfigureerde HTTPS-origin." xml:space="preserve">
+    <value>Gebruik de geconfigureerde HTTPS-origin.</value>
+  </data>
+  <data name="Gebruik deze pagina op je iPad met een ondersteunde browser en ingestelde passkeymanager. Bevestig wanneer gevraagd met Face ID, Touch ID of de apparaatcode." xml:space="preserve">
+    <value>Gebruik deze pagina op je iPad met een ondersteunde browser en ingestelde passkeymanager. Bevestig wanneer gevraagd met Face ID, Touch ID of de apparaatcode.</value>
+  </data>
+  <data name="Gebruik een YubiKey" xml:space="preserve">
+    <value>Gebruik een YubiKey</value>
+  </data>
+  <data name="Gebruik een passkey op je telefoon. Je browser kan je begeleiden met een QR-code of apparaatkeuze." xml:space="preserve">
+    <value>Gebruik een passkey op je telefoon. Je browser kan je begeleiden met een QR-code of apparaatkeuze.</value>
+  </data>
+  <data name="Gebruiker / DemoRunId" xml:space="preserve">
+    <value>Gebruiker / DemoRunId</value>
+  </data>
+  <data name="Gebruikersnaam" xml:space="preserve">
+    <value>Gebruikersnaam</value>
+  </data>
+  <data name="Geen account aanmaken." xml:space="preserve">
+    <value>Geen account aanmaken.</value>
+  </data>
+  <data name="Geregistreerde credentials" xml:space="preserve">
+    <value>Geregistreerde credentials</value>
+  </data>
+  <data name="Geregistreerde passkeys" xml:space="preserve">
+    <value>Geregistreerde passkeys</value>
+  </data>
+  <data name="Geslaagd / mislukt" xml:space="preserve">
+    <value>Geslaagd / mislukt</value>
+  </data>
+  <data name="Geslaagde authenticaties" xml:space="preserve">
+    <value>Geslaagde authenticaties</value>
+  </data>
+  <data name="Geverifieerde passkeyregistratie" xml:space="preserve">
+    <value>Geverifieerde passkeyregistratie</value>
+  </data>
+  <data name="HIER OP DEZE COMPUTER" xml:space="preserve">
+    <value>HIER OP DEZE COMPUTER</value>
+  </data>
+  <data name="Hoe wil je inloggen?" xml:space="preserve">
+    <value>Hoe wil je inloggen?</value>
+  </data>
+  <data name="Hoofdnavigatie" xml:space="preserve">
+    <value>Hoofdnavigatie</value>
+  </data>
+  <data name="Infinigate" xml:space="preserve">
+    <value>Infinigate</value>
+  </data>
+  <data name="Inloggen met mijn passkey" xml:space="preserve">
+    <value>Inloggen met mijn passkey</value>
+  </data>
+  <data name="Inloggen niet gelukt. Controleer het presentatorwachtwoord." xml:space="preserve">
+    <value>Inloggen niet gelukt. Controleer het presentatorwachtwoord.</value>
+  </data>
+  <data name="Intrekken" xml:space="preserve">
+    <value>Intrekken</value>
+  </data>
+  <data name="JE EIGEN APPARAAT" xml:space="preserve">
+    <value>JE EIGEN APPARAAT</value>
+  </data>
+  <data name="JOUW DEMONSTRATIE" xml:space="preserve">
+    <value>JOUW DEMONSTRATIE</value>
+  </data>
+  <data name="Je bent veilig aangemeld!" xml:space="preserve">
+    <value>Je bent veilig aangemeld!</value>
+  </data>
+  <data name="Je browser opent de apparaatkeuze. Volg de aanwijzingen en bevestig met je apparaat of beveiligingssleutel." xml:space="preserve">
+    <value>Je browser opent de apparaatkeuze. Volg de aanwijzingen en bevestig met je apparaat of beveiligingssleutel.</value>
+  </data>
+  <data name="Je demonstratie is verlopen. Start opnieuw." xml:space="preserve">
+    <value>Je demonstratie is verlopen. Start opnieuw.</value>
+  </data>
+  <data name="Je krijgt automatisch een willekeurige gebruikersnaam. We vragen niet om je naam of e-mailadres." xml:space="preserve">
+    <value>Je krijgt automatisch een willekeurige gebruikersnaam. We vragen niet om je naam of e-mailadres.</value>
+  </data>
+  <data name="Je krijgt vanzelf een tijdelijke gebruikersnaam." xml:space="preserve">
+    <value>Je krijgt vanzelf een tijdelijke gebruikersnaam.</value>
+  </data>
+  <data name="Je passkey blijft op je eigen apparaat. Wij ontvangen nooit je privésleutel." xml:space="preserve">
+    <value>Je passkey blijft op je eigen apparaat. Wij ontvangen nooit je privésleutel.</value>
+  </data>
+  <data name="Je sessiecontrole is verlopen. Vernieuw de pagina." xml:space="preserve">
+    <value>Je sessiecontrole is verlopen. Vernieuw de pagina.</value>
+  </data>
+  <data name="Je tijdelijke demoaccount en de bijbehorende registratie zijn verwijderd." xml:space="preserve">
+    <value>Je tijdelijke demoaccount en de bijbehorende registratie zijn verwijderd.</value>
+  </data>
+  <data name="Jij houdt de controle" xml:space="preserve">
+    <value>Jij houdt de controle</value>
+  </data>
+  <data name="Jouw apparaat. Jouw sleutel." xml:space="preserve">
+    <value>Jouw apparaat. Jouw sleutel.</value>
+  </data>
+  <data name="Jouw passkey-demonstratie" xml:space="preserve">
+    <value>Jouw passkey-demonstratie</value>
+  </data>
+  <data name="Jouw privacy" xml:space="preserve">
+    <value>Jouw privacy</value>
+  </data>
+  <data name="Jouw privacy staat voorop." xml:space="preserve">
+    <value>Jouw privacy staat voorop.</value>
+  </data>
+  <data name="Kies bij het inloggen dezelfde provider als bij de registratie. De browser beheert deze keuze; deze portal dwingt geen provider af. Een verwijderde of verlopen demo en een ander RP-domein herkennen een oude registratie niet." xml:space="preserve">
+    <value>Kies bij het inloggen dezelfde provider als bij de registratie. De browser beheert deze keuze; deze portal dwingt geen provider af. Een verwijderde of verlopen demo en een ander RP-domein herkennen een oude registratie niet.</value>
+  </data>
+  <data name="Kies een geldige demonstratie." xml:space="preserve">
+    <value>Kies een geldige demonstratie.</value>
+  </data>
+  <data name="Kies in de browser zo nodig 'ander apparaat' of een telefoon. Een QR-code en nabijheidscontrole worden door de browser aangeboden als jouw combinatie dit ondersteunt." xml:space="preserve">
+    <value>Kies in de browser zo nodig 'ander apparaat' of een telefoon. Een QR-code en nabijheidscontrole worden door de browser aangeboden als jouw combinatie dit ondersteunt.</value>
+  </data>
+  <data name="Klaar om te beginnen. Je browser vraagt om toestemming." xml:space="preserve">
+    <value>Klaar om te beginnen. Je browser vraagt om toestemming.</value>
+  </data>
+  <data name="Laat zien dat jij de passkey kunt gebruiken. De server controleert de handtekening en de juiste website." xml:space="preserve">
+    <value>Laat zien dat jij de passkey kunt gebruiken. De server controleert de handtekening en de juiste website.</value>
+  </data>
+  <data name="Laatste activiteit" xml:space="preserve">
+    <value>Laatste activiteit</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Taal</value>
+  </data>
+  <data name="LanguageSaveFailed" xml:space="preserve">
+    <value>De taalvoorkeur kon niet worden opgeslagen. Probeer opnieuw.</value>
+  </data>
+  <data name="LastPass" xml:space="preserve">
+    <value>LastPass</value>
+  </data>
+  <data name="Lees hoe we met tijdelijke gegevens omgaan →" xml:space="preserve">
+    <value>Lees hoe we met tijdelijke gegevens omgaan →</value>
+  </data>
+  <data name="Log in om actieve demonstraties te bekijken en te beëindigen." xml:space="preserve">
+    <value>Log in om actieve demonstraties te bekijken en te beëindigen.</value>
+  </data>
+  <data name="Log veilig in zonder wachtwoord. Ontdek het verschil tussen een gesynchroniseerde passkey en een hardwaregebonden YubiKey." xml:space="preserve">
+    <value>Log veilig in zonder wachtwoord. Ontdek het verschil tussen een gesynchroniseerde passkey en een hardwaregebonden YubiKey.</value>
+  </data>
+  <data name="Lokale monitor" xml:space="preserve">
+    <value>Lokale monitor</value>
+  </data>
+  <data name="MET EEN BEVEILIGINGSSLEUTEL" xml:space="preserve">
+    <value>MET EEN BEVEILIGINGSSLEUTEL</value>
+  </data>
+  <data name="MET EEN FIDO2-SLEUTEL" xml:space="preserve">
+    <value>MET EEN FIDO2-SLEUTEL</value>
+  </data>
+  <data name="MET JE TELEFOON" xml:space="preserve">
+    <value>MET JE TELEFOON</value>
+  </data>
+  <data name="Maak jouw passkey" xml:space="preserve">
+    <value>Maak jouw passkey</value>
+  </data>
+  <data name="Makkelijk om te beginnen" xml:space="preserve">
+    <value>Makkelijk om te beginnen</value>
+  </data>
+  <data name="Maximaal vijf passkeys per demonstratie." xml:space="preserve">
+    <value>Maximaal vijf passkeys per demonstratie.</value>
+  </data>
+  <data name="Mijn telefoon" xml:space="preserve">
+    <value>Mijn telefoon</value>
+  </data>
+  <data name="Mislukte authenticaties" xml:space="preserve">
+    <value>Mislukte authenticaties</value>
+  </data>
+  <data name="Na afloop verwijderen we je tijdelijke account en de bijbehorende registratie." xml:space="preserve">
+    <value>Na afloop verwijderen we je tijdelijke account en de bijbehorende registratie.</value>
+  </data>
+  <data name="Na inactiviteit verwijderen we je demo automatisch, uiterlijk na 30 minuten zolang de server actief is." xml:space="preserve">
+    <value>Na inactiviteit verwijderen we je demo automatisch, uiterlijk na 30 minuten zolang de server actief is.</value>
+  </data>
+  <data name="Naar de inhoud" xml:space="preserve">
+    <value>Naar de inhoud</value>
+  </data>
+  <data name="Naar de startpagina →" xml:space="preserve">
+    <value>Naar de startpagina →</value>
+  </data>
+  <data name="Nog een passkey toevoegen" xml:space="preserve">
+    <value>Nog een passkey toevoegen</value>
+  </data>
+  <data name="Nog geen actieve demonstraties. De eerste bezoeker kan direct beginnen." xml:space="preserve">
+    <value>Nog geen actieve demonstraties. De eerste bezoeker kan direct beginnen.</value>
+  </data>
+  <data name="Nog niet geregistreerd" xml:space="preserve">
+    <value>Nog niet geregistreerd</value>
+  </data>
+  <data name="Noodzakelijke beveiligingscookies houden jouw demo gescheiden van andere bezoekers en voorkomen ongewenste aanvragen. Het presentatordashboard gebruikt aparte authenticatie. Applicatielogs bevatten geen volledige IP-adressen, browserfingerprints, gebruikersnamen of authenticatietokens. De infrastructuur, browser, passkeymanager en eventuele hostingprovider kunnen eigen gegevens verwerken; er wordt daarom niet beweerd dat nergens persoonsgegevens worden verwerkt." xml:space="preserve">
+    <value>Noodzakelijke beveiligingscookies houden jouw demo gescheiden van andere bezoekers en voorkomen ongewenste aanvragen. Het presentatordashboard gebruikt aparte authenticatie. Applicatielogs bevatten geen volledige IP-adressen, browserfingerprints, gebruikersnamen of authenticatietokens. De infrastructuur, browser, passkeymanager en eventuele hostingprovider kunnen eigen gegevens verwerken; er wordt daarom niet beweerd dat nergens persoonsgegevens worden verwerkt.</value>
+  </data>
+  <data name="ONTDEK DE KRACHT VAN PASSKEYS" xml:space="preserve">
+    <value>ONTDEK DE KRACHT VAN PASSKEYS</value>
+  </data>
+  <data name="OOK OP IPAD" xml:space="preserve">
+    <value>OOK OP IPAD</value>
+  </data>
+  <data name="OP DE DEMOLAPTOP" xml:space="preserve">
+    <value>OP DE DEMOLAPTOP</value>
+  </data>
+  <data name="OPEN EN TRANSPARANT" xml:space="preserve">
+    <value>OPEN EN TRANSPARANT</value>
+  </data>
+  <data name="Ongeldige aanvraagorigin." xml:space="preserve">
+    <value>Ongeldige aanvraagorigin.</value>
+  </data>
+  <data name="Ongeldige operatie-identificatie." xml:space="preserve">
+    <value>Ongeldige operatie-identificatie.</value>
+  </data>
+  <data name="Ontdek inloggen met Windows Hello. Bevestig met je gezicht, vingerafdruk of apparaat-PIN." xml:space="preserve">
+    <value>Ontdek inloggen met Windows Hello. Bevestig met je gezicht, vingerafdruk of apparaat-PIN.</value>
+  </data>
+  <data name="Onverwacht serverantwoord. Vernieuw de pagina en controleer je demosessie." xml:space="preserve">
+    <value>Onverwacht serverantwoord. Vernieuw de pagina en controleer je demosessie.</value>
+  </data>
+  <data name="Open deze portal op je iPad en ervaar de registratie en authenticatie in de browser." xml:space="preserve">
+    <value>Open deze portal op je iPad en ervaar de registratie en authenticatie in de browser.</value>
+  </data>
+  <data name="Opnieuw aanmelden" xml:space="preserve">
+    <value>Opnieuw aanmelden</value>
+  </data>
+  <data name="Opties ophalen" xml:space="preserve">
+    <value>Opties ophalen</value>
+  </data>
+  <data name="Over deze omgeving" xml:space="preserve">
+    <value>Over deze omgeving</value>
+  </data>
+  <data name="PRESENTATOROMGEVING" xml:space="preserve">
+    <value>PRESENTATOROMGEVING</value>
+  </data>
+  <data name="PROBEER HET ZELF" xml:space="preserve">
+    <value>PROBEER HET ZELF</value>
+  </data>
+  <data name="Passkey Demo Portal" xml:space="preserve">
+    <value>Passkey Demo Portal</value>
+  </data>
+  <data name="Passkey registreren" xml:space="preserve">
+    <value>Passkey registreren</value>
+  </data>
+  <data name="Passkeys" xml:space="preserve">
+    <value>Passkeys</value>
+  </data>
+  <data name="Presentator inloggen" xml:space="preserve">
+    <value>Presentator inloggen</value>
+  </data>
+  <data name="Presentatorauthenticatie is nog niet geconfigureerd. De toegang blijft gesloten. Raadpleeg de lokale installatie-instructies." xml:space="preserve">
+    <value>Presentatorauthenticatie is nog niet geconfigureerd. De toegang blijft gesloten. Raadpleeg de lokale installatie-instructies.</value>
+  </data>
+  <data name="Presentatordashboard" xml:space="preserve">
+    <value>Presentatordashboard</value>
+  </data>
+  <data name="Presentatorwachtwoord" xml:space="preserve">
+    <value>Presentatorwachtwoord</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="Probeer een FIDO2-beveiligingssleutel. Houd je sleutel en de bijbehorende FIDO2-PIN bij de hand." xml:space="preserve">
+    <value>Probeer een FIDO2-beveiligingssleutel. Houd je sleutel en de bijbehorende FIDO2-PIN bij de hand.</value>
+  </data>
+  <data name="Probeer met mijn telefoon" xml:space="preserve">
+    <value>Probeer met mijn telefoon</value>
+  </data>
+  <data name="Registratie voltooid" xml:space="preserve">
+    <value>Registratie voltooid</value>
+  </data>
+  <data name="Registratie voltooid. Je passkey is opgeslagen voor dit tijdelijke account. Test nu de afzonderlijke authenticatie." xml:space="preserve">
+    <value>Registratie voltooid. Je passkey is opgeslagen voor dit tijdelijke account. Test nu de afzonderlijke authenticatie.</value>
+  </data>
+  <data name="Registreer eerst een passkey." xml:space="preserve">
+    <value>Registreer eerst een passkey.</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>Route</value>
+  </data>
+  <data name="Schakel JavaScript in om de WebAuthn-functie van je browser te gebruiken." xml:space="preserve">
+    <value>Schakel JavaScript in om de WebAuthn-functie van je browser te gebruiken.</value>
+  </data>
+  <data name="Server-side geverifieerd · gebruikersverificatie bevestigd" xml:space="preserve">
+    <value>Server-side geverifieerd · gebruikersverificatie bevestigd</value>
+  </data>
+  <data name="Serververificatie" xml:space="preserve">
+    <value>Serververificatie</value>
+  </data>
+  <data name="Sluit een FIDO2-geschikte YubiKey aan of gebruik NFC waar ondersteund. Kies een beveiligingssleutel en bevestig wanneer gevraagd met de sleutel en FIDO2-PIN." xml:space="preserve">
+    <value>Sluit een FIDO2-geschikte YubiKey aan of gebruik NFC waar ondersteund. Kies een beveiligingssleutel en bevestig wanneer gevraagd met de sleutel en FIDO2-PIN.</value>
+  </data>
+  <data name="Start de iPad-demo" xml:space="preserve">
+    <value>Start de iPad-demo</value>
+  </data>
+  <data name="Start op deze laptop" xml:space="preserve">
+    <value>Start op deze laptop</value>
+  </data>
+  <data name="TIJDELIJK DEMOACCOUNT" xml:space="preserve">
+    <value>TIJDELIJK DEMOACCOUNT</value>
+  </data>
+  <data name="Te veel aanvragen. Wacht een minuut en probeer opnieuw." xml:space="preserve">
+    <value>Te veel aanvragen. Wacht een minuut en probeer opnieuw.</value>
+  </data>
+  <data name="Technische fout" xml:space="preserve">
+    <value>Technische fout</value>
+  </data>
+  <data name="Tellingen horen bij actieve accounts. Verlopen demo's worden alleen als aantal bijgehouden, zonder bezoekershistorie. Vernieuwen en de monitor houden bezoekerssessies niet actief." xml:space="preserve">
+    <value>Tellingen horen bij actieve accounts. Verlopen demo's worden alleen als aantal bijgehouden, zonder bezoekershistorie. Vernieuwen en de monitor houden bezoekerssessies niet actief.</value>
+  </data>
+  <data name="Terug naar de demonstratie →" xml:space="preserve">
+    <value>Terug naar de demonstratie →</value>
+  </data>
+  <data name="Terug naar de startpagina →" xml:space="preserve">
+    <value>Terug naar de startpagina →</value>
+  </data>
+  <data name="Tijdelijke gebruiker" xml:space="preserve">
+    <value>Tijdelijke gebruiker</value>
+  </data>
+  <data name="Tijdstip" xml:space="preserve">
+    <value>Tijdstip</value>
+  </data>
+  <data name="Toestaan" xml:space="preserve">
+    <value>Toestaan</value>
+  </data>
+  <data name="Uitloggen" xml:space="preserve">
+    <value>Uitloggen</value>
+  </data>
+  <data name="Veilig inloggen →" xml:space="preserve">
+    <value>Veilig inloggen →</value>
+  </data>
+  <data name="Verificatie mislukt of verlopen. Probeer opnieuw met de passkey van deze demonstratie." xml:space="preserve">
+    <value>Verificatie mislukt of verlopen. Probeer opnieuw met de passkey van deze demonstratie.</value>
+  </data>
+  <data name="Verificatiestatus" xml:space="preserve">
+    <value>Verificatiestatus</value>
+  </data>
+  <data name="Verlopen demo's sinds start" xml:space="preserve">
+    <value>Verlopen demo's sinds start</value>
+  </data>
+  <data name="Vernieuwen ↻" xml:space="preserve">
+    <value>Vernieuwen ↻</value>
+  </data>
+  <data name="Verstreken" xml:space="preserve">
+    <value>Verstreken</value>
+  </data>
+  <data name="Volg de aanwijzingen van je browser. Kies de provider waar jouw passkey is opgeslagen." xml:space="preserve">
+    <value>Volg de aanwijzingen van je browser. Kies de provider waar jouw passkey is opgeslagen.</value>
+  </data>
+  <data name="Voor presentatoren" xml:space="preserve">
+    <value>Voor presentatoren</value>
+  </data>
+  <data name="Wanneer verwijderen we deze gegevens?" xml:space="preserve">
+    <value>Wanneer verwijderen we deze gegevens?</value>
+  </data>
+  <data name="Wat bewaart de demo tijdelijk?" xml:space="preserve">
+    <value>Wat bewaart de demo tijdelijk?</value>
+  </data>
+  <data name="We ontvangen nooit je privésleutel. We doen geen uitspraak over synchronisatie of hardwarebinding van jouw passkey." xml:space="preserve">
+    <value>We ontvangen nooit je privésleutel. We doen geen uitspraak over synchronisatie of hardwarebinding van jouw passkey.</value>
+  </data>
+  <data name="Welke passkey kies ik?" xml:space="preserve">
+    <value>Welke passkey kies ik?</value>
+  </data>
+  <data name="Welkom terug." xml:space="preserve">
+    <value>Welkom terug.</value>
+  </data>
+  <data name="Welkom," xml:space="preserve">
+    <value>Welkom,</value>
+  </data>
+  <data name="Windows Hello" xml:space="preserve">
+    <value>Windows Hello</value>
+  </data>
+  <data name="YubiKey" xml:space="preserve">
+    <value>YubiKey</value>
+  </data>
+  <data name="gebruikt een ingestelde authenticator van Windows. Een" xml:space="preserve">
+    <value>gebruikt een ingestelde authenticator van Windows. Een</value>
+  </data>
+  <data name="is een fysieke FIDO2-sleutel. Een" xml:space="preserve">
+    <value>is een fysieke FIDO2-sleutel. Een</value>
+  </data>
+  <data name="kan een passkey aanbieden als jouw browser, extensie en provider die functie ondersteunen en de passkey daar is opgeslagen." xml:space="preserve">
+    <value>kan een passkey aanbieden als jouw browser, extensie en provider die functie ondersteunen en de passkey daar is opgeslagen.</value>
+  </data>
+  <data name="kan via de browser worden aangeboden, soms met een QR-code en nabijheidscontrole. Een provider zoals" xml:space="preserve">
+    <value>kan via de browser worden aangeboden, soms met een QR-code en nabijheidscontrole. Een provider zoals</value>
+  </data>
+  <data name="telefoon" xml:space="preserve">
+    <value>telefoon</value>
+  </data>
+  <data name="v0.4" xml:space="preserve">
+    <value>v0.4</value>
+  </data>
+  <data name="van passkeys" xml:space="preserve">
+    <value>van passkeys</value>
+  </data>
+  <data name="← Over deze demonstratie" xml:space="preserve">
+    <value>← Over deze demonstratie</value>
+  </data>
+  <data name="✓ Echte WebAuthn-demo" xml:space="preserve">
+    <value>✓ Echte WebAuthn-demo</value>
+  </data>
+  <data name="✓ Geen wachtwoord nodig" xml:space="preserve">
+    <value>✓ Geen wachtwoord nodig</value>
+  </data>
+  <data name="✓ Jij houdt de controle" xml:space="preserve">
+    <value>✓ Jij houdt de controle</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Startpagina</value>
+  </data>
+  <data name="Configureer eerst het aparte monitorgeheim." xml:space="preserve">
+    <value>Configureer eerst het aparte monitorgeheim.</value>
+  </data>
+  <data name="Recommended" xml:space="preserve">
+    <value>Aanbevolen</value>
+  </data>
+  <data name="NewVisitor" xml:space="preserve">
+    <value>Nieuwe bezoeker</value>
+  </data>
+  <data name="VisitorCongratulations" xml:space="preserve">
+    <value>Gefeliciteerd, jij bent bezoeker #{0}!</value>
+  </data>
+  <data name="VisitorSwitchPrivacy" xml:space="preserve">
+    <value>Nieuwe bezoeker sluit de toegang tot de vorige demo af. Het account en de passkeys blijven bewaard tot de automatische cleanup.</value>
+  </data>
+  <data name="PresenterLogin" xml:space="preserve">
+    <value>Presentator aanmelden</value>
+  </data>
+  <data name="PresenterLoginName" xml:space="preserve">
+    <value>Accountnaam</value>
+  </data>
+  <data name="PresenterSignIn" xml:space="preserve">
+    <value>Aanmelden met een passkey</value>
+  </data>
+  <data name="PresenterAuthenticatorInfo" xml:space="preserve">
+    <value>Gebruik bij voorkeur een fysieke beveiligingssleutel en registreer een reservesleutel. Gebruikersverificatie is verplicht. De browser bepaalt welke authenticators beschikbaar zijn; het merk of fysieke karakter wordt niet cryptografisch vastgesteld.</value>
+  </data>
+  <data name="PresenterEnrollmentLink" xml:space="preserve">
+    <value>Sleutel registreren met uitnodiging</value>
+  </data>
+  <data name="PresenterInviteInfo" xml:space="preserve">
+    <value>Er is geen openbare accountregistratie. Gebruik de kortlevende eenmalige code van je administrator. De eerste administrator gebruikt de lokale onderhoudsprocedure op dezelfde computer en HTTPS-origin.</value>
+  </data>
+  <data name="PresenterCode" xml:space="preserve">
+    <value>Eenmalige registratiecode</value>
+  </data>
+  <data name="PresenterKeyName" xml:space="preserve">
+    <value>Naam van de beveiligingssleutel</value>
+  </data>
+  <data name="PresenterRegisterKey" xml:space="preserve">
+    <value>Beveiligingssleutel registreren</value>
+  </data>
+  <data name="PresenterKeys" xml:space="preserve">
+    <value>Mijn beveiligingssleutels</value>
+  </data>
+  <data name="PresenterRegistered" xml:space="preserve">
+    <value>Geregistreerd</value>
+  </data>
+  <data name="PresenterLastUsed" xml:space="preserve">
+    <value>Laatst gebruikt</value>
+  </data>
+  <data name="PresenterReauthInfo" xml:space="preserve">
+    <value>Bevestig eerst opnieuw je identiteit met een bestaande sleutel. Dit geeft maximaal vijf minuten toestemming voor één beveiligingswijziging. Iedere volgende wijziging vereist opnieuw bevestiging.</value>
+  </data>
+  <data name="PresenterReauthButton" xml:space="preserve">
+    <value>Identiteit opnieuw bevestigen</value>
+  </data>
+  <data name="PresenterReauthenticated" xml:space="preserve">
+    <value>Identiteit bevestigd. Je kunt nu één beveiligingswijziging uitvoeren.</value>
+  </data>
+  <data name="PresenterVerified" xml:space="preserve">
+    <value>WebAuthn-verificatie geslaagd.</value>
+  </data>
+  <data name="PresenterWorking" xml:space="preserve">
+    <value>Volg de aanwijzingen van je browser en beveiligingssleutel.</value>
+  </data>
+  <data name="PresenterPending" xml:space="preserve">
+    <value>Er is nog een presentatoraanvraag actief. Rond deze af of annuleer de aanvraag en probeer opnieuw.</value>
+  </data>
+  <data name="PresenterDenied" xml:space="preserve">
+    <value>De aanvraag is geweigerd of verlopen. Controleer je account, sleutel of uitnodiging en probeer opnieuw.</value>
+  </data>
+  <data name="PresenterReauthenticate" xml:space="preserve">
+    <value>Bevestig eerst opnieuw je identiteit met een bestaande sleutel.</value>
+  </data>
+  <data name="PresenterLastAdmin" xml:space="preserve">
+    <value>De laatste actieve administrator kan niet worden uitgeschakeld of gedegradeerd.</value>
+  </data>
+  <data name="PresenterLastKey" xml:space="preserve">
+    <value>De laatste sleutel kan niet worden verwijderd. Registreer en test eerst een reservesleutel.</value>
+  </data>
+  <data name="PresenterConfirm" xml:space="preserve">
+    <value>Ik bevestig deze wijziging.</value>
+  </data>
+  <data name="PresenterAccounts" xml:space="preserve">
+    <value>Presentatoraccounts beheren</value>
+  </data>
+  <data name="PresenterCodeIssued" xml:space="preserve">
+    <value>Deze code is één keer bruikbaar, verloopt na tien minuten en wordt niet opnieuw getoond. Deel de code veilig met de bedoelde persoon en laat deze /Presenter/Enroll openen. Een eerdere ongebruikte code voor deze uitnodiging is ongeldig.</value>
+  </data>
+  <data name="PresenterCreateAccount" xml:space="preserve">
+    <value>Account aanmaken en uitnodigen</value>
+  </data>
+  <data name="PresenterDisplayName" xml:space="preserve">
+    <value>Weergavenaam</value>
+  </data>
+  <data name="PresenterRole" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="RolePresenter" xml:space="preserve">
+    <value>Presentator</value>
+  </data>
+  <data name="RoleAdministrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="PresenterState" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="PresenterActive" xml:space="preserve">
+    <value>Actief</value>
+  </data>
+  <data name="PresenterInactive" xml:space="preserve">
+    <value>Inactief of wacht op registratie</value>
+  </data>
+  <data name="PresenterSave" xml:space="preserve">
+    <value>Wijziging opslaan</value>
+  </data>
+  <data name="PresenterIssueInvite" xml:space="preserve">
+    <value>Eenmalige sleuteluitnodiging uitgeven</value>
+  </data>
+  <data name="PresenterRemoveKey" xml:space="preserve">
+    <value>Sleutel verwijderen en doelsessies intrekken</value>
+  </data>
+  <data name="PresenterAudit" xml:space="preserve">
+    <value>Auditregistratie</value>
+  </data>
+  <data name="PresenterAuditInfo" xml:space="preserve">
+    <value>Alleen administrators kunnen deze append-only registratie bekijken. Account-ID's verwijzen naar het accountbeheer. Er worden geen sleutels, credential-ID's of sessiegeheimen getoond.</value>
+  </data>
+  <data name="PresenterActor" xml:space="preserve">
+    <value>Handelende account-ID</value>
+  </data>
+  <data name="PresenterTarget" xml:space="preserve">
+    <value>Doelaccount of evenement</value>
+  </data>
+  <data name="PresenterOlder" xml:space="preserve">
+    <value>Oudere registraties</value>
+  </data>
+  <data name="PresenterCurrentEvent" xml:space="preserve">
+    <value>Huidig evenement</value>
+  </data>
+  <data name="PresenterCountsInfo" xml:space="preserve">
+    <value>Bezoekers zijn tijdelijk aangemaakte demoaccounts met een eerste succesvolle authenticatie, geen bewezen unieke natuurlijke personen. Meerdere aanmeldingen zijn afzonderlijke authenticaties. Dagstatistieken gebruiken UTC.</value>
+  </data>
+  <data name="PresenterTotalVisitors" xml:space="preserve">
+    <value>Totaal succesvolle demoaccounts</value>
+  </data>
+  <data name="PresenterToday" xml:space="preserve">
+    <value>Succesvolle demoaccounts vandaag (UTC)</value>
+  </data>
+  <data name="PresenterEventVisitors" xml:space="preserve">
+    <value>Succesvolle demoaccounts in evenement</value>
+  </data>
+  <data name="PresenterTotalAuthentications" xml:space="preserve">
+    <value>Totaal succesvolle authenticaties</value>
+  </data>
+  <data name="PresenterEventAuthentications" xml:space="preserve">
+    <value>Authenticaties in evenement</value>
+  </data>
+  <data name="PresenterEventName" xml:space="preserve">
+    <value>Evenementnaam</value>
+  </data>
+  <data name="PresenterStartEvent" xml:space="preserve">
+    <value>Nieuw evenement starten</value>
+  </data>
+  <data name="PresenterCloseEvent" xml:space="preserve">
+    <value>Actief evenement afsluiten</value>
+  </data>
+  <data name="PresenterRenameEvent" xml:space="preserve">
+    <value>Evenementnaam wijzigen</value>
+  </data>
+  <data name="PresenterEventHistory" xml:space="preserve">
+    <value>Evenementhistorie en activiteit</value>
+  </data>
+  <data name="PresenterStarted" xml:space="preserve">
+    <value>Gestart</value>
+  </data>
+  <data name="PresenterEnded" xml:space="preserve">
+    <value>Afgesloten</value>
+  </data>
+  <data name="PresenterActiveAuthentications" xml:space="preserve">
+    <value>Authenticaties van actieve demoaccounts</value>
+  </data>
+  <data name="PresenterNoPrizes" xml:space="preserve">
+    <value>Prize Experience is nog niet beschikbaar. Er worden geen prijzen getrokken of uitgereikt.</value>
+  </data>
+  <data name="PresenterEventChanged" xml:space="preserve">
+    <value>Het actieve evenement is gewijzigd. Vernieuw de pagina en bevestig de actie opnieuw.</value>
+  </data>
+  <data name="NoActiveEvent" xml:space="preserve">
+    <value>Geen actief evenement</value>
+  </data>
+  <data name="Open demo" xml:space="preserve">
+    <value>Open demo zonder evenement</value>
+  </data>
+  <data name="EventStatusActive" xml:space="preserve">
+    <value>Actief</value>
+  </data>
+  <data name="EventStatusClosed" xml:space="preserve">
+    <value>Afgesloten</value>
+  </data>
+  <data name="EventStatusImported" xml:space="preserve">
+    <value>Historisch statistiekvak</value>
+  </data>
+  <data name="EventStatusNone" xml:space="preserve">
+    <value>Geen actief evenement; de openbare demo blijft werken.</value>
+  </data>
+  <data name="AuditBootstrapIssued" xml:space="preserve">
+    <value>Lokale bootstrap uitgegeven</value>
+  </data>
+  <data name="AuditEnrollmentOpened" xml:space="preserve">
+    <value>Registratieautorisatie verbruikt</value>
+  </data>
+  <data name="AuditCredentialRegistered" xml:space="preserve">
+    <value>Sleutel geregistreerd</value>
+  </data>
+  <data name="AuditSignedIn" xml:space="preserve">
+    <value>Aangemeld</value>
+  </data>
+  <data name="AuditSignedOut" xml:space="preserve">
+    <value>Afgemeld</value>
+  </data>
+  <data name="AuditReauthenticated" xml:space="preserve">
+    <value>Identiteit opnieuw bevestigd</value>
+  </data>
+  <data name="AuditCeremonyRejected" xml:space="preserve">
+    <value>WebAuthn-aanvraag afgewezen</value>
+  </data>
+  <data name="AuditAccountCreated" xml:space="preserve">
+    <value>Account aangemaakt</value>
+  </data>
+  <data name="AuditAccountUpdated" xml:space="preserve">
+    <value>Account gewijzigd en sessies ingetrokken</value>
+  </data>
+  <data name="AuditEnrollmentInvited" xml:space="preserve">
+    <value>Sleuteluitnodiging uitgegeven</value>
+  </data>
+  <data name="AuditCredentialRemoved" xml:space="preserve">
+    <value>Sleutel verwijderd</value>
+  </data>
+  <data name="AuditEventClosed" xml:space="preserve">
+    <value>Evenement afgesloten</value>
+  </data>
+  <data name="AuditEventStarted" xml:space="preserve">
+    <value>Evenement gestart</value>
+  </data>
+  <data name="AuditEventRenamed" xml:space="preserve">
+    <value>Evenementnaam gewijzigd</value>
+  </data>
+  <data name="AuditDemoEndRequested" xml:space="preserve">
+    <value>Beëindiging demo aangevraagd</value>
+  </data>
+  <data name="AuditMonitorGrantChangeRequested" xml:space="preserve">
+    <value>Wijziging monitortoestemming aangevraagd</value>
+  </data>
+  <data name="PresenterForbidden" xml:space="preserve">
+    <value>Je account heeft geen toestemming voor deze actie.</value>
+  </data>
+  <data name="AuditRoleChangedToAdministrator" xml:space="preserve">
+    <value>Rol gewijzigd naar administrator</value>
+  </data>
+  <data name="AuditRoleChangedToPresenter" xml:space="preserve">
+    <value>Rol gewijzigd naar presentator</value>
+  </data>
+  <data name="AuditAccountEnabled" xml:space="preserve">
+    <value>Account ingeschakeld</value>
+  </data>
+  <data name="AuditAccountDisabled" xml:space="preserve">
+    <value>Account uitgeschakeld</value>
+  </data>
+  <data name="PresenterLastSignIn" xml:space="preserve">
+    <value>Laatste geslaagde aanmelding (UTC)</value>
+  </data>
+  <data name="PresenterDiscoverableInfo" xml:space="preserve">
+    <value>Kies je geregistreerde passkey in de browser. Je hoeft geen accountnaam in te voeren.</value>
+  </data>
+  <data name="PrizeOverview" xml:space="preserve"><value>Prize-evenementen</value></data>
+  <data name="PrizeNew" xml:space="preserve"><value>Nieuw evenement</value></data>
+  <data name="PrizeManagementOnly" xml:space="preserve"><value>Alleen evenementbeheer is beschikbaar. Bezoekers kunnen nog niet deelnemen aan de winactie.</value></data>
+  <data name="PrizeDashboard" xml:space="preserve"><value>Terug naar het dashboard</value></data>
+  <data name="PrizeProfile" xml:space="preserve"><value>Evenementprofiel</value></data>
+  <data name="PrizeApplyProfile" xml:space="preserve"><value>Profiel toepassen</value></data>
+  <data name="PrizeProfileHint" xml:space="preserve"><value>Kies eerst een profiel. Toepassen vult de instellingen opnieuw in; bestaande evenementen veranderen niet.</value></data>
+  <data name="PrizeName" xml:space="preserve"><value>Evenementnaam</value></data>
+  <data name="PrizeBasics" xml:space="preserve"><value>Basisinstellingen</value></data>
+  <data name="PrizeAdvanced" xml:space="preserve"><value>Geavanceerd</value></data>
+  <data name="PrizeGroupSize" xml:space="preserve"><value>Groepsgrootte</value></data>
+  <data name="PrizeEnabled" xml:space="preserve"><value>Prijzen inschakelen</value></data>
+  <data name="PrizeDefaultRoundCapacity" xml:space="preserve"><value>Standaardcapaciteit per ronde</value></data>
+  <data name="PrizeNextRoundCapacity" xml:space="preserve"><value>Capaciteit volgende ronde</value></data>
+  <data name="PrizeRounds" xml:space="preserve"><value>Rondes</value></data>
+  <data name="PrizeFixedVisitorLink" xml:space="preserve"><value>Vaste bezoekerslink (QR)</value></data>
+  <data name="PrizeRoundLabel" xml:space="preserve"><value>Ronde</value></data>
+  <data name="PrizeRoundCapacity" xml:space="preserve"><value>Bezetting</value></data>
+  <data name="PrizeRoundFull" xml:space="preserve"><value>Deze ronde is vol. Vraag de presentator om hulp.</value></data>
+  <data name="PrizeCloseRound" xml:space="preserve"><value>Ronde afsluiten en uitslag tonen</value></data>
+  <data name="PrizeRoundWaiting" xml:space="preserve"><value>Je bent ingedeeld. Wacht op de presentator voor de uitslag.</value></data>
+  <data name="PrizeRoundWon" xml:space="preserve"><value>Jouw alias wint: {0}</value></data>
+  <data name="PrizeRoundNoPrize" xml:space="preserve"><value>Er was geen prijs beschikbaar in deze ronde.</value></data>
+  <data name="PrizeWinners" xml:space="preserve"><value>Winnaars per groep</value></data>
+  <data name="PrizeSelection" xml:space="preserve"><value>Prijsselectie</value></data>
+  <data name="PrizeFixed" xml:space="preserve"><value>Vaste prijs</value></data>
+  <data name="PrizeRandom" xml:space="preserve"><value>Willekeurig prijstype</value></data>
+  <data name="PrizePriceName" xml:space="preserve"><value>Naam van de prijs</value></data>
+  <data name="PrizeStock" xml:space="preserve"><value>Voorraad (leeg = onbeperkt)</value></data>
+  <data name="PrizeStartCodes" xml:space="preserve"><value>Startcode verplicht</value></data>
+  <data name="PrizeVisibility" xml:space="preserve"><value>Toegang</value></data>
+  <data name="PrizePrivate" xml:space="preserve"><value>Besloten</value></data>
+  <data name="PrizePublic" xml:space="preserve"><value>Openbaar</value></data>
+  <data name="PrizePublicCodes" xml:space="preserve"><value>Bij een openbaar evenement is een startcode verplicht. Code-uitgifte en deelname zijn nog niet beschikbaar.</value></data>
+  <data name="PrizeMode" xml:space="preserve"><value>Winvorm</value></data>
+  <data name="PrizeGroupMode" xml:space="preserve"><value>Trekking per groepsronde</value></data>
+  <data name="PrizeInstantMode" xml:space="preserve"><value>Direct winnen</value></data>
+  <data name="PrizeAssignment" xml:space="preserve"><value>Groepsindeling</value></data>
+  <data name="PrizeAutomatic" xml:space="preserve"><value>Automatisch</value></data>
+  <data name="PrizeByCode" xml:space="preserve"><value>Groepscode vereist</value></data>
+  <data name="PrizeNextGroup" xml:space="preserve"><value>Volgende groep</value></data>
+  <data name="PrizeManual" xml:space="preserve"><value>Handmatig</value></data>
+  <data name="PrizeReveal" xml:space="preserve"><value>Winnaars bekendmaken</value></data>
+  <data name="PrizeTogether" xml:space="preserve"><value>Allemaal tegelijk</value></data>
+  <data name="PrizeSequential" xml:space="preserve"><value>Een voor een</value></data>
+  <data name="PrizeAnimation" xml:space="preserve"><value>Animatieduur (seconden)</value></data>
+  <data name="PrizeChanceNumerator" xml:space="preserve"><value>Winnende kansen</value></data>
+  <data name="PrizeChanceDenominator" xml:space="preserve"><value>Totaal aantal kansen</value></data>
+  <data name="PrizeChanceHint" xml:space="preserve"><value>Bijvoorbeeld: 1 uit 10. Een maximum garandeert geen vast aantal winnaars.</value></data>
+  <data name="PrizeMaxWins" xml:space="preserve"><value>Maximaal aantal winmomenten (leeg = geen beleidsmaximum)</value></data>
+  <data name="PrizeReaction" xml:space="preserve"><value>Reactietijd winnaar (seconden)</value></data>
+  <data name="PrizeRetention" xml:space="preserve"><value>Bewaartermijn na afsluiting (dagen)</value></data>
+  <data name="PrizePostClose" xml:space="preserve"><value>Claimperiode na afsluiting (minuten)</value></data>
+  <data name="PrizeTimeHint" xml:space="preserve"><value>Standaard: 120 seconden reactietijd en 1440 minuten (24 uur) na afsluiting. De bewaartermijn blijft de uiterste grens.</value></data>
+  <data name="PrizeFields" xml:space="preserve"><value>Gegevens voor latere prijsafhandeling</value></data>
+  <data name="PrizeFieldsHint" xml:space="preserve"><value>Dit zijn voorbereidingen. Er worden nu geen persoonsgegevens van deelnemers gevraagd.</value></data>
+  <data name="PrizeFirstName" xml:space="preserve"><value>Voornaam</value></data>
+  <data name="PrizeLastName" xml:space="preserve"><value>Achternaam</value></data>
+  <data name="PrizeEmail" xml:space="preserve"><value>E-mailadres</value></data>
+  <data name="PrizeCompany" xml:space="preserve"><value>Bedrijfsnaam</value></data>
+  <data name="PrizeShippingAddress" xml:space="preserve"><value>Verzendadres</value></data>
+  <data name="PrizeHidden" xml:space="preserve"><value>Niet vragen</value></data>
+  <data name="PrizeOptional" xml:space="preserve"><value>Optioneel</value></data>
+  <data name="PrizeRequired" xml:space="preserve"><value>Verplicht</value></data>
+  <data name="PrizeStart" xml:space="preserve"><value>Start evenement</value></data>
+  <data name="PrizeSaveDraft" xml:space="preserve"><value>Bewaar concept</value></data>
+  <data name="PrizeSave" xml:space="preserve"><value>Instellingen opslaan</value></data>
+  <data name="PrizeBack" xml:space="preserve"><value>Terug naar evenementen</value></data>
+  <data name="PrizeDetails" xml:space="preserve"><value>Evenementdetails</value></data>
+  <data name="PrizeStatus" xml:space="preserve"><value>Status</value></data>
+  <data name="PrizeStatusDraft" xml:space="preserve"><value>Concept</value></data>
+  <data name="PrizeStatusOpen" xml:space="preserve"><value>Gestart</value></data>
+  <data name="PrizeStatusClosed" xml:space="preserve"><value>Afgesloten</value></data>
+  <data name="PrizeStatusPurging" xml:space="preserve"><value>Niet beschikbaar</value></data>
+  <data name="PrizeCreated" xml:space="preserve"><value>Aangemaakt (UTC)</value></data>
+  <data name="PrizeClosed" xml:space="preserve"><value>Afgesloten (UTC)</value></data>
+  <data name="PrizePurge" xml:space="preserve"><value>Bewaren tot (UTC)</value></data>
+  <data name="PrizeClose" xml:space="preserve"><value>Evenement afsluiten</value></data>
+  <data name="PrizeReopen" xml:space="preserve"><value>Evenement opnieuw openen</value></data>
+  <data name="PrizeConfirm" xml:space="preserve"><value>Ik bevestig deze wijziging.</value></data>
+  <data name="PrizeRename" xml:space="preserve"><value>Naam wijzigen</value></data>
+  <data name="PrizeTemplateName" xml:space="preserve"><value>Naam voor nieuw profiel</value></data>
+  <data name="PrizeSaveProfile" xml:space="preserve"><value>Opslaan als nieuw profiel</value></data>
+  <data name="PrizeTemplateHint" xml:space="preserve"><value>Een profiel is een sjabloon. Het opslaan verandert dit evenement en andere evenementen niet.</value></data>
+  <data name="PrizeSettingsLocked" xml:space="preserve"><value>Deze instellingen staan vast voor dit evenement.</value></data>
+  <data name="PrizeExpired" xml:space="preserve"><value>De bewaartermijn is verstreken. Dit evenement kan niet meer worden gewijzigd of heropend.</value></data>
+  <data name="PrizeNone" xml:space="preserve"><value>Er zijn nog geen Prize-evenementen.</value></data>
+  <data name="PrizePrevious" xml:space="preserve"><value>Vorige</value></data>
+  <data name="PrizeNext" xml:space="preserve"><value>Volgende</value></data>
+  <data name="PrizeBuiltinCybertruck" xml:space="preserve"><value>Cybertruck</value></data>
+  <data name="PrizeBuiltinInstant" xml:space="preserve"><value>Direct winnen</value></data>
+  <data name="PrizeBuiltinDraw" xml:space="preserve"><value>Evenement met loting</value></data>
+  <data name="PrizeBuiltinCustom" xml:space="preserve"><value>Aangepast</value></data>
+  <data name="PrizeInvalidSettings" xml:space="preserve"><value>Controleer de instellingen. Gebruik geldige aantallen en kies bij openbare toegang verplichte startcodes.</value></data>
+  <data name="PrizeInvalidName" xml:space="preserve"><value>Vul een naam van 1 tot 100 tekens in.</value></data>
+  <data name="PrizeInvalidRequest" xml:space="preserve"><value>De aanvraag is ongeldig. Open het formulier opnieuw.</value></data>
+  <data name="PrizeWrongEvent" xml:space="preserve"><value>De aanvraag hoort niet bij dit evenement.</value></data>
+  <data name="PrizeNotFound" xml:space="preserve"><value>Het evenement bestaat niet meer.</value></data>
+  <data name="PrizeConfirmRequired" xml:space="preserve"><value>Bevestig de wijziging voordat je verdergaat.</value></data>
+  <data name="PrizeEventChanged" xml:space="preserve"><value>Een andere presentator heeft het evenement gewijzigd. Vernieuw de pagina en controleer de actuele instellingen.</value></data>
+  <data name="PrizeIntentChanged" xml:space="preserve"><value>Deze aanvraag is al met andere gegevens gebruikt. Open een nieuw formulier.</value></data>
+  <data name="PrizeEventExpired" xml:space="preserve"><value>De bewaartermijn is verstreken. Opnieuw openen of wijzigen is niet meer mogelijk.</value></data>
+  <data name="PrizeBusy" xml:space="preserve"><value>De opslag is tijdelijk bezet. Probeer dezelfde aanvraag opnieuw.</value></data>
+  <data name="ClickFixTitle" xml:space="preserve"><value>Herken een misleidende herstelmelding</value></data>
+  <data name="ClickFixBack" xml:space="preserve"><value>Terug naar mijn demo →</value></data>
+  <data name="ClickFixSafe" xml:space="preserve"><value>VEILIGE BROWSEROEFENING</value></data>
+  <data name="ClickFixIntro" xml:space="preserve"><value>Je bent aangemeld met je passkey. Oefen nu hoe je reageert op een onverwachte herstelmelding. De oefening blijft binnen je browser: er wordt niets geïnstalleerd, gekopieerd of uitgevoerd op je apparaat.</value></data>
+  <data name="ClickFixProgress" xml:space="preserve"><value>Voortgang van de oefening</value></data>
+  <data name="ClickFixReady" xml:space="preserve"><value>Herstelcontrole gereed. Kies je volgende stap.</value></data>
+  <data name="ClickFixPromptTitle" xml:space="preserve"><value>Fictieve melding: verificatie mislukt</value></data>
+  <data name="ClickFixPrompt" xml:space="preserve"><value>Stel je voor: een website beweert dat je apparaat eerst moet worden hersteld om verder te kunnen. De website vraagt je instructies buiten de browser uit te voeren.</value></data>
+  <data name="ClickFixFiction" xml:space="preserve"><value>Dit is een nagebootste melding, geen echte fout. Kies hieronder alleen wat je in deze oefening zou doen.</value></data>
+  <data name="ClickFixFollow" xml:space="preserve"><value>Ik zou de herstelmelding volgen (simuleer)</value></data>
+  <data name="ClickFixStop" xml:space="preserve"><value>Ik stop en controleer via een vertrouwd kanaal</value></data>
+  <data name="ClickFixResultTitle" xml:space="preserve"><value>Wat betekent jouw keuze?</value></data>
+  <data name="ClickFixFollowResult" xml:space="preserve"><value>Je koos ervoor de melding te volgen. In deze oefening is niets uitgevoerd. Een echte aanvaller hoopt dat je een onveilige instructie vertrouwt omdat die op een oplossing lijkt.</value></data>
+  <data name="ClickFixStopResult" xml:space="preserve"><value>Je koos ervoor te stoppen en de melding te controleren. Daarmee onderbreek je de misleiding. Zoek zelf het bekende contactpunt op, in plaats van de contactgegevens in de melding te gebruiken.</value></data>
+  <data name="ClickFixExplanation" xml:space="preserve"><value>Dit heet ClickFix: een aanvaller laat een probleem of controle zien en verleidt jou om zelf de gevaarlijke vervolgstap te zetten. Bij een echte aanval kan dat software starten, bestanden blootstellen of een al aangemelde sessie in gevaar brengen. Deze oefening doet dat niet.</value></data>
+  <data name="ClickFixPasskeys" xml:space="preserve"><value>Je YubiKey beschermt je bij het inloggen tegen phishing. Een infostealer kan daarna alsnog je sessiecookie uit je browser stelen. Een MDR-oplossing kan dat verdachte gedrag op je apparaat signaleren, zodat het securityteam kan ingrijpen.</value></data>
+  <data name="ClickFixFinish" xml:space="preserve"><value>Begrepen — naar de leerpunten</value></data>
+  <data name="ClickFixComplete" xml:space="preserve"><value>Stap 3 van 3: oefening afgerond</value></data>
+  <data name="ClickFixLearn1" xml:space="preserve"><value>Stop bij onverwachte herstel- of verificatieverzoeken.</value></data>
+  <data name="ClickFixLearn2" xml:space="preserve"><value>Voer geen instructies buiten de browser uit omdat een website dat vraagt.</value></data>
+  <data name="ClickFixLearn3" xml:space="preserve"><value>Verifieer via een vertrouwd kanaal en meld de verdachte melding.</value></data>
+  <data name="ClickFixNoDetection" xml:space="preserve"><value>Een gemelde keuze bewijst geen malwareactiviteit, sessiediefstal of MDR-detectie. Opnieuw oefenen wijzigt een vastgelegde keuze niet.</value></data>
+  <data name="ClickFixReset" xml:space="preserve"><value>Oefening opnieuw beginnen</value></data>
+  <data name="ClickFixNoScript" xml:space="preserve"><value>Schakel JavaScript in voor de interactieve oefening. Er worden geen opdrachten uitgevoerd.</value></data>
+  <data name="ClickFixOpen" xml:space="preserve"><value>Verder: veilige ClickFix-oefening</value></data>
+  <data name="ClickFixReview" xml:space="preserve"><value>Bekijk wat er in deze oefening gebeurde.</value></data>
+  <data name="ClickFixSignInRequired" xml:space="preserve"><value>Meld je aan met je passkey voordat je de ClickFix-oefening opent. Is je aanmelding verlopen? Meld je dan opnieuw aan.</value></data>
+  <data name="EventEditionTitle" xml:space="preserve"><value>Event Edition — evenementen en runkoppeling</value></data>
+  <data name="EventEditionBack" xml:space="preserve"><value>← Terug naar presentatoroverzicht</value></data>
+  <data name="EventEditionInfo" xml:space="preserve"><value>Dit aparte beursregister verandert de bestaande statistiekevenementen niet. Alle bestaande bevoegde presentatoren mogen het beheren. Toewijzing geeft geen extra rechten. Geplande datums zijn metadata; starten en afsluiten gebeurt handmatig.</value></data>
+  <data name="EventEditionName" xml:space="preserve"><value>Naam (geen gevoelige gegevens)</value></data>
+  <data name="EventEditionStartDate" xml:space="preserve"><value>Geplande start (UTC)</value></data>
+  <data name="EventEditionEndDate" xml:space="preserve"><value>Gepland einde (UTC)</value></data>
+  <data name="EventEditionAssignment" xml:space="preserve"><value>Toegewezen presentator: huidige operator</value></data>
+  <data name="EventEditionPresenter" xml:space="preserve"><value>Toegewezen presenterreferentie</value></data>
+  <data name="EventEditionConfirm" xml:space="preserve"><value>Ik bevestig deze handeling.</value></data>
+  <data name="EventEditionCreate" xml:space="preserve"><value>Evenement plannen</value></data>
+  <data name="EventEditionScheduled" xml:space="preserve"><value>Gepland</value></data>
+  <data name="EventEditionActive" xml:space="preserve"><value>Actief</value></data>
+  <data name="EventEditionClosed" xml:space="preserve"><value>Afgesloten (historie behouden)</value></data>
+  <data name="EventEditionStart" xml:space="preserve"><value>Evenement starten</value></data>
+  <data name="EventEditionClose" xml:space="preserve"><value>Evenement afsluiten</value></data>
+  <data name="EventEditionPortalRun" xml:space="preserve"><value>Portal-DemoRunId van de gekozen bezoeker</value></data>
+  <data name="EventEditionWpfRun" xml:space="preserve"><value>Voorbereide WPF-runreferentie</value></data>
+  <data name="EventEditionLink" xml:space="preserve"><value>Runs koppelen en tijdelijke code uitgeven</value></data>
+  <data name="EventEditionCode" xml:space="preserve"><value>Tijdelijke leescode — slechts eenmaal zichtbaar</value></data>
+  <data name="EventEditionCodeHelp" xml:space="preserve"><value>Plaats deze code in het afgeschermde WPF-veld voor precies deze run. Niet opslaan, loggen of delen. Geldig tot maximaal 30 minuten en alleen zolang jouw operatorsessie geldig is. Laat de bezoeker de ClickFix-pagina opnieuw openen. Een run wordt niet opnieuw gekoppeld; gebruik voor een volgende demonstratie een nieuwe bezoeker en een nieuwe WPF-run.</value></data>
+  <data name="EventEditionDenied" xml:space="preserve"><value>Handeling geweigerd. Controleer je aanmelding, actief evenement en unieke runreferenties. Een bestaande keuze of afgesloten run kan niet worden overschreven.</value></data>
+  <data name="EventEditionStorageFailed" xml:space="preserve"><value>Evenementopslag is niet beschikbaar of de integriteitscontrole is mislukt. Er is niets automatisch hersteld. Vraag de administrator om onderzoek.</value></data>
+  <data name="EventEditionRecover" xml:space="preserve"><value>Vorige manifestversie gecontroleerd herstellen</value></data>
+  <data name="EventEditionRecoverHelp" xml:space="preserve"><value>Alleen bij een vastgestelde opslagfout. Herstel kan de laatste metadatawijziging verliezen. De beschadigde versie blijft behouden. Alle herstelde evenementen worden gesloten en alle leescodes ingetrokken. Gebruik daarna nieuwe runs. Dit raakt geen SQLite-gegevens.</value></data>
+  <data name="ClickFixNotLinked" xml:space="preserve"><value>Zelfstandige oefening: geen koppeling met WPF. Er wordt geen keuze verstuurd.</value></data>
+  <data name="ClickFixLinked" xml:space="preserve"><value>Gekoppelde oefening: alleen jouw expliciete keuze wordt server-side gemeld. Geen browsergegevens of endpointactiviteit.</value></data>
+  <data name="ClickFixSending" xml:space="preserve"><value>Keuze wordt veilig gemeld…</value></data>
+  <data name="ClickFixDelivered" xml:space="preserve"><value>De eerste keuze van deze run is server-side vastgelegd. Opnieuw oefenen verandert die niet. De presentator beslist zelf over het vervolg. Geen MDR-detectie vastgesteld.</value></data>
+  <data name="ClickFixDeliveryFailed" xml:space="preserve"><value>De keuze kon niet worden bevestigd. Probeer dezelfde melding opnieuw of vraag de presentator om handmatig verder te gaan. Er wordt niets automatisch gestart.</value></data>
+  <data name="ClickFixRetry" xml:space="preserve"><value>Dezelfde keuze opnieuw melden</value></data>
+  <data name="ClickFixNotificationUnavailable" xml:space="preserve"><value>Melden aan de presentator is tijdelijk niet beschikbaar. De veilige oefening blijft werken. Vraag de presentator om handmatig verder te gaan.</value></data>
+  <data name="SetupTitle" xml:space="preserve"><value>Eerste administrator instellen</value></data>
+  <data name="SetupWelcome" xml:space="preserve"><value>1. Welkom</value></data>
+  <data name="SetupWelcomeInfo" xml:space="preserve"><value>Stel deze installatie veilig in. Alleen een lokaal bevoegde beheerder kan het eerste administratoraccount aanmaken.</value></data>
+  <data name="SetupAccount" xml:space="preserve"><value>2. Administratoraccount aanmaken</value></data>
+  <data name="SetupAccountInfo" xml:space="preserve"><value>Open op deze computer een beheerterminal in de portalinstallatiemap. Gebruik dezelfde database-, omgevings- en opslagconfiguratie als de portal. Voer onderstaande opdracht uit, vul de accountgegevens in en bevestig met BOOTSTRAP. Plak de eenmalige code hieronder; deze verloopt na tien minuten.</value></data>
+  <data name="SetupOriginInfo" xml:space="preserve"><value>Open deze wizard op deze computer via de geconfigureerde HTTPS-origin. Wijzig de RP-ID of origin niet voor registratie. Zet de code nooit in een URL of log.</value></data>
+  <data name="SetupRegister" xml:space="preserve"><value>3. YubiKey/passkey registreren</value></data>
+  <data name="SetupLogin" xml:space="preserve"><value>4. Aanmelden en doorgaan</value></data>
+  <data name="SetupLoginInfo" xml:space="preserve"><value>Na registratie sluit deze wizard en verschijnt de aanmeldpagina. Meld je afzonderlijk aan met de geregistreerde sleutel; daarna opent automatisch het presentatordashboard. Registratie bewijst op zichzelf geen fysiek YubiKey-type.</value></data>
+  <data name="SetupLocalOnly" xml:space="preserve"><value>Voer de configuratie uit op de portalcomputer via een directe lokale HTTPS-verbinding. Externe toegang geeft geen bootstrapbevoegdheid.</value></data>
+  <data name="SetupPackagedInfo" xml:space="preserve"><value>Gebruik in Event Edition Bootstrap-Administrator.cmd als beheerder onder hetzelfde Windows-account. Deze starter levert de installatieconfiguratie; een .NET SDK is niet nodig.</value></data>
+  <data name="IdentitySessions" xml:space="preserve"><value>Actieve sessies</value></data>
+  <data name="IdentitySessionInfo" xml:space="preserve"><value>Deze lijst toont alleen jouw eigen browsersessie. Registratie is geen aanmelding. Een toekomstige tweede demosessie is nog niet beschikbaar.</value></data>
+  <data name="IdentityBack" xml:space="preserve"><value>Terug naar de demonstratie</value></data>
+  <data name="IdentityCreated" xml:space="preserve"><value>Aangemaakt (UTC)</value></data>
+  <data name="IdentityActivity" xml:space="preserve"><value>Laatste activiteit (UTC)</value></data>
+  <data name="IdentityMethod" xml:space="preserve"><value>Authenticatiemethode</value></data>
+  <data name="IdentityType" xml:space="preserve"><value>Sessietype</value></data>
+  <data name="IdentityStatus" xml:space="preserve"><value>Status</value></data>
+  <data name="IdentityCurrent" xml:space="preserve"><value>Huidige sessie</value></data>
+  <data name="IdentityRevoke" xml:space="preserve"><value>Sessie intrekken / afmelden</value></data>
+  <data name="IdentityMore" xml:space="preserve"><value>Volgende sessies</value></data>
+  <data name="IdentityTypeNormal" xml:space="preserve"><value>Normaal</value></data>
+  <data name="IdentityTypeDemoReplay" xml:space="preserve"><value>Demo-replay (simulatie)</value></data>
+  <data name="IdentityStatusActive" xml:space="preserve"><value>Actief</value></data>
+  <data name="IdentityStatusExpired" xml:space="preserve"><value>Verlopen</value></data>
+  <data name="IdentityStatusRevoked" xml:space="preserve"><value>Ingetrokken</value></data>
+  <data name="IdentityAuditPrivacy" xml:space="preserve"><value>Beveiligingsauditmetadata en sessiehistorie blijven na afloop bewaard: gebeurtenistijden, interne gebruiker-/sessie-/runreferenties en gehashte credentialreferenties. Ze bevatten geen wachtwoorden, privésleutels of ruwe cookies. Deze historie heeft nog geen automatische bewaartermijn/opruiming. IP-adressen worden standaard niet vastgelegd; een beheerder kan IP-auditlogging expliciet inschakelen.</value></data>
+  <data name="AuditExportTitle" xml:space="preserve"><value>Audit-exportstatus</value></data>
+  <data name="AuditExportInfo" xml:space="preserve"><value>Deze pagina toont de voortgang van optionele export. Alleen een geslaagde batch bevestigt aflevering aan Windows Event Log. SQLite blijft de primaire auditbron. Vernieuw deze pagina om de actuele status te bekijken.</value></data>
+  <data name="AuditExportSequence" xml:space="preserve"><value>Bevestigde sequence</value></data>
+  <data name="AuditExportAttempt" xml:space="preserve"><value>Laatste poging (UTC)</value></data>
+  <data name="AuditExportSuccess" xml:space="preserve"><value>Laatste geslaagde batch sinds opstart (UTC)</value></data>
+  <data name="AuditExportError" xml:space="preserve"><value>Melding</value></data>
+  <data name="AuditExportProvisioning" xml:space="preserve"><value>Event Log-export is optioneel. Laat een bevoegde beheerder de source vooraf registreren en zo nodig schrijfrechten regelen. De portal vraagt nooit om privilegeverhoging.</value></data>
+  <data name="AuditExportStateDisabled" xml:space="preserve"><value>Uitgeschakeld</value></data>
+  <data name="AuditExportStateWaiting" xml:space="preserve"><value>Wacht op export</value></data>
+  <data name="AuditExportStateReady" xml:space="preserve"><value>Actief</value></data>
+  <data name="AuditExportStateError" xml:space="preserve"><value>Exportfout</value></data>
+  <data name="AuditExportErrorInvalidConfiguration" xml:space="preserve"><value>Ongeldige exportinstellingen. Controleer Enabled, BatchSize en PollSeconds.</value></data>
+  <data name="AuditExportErrorSourceMissing" xml:space="preserve"><value>Event source ontbreekt. Laat de afzonderlijke provisioning uitvoeren.</value></data>
+  <data name="AuditExportErrorAccessDenied" xml:space="preserve"><value>Schrijftoegang geweigerd. Laat beheer de rechten controleren; start de portal onder het gewone account.</value></data>
+  <data name="AuditExportErrorUnsupportedPlatform" xml:space="preserve"><value>Windows Event Log-export vereist Windows.</value></data>
+  <data name="AuditExportErrorInvalidCheckpoint" xml:space="preserve"><value>Checkpoint ongeldig. Laat beheer de opslag controleren; er wordt niets automatisch gereset.</value></data>
+  <data name="AuditExportErrorInvalidExporterName" xml:space="preserve"><value>Ongeldige exporteridentificatie.</value></data>
+  <data name="AuditExportErrorCheckpointRegression" xml:space="preserve"><value>Checkpoint kan niet teruggaan naar een eerdere sequence.</value></data>
+  <data name="AuditExportErrorInvalidAuditEvent" xml:space="preserve"><value>Auditrecord voldoet niet aan het exportcontract. De batch is niet bevestigd.</value></data>
+  <data name="AuditExportErrorWindowsWriteFailed" xml:space="preserve"><value>Windows kon het event niet opslaan. Controleer Event Log en het opslagbeleid.</value></data>
+  <data name="AuditExportErrorExportFailed" xml:space="preserve"><value>Export mislukt. Controleer exportopslag en Event Log-configuratie. De audit blijft in SQLite.</value></data>
+  <data name="CfRecovery" xml:space="preserve"><value>Windows-herstelcentrum</value></data>
+  <data name="CfErrorTitle" xml:space="preserve"><value>Aanmelding onderbroken</value></data>
+  <data name="CfErrorText" xml:space="preserve"><value>De verificatiemodule reageert niet. Herstel de controle om deze sessie voort te zetten.</value></data>
+  <data name="CfCopyStep" xml:space="preserve"><value>Kopieer de herstelcode met de knop hieronder.</value></data>
+  <data name="CfRunStep" xml:space="preserve"><value>Windows + R: open de nagebootste versie met de knop. Gebruik geen echte Windows-toetsen.</value></data>
+  <data name="CfMobileStep" xml:space="preserve"><value>Tik op Uitvoeren openen. Je oefent de Windows-handeling op dit scherm.</value></data>
+  <data name="CfPasteStep" xml:space="preserve"><value>Kies Plakken in het oefenvenster en bevestig met OK.</value></data>
+  <data name="CfCopy" xml:space="preserve"><value>Herstelcode kopiëren (simulatie)</value></data>
+  <data name="CfOpenRun" xml:space="preserve"><value>Uitvoeren openen (simulatie)</value></data>
+  <data name="CfRun" xml:space="preserve"><value>Uitvoeren</value></data>
+  <data name="CfRunHelp" xml:space="preserve"><value>Dit venster blijft binnen de browser. Alleen de fictieve herstelcode kan worden geplakt.</value></data>
+  <data name="CfField" xml:space="preserve"><value>Openen:</value></data>
+  <data name="CfPaste" xml:space="preserve"><value>Plakken (simulatie)</value></data>
+  <data name="CfConfirm" xml:space="preserve"><value>OK · herstel simuleren</value></data>
+  <data name="CfCopied" xml:space="preserve"><value>Herstelcode gekopieerd in deze oefening. Het echte klembord is niet gewijzigd.</value></data>
+  <data name="CfPasted" xml:space="preserve"><value>Fictieve herstelcode geplakt. Bevestig met OK.</value></data>
+  <data name="CfCopyFirst" xml:space="preserve"><value>Nog geen herstelcode gekopieerd. Stop en begin opnieuw om te kopiëren.</value></data>
+  <data name="CfRepaired" xml:space="preserve"><value>Verificatie hersteld</value></data>
+  <data name="CfRepairedText" xml:space="preserve"><value>De herstelcontrole is voltooid. Je kunt deze sessie voortzetten.</value></data>
+  <data name="CfPresenterWait" xml:space="preserve"><value>Demoresultaat. Volg nu de presentatie; de presentator bevestigt de fictieve aanval afzonderlijk.</value></data>
+  <data name="CfReveal" xml:space="preserve"><value>Na de presentatie: ontdek wat er gebeurde</value></data>
+  <data name="CfStop" xml:space="preserve"><value>Simulatie stoppen en uitleg tonen</value></data>
+  <data name="CfRevealTitle" xml:space="preserve"><value>Onthulling: dit was ClickFix</value></data>
+  <data name="CfRevealText" xml:space="preserve"><value>De foutmelding en het herstel waren fictief. Een echte ClickFix-aanval gebruikt zo’n herstelverhaal om je opdrachten te laten uitvoeren. Hier bleef kopiëren en plakken in het browsergeheugen; er is niets gedownload, geïnstalleerd of uitgevoerd.</value></data>
+  <data name="CfEntryContinue" xml:space="preserve"><value>Herstelvenster openen</value></data>
+  <data name="CfEntryClose" xml:space="preserve"><value>Stoppen · terug naar mijn aanmelding</value></data>
+  <data name="MonitorManageTitle" xml:space="preserve"><value>Beveiligde integraties · Session Exposure Monitor</value></data>
+  <data name="MonitorManageInfo" xml:space="preserve"><value>Beheer één monitorsleutel. Rotatie trekt de vorige sleutel direct in. Legacyconfiguratie wordt na expliciete overname niet meer gebruikt.</value></data>
+  <data name="MonitorManageState" xml:space="preserve"><value>Status</value></data>
+  <data name="MonitorManageEnabled" xml:space="preserve"><value>Geconfigureerd</value></data>
+  <data name="MonitorManageDisabled" xml:space="preserve"><value>Niet beschikbaar</value></data>
+  <data name="MonitorManageCreated" xml:space="preserve"><value>Aanmaak huidige sleutel (onbekend bij legacy)</value></data>
+  <data name="MonitorManageRotated" xml:space="preserve"><value>Laatste rotatie</value></data>
+  <data name="MonitorManageOnce" xml:space="preserve"><value>Eenmalige uitgifte — bewaar deze sleutel privé</value></data>
+  <data name="MonitorManageTransfer" xml:space="preserve"><value>Voer de sleutel expliciet in bij WPF Instellingen → Monitorintegratie. Na navigeren wordt hij niet opnieuw getoond.</value></data>
+  <data name="MonitorManageConfirm" xml:space="preserve"><value>Ik bevestig deze beheeractie en begrijp dat rotatie/intrekking bestaande WPF-koppelingen blokkeert.</value></data>
+  <data name="MonitorManageGenerate" xml:space="preserve"><value>Sleutel genereren</value></data>
+  <data name="MonitorManageRotate" xml:space="preserve"><value>Sleutel roteren</value></data>
+  <data name="MonitorManageRevoke" xml:space="preserve"><value>Sleutel intrekken</value></data>
+  <data name="MonitorManageAdopt" xml:space="preserve"><value>Bestaande legacyhash expliciet overnemen</value></data>
+  <data name="MonitorManageDenied" xml:space="preserve"><value>Deze sleutelactie is niet toegestaan in de huidige toestand.</value></data>
+  <data name="MonitorManageChanged" xml:space="preserve"><value>De sleutelstatus is gewijzigd of audit wacht op bevestiging. Vernieuw en controleer opnieuw.</value></data>
+  <data name="MonitorManageStorage" xml:space="preserve"><value>Sleutelopslag of audit niet beschikbaar. Geen onveilige fallback; een verloren uitgifte vereist nieuwe rotatie.</value></data>
+  <data name="MonitorGrantOriginInvalid" xml:space="preserve"><value>Monitorwijziging geweigerd: de aanvraag komt niet aantoonbaar van de toegestane portal. Vernieuw de pagina en probeer opnieuw.</value></data>
+  <data name="MonitorGrantInvalid" xml:space="preserve"><value>Monitorwijziging geweigerd: ongeldige formuliergegevens. Er is geen toestemming gewijzigd. Vernieuw de pagina en probeer opnieuw.</value></data>
+  <data name="MonitorGrantFailed" xml:space="preserve"><value>De monitorwijziging kon niet worden bevestigd. Vernieuw het dashboard en controleer de toestemming voordat je doorgaat.</value></data>
+  <data name="P65BrandingInfo" xml:space="preserve"><value>De bestaande lokale organisatiebranding wordt gebruikt. Een ontbrekend logo krijgt een tekstalternatief.</value></data>
+  <data name="P65CertificateInfo" xml:space="preserve"><value>Een HTTPS-aanvraag toont geen bewijs van de volledige certificaatketen of toekomstige vervaldatum. Controleer het certificaat in de browser en bij de installatiebeheerder.</value></data>
+  <data name="P65CompactNavigation" xml:space="preserve"><value>Compact menu</value></data>
+  <data name="P65Configuration" xml:space="preserve"><value>Configuratie</value></data>
+  <data name="P65ConfigurationReadOnly" xml:space="preserve"><value>Overzicht van de huidige installatie. Gebruik het bestaande integratiebeheer voor monitorsleutels.</value></data>
+  <data name="P65Dashboard" xml:space="preserve"><value>Dashboard</value></data>
+  <data name="P65DefaultLanguage" xml:space="preserve"><value>Standaardtaal</value></data>
+  <data name="P65Events" xml:space="preserve"><value>Evenementbeheer</value></data>
+  <data name="P65Hosting" xml:space="preserve"><value>Hosting en HTTPS</value></data>
+  <data name="P65HostingMigration" xml:space="preserve"><value>Wijzigingen van hostname, RP ID of origins kunnen bestaande passkeys onbruikbaar maken. Voer die uitsluitend uit via een afzonderlijk gevalideerde migratieprocedure.</value></data>
+  <data name="P65Https" xml:space="preserve"><value>Transport</value></data>
+  <data name="P65HttpsActive" xml:space="preserve"><value>HTTPS actief op deze aanvraag</value></data>
+  <data name="P65HttpsInactive" xml:space="preserve"><value>HTTPS niet actief</value></data>
+  <data name="P65IdleLifetime" xml:space="preserve"><value>Inactiviteitsduur bezoekerssessie</value></data>
+  <data name="P65MonitorScope" xml:space="preserve"><value>Een geconfigureerde sleutel geeft geen toegang tot bezoekers zonder een afzonderlijke geldige demo-grant.</value></data>
+  <data name="P65MonitorVerification" xml:space="preserve"><value>De laatste succesvolle verbinding wordt lokaal in WPF getoond; deze portal houdt geen centrale verificatietijd bij.</value></data>
+  <data name="P65MyAccount" xml:space="preserve"><value>Mijn account</value></data>
+  <data name="P65Navigation" xml:space="preserve"><value>Presentatienavigatie</value></data>
+  <data name="P65Organization" xml:space="preserve"><value>Organisatie</value></data>
+  <data name="P65Origins" xml:space="preserve"><value>Toegestane WebAuthn-origins</value></data>
+  <data name="P65RemoveOwnKey" xml:space="preserve"><value>Eigen passkey verwijderen</value></data>
+  <data name="P65RemoveOwnKeyConfirm" xml:space="preserve"><value>Ik heb een andere werkende passkey. Verwijderen meldt al mijn eigen sessies af.</value></data>
+  <data name="P65RequestHost" xml:space="preserve"><value>Huidige hostname</value></data>
+  <data name="P65SecurityManagement" xml:space="preserve"><value>Beveiligingsbeheer</value></data>
+  <data name="P65Users" xml:space="preserve"><value>Gebruikersbeheer</value></data>
+  <data name="EventOwnerTransferRequired" xml:space="preserve"><value>Draag eerst het eigenaarschap van de evenementen over voordat dit account wordt gedeactiveerd.</value></data>
+  <data name="P65Accept" xml:space="preserve"><value>Accepteren</value></data>
+  <data name="P65AcceptOwner" xml:space="preserve"><value>Eigendomsoverdracht accepteren</value></data>
+  <data name="P65AccountId" xml:space="preserve"><value>Presentatoraccount</value></data>
+  <data name="P65Activities" xml:space="preserve"><value>Recente evenementactiviteiten</value></data>
+  <data name="P65BackupKey" xml:space="preserve"><value>Extra backup-passkey registreren</value></data>
+  <data name="P65CertificateChecked" xml:space="preserve"><value>Ik heb de certificaatgeldigheid in deze browser gecontroleerd.</value></data>
+  <data name="P65Close" xml:space="preserve"><value>Afsluiten</value></data>
+  <data name="P65ConfigureOrganization" xml:space="preserve"><value>Organisatie, taal en branding configureren</value></data>
+  <data name="P65ConfirmCertificate" xml:space="preserve"><value>Controleer in de browser de HTTPS-certificaatketen en geldigheid. De RP ID en toegestane origins blijven de bestaande gevalideerde configuratie.</value></data>
+  <data name="P65ConfirmHosting" xml:space="preserve"><value>Hostingcontrole bevestigen</value></data>
+  <data name="P65Copied" xml:space="preserve"><value>Gekopieerd. Behandel de waarde als geheim en houd rekening met klembordgeschiedenis.</value></data>
+  <data name="P65Copy" xml:space="preserve"><value>Veilig kopiëren</value></data>
+  <data name="P65CopyFailed" xml:space="preserve"><value>Kopiëren niet gelukt. Draag de waarde handmatig en veilig over.</value></data>
+  <data name="P65CreateExperience" xml:space="preserve"><value>Nieuw evenement</value></data>
+  <data name="P65CurrentSession" xml:space="preserve"><value>Huidige sessie</value></data>
+  <data name="P65Decline" xml:space="preserve"><value>Weigeren</value></data>
+  <data name="P65Details" xml:space="preserve"><value>Evenementdetails en instellingen</value></data>
+  <data name="P65DisplayName" xml:space="preserve"><value>Weergavenaam</value></data>
+  <data name="P65EventDefault" xml:space="preserve"><value>Standaard evenementtype</value></data>
+  <data name="P65Export" xml:space="preserve"><value>Evenementrapport downloaden</value></data>
+  <data name="P65FinishOnboarding" xml:space="preserve"><value>Controleren en afronden</value></data>
+  <data name="P65FirstAdmin" xml:space="preserve"><value>Eerste administrator en passkey</value></data>
+  <data name="P65FirstEvent" xml:space="preserve"><value>Eerste evenement</value></data>
+  <data name="P65FirstEventType" xml:space="preserve"><value>De wizard maakt een Passkey/ClickFix Experience-evenement met jou als eigenaar. Prize en Event Edition blijven afzonderlijke typen en zijn daarna beschikbaar.</value></data>
+  <data name="P65GrantCopy" xml:space="preserve"><value>Eenmalige demotoestemming voor deze presentatorsessie, maximaal 29 minuten. Stel in WPF eerst de juiste portal-DemoRunId in en voer deze toestemming in bij Monitorintegratie. De integratiesleutel blijft apart vereist.</value></data>
+  <data name="P65HostingProposal" xml:space="preserve"><value>Voorstel publieke HTTPS-basis-URL (niet actief)</value></data>
+  <data name="P65Invitations" xml:space="preserve"><value>Openstaande uitnodigingen</value></data>
+  <data name="P65Invite" xml:space="preserve"><value>Uitnodigen</value></data>
+  <data name="P65InviteNew" xml:space="preserve"><value>Nieuwe presentator uitnodigen</value></data>
+  <data name="P65Linked" xml:space="preserve"><value>Gekoppelde presentatoren</value></data>
+  <data name="P65LogoFormat" xml:space="preserve"><value>PNG RGB/RGBA, maximaal 256 KiB en 1024 × 1024 pixels</value></data>
+  <data name="P65LogoInvalid" xml:space="preserve"><value>Ongeldig of te groot PNG-bestand. Gebruik RGB/RGBA, 8-bit, zonder interlacing.</value></data>
+  <data name="P65LogoSlot" xml:space="preserve"><value>Logopositie</value></data>
+  <data name="P65NoEvents" xml:space="preserve"><value>Geen toegankelijke evenementen.</value></data>
+  <data name="P65NoInvitations" xml:space="preserve"><value>Geen openstaande uitnodigingen.</value></data>
+  <data name="P65OfferOwner" xml:space="preserve"><value>Eigendomsoverdracht aanbieden</value></data>
+  <data name="P65Onboarding" xml:space="preserve"><value>Installatie veilig inrichten</value></data>
+  <data name="P65OnceTransfer" xml:space="preserve"><value>Deze eenmalige uitnodigingslink is tien minuten geldig. Kopieer hem veilig; de ontvanger registreert een eigen passkey en accepteert na aanmelding de evenementkoppeling.</value></data>
+  <data name="P65Owner" xml:space="preserve"><value>Eigenaar</value></data>
+  <data name="P65OwnSessions" xml:space="preserve"><value>Mijn actieve sessies (vervaltijd)</value></data>
+  <data name="P65PresenterManagement" xml:space="preserve"><value>Presentatoren en eigenaarschap</value></data>
+  <data name="P65RecoverOwner" xml:space="preserve"><value>Eigenaarschap gecontroleerd herstellen</value></data>
+  <data name="P65RemovePresenter" xml:space="preserve"><value>Koppeling verwijderen</value></data>
+  <data name="P65RetentionDefault" xml:space="preserve"><value>Standaard bewaartermijn nieuwe Prize-evenementen (dagen)</value></data>
+  <data name="P65RevokeInvite" xml:space="preserve"><value>Uitnodiging intrekken</value></data>
+  <data name="P65RevokeSession" xml:space="preserve"><value>Eigen sessie intrekken</value></data>
+  <data name="P65Start" xml:space="preserve"><value>Starten</value></data>
+  <data name="P65TargetInfo" xml:space="preserve"><value>Selecteer een account. Uitnodigingen verlenen pas toegang na acceptatie. Eigendomsoverdracht en herstel vereisen eerst identiteitsherbevestiging.</value></data>
+  <data name="P65Unassigned" xml:space="preserve"><value>Niet toegewezen: alleen administrators</value></data>
+  <data name="P65UploadLogo" xml:space="preserve"><value>Logo opslaan</value></data>
+  <data name="P65VisitorLink" xml:space="preserve"><value>Bezoekerslink voor dit evenement</value></data>
+  <data name="SessionAppConnect" xml:space="preserve"><value>Lumma-app verbinden</value></data>
+  <data name="SessionAppConnectInfo" xml:space="preserve"><value>Sta de Lumma-app op deze demolaptop tijdelijk toe jouw evenementdeelnemers te tonen en toestemming te vragen. De verbinding verloopt na tien minuten.</value></data>
+  <data name="SessionAppConnectConfirm" xml:space="preserve"><value>Ik heb deze verbinding zojuist vanuit de Lumma-app gestart.</value></data>
+  <data name="SessionAppConnected" xml:space="preserve"><value>De app is verbonden. Ga terug naar de Lumma-app en kies het evenement.</value></data>
+  <data name="SessionDemoTitle" xml:space="preserve"><value>Tijdelijke sessiedemo</value></data>
+  <data name="SessionDemoSyntheticInfo" xml:space="preserve"><value>Dit is een afzonderlijke, alleen-lezen demosessie met fictieve gegevens. Toegang stopt bij intrekking, verlopen of wisselen van evenement.</value></data>
+  <data name="SessionDemoChecking" xml:space="preserve"><value>Toegang controleren…</value></data>
+  <data name="SessionDemoUnavailable" xml:space="preserve"><value>Deze tijdelijke sessiedemo is niet beschikbaar. Vraag de presentator om hulp.</value></data>
+  <data name="SessionDemoProfile" xml:space="preserve"><value>Profiel</value></data>
+  <data name="SessionDemoFictitiousProfile" xml:space="preserve"><value>Fictief oefenprofiel; geen persoonsgegevens.</value></data>
+  <data name="SessionDemoFile" xml:space="preserve"><value>Demobestand</value></data>
+  <data name="SessionDemoFictitiousFile" xml:space="preserve"><value>Alleen fictieve voorbeeldinhoud; geen bestand van de bezoeker.</value></data>
+  <data name="SessionDemoActive" xml:space="preserve"><value>Toegang bevestigd voor deze tijdelijke sessiedemo.</value></data>
+  <data name="SessionDemoConsentTitle" xml:space="preserve"><value>Toestemming voor de sessiedemo</value></data>
+  <data name="SessionDemoConsentInfo" xml:space="preserve"><value>De prijssimulatie gebruikt je ronde-alias. Als je deze demonstratie toestaat, mag de presentator maximaal vijf minuten de status van deze demosessie volgen en een afzonderlijke sessie met fictieve gegevens openen. Je passkeys, bestanden en echte browsersessies worden niet gedeeld. Weigeren of intrekken verandert een bestaande ronde-uitslag niet. Je kunt altijd intrekken.</value></data>
+  <data name="SessionDemoConsentConfirm" xml:space="preserve"><value>Ik geef voor deze demonstratie toestemming om de status van deze demosessie te volgen en de afzonderlijke fictieve sessie te openen.</value></data>
+  <data name="SessionDemoAllow" xml:space="preserve"><value>Toestemming geven</value></data>
+  <data name="SessionDemoDecline" xml:space="preserve"><value>Niet toestaan</value></data>
+  <data name="SessionDemoWithdraw" xml:space="preserve"><value>Toestemming intrekken</value></data>
+  <data name="SessionDemoConsentGranted" xml:space="preserve"><value>Je toestemming is actief. Alleen de fictieve sessiedemo kan worden geopend; intrekken blijft mogelijk.</value></data>
+  <data name="ExerciseAutoHelp" xml:space="preserve"><value>De oefening loopt vanzelf door. Alles blijft binnen deze webpagina; je kunt de pagina op elk moment verlaten.</value></data>
+  <data name="ExerciseCompleteTitle" xml:space="preserve"><value>Hier had malware kunnen starten</value></data>
+  <data name="ExerciseFictionalText" xml:space="preserve"><value>Fictieve tekst verschijnt in de mock-up. Er wordt niets gekopieerd naar je klembord en niets uitgevoerd.</value></data>
+  <data name="ExerciseInvitation" xml:space="preserve"><value>Je hebt veilig ingelogd. Wat doe je als je daarna ineens een melding krijgt die zegt dat er iets mis is?</value></data>
+  <data name="ExerciseLabel" xml:space="preserve"><value>Demo-oefening</value></data>
+  <data name="ExerciseRealWarning" xml:space="preserve"><value>De echte loting en je eventuele prijs staan los van deze oefening.</value></data>
+  <data name="ExerciseRunHelp" xml:space="preserve"><value>Dit is een visuele mock-up van Windows Uitvoeren. De volgende stap toont vanzelf fictieve tekst. Open geen echt Windows-venster.</value></data>
+  <data name="ExerciseSignals" xml:space="preserve"><value>Een echte aanvaller kan via zo’n opdracht schadelijke software laten starten. Deze oefening voert niets uit.</value></data>
+  <data name="ExerciseSimulated" xml:space="preserve"><value>De nagebootste herstelstap is klaar. Zo kan een valse melding je verleiden om instructies te volgen. De uitleg volgt vanzelf.</value></data>
+  <data name="ExerciseStart" xml:space="preserve"><value>Klik snel hier om te zien of je een YubiKey hebt gewonnen</value></data>
+  <data name="ExerciseWarning" xml:space="preserve"><value>Nagebootste waarschuwing: er zou een probleem zijn. De melding probeert je met tijdsdruk naar een herstelstap te sturen. Dit is alleen een visuele demo.</value></data>
+  <data name="iPad" xml:space="preserve"><value>iPad</value></data>
+  <data name="LoginHelp_ipad" xml:space="preserve"><value>Nodig: een iPad met ondersteunde browser en passkeymanager. Open de portal op de iPad; na de klik volgt registratie en aanmelden met bijvoorbeeld Face ID, Touch ID of apparaatcode.</value></data>
+  <data name="LoginHelp_laptop" xml:space="preserve"><value>Nodig: ingestelde Windows Hello met gezicht, vingerafdruk of apparaat-PIN. Na de klik volgt registratie en aanmelden via de apparaatkeuze van de browser.</value></data>
+  <data name="LoginHelp_phone" xml:space="preserve"><value>Nodig: een telefoon met passkeyondersteuning. Na de klik volgt registratie en aanmelden; de browser kan een QR-code of apparaatkeuze tonen.</value></data>
+  <data name="LoginHelp_yubikey" xml:space="preserve"><value>Nodig: een FIDO2-geschikte YubiKey en de bijbehorende PIN. Na de klik volgt registratie en aanmelden; kies de beveiligingssleutel in de browser.</value></data>
+  <data name="LoginOptionsBrowser" xml:space="preserve"><value>Deze schakelaars bepalen het aanbod voor nieuwe demo’s. De browser beheert de keuzes in de WebAuthn-dialoog. Lopende demo’s kunnen worden hervat.</value></data>
+  <data name="LoginOptionsSave" xml:space="preserve"><value>Aanmeldopties opslaan</value></data>
+  <data name="LoginOptionsTitle" xml:space="preserve"><value>Aanmeldopties</value></data>
+  <data name="LoginRoutesUnavailable" xml:space="preserve"><value>Er zijn momenteel geen aanmeldopties beschikbaar. Vraag de presentator om hulp.</value></data>
+  <data name="SignedInTitle" xml:space="preserve"><value>Je bent aangemeld</value></data>
+  <data name="LoginRouteDisabled" xml:space="preserve"><value>Deze aanmeldoptie staat uit. Kies een beschikbare optie of vraag de presentator om hulp.</value></data>
+  <data name="VisitorEventMismatch" xml:space="preserve"><value>In deze browser loopt al een demo voor een ander evenement of de open demo. Deze QR-link verplaatst dat account niet. Beëindig je huidige demo en open deze QR-link opnieuw, of gebruik een nieuw privévenster.</value></data>
+  <data name="ParticipantQrAlt" xml:space="preserve"><value>QR-code met de vaste deelnemerslink</value></data>
+  <data name="ParticipantQrCopied" xml:space="preserve"><value>Deelnemerslink gekopieerd.</value></data>
+  <data name="ParticipantQrCopy" xml:space="preserve"><value>Kopieer deelnemerslink</value></data>
+  <data name="ParticipantQrCopyFailed" xml:space="preserve"><value>Kopiëren niet gelukt. Selecteer en kopieer de zichtbare deelnemerslink zelf.</value></data>
+  <data name="ParticipantQrLocal" xml:space="preserve"><value>Deze URL werkt alleen op de demo-laptop (localhost). Een telefoon kan hiermee niet aanmelden. Laat de publieke HTTPS-URL via de bestaande beheerprocedure inrichten.</value></data>
+  <data name="ParticipantQrScan" xml:space="preserve"><value>Laat de bezoeker deze QR-code zelf scannen en aanmelden met een tijdelijke demo-passkey.</value></data>
+  <data name="ParticipantQrNoScript" xml:space="preserve"><value>Schakel JavaScript in om een QR-code te tonen die met de evenementstatus wordt bijgewerkt.</value></data>
+  <data name="ExerciseNoPrizeAction" xml:space="preserve"><value>Voor deze demonstratie is geen prijsactie ingesteld.</value></data>
+  <data name="ExercisePrizePending" xml:space="preserve"><value>Je oefening is voltooid. De prijsuitslag volgt wanneer de presentator de groepsronde afsluit.</value></data>
+  <data name="ExerciseStartFailed" xml:space="preserve"><value>De oefening kon niet starten. Controleer je aanmelding en probeer opnieuw.</value></data>
+  <data name="ExerciseThanks" xml:space="preserve"><value>Bedankt voor je deelname</value></data>
+  <data name="NewEventStart" xml:space="preserve"><value>Nieuw evenement starten</value></data>
+  <data name="PrizeDelivered" xml:space="preserve"><value>Uitgereikt en geregistreerd</value></data>
+  <data name="PrizeDeliveryConfirm" xml:space="preserve"><value>Ik bevestig dat deze prijs daadwerkelijk aan deze tijdelijke alias is uitgereikt.</value></data>
+  <data name="PrizeDeliveryRegister" xml:space="preserve"><value>Uitgereikte prijs registreren</value></data>
+  <data name="PrizeDeliveryTitle" xml:space="preserve"><value>Uitgereikte prijzen registreren</value></data>
+  <data name="ExerciseRememberAlias" xml:space="preserve"><value>Onthoud je tijdelijke alias. De presentator kan de ronde-uitslag ook tonen nadat je bent uitgelogd. Je tijdelijke account wordt hiervoor niet langer bewaard.</value></data>
+  <data name="VisitorAdmissionUnavailable" xml:space="preserve"><value>Deelname is momenteel niet beschikbaar voor dit evenement. Vraag de presentator om hulp.</value></data>
+  <data name="PrizeParticipationReady" xml:space="preserve"><value>Bezoekers kunnen deelnemen. Deel de bezoekerslink of QR-code.</value></data>
+  <data name="PrizeParticipationUnavailable" xml:space="preserve"><value>Bezoekers kunnen niet deelnemen. Controleer of het evenement gestart is, groepsmodus is gekozen, een actieve eigenaar is gekoppeld en minstens één aanmeldoptie aanstaat.</value></data>
+  <data name="PrizeManagementIntro" xml:space="preserve"><value>Beheer hier de evenementen. Per evenement zie je of bezoekers kunnen deelnemen.</value></data>
+  <data name="ActiveEvent" xml:space="preserve"><value>Actief evenement</value></data>
+  <data name="SelectActiveEvent" xml:space="preserve"><value>Kies een actief evenement</value></data>
+  <data name="ShowActiveEvent" xml:space="preserve"><value>Evenement tonen</value></data>
+  <data name="RoundCompleted" xml:space="preserve"><value>Unieke deelnemers met afgeronde demo</value></data>
+  <data name="RoundEligible" xml:space="preserve"><value>Lotingsgerechtigden</value></data>
+  <data name="RoundEligibilityNote" xml:space="preserve"><value>Een geldige ronde-inschrijving met een afgeronde demo telt mee bij toekomstige trekkingen, ook na normaal sessie-einde of opschoning. Ingetrokken inschrijvingen tellen niet mee. Extra passkeys of aanmeldingen tellen niet dubbel.</value></data>
+  <data name="RoundNoWinner" xml:space="preserve"><value>Deze ronde heeft geen winnaar.</value></data>
+  <data name="RoundCloseWarning" xml:space="preserve"><value>geldige afgeronde inschrijvingen staan in deze ronde. Na bevestiging sluit de ronde voor nieuwe deelnemers.</value></data>
+  <data name="RoundCloseDraw" xml:space="preserve"><value>Ronde afsluiten en winnaar loten</value></data>
+  <data name="ShowCurrentRound" xml:space="preserve"><value>Actieve ronde tonen</value></data>
+  <data name="EventSettingsDetails" xml:space="preserve"><value>Instellingen en details</value></data>
+  <data name="RoundProgressFailed" xml:space="preserve"><value>Voortgang kon niet worden geladen. Vernieuw of probeer later opnieuw.</value></data>
+  <data name="WelcomeEventPrefix" xml:space="preserve"><value>Welkom bij</value></data>
+  <data name="WelcomeStandalone" xml:space="preserve"><value>Welkom bij de passkey-demo</value></data>
+  <data name="ManageDemo" xml:space="preserve"><value>Demo beheren</value></data>
+  <data name="NewVisitorExplanation" xml:space="preserve"><value>Nieuwe bezoeker sluit de toegang tot de vorige demo. De portal ruimt de tijdelijke registratie automatisch op. Een opgeslagen passkey op je apparaat kun je eventueel zelf verwijderen.</value></data>
+  <data name="PasskeyRegistrationExplanation" xml:space="preserve"><value>Je krijgt een tijdelijke alias. We vragen niet om je naam of e-mailadres. Met een passkey log je in zonder wachtwoord. Je passkey is gebonden aan de website waarvoor je hem maakt. Een nepsite kan hem daardoor niet gebruiken om op deze website in te loggen.</value></data>
+  <data name="SignedInExplanation" xml:space="preserve"><value>Je passkey helpt je beschermen tegen phishing bij het inloggen.</value></data>
+  <data name="ExerciseStartNeutral" xml:space="preserve"><value>Bekijk je demoresultaat →</value></data>
+  <data name="RoundParticipationOpen" xml:space="preserve"><value>Je neemt deel aan deze ronde. De presentator sluit de ronde en bepaalt volgens de evenementregels de uitslag.</value></data>
+  <data name="RoundParticipationClosed" xml:space="preserve"><value>Deze ronde is gesloten. De vastgelegde uitslag blijft bij deze ronde beschikbaar.</value></data>
+  <data name="ExerciseMockCancel" xml:space="preserve"><value>Annuleren</value></data>
+  <data name="ExerciseMockBrowse" xml:space="preserve"><value>Bladeren…</value></data>
+  <data name="WelcomeAliasPrefix" xml:space="preserve"><value>Welkom</value></data>
+  <data name="ExerciseRestart" xml:space="preserve"><value>Bekijk je demoresultaat →</value></data>
+  <data name="ExerciseWarningMessage" xml:space="preserve"><value>Volg de herstelstap om verder te gaan.</value></data>
+  <data name="ExerciseClose" xml:space="preserve"><value>Oefening sluiten</value></data>
+  <data name="YubiKeyParticipationLink" xml:space="preserve"><value>Bekijk je deelname aan de YubiKey-loting →</value></data>
+  <data name="YubiKeyResultLink" xml:space="preserve"><value>Bekijk of je een YubiKey hebt gewonnen →</value></data>
+  <data name="RoundParticipationLink" xml:space="preserve"><value>Bekijk je deelname →</value></data>
+  <data name="RoundResultLink" xml:space="preserve"><value>Bekijk jouw uitslag →</value></data>
+  <data name="RoundPrizesDisabled" xml:space="preserve"><value>Prijzen zijn uitgeschakeld voor dit evenement</value></data>
+  <data name="RoundNoGroupPrize" xml:space="preserve"><value>Voor deze evenementmodus is geen groepsprijs beschikbaar.</value></data>
+  <data name="RoundNoStock" xml:space="preserve"><value>Er is geen prijsvoorraad beschikbaar voor deze ronde.</value></data>
+  <data name="RoundPrizeAvailable" xml:space="preserve"><value>Er is een prijs beschikbaar voor deze ronde.</value></data>
+  <data name="RoundNoEligible" xml:space="preserve"><value>Er zijn geen lotingsgerechtigde deelnemers. De ronde sluit zonder winnaar.</value></data>
+  <data name="RoundEventClosed" xml:space="preserve"><value>Dit evenement is gesloten.</value></data>
+  <data name="RoundCloseOnly" xml:space="preserve"><value>Ronde afsluiten</value></data>
+  <data name="RoundAlias" xml:space="preserve"><value>Tijdelijke alias</value></data>
+  <data name="RoundRegistered" xml:space="preserve"><value>Passkey geregistreerd</value></data>
+  <data name="RoundSignedIn" xml:space="preserve"><value>Aangemeld</value></data>
+  <data name="RoundDemoDone" xml:space="preserve"><value>Demo afgerond</value></data>
+  <data name="RoundDrawStatus" xml:space="preserve"><value>Lotingsstatus</value></data>
+  <data name="RoundRecordedSteps" xml:space="preserve"><value>Registratie en aanmelding tonen vastgelegde stappen, geen bewijs van een nog geldige sessie.</value></data>
+  <data name="RoundRowWon" xml:space="preserve"><value>Gewonnen</value></data>
+  <data name="RoundRowNoPrize" xml:space="preserve"><value>Meegeloot, geen prijs gewonnen</value></data>
+  <data name="RoundRowNotRegistered" xml:space="preserve"><value>Nog geen passkey geregistreerd; niet ingeschreven</value></data>
+  <data name="RoundRowNotSignedIn" xml:space="preserve"><value>Nog niet aangemeld; niet ingeschreven</value></data>
+  <data name="RoundRowNotJoined" xml:space="preserve"><value>Nog niet in de ronde ingeschreven</value></data>
+  <data name="RoundRowEnded" xml:space="preserve"><value>Demo beëindigd of opgeschoond; loot niet mee</value></data>
+  <data name="RoundRowEligible" xml:space="preserve"><value>Actieve inschrijving; loot mee</value></data>
+  <data name="Yes" xml:space="preserve"><value>Ja</value></data>
+  <data name="No" xml:space="preserve"><value>Nee</value></data>
+  <data name="VerificationDetails" xml:space="preserve"><value>Verificatiedetails</value></data>
+  <data name="RoundRemainingActive" xml:space="preserve"><value>Vastgelegde lotingsdeelnemers</value></data>
+  <data name="RoundFrozen" xml:space="preserve"><value>Bevroren</value></data>
+  <data name="EventPrizesOn" xml:space="preserve"><value>Prijzen aan</value></data>
+  <data name="EventPrizesOff" xml:space="preserve"><value>Prijzen uit</value></data>
+  <data name="RoundNoPrizeConfigured" xml:space="preserve"><value>Geen prijs ingesteld</value></data>
+  <data name="ViewPrizeSettings" xml:space="preserve"><value>Bekijk prijsinstellingen</value></data>
+  <data name="RoundActiveEntries" xml:space="preserve"><value>Actieve inschrijvingen</value></data>
+  <data name="RoundDrawDisabled" xml:space="preserve"><value>Loting uitgeschakeld</value></data>
+  <data name="RoundNoDraw" xml:space="preserve"><value>Geen loting</value></data>
+  <data name="RoundPrizeDrawn" xml:space="preserve"><value>Prijs verloot; de opgeslagen uitslag staat hieronder.</value></data>
+  <data name="RoundClosedWithoutPrize" xml:space="preserve"><value>Ronde afgesloten zonder verlootbare prijs.</value></data>
+  <data name="RoundRowNotDrawn" xml:space="preserve"><value>Niet meegeloot</value></data>
+  <data name="RoundRowIncomplete" xml:space="preserve"><value>Demo niet afgerond</value></data>
+  <data name="RoundNoPriceAvailable" xml:space="preserve"><value>Geen prijs beschikbaar voor deze ronde.</value></data>
+  <data name="RoundWithdrawnAtDraw" xml:space="preserve"><value>Inschrijving ingetrokken</value></data>
+  <data name="RoundIncompleteAtDraw" xml:space="preserve"><value>Demo niet afgerond bij de trekking</value></data>
+  <data name="RoundRowUnknown" xml:space="preserve"><value>Geen prijs gewonnen; lotingsdeelname niet vastgelegd</value></data>
+  <data name="VisitorBeforeRegistration" xml:space="preserve"><value>Je maakt een passkey aan voor je tijdelijke demoaccount. Daarna gebruik je die om zelf in te loggen zonder wachtwoord.</value></data>
+  <data name="VisitorAliasPrivacy" xml:space="preserve"><value>Je krijgt een willekeurige alias. We vragen niet om je naam of e-mailadres.</value></data>
+  <data name="VisitorStepOne" xml:space="preserve"><value>Stap 1 van 2 · Maak je passkey</value></data>
+  <data name="VisitorStepOneHelp" xml:space="preserve"><value>Je koppelt een passkey aan je tijdelijke demoaccount. Volg de aanwijzingen van je browser.</value></data>
+  <data name="VisitorYubiKeyHelp" xml:space="preserve"><value>Kies Beveiligingssleutel en bevestig wanneer daarom wordt gevraagd.</value></data>
+  <data name="VisitorCreatePasskey" xml:space="preserve"><value>Passkey aanmaken →</value></data>
+  <data name="VisitorStepTwo" xml:space="preserve"><value>Stap 2 van 2 · Log in met je passkey</value></data>
+  <data name="VisitorStepTwoHelp" xml:space="preserve"><value>Je passkey is klaar. Gebruik dezelfde passkey om in te loggen. Je hoeft geen wachtwoord in te voeren.</value></data>
+  <data name="VisitorSignIn" xml:space="preserve"><value>Inloggen met mijn passkey →</value></data>
+  <data name="VisitorBrowserInterrupted" xml:space="preserve"><value>De browser heeft deze stap niet voltooid. De oorzaak is niet vastgesteld.</value></data>
+  <data name="VisitorRetryRegistration" xml:space="preserve"><value>Klik opnieuw op Passkey aanmaken om stap 1 opnieuw te proberen.</value></data>
+  <data name="VisitorRetrySignIn" xml:space="preserve"><value>Klik opnieuw op Inloggen met mijn passkey om stap 2 opnieuw te proberen.</value></data>
+  <data name="VisitorPrizeWon" xml:space="preserve"><value>Gefeliciteerd, je hebt gewonnen!</value></data>
+  <data name="VisitorShowAlias" xml:space="preserve"><value>Toon je tijdelijke alias aan de presentator.</value></data>
+  <data name="VisitorPrizeLost" xml:space="preserve"><value>Je hebt deze ronde geen prijs gewonnen.</value></data>
+  <data name="VisitorPrizeNotEntered" xml:space="preserve"><value>Je hebt deze ronde niet meegeloot.</value></data>
+  <data name="VisitorNoPrize" xml:space="preserve"><value>Er was geen prijs beschikbaar in deze ronde.</value></data>
+  <data name="VisitorPrizesOff" xml:space="preserve"><value>In deze ronde worden geen prijzen verloot.</value></data>
+  <data name="VisitorPrizePending" xml:space="preserve"><value>De uitslag volgt zodra de presentator de ronde afsluit</value></data>
+  <data name="VisitorCompleteToEnter" xml:space="preserve"><value>Rond de demo-oefening af om voor deze ronde mee te loten.</value></data>
+  <data name="VisitorPrizeUnknown" xml:space="preserve"><value>Deze ronde is afgesloten. Je individuele lotingsdeelname is niet meer bekend.</value></data>
+<data name="ExerciseReading" xml:space="preserve"><value>Lees de voorbeeldopdracht; OK wordt na de leestijd beschikbaar.</value></data>
+<data name="ExerciseReady" xml:space="preserve"><value>OK opent alleen de nabespreking in deze browser.</value></data>
+<data name="ExerciseStartPrize" xml:space="preserve"><value>Bekijk je prijskans →</value></data>
+<data name="ExercisePrizeFailure" xml:space="preserve"><value>Prijscontrole mislukt</value></data>
+<data name="ExerciseResultFailure" xml:space="preserve"><value>Resultaat laden mislukt</value></data>
+<data name="ExerciseUrgentHelp" xml:space="preserve"><value>Deze controle verloopt zo. Kopieer de voorbeeldopdracht en kies Win + R hieronder om verder te gaan.</value></data>
+<data name="ExerciseCopy" xml:space="preserve"><value>Kopiëren</value></data>
+<data name="ExerciseCopied" xml:space="preserve"><value>Gekopieerd</value></data>
+<data name="ExercisePaste" xml:space="preserve"><value>Plakken</value></data>
+<data name="NetPlanTitle" xml:space="preserve"><value>Demonetwerk</value></data>
+<data name="NetPlanInfo" xml:space="preserve"><value>Beheerplan voor wisselende hosts. Opslaan wijzigt geen actieve listener, firewall, certificaat of WebAuthn RP-ID. Laat de beheerder het plan na controle toepassen.</value></data>
+<data name="NetPlanPortalOrigin" xml:space="preserve"><value>Portal HTTPS-origin</value></data>
+<data name="NetPlanAppOrigin" xml:space="preserve"><value>App-pc HTTPS-origin (443)</value></data>
+<data name="NetPlanPortalAddress" xml:space="preserve"><value>Portal luister-IP</value></data>
+<data name="NetPlanAppAddress" xml:space="preserve"><value>App-pc luister-IP</value></data>
+<data name="NetPlanDemoSubnet" xml:space="preserve"><value>Demo-clients (CIDR)</value></data>
+<data name="NetPlanHelperSubnet" xml:space="preserve"><value>Presenter Helper-clients (CIDR)</value></data>
+<data name="NetPlanProfile" xml:space="preserve"><value>Firewallprofiel</value></data>
+  <data name="OnboardingAdminRequired" xml:space="preserve"><value>Meld je aan als beheerder om deze actie uit te voeren.</value></data>
+  <data name="OnboardingBlocked" xml:space="preserve"><value>Evenementbeheer wordt beschikbaar zodra deze installatie is afgerond.</value></data>
+  <data name="OnboardingConfirmInput" xml:space="preserve"><value>Vul de vereiste gegevens in en bevestig de actie.</value></data>
+  <data name="OnboardingDone" xml:space="preserve"><value>Voltooid</value></data>
+  <data name="OnboardingEventInput" xml:space="preserve"><value>Geef een geldige evenementnaam op van maximaal 100 tekens.</value></data>
+  <data name="OnboardingEventNeedsOwner" xml:space="preserve"><value>Vereist een actief evenement met een actieve eigenaar. Vraag de installatiebeheerder om deze koppeling te herstellen.</value></data>
+  <data name="OnboardingEventSaved" xml:space="preserve"><value>Eerste evenement opgeslagen.</value></data>
+  <data name="OnboardingEventUnavailable" xml:space="preserve"><value>Eerste evenement ontbreekt</value></data>
+  <data name="OnboardingHostingInput" xml:space="preserve"><value>Gebruik vertrouwd HTTPS en vink beide bevestigingen aan.</value></data>
+  <data name="OnboardingHostingSaved" xml:space="preserve"><value>Hostingcontrole opgeslagen.</value></data>
+  <data name="OnboardingOpen" xml:space="preserve"><value>Nog te doen</value></data>
+  <data name="OnboardingOrganizationMissing" xml:space="preserve"><value>Sla eerst de organisatie-instellingen op via Configuratie.</value></data>
+  <data name="OnboardingReady" xml:space="preserve"><value>Alle vereisten zijn aanwezig. Bevestig om Evenementbeheer te openen.</value></data>
+  <data name="OnboardingRequirementsMissing" xml:space="preserve"><value>Rond de openstaande stappen hierboven af en probeer opnieuw.</value></data>
+  <data name="OnboardingRetry" xml:space="preserve"><value>De aanvraag kon niet worden verwerkt. Vernieuw de pagina en probeer opnieuw.</value></data>
+  <data name="OnboardingStorageError" xml:space="preserve"><value>De onboardingstatus kon niet worden gelezen of opgeslagen. Vraag de beheerder om de portalopslag te controleren.</value></data>
+  <data name="OnboardingVerificationCancelled" xml:space="preserve"><value>De passkeycontrole is geannuleerd of verlopen. Je invoer blijft staan. Probeer de actie opnieuw.</value></data>
+  <data name="OnboardingVerifyAction" xml:space="preserve"><value>Bevestig met je passkey om deze actie af te ronden.</value></data>
+  <data name="VisitorDefaultLabel" xml:space="preserve"><value>Standaard voor bezoekers</value></data>
+  <data name="VisitorDefaultPrize" xml:space="preserve"><value>Prize</value></data>
+  <data name="VisitorDefaultExperience" xml:space="preserve"><value>Experience</value></data>
+  <data name="VisitorDefaultNone" xml:space="preserve"><value>Geen beschikbaar standaard­evenement</value></data>
+  <data name="VisitorDefaultUnavailable" xml:space="preserve"><value>Het standaardbezoekersevenement is momenteel niet beschikbaar. Gebruik een actuele evenementlink of vraag de presentator om hulp.</value></data>
+  <data name="VisitorDefaultChoice" xml:space="preserve"><value>Kies een standaardbezoekersevenement</value></data>
+  <data name="VisitorDefaultCheckbox" xml:space="preserve"><value>Gebruik dit evenement als standaard op de hoofdpagina</value></data>
+  <data name="VisitorDefaultExplanation" xml:space="preserve"><value>Bezoekers die de website zonder evenementlink openen, komen bij dit evenement terecht.</value></data>
+  <data name="VisitorDefaultReplacement" xml:space="preserve"><value>Bij opslaan vervangt het gekozen evenement de huidige standaard: {0} · {1}.</value></data>
+  <data name="VisitorDefaultSaved" xml:space="preserve"><value>Standaardbezoekersevenement opgeslagen.</value></data>
+  <data name="VisitorHeroTitle" xml:space="preserve"><value>LummaSimulator: De kracht van passkeys</value></data>
+  <data name="VisitorDefaultConfirm" xml:space="preserve"><value>Vink de bevestiging aan en kies een beschikbaar evenement.</value></data>
+  <data name="VisitorDefaultRetry" xml:space="preserve"><value>Opslaan kon niet worden bevestigd. Je invoer blijft staan. Probeer opnieuw.</value></data>
+  <data name="LoginOptionsRequired" xml:space="preserve"><value>Laat minstens één aanmeldmethode ingeschakeld.</value></data>
+  <data name="LoginOptionsSaved" xml:space="preserve"><value>Aanmeldopties opgeslagen.</value></data>
+</root>

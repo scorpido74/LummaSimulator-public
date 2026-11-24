@@ -1,0 +1,266 @@
+<Window x:Class="LummaSimulator.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:LummaSimulator.App"
+        Icon="Assets/LummaSimulator.ico" Title="Lumma Attack Simulator" Width="1280" Height="900" MinWidth="480" MinHeight="320" ResizeMode="CanResize" UseLayoutRounding="True" SnapsToDevicePixels="True"
+        Background="#10151F" Foreground="#E7EDF7" FontFamily="Segoe UI" WindowStartupLocation="CenterScreen">
+    <Window.Resources><ResourceDictionary><ResourceDictionary.MergedDictionaries><ResourceDictionary Source="Assets/Branding.xaml"/></ResourceDictionary.MergedDictionaries><local:DesktopTextConverter x:Key="DesktopTranslation"/><Style TargetType="CheckBox"><Setter Property="MaxWidth" Value="350"/><Setter Property="ContentTemplate"><Setter.Value><DataTemplate><TextBlock TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock></DataTemplate></Setter.Value></Setter></Style><Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/></Style><Style TargetType="TabItem"><Setter Property="MaxWidth" Value="210"/><Setter Property="HeaderTemplate"><Setter.Value><DataTemplate><TextBlock TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock></DataTemplate></Setter.Value></Setter><Setter Property="Foreground" Value="#E7EDF7"/><Setter Property="Background" Value="#192333"/><Setter Property="Template"><Setter.Value><ControlTemplate TargetType="TabItem"><Border x:Name="TabSurface" Background="{TemplateBinding Background}" Padding="12,7" Margin="0,0,4,0" CornerRadius="5,5,0,0"><ContentPresenter ContentSource="Header"/></Border><ControlTemplate.Triggers><Trigger Property="IsSelected" Value="True"><Setter TargetName="TabSurface" Property="Background" Value="#2B5066"/></Trigger></ControlTemplate.Triggers></ControlTemplate></Setter.Value></Setter></Style>
+        <Style TargetType="Button">
+            <Setter Property="MaxWidth" Value="320"/><Setter Property="MinHeight" Value="44"/><Setter Property="ContentTemplate"><Setter.Value><DataTemplate><TextBlock TextWrapping="Wrap" TextAlignment="Center"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock></DataTemplate></Setter.Value></Setter><Setter Property="Background" Value="#24344C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="24,10"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Surface" Background="{TemplateBinding Background}" CornerRadius="6" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="Surface" Property="Opacity" Value="0.8"/></Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True"><Setter TargetName="Surface" Property="BorderBrush" Value="#FFCA70"/><Setter TargetName="Surface" Property="BorderThickness" Value="2"/></Trigger><Trigger Property="IsEnabled" Value="False"><Setter TargetName="Surface" Property="Opacity" Value="0.35"/></Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ResourceDictionary></Window.Resources>
+    <DockPanel><WrapPanel DockPanel.Dock="Top" Margin="16,8"><TextBlock Text="LummaSimulator" FontSize="20" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,20,0"/><Image Source="{Binding ResellerLogo, RelativeSource={RelativeSource AncestorType=Window}}" Width="180" Height="46" Stretch="Uniform" Margin="0,0,12,0"><Image.Style><Style TargetType="Image"><Style.Triggers><Trigger Property="Source" Value="{x:Null}"><Setter Property="Visibility" Value="Collapsed"/></Trigger></Style.Triggers></Style></Image.Style></Image><TextBlock Text="{Binding OrganizationName, RelativeSource={RelativeSource AncestorType=Window}}" MaxWidth="200" VerticalAlignment="Center" Margin="0,0,20,0"/><Button Content="NL" Click="OnDutch" IsEnabled="{Binding IsEnglish, Source={x:Static local:DesktopLanguage.Current}}" AutomationProperties.Name="Nederlands"/><Button Content="EN" Click="OnEnglish" IsEnabled="{Binding IsDutch, Source={x:Static local:DesktopLanguage.Current}}" AutomationProperties.Name="English"/></WrapPanel><TextBlock DockPanel.Dock="Top" Text="{Binding ShutdownError, RelativeSource={RelativeSource AncestorType=Window}}" Foreground="#FFCA70" Margin="16,0" TextWrapping="Wrap"/><ScrollViewer x:Name="WorkspaceScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"><Grid x:Name="WorkspaceGrid" Margin="10"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="0"/></Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="{Binding [text.0], Source={x:Static local:DesktopLanguage.Current}}" FontSize="27" FontWeight="SemiBold"/>
+            <TextBlock Foreground="#66DCC6" Margin="0,8,0,0" FontWeight="SemiBold"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}" ConverterParameter="format.134"><Binding Path="ModeLabel"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+            <TextBlock Foreground="#AAB8CF" Margin="0,4,0,6" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ModeDescription"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+            <Border Background="#192333" CornerRadius="6" Padding="8" Margin="0,0,0,8">
+                <StackPanel IsEnabled="{Binding IsIdle}">
+                    <WrapPanel>
+                        <CheckBox Content="{Binding [text.1], Source={x:Static local:DesktopLanguage.Current}}" IsChecked="{Binding IsLiveTelemetry}" Foreground="#E7EDF7" VerticalAlignment="Center" Margin="0,0,24,0"/>
+                        <WrapPanel IsEnabled="{Binding IsLiveTelemetry}">
+                            <CheckBox x:Name="LocalHttpCheckBox" Content="{Binding [text.2], Source={x:Static local:DesktopLanguage.Current}}" IsChecked="{Binding EnableLocalHttp}" Foreground="#E7EDF7" VerticalAlignment="Center" Margin="0,0,12,0"/>
+                            <TextBlock x:Name="LocalHttpStatusLabel" Foreground="#66DCC6" VerticalAlignment="Center" Margin="0,0,12,0"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="LocalHttpStatus"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text><TextBlock.ToolTip><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="LocalHttpDetail"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.ToolTip></TextBlock>
+                            <TextBlock Text="{Binding [text.3], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                            <TextBox Text="{Binding LocalPort, UpdateSourceTrigger=LostFocus}" Width="62" MaxLength="5" Background="#10151F" Foreground="#E7EDF7" Padding="5,2" IsEnabled="{Binding EnableLocalHttp}" AutomationProperties.Name="Local test server port"/>
+                        </WrapPanel>
+                    </WrapPanel>
+                    <TextBlock Foreground="#F3B36B" FontSize="12" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="LocalHttpError"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                    <TextBlock Text="{Binding [text.4], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" FontSize="12" Margin="0,8,0,0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <Grid x:Name="SimulationControls" Grid.Row="1" Margin="0,0,0,8">
+            <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+            <WrapPanel>
+                <Button Content="{Binding [text.5], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding StartCommand}" Background="#167E71"/>
+                <Button Content="{Binding [text.6], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding StopCommand}"/>
+                <Button Content="{Binding [text.7], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding ResetCommand}"/>
+                <Button Content="{Binding [text.8], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding ShowScenarioCommand}" Padding="12,10"/>
+                <Button x:Name="ToggleAssessmentButton" Content="{Binding [AssessmentToggle], Source={x:Static local:DesktopLanguage.Current}}" Click="OnToggleAssessment" Padding="12,10"/>
+                <Button Content="{Binding [text.9], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding CleanupCommand}" ToolTip="{Binding [text.10], Source={x:Static local:DesktopLanguage.Current}}"/><Button Content="{Binding [text.11], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding ExportAttackCommand}"/>
+            </WrapPanel>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                <TextBlock FontWeight="SemiBold" HorizontalAlignment="Right"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Status"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                <TextBlock Foreground="#66DCC6" HorizontalAlignment="Right"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ProgressText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+            </StackPanel>
+        </Grid>
+        <ProgressBar Grid.Row="2" Value="{Binding Progress, Mode=OneWay}" Maximum="100" Height="6" Background="#243044" Foreground="#45CDB5" BorderThickness="0" Margin="0,0,0,8"/>
+        <TabControl x:Name="ScenarioTabs" SelectionChanged="OnScenarioTabChanged" Grid.Row="3" Background="#10151F" BorderBrush="#2D3C52" Margin="0,0,0,8"><TabItem Header="{Binding [text.12], Source={x:Static local:DesktopLanguage.Current}}"><Grid x:Name="AttackLayout" Margin="6">
+            <Grid.RowDefinitions><RowDefinition/><RowDefinition Height="0"/></Grid.RowDefinitions><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="0"/></Grid.ColumnDefinitions>
+            <DockPanel x:Name="AttackCards" Margin="0">
+                <TextBlock DockPanel.Dock="Top" Text="{Binding [text.13], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" FontSize="12" Margin="0,0,0,10"/>
+                <ScrollViewer VerticalScrollBarVisibility="Disabled">
+                    <ItemsControl x:Name="PhaseCardsControl" ItemsSource="{Binding Phases}">
+                        <ItemsControl.ItemsPanel><ItemsPanelTemplate><local:EqualRowPanel Columns="{Binding PhaseColumns, RelativeSource={RelativeSource AncestorType=Window}}"/></ItemsPanelTemplate></ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate><DataTemplate>
+                            <Border x:Name="Card" Background="#192333" BorderBrush="#2D3C52" BorderThickness="1" CornerRadius="8" Padding="8" Margin="3" VerticalAlignment="Stretch">
+                                <Grid><Grid.RowDefinitions><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions><StackPanel>
+                                    <DockPanel><TextBlock Foreground="#8DBCF4" FontWeight="Bold"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="TechniqueId"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock><TextBlock x:Name="State" Foreground="#AAB8CF" HorizontalAlignment="Right" FontSize="12"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="StatusText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock></DockPanel>
+                                    <TextBlock FontSize="16" FontWeight="SemiBold" Margin="0,7,0,4" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="TechniqueName"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                                    <TextBlock Foreground="#8D9DB6" FontSize="12" Margin="0,0,0,7"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="TacticName"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                                    <TextBlock Foreground="#AAB8CF" FontSize="12" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ActivityDescription"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text><TextBlock.ToolTip><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="MappingNote"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.ToolTip></TextBlock>
+</StackPanel><Expander x:Name="PhaseDetailsExpander" ExpandDirection="Up" Grid.Row="1" VerticalAlignment="Bottom" Header="{Binding [CardDetails], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" FontSize="12"><StackPanel>                                    <TextBlock Foreground="#66DCC6" FontSize="12" Margin="0,9,0,0"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}" ConverterParameter="format.135"><Binding Path="ActivityText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                                    <TextBlock Foreground="#BBA5E1" FontSize="12"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}" ConverterParameter="format.136"><Binding Path="TechniqueActivityText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                                    <WrapPanel Margin="0,5,0,0"><TextBlock Text="{Binding DurationText}" Foreground="#AAB8CF" FontSize="12" Margin="0,0,12,0"/><TextBlock Text="{Binding TimestampText}" Foreground="#AAB8CF" FontSize="12"/></WrapPanel>
+                                    <TextBlock Foreground="#AAB8CF" FontSize="12" TextWrapping="Wrap" Margin="0,7,0,0"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="EvidenceSummary"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text><TextBlock.ToolTip><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ProductStatusText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.ToolTip></TextBlock>
+</StackPanel></Expander>
+                                </Grid>
+                            </Border>
+                            <DataTemplate.Triggers>
+                                <DataTrigger Binding="{Binding StatusText}" Value="running"><Setter TargetName="Card" Property="BorderBrush" Value="#63AEFF"/><Setter TargetName="State" Property="Foreground" Value="#63AEFF"/></DataTrigger>
+                                <DataTrigger Binding="{Binding StatusText}" Value="completed"><Setter TargetName="Card" Property="BorderBrush" Value="#45CDB5"/></DataTrigger>
+                                <DataTrigger Binding="{Binding StatusText}" Value="failed"><Setter TargetName="Card" Property="BorderBrush" Value="#FFAB79"/></DataTrigger>
+                            </DataTemplate.Triggers>
+                        </DataTemplate></ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </DockPanel>
+
+        </Grid>
+            </TabItem>
+            <TabItem Header="{Binding [text.21], Source={x:Static local:DesktopLanguage.Current}}">
+                <Grid x:Name="MonitorLayout" DataContext="{Binding SessionMonitor}" Margin="16">
+                    <Grid.RowDefinitions><RowDefinition/><RowDefinition Height="0"/></Grid.RowDefinitions><Grid.ColumnDefinitions><ColumnDefinition Width="340"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                    <ScrollViewer VerticalScrollBarVisibility="Disabled" Margin="0,0,22,0"><StackPanel>
+                        <TextBlock Text="{Binding [text.22], Source={x:Static local:DesktopLanguage.Current}}" FontSize="18" FontWeight="SemiBold"/>
+                        <TextBlock Foreground="#AAB8CF" FontSize="12" Margin="0,8,0,0"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Origin"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                        <TextBlock Foreground="#AAB8CF" FontSize="12" Margin="0,7,0,0" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ConfigurationStatus"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                        <TextBlock Text="{Binding [text.23], Source={x:Static local:DesktopLanguage.Current}}" TextWrapping="Wrap" Foreground="#AAB8CF" FontSize="12" Margin="0,7,0,12"/>
+                        <TextBlock Text="{Binding [text.24], Source={x:Static local:DesktopLanguage.Current}}" FontSize="12"/>
+                        <TextBox Text="{Binding PortalDemoRunId, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding IsIdle}" Background="#192333" Foreground="#E7EDF7" Padding="8" Margin="0,5,0,12"/>
+                        <WrapPanel><Button Content="{Binding [text.25], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding RefreshCommand}" Padding="12,10"/><Button Content="{Binding [text.26], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding CancelCommand}" Padding="12,10"/></WrapPanel>
+                        <Button Content="{Binding [text.27], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding SimulateExposureCommand}" Margin="0,12,0,8"/>
+                        <Button Content="{Binding [text.28], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding SimulateReplayCommand}"/>
+                        <TextBlock Text="{Binding [text.29], Source={x:Static local:DesktopLanguage.Current}}" TextWrapping="Wrap" Foreground="#AAB8CF" FontSize="12" Margin="0,16,0,0"/>
+                    </StackPanel></ScrollViewer>
+                    <ScrollViewer x:Name="MonitorResults" Grid.Column="1" VerticalScrollBarVisibility="Disabled"><StackPanel>
+                        <TextBlock FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="StateText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                        <TextBlock Foreground="#66DCC6" Margin="0,10,0,0" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ServerSessionText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                        <TextBlock Foreground="#AAB8CF" FontSize="12" Margin="0,7,0,0"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="CheckedAtText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                        <TextBlock Foreground="#BBA5E1" Margin="0,7,0,0" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ReplayText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                        <TextBlock Foreground="#AAB8CF" Margin="0,10,0,15" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Notice"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                        <ItemsControl ItemsSource="{Binding Techniques}"><ItemsControl.ItemTemplate><DataTemplate>
+                            <Border Background="#192333" BorderBrush="#2D3C52" BorderThickness="1" CornerRadius="6" Padding="12" Margin="0,0,0,8"><StackPanel>
+                                <TextBlock FontWeight="SemiBold"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="TechniqueLabel"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                                <TextBlock Foreground="#8D9DB6" FontSize="12"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="TacticName"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                                <TextBlock Foreground="#AAB8CF" FontSize="12" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ActivityDescription"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                                <TextBlock Foreground="#BBA5E1" FontSize="12" Margin="0,5,0,0"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}" ConverterParameter="format.137"><Binding Path="TechniqueActivityText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                                <WrapPanel><TextBlock Text="{Binding DurationText}" Foreground="#AAB8CF" FontSize="12" Margin="0,0,15,0"/><TextBlock Text="{Binding TimestampText}" Foreground="#AAB8CF" FontSize="12"/></WrapPanel>
+                                <TextBlock Foreground="#AAB8CF" FontSize="12" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="EvidenceSummary"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                            </StackPanel></Border>
+                        </DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+                    </StackPanel></ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{Binding [text.30], Source={x:Static local:DesktopLanguage.Current}}"><ScrollViewer VerticalScrollBarVisibility="Disabled"><StackPanel Margin="18">
+                <CheckBox Content="{Binding [EventParticipantsEnable], Source={x:Static local:DesktopLanguage.Current}}" IsChecked="{Binding EventEditionEnabled}" IsEnabled="{Binding IsIdle}" Foreground="#E7EDF7"/>
+                <StackPanel IsEnabled="{Binding ParticipantFlowEnabled}">
+                    <StackPanel DataContext="{Binding EventParticipants}">
+                        <TextBlock Text="{Binding [EventParticipantsIntro], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" Margin="0,10"/>
+                        <TextBlock x:Name="HelperReceiverNotice" Foreground="#FFCA70" TextWrapping="Wrap" Margin="0,4"/>
+                        <Button x:Name="ConnectParticipantsButton" Content="{Binding [EventParticipantsConnect], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding ConnectCommand}" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding [EventParticipantsEvent], Source={x:Static local:DesktopLanguage.Current}}" Margin="0,12,0,4"/>
+                        <ComboBox x:Name="ParticipantEventChoice" ItemsSource="{Binding Events}" SelectedItem="{Binding SelectedEvent}" DisplayMemberPath="Name" IsEnabled="{Binding CanEdit}" MinHeight="36" AutomationProperties.Name="{Binding [EventParticipantsEvent], Source={x:Static local:DesktopLanguage.Current}}"/>
+                        <Grid Margin="8,12,8,4"><Grid.ColumnDefinitions><ColumnDefinition Width="64"/><ColumnDefinition Width="*"/><ColumnDefinition Width="170"/></Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding [EventParticipantsRound], Source={x:Static local:DesktopLanguage.Current}}"/>
+                            <TextBlock Grid.Column="1" Text="{Binding [EventParticipantsAlias], Source={x:Static local:DesktopLanguage.Current}}"/>
+                            <TextBlock Grid.Column="2" Text="{Binding [EventParticipantsConsent], Source={x:Static local:DesktopLanguage.Current}}"/>
+                        </Grid>
+                        <ListBox x:Name="EventParticipantsList" ItemsSource="{Binding Participants}" SelectedItem="{Binding SelectedParticipant}" IsEnabled="{Binding CanEdit}" MinHeight="88" MaxHeight="260" Background="#192333" Foreground="#E7EDF7" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" AutomationProperties.Name="{Binding [EventParticipantsList], Source={x:Static local:DesktopLanguage.Current}}">
+                            <ListBox.ItemTemplate><DataTemplate><Grid Margin="4,6"><Grid.ColumnDefinitions><ColumnDefinition Width="64"/><ColumnDefinition Width="*"/><ColumnDefinition Width="170"/></Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Round}"/><TextBlock Grid.Column="1" Text="{Binding Alias}" FontWeight="SemiBold" Margin="0,0,8,0"/><TextBlock Grid.Column="2" Text="{Binding ConsentText}"/>
+                            </Grid></DataTemplate></ListBox.ItemTemplate>
+                        </ListBox>
+                        <TextBlock x:Name="ParticipantRosterNotice" Text="{Binding RosterNotice}" Foreground="#FFCA70" TextWrapping="Wrap" Margin="0,6" AutomationProperties.LiveSetting="Polite"/>
+                        <TextBlock x:Name="ParticipantSessionNotice" Text="{Binding Notice}" Foreground="#FFCA70" Margin="0,10"/>
+                        <WrapPanel><Button Content="{Binding [EventParticipantsRefresh], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding RefreshCommand}"/>
+                            <Button x:Name="OpenParticipantButton" Content="{Binding [EventParticipantsOpen], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding OpenCommand}" Background="#167E71"/>
+                        </WrapPanel>
+                    </StackPanel>
+                    <Button x:Name="StartParticipantDemoButton" Content="{Binding [EventParticipantsStart], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding StartCommand}" HorizontalAlignment="Left" Margin="0,10" Background="#167E71"/>
+                </StackPanel>
+                <Expander Header="{Binding [EventParticipantsLegacy], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" Margin="0,16,0,0"><StackPanel>
+                <CheckBox Content="{Binding [EventParticipantsLegacyEnable], Source={x:Static local:DesktopLanguage.Current}}" IsChecked="{Binding LegacyEventLinkEnabled}" IsEnabled="{Binding IsIdle}" Foreground="#E7EDF7"/>
+                <StackPanel IsEnabled="{Binding LegacyEventLinkEnabled}">
+                <TextBlock Text="{Binding [text.32], Source={x:Static local:DesktopLanguage.Current}}" TextWrapping="Wrap" Foreground="#AAB8CF" Margin="0,10"/>
+                <Button Content="{Binding [text.33], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding PrepareEventRunCommand}" HorizontalAlignment="Left"/>
+                <TextBlock Text="{Binding [text.34], Source={x:Static local:DesktopLanguage.Current}}" Margin="0,10,0,4"/>
+                <TextBox Text="{Binding EventEdition.RunId, Mode=OneWay}" IsReadOnly="True" Background="#192333" Foreground="#66DCC6" Padding="8"/>
+                <TextBlock Text="{Binding [text.35], Source={x:Static local:DesktopLanguage.Current}}" Margin="0,10,0,4"/>
+                <PasswordBox x:Name="EventPairingCode" PasswordChanged="OnEventCodeChanged" MaxLength="43" Background="#192333" Foreground="#E7EDF7" Padding="8" AutomationProperties.Name="Tijdelijke Event Edition code"/>
+                <Button Content="{Binding [text.36], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding EventEdition.RefreshCommand}" HorizontalAlignment="Left" Margin="0,10"/>
+                <TextBlock Foreground="#66DCC6" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="EventEdition.EventText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="0,8"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}" ConverterParameter="format.138"><Binding Path="EventEdition.PortalRunText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                <TextBlock TextWrapping="Wrap" FontWeight="SemiBold"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="EventEdition.ActionText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                <TextBlock TextWrapping="Wrap" Foreground="#66DCC6" Margin="0,8"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="EventEdition.ConfirmationText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                <TextBlock Foreground="#F3B36B" TextWrapping="Wrap" Margin="0,10"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="EventEdition.Notice"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                <CheckBox Content="{Binding [text.37], Source={x:Static local:DesktopLanguage.Current}}" IsChecked="{Binding EventEdition.Consent}" Foreground="#E7EDF7"/>
+                <WrapPanel Margin="0,10"><Button Content="{Binding [text.38], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding EventEdition.ApproveCommand}" Background="#167E71"/><Button Content="{Binding [text.39], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding EventEdition.FallbackCommand}"/></WrapPanel>
+                <TextBlock Text="{Binding [text.40], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" TextWrapping="Wrap"/>
+                </StackPanel></StackPanel></Expander>
+            </StackPanel></ScrollViewer></TabItem>
+
+<TabItem Header="{Binding [IntegrationSettings], Source={x:Static local:DesktopLanguage.Current}}"><ScrollViewer VerticalScrollBarVisibility="Disabled"><StackPanel DataContext="{Binding SessionMonitor.Integration}" Margin="18">
+<TextBlock Text="{Binding [IntegrationTitle], Source={x:Static local:DesktopLanguage.Current}}" FontSize="20" FontWeight="SemiBold"/>
+<TextBlock Text="{Binding [IntegrationPortal], Source={x:Static local:DesktopLanguage.Current}}"/><TextBox Text="{Binding PortalAddress, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding CanEdit}" Background="#192333" Foreground="White" Padding="8"/>
+<TextBlock Text="{Binding [IntegrationStatus], Source={x:Static local:DesktopLanguage.Current}}" Margin="0,12,0,4"/>
+<TextBlock TextWrapping="Wrap" Foreground="#66DCC6"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Status"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+<TextBlock Text="{Binding [IntegrationHasKey], Source={x:Static local:DesktopLanguage.Current}}"/><TextBlock><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="KeyPresence"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+<TextBlock Text="{Binding [IntegrationLastSuccess], Source={x:Static local:DesktopLanguage.Current}}"/><TextBlock Text="{Binding LastSuccess}"/>
+<TextBlock Foreground="#AAB8CF" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Source"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+<WrapPanel Margin="0,12"><Button Content="{Binding [IntegrationTest], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding TestCommand}"/><Button Content="{Binding [IntegrationReplace], Source={x:Static local:DesktopLanguage.Current}}" Click="OnMonitorReplace" IsEnabled="{Binding CanEdit}"/><Button Content="{Binding [IntegrationRemove], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding RemoveCommand}"/></WrapPanel>
+<TextBlock Text="{Binding [IntegrationPassword], Source={x:Static local:DesktopLanguage.Current}}" TextWrapping="Wrap"/>
+<PasswordBox x:Name="MonitorSecret" MaxLength="43" IsEnabled="{Binding CanEdit}" Background="#192333" Foreground="White" Padding="8" AutomationProperties.Name="Monitor key / monitorsleutel"/>
+<CheckBox x:Name="MonitorConsent" Content="{Binding [IntegrationConsent], Source={x:Static local:DesktopLanguage.Current}}" Foreground="White" IsEnabled="{Binding CanEdit}" Margin="0,10"/>
+<Button Content="{Binding [IntegrationSave], Source={x:Static local:DesktopLanguage.Current}}" Click="OnMonitorSave" IsEnabled="{Binding CanEdit}" HorizontalAlignment="Left"/>
+<TextBlock Text="{Binding [IntegrationInfo], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" TextWrapping="Wrap" Margin="0,12"/>
+<TextBlock Text="{Binding [IntegrationGrant], Source={x:Static local:DesktopLanguage.Current}}" TextWrapping="Wrap"/>
+<PasswordBox x:Name="MonitorGrantSecret" MaxLength="43" Background="#192333" Foreground="White" Padding="8" AutomationProperties.Name="Demo grant / demotoestemming"/>
+<Button Content="{Binding [IntegrationGrantApply], Source={x:Static local:DesktopLanguage.Current}}" Click="OnMonitorGrantSave" HorizontalAlignment="Left"/>
+</StackPanel></ScrollViewer></TabItem>
+        </TabControl>
+                    <Border x:Name="AssessmentPanel" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Visibility="Collapsed" VerticalAlignment="Top" Background="#192333" BorderBrush="#2D3C52" BorderThickness="1" CornerRadius="8" Padding="10">
+                <ScrollViewer VerticalScrollBarVisibility="Disabled"><StackPanel IsEnabled="{Binding IsIdle}">
+                    <TextBlock Text="{Binding [text.14], Source={x:Static local:DesktopLanguage.Current}}" FontWeight="SemiBold" FontSize="15"/>
+                    <TextBlock Text="{Binding [text.15], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" TextWrapping="Wrap" FontSize="12" Margin="0,4,0,6"/>
+                    <TextBlock Text="{Binding [text.16], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" FontSize="12"/>
+                    <ComboBox ItemsSource="{Binding Phases}" SelectedItem="{Binding SelectedPhase}"  Margin="0,3,0,6"><ComboBox.ItemTemplate><DataTemplate><TextBlock><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="TechniqueLabel"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock></DataTemplate></ComboBox.ItemTemplate></ComboBox>
+                    <TextBlock Text="{Binding [text.17], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" FontSize="12"/>
+                    <ComboBox ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct}" Margin="0,3,0,6"/>
+                    <TextBlock Text="{Binding [text.18], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF" FontSize="12"/>
+                    <ComboBox ItemsSource="{Binding AssessmentOptions}" SelectedItem="{Binding SelectedAssessmentText}" Margin="0,3,0,6"><ComboBox.ItemTemplate><DataTemplate><TextBlock><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock></DataTemplate></ComboBox.ItemTemplate></ComboBox>
+                    <CheckBox ContentTemplate="{x:Null}" IsChecked="{Binding AssessmentConfirmed}" Foreground="#E7EDF7" Margin="0,3,0,6"><TextBlock Text="{Binding [text.19], Source={x:Static local:DesktopLanguage.Current}}" TextWrapping="Wrap" MaxWidth="205"/></CheckBox>
+                    <Button Content="{Binding [text.20], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding ConfirmAssessmentCommand}" Padding="10,6"/>
+                    <TextBlock Foreground="#AAB8CF" FontSize="12" TextWrapping="Wrap" Margin="0,15,0,0"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="SelectedPhase.ProductStatusText"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                </StackPanel></ScrollViewer>
+            </Border>
+<Expander x:Name="ActivityLogExpander" Grid.Row="5" Grid.ColumnSpan="2" Header="{Binding [text.41], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#E7EDF7" IsExpanded="False">        <Grid>
+            <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+            <TextBlock Text="{Binding [text.41], Source={x:Static local:DesktopLanguage.Current}}" FontWeight="SemiBold" Margin="0,0,0,10"/>
+            <ListBox x:Name="ActivityLog" MinHeight="80" MaxHeight="180" Grid.Row="1" ItemsSource="{Binding Entries}" Background="#131D2B" Foreground="#D9E4F5" BorderBrush="#2D3C52" Padding="8" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="False">
+                <ListBox.ItemContainerStyle><Style TargetType="ListBoxItem"><Setter Property="HorizontalContentAlignment" Value="Stretch"/></Style></ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate><DataTemplate>
+                    <Grid Margin="0,3">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="105"/><ColumnDefinition Width="55"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding TimeText}" Foreground="#8D9DB6" FontFamily="Consolas"/>
+                        <TextBlock Grid.Column="1" Foreground="#66DCC6" FontFamily="Consolas"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Level"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                        <TextBlock Grid.Column="2" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Message"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                    </Grid>
+                </DataTemplate></ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+</Expander>
+<Expander Grid.Row="6" Grid.ColumnSpan="2" Header="{Binding [LogDetails], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#AAB8CF">        <StackPanel Margin="0,12,0,0">
+            <TextBlock Foreground="#66DCC6" FontFamily="Consolas" FontSize="12" Margin="0,0,0,4"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}" ConverterParameter="format.139"><Binding Path="DemoRunId"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+            <TextBlock Foreground="#66DCC6" FontSize="12" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ExportStatus"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock><TextBlock Foreground="#AAB8CF" FontSize="12" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="LogStatus"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+            <TextBlock Foreground="#8D9DB6" FontSize="12" TextWrapping="Wrap" Margin="0,4,0,0"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}" ConverterParameter="format.140"><Binding Path="LogDirectory"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+        </StackPanel>
+</Expander>
+        <Border x:Name="ScenarioIntroduction" Grid.RowSpan="7" Grid.ColumnSpan="2" Background="#10151F" Padding="8">
+            <Border.Style><Style TargetType="Border"><Setter Property="Visibility" Value="Collapsed"/><Style.Triggers><DataTrigger Binding="{Binding ShowScenarioIntroduction}" Value="True"><Setter Property="Visibility" Value="Visible"/></DataTrigger></Style.Triggers></Style></Border.Style>
+            <ScrollViewer VerticalScrollBarVisibility="Disabled"><StackPanel>
+                <TextBlock Text="{Binding [text.42], Source={x:Static local:DesktopLanguage.Current}}" Foreground="#66DCC6" FontWeight="SemiBold"/>
+                <TextBlock FontSize="32" FontWeight="SemiBold" Margin="0,12,0,8" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Scenario.Title"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                <TextBlock FontSize="16" TextWrapping="Wrap" Foreground="#AAB8CF"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Scenario.Description"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                <Border Background="#192333" Padding="18" CornerRadius="8" Margin="0,18,0,12"><StackPanel>
+                    <TextBlock Text="{Binding [text.43], Source={x:Static local:DesktopLanguage.Current}}" FontSize="18" FontWeight="SemiBold"/>
+                    <TextBlock Margin="0,4,0,6" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="Scenario.AttackerGoal"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                    <ItemsControl x:Name="ScenarioRoles" ItemsSource="{Binding Scenario.Roles}"><ItemsControl.ItemTemplate><DataTemplate><TextBlock Margin="0,5" TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock></DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+                </StackPanel></Border>
+                <TextBlock Text="{Binding [text.44], Source={x:Static local:DesktopLanguage.Current}}" FontSize="18" FontWeight="SemiBold" Margin="0,8"/>
+                <ItemsControl x:Name="ScenarioPhaseOverview" ItemsSource="{Binding Phases}"><ItemsControl.ItemsPanel><ItemsPanelTemplate><UniformGrid Columns="{Binding OverviewColumns, RelativeSource={RelativeSource AncestorType=Window}}"/></ItemsPanelTemplate></ItemsControl.ItemsPanel><ItemsControl.ItemTemplate><DataTemplate>
+                    <Border Background="#192333" Padding="12" Margin="0,0,8,8" CornerRadius="6"><StackPanel><TextBlock Foreground="#8DBCF4" FontWeight="SemiBold"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="TechniqueId"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock><TextBlock TextWrapping="Wrap"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="TechniqueName"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock><TextBlock Foreground="#AAB8CF" TextWrapping="Wrap" FontSize="12"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding Path="ActivityDescription"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock></StackPanel></Border>
+                </DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+                <TextBlock Text="{Binding [text.45], Source={x:Static local:DesktopLanguage.Current}}" FontSize="18" FontWeight="SemiBold" Margin="0,8"/>
+                <ItemsControl ItemsSource="{Binding Scenario.LearningPoints}"><ItemsControl.ItemTemplate><DataTemplate><TextBlock Margin="0,4" TextWrapping="Wrap" Foreground="#AAB8CF"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}"><Binding/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock></DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+                <TextBlock Foreground="#66DCC6" Margin="0,16,0,8"><TextBlock.Text><MultiBinding Converter="{StaticResource DesktopTranslation}" ConverterParameter="format.141"><Binding Path="ModeLabel"/><Binding Path="Language" Source="{x:Static local:DesktopLanguage.Current}"/></MultiBinding></TextBlock.Text></TextBlock>
+                <WrapPanel Margin="0,0,0,8"><Button x:Name="StartScenarioButton" Content="{Binding [text.46], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding StartCommand}" Background="#167E71"/><Button Content="{Binding [text.47], Source={x:Static local:DesktopLanguage.Current}}" Command="{Binding ContinueToControlsCommand}"/></WrapPanel>
+            </StackPanel></ScrollViewer>
+        </Border>
+    </Grid></ScrollViewer></DockPanel>
+</Window>
+
+
+

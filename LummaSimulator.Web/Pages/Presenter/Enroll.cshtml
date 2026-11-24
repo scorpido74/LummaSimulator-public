@@ -1,0 +1,12 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.EnrollModel
+@{ ViewData["Title"]=T["PresenterEnrollmentLink"].Value; ViewData["TitleKey"]="PresenterEnrollmentLink"; }
+<section class="login-panel panel"><h1><local-text key="PresenterEnrollmentLink"></local-text></h1>
+<p><local-text key="PresenterInviteInfo"></local-text></p><p><local-text key="PresenterAuthenticatorInfo"></local-text></p>
+<form data-presenter-action="enroll" data-use-invitation="true" method="post">
+<label for="enrollment-code"><local-text key="PresenterCode"></local-text></label><input id="enrollment-code" name="code" type="password" required="@(!Model.HasGrant)" minlength="43" maxlength="43" autocomplete="off" />
+<label for="enrollment-key"><local-text key="PresenterKeyName"></local-text></label><input id="enrollment-key" name="keyName" required maxlength="60" autocomplete="off" />
+<button class="button button-primary" type="submit"><local-text key="PresenterRegisterKey"></local-text></button></form>
+<button id="presenter-cancel" class="button button-outline" type="button" hidden><local-text key="Aanvraag annuleren"></local-text></button>
+<p id="presenter-status" class="notice" role="status" aria-live="polite"></p></section>
+@section Scripts { <script src="~/js/invite-enrollment.js" asp-append-version="true" defer></script><script src="~/js/presenter.js" asp-append-version="true" defer></script> }

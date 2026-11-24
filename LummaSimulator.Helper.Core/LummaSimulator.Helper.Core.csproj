@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup><Compile Include="../LummaSimulator.App/ParticipantSessionClient.cs" Link="ParticipantSessionClient.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../shared/ParticipantQr.cs" Link="Shared/ParticipantQr.cs" /></ItemGroup>
+</Project>

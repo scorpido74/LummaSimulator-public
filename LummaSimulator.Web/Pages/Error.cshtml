@@ -1,0 +1,4 @@
+@page
+@model ErrorModel
+@{ ViewData["Title"] = T["Technische fout"].Value; ViewData["TitleKey"] = "Technische fout"; }
+<section class="panel reading-page"><h1><local-text key="Even opnieuw proberen."></local-text></h1><p><local-text key="Er is een technische fout opgetreden. Neem zo nodig contact op met de presentator."></local-text></p><a class="button button-primary" asp-page="/Index"><local-text key="Naar de startpagina →"></local-text></a></section>

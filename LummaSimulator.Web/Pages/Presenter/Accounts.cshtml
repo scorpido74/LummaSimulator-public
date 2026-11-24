@@ -1,0 +1,25 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.AccountsModel
+@{ ViewData["Title"]=T["PresenterAccounts"].Value;ViewData["TitleKey"]="PresenterAccounts"; }
+<section class="panel reading-page"><h1><local-text key="PresenterAccounts"></local-text></h1><a asp-page="/Presenter/Index"><local-text key="Presentatordashboard"></local-text></a>
+@if(Model.Notice is string notice){<p class="notice error"><local-text key="@notice"></local-text></p>}
+@if(TempData["AccountNotice"] is string accountNotice){<p class="notice error"><local-text key="@accountNotice"></local-text></p>}
+@if(Model.IssuedCode is string code){<div class="notice"><p><local-text key="PresenterCodeIssued"></local-text></p><code>@code</code></div>}
+<p><local-text key="PresenterReauthInfo"></local-text></p><form data-presenter-action="reauth" method="post"><button class="button button-outline" type="submit"><local-text key="PresenterReauthButton"></local-text></button></form>
+<button id="presenter-cancel" type="button" class="button button-outline" hidden><local-text key="Aanvraag annuleren"></local-text></button><p id="presenter-status" role="status" class="notice" aria-live="polite"></p>
+<h2><local-text key="PresenterCreateAccount"></local-text></h2>
+<form method="post" asp-page-handler="Create"><label for="new-login"><local-text key="PresenterLoginName"></local-text></label><input id="new-login" name="login" required minlength="3" maxlength="64" pattern="[A-Za-z0-9._-]+" />
+<label for="new-name"><local-text key="PresenterDisplayName"></local-text></label><input id="new-name" name="name" required maxlength="100" />
+<label for="new-role"><local-text key="PresenterRole"></local-text></label><select id="new-role" name="role"><option data-i18n="RolePresenter" value="Presenter">@T["RolePresenter"]</option><option data-i18n="RoleAdministrator" value="Administrator">@T["RoleAdministrator"]</option></select>
+<button class="button button-primary" type="submit"><local-text key="PresenterCreateAccount"></local-text></button></form>
+<div class="table-scroll"><table><thead><tr><th><local-text key="PresenterDisplayName"></local-text></th><th><local-text key="PresenterRegistered"></local-text></th><th><local-text key="PresenterLastSignIn"></local-text></th><th><local-text key="PresenterRole"></local-text></th><th><local-text key="PresenterState"></local-text></th><th><local-text key="Actie"></local-text></th></tr></thead><tbody>
+@foreach(var account in Model.Accounts){<tr><td>@account.Name <small>@account.Login · @account.Id</small></td><td>@DateTimeOffset.FromUnixTimeMilliseconds(account.Created).ToString("u")</td><td>@(account.LastLogin is long loginTime ? DateTimeOffset.FromUnixTimeMilliseconds(loginTime).ToString("u") : "—")</td><td><local-text key="@("Role"+account.Role)"></local-text></td><td><local-text key="@(account.Active?"PresenterActive":"PresenterInactive")"></local-text></td><td>
+<a asp-page="/Presenter/Accounts" asp-route-target="@account.Id"><local-text key="PresenterKeys"></local-text></a>
+<form method="post" asp-page-handler="Update"><input type="hidden" name="target" value="@account.Id" /><select name="role" data-i18n-aria-label="PresenterRole" aria-label="@T["PresenterRole"]"><option data-i18n="RolePresenter" value="Presenter" selected="@(account.Role=="Presenter")">@T["RolePresenter"]</option><option data-i18n="RoleAdministrator" value="Administrator" selected="@(account.Role=="Administrator")">@T["RoleAdministrator"]</option></select>
+<label><input type="checkbox" name="active" value="true" checked="@account.Active" /><local-text key="PresenterActive"></local-text></label><label><input type="checkbox" name="confirmed" value="true" required /><local-text key="PresenterConfirm"></local-text></label><button type="submit" class="button button-outline"><local-text key="PresenterSave"></local-text></button></form>
+<form method="post" asp-page-handler="Invite"><input type="hidden" name="target" value="@account.Id" /><label><input type="checkbox" name="confirmed" value="true" required /><local-text key="PresenterConfirm"></local-text></label><button type="submit" class="button button-outline"><local-text key="PresenterIssueInvite"></local-text></button></form>
+</td></tr>}
+</tbody></table></div>
+@if(Model.Target is string target){<h2><local-text key="PresenterKeys"></local-text></h2>@foreach(var key in Model.Keys){<form method="post" asp-page-handler="Remove"><span>@key.Name · @DateTimeOffset.FromUnixTimeMilliseconds(key.Registered).ToString("u")</span><input type="hidden" name="target" value="@target" /><input type="hidden" name="key" value="@key.Id" /><label><input name="confirmed" type="checkbox" value="true" required /><local-text key="PresenterConfirm"></local-text></label><button type="submit" class="button button-danger"><local-text key="PresenterRemoveKey"></local-text></button></form>}}
+</section>
+@section Scripts { <script src="~/js/presenter.js" asp-append-version="true" defer></script> }

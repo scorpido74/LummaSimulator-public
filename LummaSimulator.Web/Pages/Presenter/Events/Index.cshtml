@@ -1,0 +1,83 @@
+@page
+@model LummaSimulator.Web.Pages.Presenter.Events.IndexModel
+@{ViewData["Title"]=T["P65Events"].Value;ViewData["TitleKey"]="P65Events";}
+<h1><local-text key="P65Events"></local-text></h1>
+<section class="panel" id="visitor-default">
+<p><strong><local-text key="VisitorDefaultLabel"></local-text>:</strong>
+@if(Model.VisitorDefault is {} current){<text>@current.Name · @T[current.Kind=="prize"?"VisitorDefaultPrize":"VisitorDefaultExperience"]</text>}
+else{<local-text key="VisitorDefaultNone"></local-text>}</p>
+@if(Model.VisitorDefault?.Available==false){<p class="notice"><local-text key="VisitorDefaultUnavailable"></local-text></p>}
+@if(TempData["VisitorDefaultNotice"] is string defaultNotice){<p class="notice" role="status"><local-text key="@defaultNotice"></local-text></p>}
+@if(Model.VisitorDefaultChoices.Count>0){
+var managedChoice=Model.VisitorDefaultChoices.FirstOrDefault(choice=>choice.Kind==Model.Kind&&choice.Id==Model.Id);
+var chosenKind=managedChoice?.Kind??Model.VisitorDefault?.Kind;
+var chosenId=managedChoice?.Id??Model.VisitorDefault?.Id;
+<form method="post" asp-page-handler="VisitorDefault" data-presenter-action="reauth" data-visitor-default-submit aria-describedby="visitor-default-status">
+<label for="visitor-default-selection"><local-text key="VisitorDefaultChoice"></local-text></label>
+<select name="selection" id="visitor-default-selection">
+@foreach(var choice in Model.VisitorDefaultChoices){
+<option value="@($"{choice.Kind}:{choice.Id}")" selected="@(Model.VisitorDefaultSelection is {} submitted?submitted==$"{choice.Kind}:{choice.Id}":chosenKind==choice.Kind&&chosenId==choice.Id)">@choice.Name · @T[choice.Kind=="prize"?"VisitorDefaultPrize":"VisitorDefaultExperience"]</option>
+}
+</select>
+<label><input type="checkbox" name="useAsDefault" value="true" checked="@Model.VisitorDefaultConfirmed" required/><local-text key="VisitorDefaultCheckbox"></local-text></label>
+<p><local-text key="VisitorDefaultExplanation"></local-text></p>
+@if(Model.VisitorDefault is {} previous){<p>@string.Format(T["VisitorDefaultReplacement"].Value, previous.Name, T[previous.Kind=="prize"?"VisitorDefaultPrize":"VisitorDefaultExperience"].Value)</p>}
+<button class="button button-primary" type="submit"><local-text key="PrizeSave"></local-text></button>
+</form>
+<button type="button" class="button button-outline" id="visitor-default-cancel" hidden><local-text key="Aanvraag annuleren"></local-text></button>
+}
+<p id="visitor-default-status" role="status">@if(Model.VisitorDefaultError is {} error){<local-text key="@error"></local-text>}</p>
+</section>
+<form method="get" id="active-event-selection"><label for="active-event"><local-text key="ActiveEvent"></local-text></label><select id="active-event" name="id"><option value=""><local-text key="SelectActiveEvent"></local-text></option>@foreach(var active in Model.ActiveEvents){<option value="@active.Id" data-kind="@active.Kind" selected="@(active.Id==Model.Id&&active.Kind==Model.Kind)">@active.Name</option>}</select><input type="hidden" id="active-event-kind" name="kind" value="@Model.Kind"/><button class="button button-primary"><local-text key="ShowActiveEvent"></local-text></button></form>
+@if(Model.RoundOptions.Count>0){<form method="get" id="round-selection"><input type="hidden" name="kind" value="prize"/><input type="hidden" name="id" value="@Model.Id"/><label for="round-select"><local-text key="PrizeRoundLabel"></local-text></label><select id="round-select" name="roundId">@foreach(var option in Model.RoundOptions){<option value="@option.Id" selected="@(option.Id==Model.Progress?.Round.GroupId)">@option.Number · @T[option.Status=="Open"?"PrizeStatusOpen":option.Status=="Closed"?"PrizeStatusClosed":"RoundFrozen"]</option>}</select><button class="button button-outline"><local-text key="ShowCurrentRound"></local-text></button></form>}
+@if(Model.Progress is {} progress){<partial name="_EventRoundProgress" model="progress" />}
+@if(Model.ParticipantEntry is {} invitation){<partial name="_ParticipantQr" model="invitation" />}
+<details class="event-details" open="@(Model.Notice is not null||Model.Code is not null||Model.Overview)"><summary><local-text key="EventSettingsDetails"></local-text></summary>
+<p>Session Exposure Monitor · <local-text key="@(Model.MonitorConfigured?"MonitorManageEnabled":"MonitorManageDisabled")"></local-text></p>
+@if(Model.Notice is string notice){<p class="notice error" role="alert"><local-text key="@notice"></local-text></p>}
+@if(Model.Code is string code){<section class="notice" id="monitor-issued"><p><local-text key="@(Model.EnrollmentCode?"P65OnceTransfer":"P65GrantCopy")"></local-text></p><code id="monitor-issued-key">@(Model.EnrollmentCode?Url.Page("/Presenter/Enroll",null,null,ViewContext.HttpContext.Request.Scheme)+"#invite="+code:code)</code><button type="button" id="copy-invitation" class="button button-outline" data-success="@T["P65Copied"]" data-failed="@T["P65CopyFailed"]"><local-text key="P65Copy"></local-text></button><p id="copy-status" role="status"></p></section>}
+<div class="presenter-cards"><section class="panel"><h2><local-text key="P65Events"></local-text></h2>
+@if(User.IsInRole("Administrator")){<ul>@foreach(var item in Model.Events){<li><a asp-page="Index" asp-route-kind="@item.Kind" asp-route-id="@item.Id" asp-route-overview="true">@item.Name</a> · @item.Kind · @item.State · <local-text key="@(item.Owner==Model.Actor?"P65Owner":item.Owner is null?"P65Unassigned":User.IsInRole("Administrator")?"RoleAdministrator":"P65Linked")"></local-text></li>}</ul>}
+@if(Model.Events.Count==0){<p><local-text key="P65NoEvents"></local-text></p>}
+<p><a asp-page="/Presenter/Prizes/New"><local-text key="PrizeNew"></local-text></a> · <a asp-page="/Presenter/EventEdition"><local-text key="EventEditionTitle"></local-text></a></p>
+<details class="new-event-form"><summary class="button button-primary"><local-text key="NewEventStart"></local-text></summary><form method="post"><input type="hidden" name="operation" value="create"/><label><local-text key="P65EventDefault"></local-text><select name="kind">@foreach(var type in new[]{"experience","prize","edition"}){<option value="@type" selected="@(Model.Defaults.EventType==type)">@type</option>}</select></label><label><local-text key="PresenterEventName"></local-text><input name="name" maxlength="100" required/></label><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button class="button button-primary"><local-text key="P65CreateExperience"></local-text></button></form></details></section>
+<section class="panel"><h2><local-text key="P65Invitations"></local-text></h2>
+@foreach(var invite in Model.Invitations){<form method="post"><p>@invite.Name · @DateTimeOffset.FromUnixTimeMilliseconds(invite.Expires).ToString("u")</p><input type="hidden" name="invitation" value="@invite.Id"/><input type="hidden" name="confirmed" value="true"/><button name="operation" value="accept" class="button button-primary"><local-text key="P65Accept"></local-text></button><button name="operation" value="decline" class="button button-outline"><local-text key="P65Decline"></local-text></button></form>}
+@if(Model.Invitations.Count==0){<p><local-text key="P65NoInvitations"></local-text></p>}
+@foreach(var transfer in Model.Transfers){<form method="post"><p>@transfer.Name · <local-text key="P65OfferOwner"></local-text></p><input type="hidden" name="kind" value="@transfer.Kind"/><input type="hidden" name="id" value="@transfer.EventId"/><input type="hidden" name="operation" value="transfer"/><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button class="button button-outline"><local-text key="P65AcceptOwner"></local-text></button></form>}
+</section></div>
+@if(Model.Id is string id&&Model.Kind is string kind){
+<section class="panel" id="active-event-summary"><h2>@Model.Events.Single(e=>e.Id==id&&e.Kind==kind).Name</h2>
+<p>@Model.Events.Single(e=>e.Id==id&&e.Kind==kind).State</p>
+@if(Model.SelectedPrize is {} selectedPrize){
+<form method="post" asp-page="/Presenter/Prizes/Event" asp-route-id="@id" asp-page-handler="Rename"><input name="ExpectedEventId" type="hidden" value="@id"/><input name="Version" type="hidden" value="@selectedPrize.Version"/><input name="OperationKey" type="hidden" value="@Model.OperationKey"/>
+<label><local-text key="PresenterEventName"></local-text><input name="Name" value="@selectedPrize.Name" required maxlength="100"/></label><button class="button button-outline"><local-text key="PrizeRename"></local-text></button></form>
+@if(selectedPrize.Status=="Open"){
+<form method="post" asp-page="/Presenter/Prizes/Event" asp-route-id="@id" asp-page-handler="Close"><input name="ExpectedEventId" type="hidden" value="@id"/><input name="Version" type="hidden" value="@selectedPrize.Version"/><input name="OperationKey" type="hidden" value="@Model.OperationKey"/><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PrizeConfirm"></local-text></label><button class="button button-outline"><local-text key="PrizeClose"></local-text></button></form>
+}}
+<p><local-text key="P65Linked"></local-text>: @Model.People.Count(p=>p.Owner||p.Member)</p><ul>@foreach(var person in Model.People.Where(p=>p.Owner||p.Member||p.Invited)){<li>@person.Name · <local-text key="@(person.Owner?"P65Owner":person.Invited?"P65Invitations":"P65Linked")"></local-text></li>}</ul>
+<p><a asp-page="Index" asp-page-handler="Export" asp-route-kind="@kind" asp-route-id="@id"><local-text key="P65Export"></local-text></a></p>
+@if(kind=="prize"){<p><a asp-page="/Presenter/Prizes/Event" asp-route-id="@id"><local-text key="P65Details"></local-text></a></p>}
+@if(kind=="edition"){<p><a asp-page="/Presenter/EventEdition"><local-text key="EventEditionTitle"></local-text></a></p>}
+@if(kind=="experience"){<form method="post"><input type="hidden" name="kind" value="@kind"/><input type="hidden" name="id" value="@id"/><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button name="operation" value="start" class="button button-primary"><local-text key="P65Start"></local-text></button><button name="operation" value="close" class="button button-outline"><local-text key="P65Close"></local-text></button></form>}
+@if (Model.CanManage) {
+<partial name="_LoginRoutesEditor" model="new LummaSimulator.Web.Services.LoginRoutesEditor(kind,id,Model.LoginRoutes)" />
+}
+<h3><local-text key="P65Activities"></local-text></h3><ul>@foreach(var activity in Model.Activities){<li>@DateTimeOffset.FromUnixTimeMilliseconds(activity.At).ToString("u") · @activity.ActorName · @activity.Action</li>}</ul>
+@foreach(var demo in Model.Demos){<form method="post"><p>@demo.Name · @demo.DemoRunId · @demo.Successes / @demo.Failures</p><input type="hidden" name="demo" value="@demo.Id"/><input type="hidden" name="kind" value="@kind"/><input type="hidden" name="id" value="@id"/><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button name="operation" value="@(Model.Grants.Contains(demo.Id)?"ungrant":"grant")" class="button button-outline"><local-text key="@(Model.Grants.Contains(demo.Id)?"Intrekken":"Toestaan")"></local-text></button><button name="operation" value="end" class="button button-danger"><local-text key="Beëindigen"></local-text></button></form>}
+</section>
+@if(Model.CanInvite || Model.CanManage){<section class="panel"><h2><local-text key="P65PresenterManagement"></local-text></h2>
+<p><local-text key="P65TargetInfo"></local-text></p>
+<form method="post"><input type="hidden" name="kind" value="@kind"/><input type="hidden" name="id" value="@id"/><label><local-text key="P65AccountId"></local-text><select name="target" required>@foreach(var person in Model.People){<option value="@person.Id">@person.Name</option>}</select></label><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label>
+@if(Model.CanInvite){<button name="operation" value="invite" class="button button-primary"><local-text key="P65Invite"></local-text></button>}
+@if(Model.CanManage){<button name="operation" value="revoke" class="button button-outline"><local-text key="P65RevokeInvite"></local-text></button><button name="operation" value="remove" class="button button-outline"><local-text key="P65RemovePresenter"></local-text></button><button name="operation" value="offer" class="button button-outline"><local-text key="P65OfferOwner"></local-text></button>
+@if(User.IsInRole("Administrator")){<button name="operation" value="recover" class="button button-outline"><local-text key="P65RecoverOwner"></local-text></button>}
+}
+</form>
+@if(Model.CanInviteNew){<form method="post"><input type="hidden" name="kind" value="@kind"/><input type="hidden" name="id" value="@id"/><label><local-text key="PresenterLoginName"></local-text><input name="login" required maxlength="64"/></label><label><local-text key="PresenterDisplayName"></local-text><input name="name" required maxlength="100"/></label><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button name="operation" value="new" class="button button-primary"><local-text key="P65InviteNew"></local-text></button></form>}
+</section>}
+<form method="post"><input type="hidden" name="kind" value="@kind"/><input type="hidden" name="id" value="@id"/><label><input type="checkbox" name="confirmed" value="true" required/><local-text key="PresenterConfirm"></local-text></label><button class="button button-outline" name="operation" value="transfer"><local-text key="P65AcceptOwner"></local-text></button></form>
+}
+<section class="panel"><form method="post" data-presenter-action="reauth"><button class="button button-outline"><local-text key="PresenterReauthButton"></local-text></button></form><button id="presenter-cancel" type="button" class="button button-outline" hidden><local-text key="Aanvraag annuleren"></local-text></button><p id="presenter-status" role="status"></p></section>
+</details>
+@section Scripts{<script src="~/js/event-round-progress.js" asp-append-version="true" defer></script><script src="~/js/participant-qr.js" asp-append-version="true" defer></script><script src="~/js/presenter.js" asp-append-version="true" defer></script><script src="~/js/monitor-keys.js" asp-append-version="true" defer></script><script src="~/js/event-invitations.js" asp-append-version="true" defer></script>}

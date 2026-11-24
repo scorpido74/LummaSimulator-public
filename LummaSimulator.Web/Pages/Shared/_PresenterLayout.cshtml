@@ -1,0 +1,64 @@
+@inject LummaSimulator.Web.Services.PresentationSettings Presentation
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment BrandingEnvironment
+@{
+    var logo = Presentation.Logo("presenter") ?? Presentation.Logo("organization") ?? LummaSimulator.Web.Services.ResellerBranding.LogoUrl(Experience, BrandingEnvironment.WebRootPath, BrandingEnvironment.WebRootFileProvider);
+    var page = ViewContext.RouteData.Values["page"]?.ToString() ?? "";
+    var dashboardActive=page=="/Presenter/Events/Index"&&!ViewContext.HttpContext.Request.Query.ContainsKey("kind")&&ViewContext.HttpContext.Request.Query["view"]!="events";
+    var eventsActive = page.StartsWith("/Presenter/Prizes", StringComparison.Ordinal) || page.StartsWith("/Presenter/Events",StringComparison.Ordinal)&&!dashboardActive || page == "/Presenter/EventEdition";
+    var configActive = page.StartsWith("/Presenter/Configuration", StringComparison.Ordinal) || page.StartsWith("/Presenter/Integrations", StringComparison.Ordinal) || page.StartsWith("/Presenter/Audit", StringComparison.Ordinal);
+}
+<!DOCTYPE html>
+<html lang="@System.Globalization.CultureInfo.CurrentUICulture.Name">
+<head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="color-scheme" content="dark" />
+    <title data-i18n-title="@ViewData["TitleKey"]" data-title-suffix=" · LummaSimulator">@ViewData["Title"] · LummaSimulator</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/presenter.css" asp-append-version="true" />
+</head>
+<body class="presenter-body">
+<a class="skip-link" href="#main"><local-text key="Naar de inhoud"></local-text></a>
+<aside class="presenter-sidebar">
+<div class="presenter-brand"><a asp-page="/Presenter/Events/Index">@Presentation.Current.DisplayName</a>
+@if (logo is not null) { <img src="@Url.Content(logo)" alt="@Presentation.Current.Organization" class="presenter-logo" /> }
+else { <span>@Presentation.Current.Organization</span> }
+</div>
+<details id="presenter-navigation" open>
+<summary id="presenter-navigation-summary"><local-text key="P65Navigation"></local-text></summary>
+<nav aria-label="@T["P65Navigation"]" data-i18n-aria-label="P65Navigation">
+<a asp-page="/Presenter/Events/Index" aria-current="@(dashboardActive ? "page" : null)"><span aria-hidden="true">▦</span><span class="nav-label"><local-text key="P65Dashboard"></local-text></span></a>
+<a asp-page="/Presenter/Events/Index" asp-route-view="events" aria-current="@(eventsActive ? "location" : null)"><span aria-hidden="true">◇</span><span class="nav-label"><local-text key="P65Events"></local-text></span></a>
+@if (eventsActive) {
+<div class="presenter-subnav"><a asp-page="/Presenter/Prizes/Index"><local-text key="PrizeOverview"></local-text></a><a asp-page="/Presenter/EventEdition"><local-text key="EventEditionTitle"></local-text></a></div>
+}
+@if (User.IsInRole("Administrator")) {
+<a asp-page="/Presenter/Accounts" aria-current="@(page == "/Presenter/Accounts" ? "page" : null)"><span aria-hidden="true">♙</span><span class="nav-label"><local-text key="P65Users"></local-text></span></a>
+<a asp-page="/Presenter/Configuration/Index" aria-current="@(page == "/Presenter/Configuration/Index" ? "page" : configActive ? "location" : null)"><span aria-hidden="true">⚙</span><span class="nav-label"><local-text key="P65Configuration"></local-text></span></a>
+@if (configActive) {
+<div class="presenter-subnav"><a asp-page="/Presenter/Integrations/Monitor"><local-text key="MonitorManageTitle"></local-text></a><a asp-page="/Presenter/Audit"><local-text key="PresenterAudit"></local-text></a><a asp-page="/Presenter/AuditExport"><local-text key="AuditExportTitle"></local-text></a></div>
+}
+}
+<div class="presenter-account-nav"><a asp-page="/Presenter/Security" aria-current="@(page == "/Presenter/Security" ? "page" : null)"><span aria-hidden="true">○</span><span class="nav-label"><local-text key="P65MyAccount"></local-text></span></a>
+<form method="post" asp-page="/Presenter/Index" asp-page-handler="Logout"><button type="submit"><span aria-hidden="true">↪</span><span class="nav-label"><local-text key="Uitloggen"></local-text></span></button></form></div>
+</nav></details>
+<button type="button" id="presenter-collapse" aria-controls="presenter-navigation" aria-expanded="true" hidden><local-text key="P65CompactNavigation"></local-text></button>
+</aside>
+<div class="presenter-workspace">
+<header class="presenter-toolbar"><span class="presenter-identity">@User.Identity?.Name</span>
+<form id="language-preference-form" class="language-switch" method="post" aria-label="@T["Language"]" data-i18n-aria-label="Language">
+@Html.AntiForgeryToken()
+@foreach (var language in Experience.AvailableLanguages) {
+<button type="button" data-language="@language" aria-pressed="@(language == System.Globalization.CultureInfo.CurrentUICulture.Name ? "true" : "false")">@(language == "nl-NL" ? "NL" : "EN")</button>
+}
+<span id="language-notice" role="status" aria-live="polite"></span></form>
+</header>
+<main id="main" class="presenter-main" tabindex="-1">@RenderBody()</main>
+<footer class="presenter-footer">LummaSimulator · v@(typeof(LummaSimulator.Web.Services.PresentationSettings).Assembly.GetCustomAttributes(typeof(System.Reflection.AssemblyInformationalVersionAttribute), false).Cast<System.Reflection.AssemblyInformationalVersionAttribute>().Single().InformationalVersion) · @Presentation.Current.Organization</footer>
+</div>
+<template id="localization-data">@Html.Raw(System.Text.Json.JsonSerializer.Serialize(new {
+    language = System.Globalization.CultureInfo.CurrentUICulture.Name, audience = "presenter",
+    catalogs = Experience.AvailableLanguages.ToDictionary(language => language, language => UiText.Catalog(language))
+}))</template>
+<script src="~/js/localization.js" asp-append-version="true" defer></script>
+<script src="~/js/presenter-navigation.js" asp-append-version="true" defer></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body></html>
