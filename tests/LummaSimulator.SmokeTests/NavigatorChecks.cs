@@ -16,9 +16,9 @@ internal static class NavigatorChecks
         var repo = new DirectoryInfo(AppContext.BaseDirectory);
         while (repo is not null && !File.Exists(Path.Combine(repo.FullName, "LummaSimulator.slnx"))) repo = repo.Parent;
         if (repo is null) throw new InvalidOperationException("Repository root not found.");
-        using var data = JsonDocument.Parse(await File.ReadAllTextAsync(Path.Combine(repo.FullName, "docs/references/enterprise-attack-20.0-subset.json")));
+        using var data = JsonDocument.Parse(await File.ReadAllTextAsync(Path.Combine(repo.FullName, "docs", "references", "enterprise-attack-20.0-subset.json")));
         var official = data.RootElement.GetProperty("techniques").EnumerateArray().ToDictionary(t => t.GetProperty("id").GetString()!);
-        var format = await File.ReadAllTextAsync(Path.Combine(repo.FullName, "docs/references/navigator-layer-format-v4.5.md"));
+        var format = await File.ReadAllTextAsync(Path.Combine(repo.FullName, "docs", "references", "navigator-layer-format-v4.5.md"));
         Check(format.Contains("**Version 4.5**"), "Pinned official format version");
         Check(data.RootElement.GetProperty("attackVersion").GetString() == AttackCatalog.AttackVersion, "Dataset version matches reference");
         var phases = Enumerable.Range(1, 6).Select(i => new SimulationPhase(i, "PRIVATE-USER-DO-NOT-EXPORT", "C:\\sensitive\\profile")).ToArray();

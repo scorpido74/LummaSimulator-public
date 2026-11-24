@@ -1,4 +1,4 @@
-# LummaSimulator Event Edition v0.7.0-beta.1 installeren
+# LummaSimulator Event Edition v0.7.0-beta.4 installeren
 
 Zie [branding en talen](branding-and-languages.md) voor lokale resellerlogo's, NL/EN en het neutrale applicatie-icoon. Publicatie en werkelijke eerste-installatieacceptatie zijn afzonderlijke vrijgavevoorwaarden; deze handleiding bewijst die niet.
 
@@ -6,7 +6,7 @@ Deze handleiding beschrijft een lokaal Windows 11 x64-demopakket. De ontwikkelaa
 
 ## Downloaden en uitpakken
 
-Download na vrijgave `LummaSimulator-EventEdition-v0.7.0-beta.1-win-x64.zip` uitsluitend van de publieke distributierepository `scorpido74/LummaSimulator-Releases`. De bronrepository blijft prive. Controleer de ZIP-hash tegen het afzonderlijke `.zip.sha256`-bestand. Er is nog geen publieke release geclaimd. Pak de ZIP volledig uit op een lokale vaste schijf, bijvoorbeeld `C:\Demo pakketten\LummaSimulator Event Edition v0.7.0-beta.1`. Start niets rechtstreeks vanuit de ZIP, OneDrive-synchronisatie of VMware Shared Folders. Paden met spaties worden ondersteund.
+Download na vrijgave `LummaSimulator-EventEdition-v0.7.0-beta.4-win-x64.zip` uitsluitend van de [GitHub-prerelease van LummaSimulator-public](https://github.com/scorpido74/LummaSimulator-public/releases/tag/v0.7.0-beta.4). Controleer de ZIP-hash tegen het afzonderlijke `.zip.sha256`-bestand. Pak de ZIP volledig uit op een lokale vaste schijf, bijvoorbeeld `C:\Demo pakketten\LummaSimulator Event Edition v0.7.0-beta.4`. Start niets rechtstreeks vanuit de ZIP, OneDrive-synchronisatie of VMware Shared Folders. Paden met spaties worden ondersteund.
 
 Gebruik een eigen Windows-account met Edge of Chrome en Windows PowerShell 5.1. De scripts veranderen geen execution policy. Blokkeert Windows gedownloade scripts, controleer dan herkomst en hashes en laat een bevoegde beheerder het gecontroleerde pakket volgens lokaal beleid vrijgeven; schakel geen beveiliging generiek uit. SmartScreen/antivirus kan niet-ondertekende binaries waarschuwen. Er is nog geen ondertekende installer.
 
